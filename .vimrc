@@ -53,7 +53,8 @@ set showmatch
 
 
 " 字体
-set gfn=YaHeiMono:h20
+" 给gvim用的，在termnilal下是terminal本身字体所决定vim是什么字体
+" set gfn=YaHeiMono:h20
 
 " ---------------------------
 "			配色设置
