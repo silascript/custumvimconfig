@@ -14,6 +14,8 @@ let g:sonokai_style='andromeda'
 " 对于terminal版的vim是无效的
 " 因为terminal下的vim是由terminal的字体决定的
 set gfn=JetBrainsMono_Nerd_Font_Mono:h18
+" Cascadia Code PL对于尖角在gvim中显示不如JetBrainsMono
+" set gfn=Cascadia_Code_PL:h18
 
 " 设置powerline font
 let g:airline_powerline_fonts=1
