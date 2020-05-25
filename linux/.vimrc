@@ -4,6 +4,11 @@
 "				基础设置
 " ------------------------------------
 
+
+
+
+
+
 set nocompatible
 
 " 格键设置
@@ -52,6 +57,9 @@ set showmatch
 
 
 
+
+
+
 " 字体
 " 给gvim用的，在termnilal下是terminal本身字体所决定vim是什么字体
 " set gfn=YaHeiMono:h20
@@ -95,7 +103,7 @@ set noexpandtab
 " ---------------------------
 set encoding=utf-8
 set langmenu=zh_CN.UTF-8
-set fileencodings=utf-8,gbk,gb18030,gb2312,ucs-bom,cp936,big5,shift-jis,latin1
+set fileencodings=utf-8,gbk,gb18030,gb2312,ucs-bom,cp936,big5,euc-jp,euc-kr,shift-jis,latin1
 " set helplang=cn
 
 " 设置双字宽
@@ -132,8 +140,7 @@ set wildmenu
 
 " --------------------------
 "		非插件快捷键映射
-" --------------------------
-
+" -------------------------- 
 " buffer快捷键
 nmap <C-b>n :bnext<CR>
 nmap <C-b>p :bprev<CR>
