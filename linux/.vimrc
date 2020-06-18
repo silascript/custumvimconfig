@@ -31,8 +31,13 @@ set cursorline
 " set cursorcolumn
 
 " 开启256色
-set t_Co=256
-set termguicolors
+" set t_Co=256
+" 开启真彩
+" set termguicolors
+if has("termguicolors")
+    set termguicolors
+endif
+
 
 " 设置当前光标与顶部和底部距离
 set scrolloff=5
@@ -58,8 +63,6 @@ set showmatch
 
 
 
-
-
 " 字体
 " 给gvim用的，在termnilal下是terminal本身字体所决定vim是什么字体
 " set gfn=YaHeiMono:h20
@@ -68,10 +71,13 @@ set showmatch
 "			配色设置
 " ---------------------------
 " colorscheme tomorrow-night 
-colorscheme sonokai 
+" colorscheme sonokai 
 " 设置sonokai样式
-let g:sonokai_style = 'andromeda'
-
+" let g:sonokai_style = 'andromeda'
+" gruvbox是真彩配色
+colorscheme gruvbox
+let g:gruvbox_contrast_dark='hard'
+set background=dark
 
 " 命令模式显示指令
 set showcmd
@@ -171,9 +177,12 @@ call plug#begin('~/.vim/plugged')
 
 	" 语法高亮增强
 	Plug 'sheerun/vim-polyglot'
-
+	
 	" sonokai配色
 	Plug 'sainnhe/sonokai'
+	" 真彩theme
+	Plug 'morhetz/gruvbox'
+
 
 	" emmet
 	Plug 'mattn/emmet-vim'
