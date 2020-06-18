@@ -1,12 +1,5 @@
 
-
-" ------------------------------------
-"				基础设置
-" ------------------------------------
-
-
-
-
+" ------------------------------------ "				基础设置 " ------------------------------------ 
 
 
 set nocompatible
@@ -214,6 +207,10 @@ call plug#begin('~/.vim/plugged')
 	" 文件类型图标
 	Plug 'ryanoasis/vim-devicons'
 
+	" git相关
+	Plug 'airblade/vim-gitgutter'
+	Plug 'tpope/vim-fugitive'
+
 
 call plug#end()
 
@@ -373,6 +370,14 @@ filetype indent on
 let g:indentLine_char = '┊'
 " 可以使用不同层次不同的字符
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+
+
+" -----------------------
+"		GitGutter设置
+" -----------------------
+" 开启gitgutter
+let g:gitgutter_enabled = 1
 
 
 
