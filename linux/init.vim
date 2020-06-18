@@ -68,6 +68,9 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	" motion
 	Plug 'easymotion/vim-easymotion'
 
+	" undo查看
+	Plug 'mbbill/undotree'
+
 call plug#end()
 
 
@@ -121,6 +124,22 @@ let g:airline_theme='wombat'
 " ---------------------------------------------------------
 
 
+
+" ---------------------------
+"		NerdTree设置
+" ---------------------------
+" 映射快捷键
+map <leader>nt :NERDTreeToggle <CR>
+
+
+" -----------------------------
+"		UndoTree设置
+" -----------------------------
+"映射快捷键
+nnoremap <leader>udt :UndotreeToggle <CR>
+" 设置undo文件的存放目录
+set undofile
+set undodir=~/.local/share/nvim/.undodir
 
 
 
