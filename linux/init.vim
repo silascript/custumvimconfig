@@ -71,6 +71,12 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	" undo查看
 	Plug 'mbbill/undotree'
 
+
+	" git相关
+	Plug 'airblade/vim-gitgutter'
+	Plug 'tpope/vim-fugitive'
+
+
 call plug#end()
 
 
@@ -140,6 +146,16 @@ nnoremap <leader>udt :UndotreeToggle <CR>
 " 设置undo文件的存放目录
 set undofile
 set undodir=~/.local/share/nvim/.undodir
+
+
+
+
+" -----------------------
+"		GitGutter设置
+" -----------------------
+" 开启gitgutter
+let g:gitgutter_enabled = 1
+
 
 
 
