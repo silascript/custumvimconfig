@@ -77,6 +77,9 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	Plug 'tpope/vim-fugitive'
 
 
+	" lorem
+	Plug 'vim-scripts/loremipsum'
+
 call plug#end()
 
 
@@ -155,6 +158,8 @@ set undodir=~/.local/share/nvim/.undodir
 " -----------------------
 " 开启gitgutter
 let g:gitgutter_enabled = 1
+
+
 
 
 

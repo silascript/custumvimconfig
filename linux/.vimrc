@@ -211,6 +211,8 @@ call plug#begin('~/.vim/plugged')
 	Plug 'airblade/vim-gitgutter'
 	Plug 'tpope/vim-fugitive'
 
+	" Lorem Ipsum
+	Plug 'vim-scripts/loremipsum'
 
 call plug#end()
 
