@@ -250,7 +250,8 @@ let g:airline_extensions = ['branch','tabline']
 let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " airline样式设置
-let g:airline_theme = 'dark'
+" let g:airline_theme = 'dark'
+let g:airline_theme = 'wombat'
 
 
 if !exists('g:airline_symbols')
