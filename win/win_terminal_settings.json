@@ -28,7 +28,8 @@
         "defaults":
         {
             // Put settings here that you want to apply to all profiles.
-            "fontFace":"JetBrainsMono Nerd Font Mono",
+            //"fontFace":"JetBrainsMono Nerd Font Mono",
+            "fontFace":"CaskaydiaCove NF",
             //"fontFace":"Cascadia Code PL",
             //"fontFace":"NotoMono Nerd Font Mono",
             //"fontFace":"YaHeiMono",
