@@ -80,6 +80,9 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	" lorem
 	Plug 'vim-scripts/loremipsum'
 
+	" html相关
+	Plug 'mattn/emmet-vim'
+
 call plug#end()
 
 

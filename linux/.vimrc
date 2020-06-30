@@ -213,6 +213,9 @@ call plug#begin('~/.vim/plugged')
 
 	" Lorem Ipsum
 	Plug 'vim-scripts/loremipsum'
+	
+	" html相关
+	Plug 'mattn/emmet-vim'
 
 call plug#end()
 
