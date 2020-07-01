@@ -127,6 +127,10 @@ set hlsearch
 " 设置输入搜索内容时实时高亮
 set incsearch
 
+" 忽略大小写
+set ignorecase
+
+
 
 
 " ----------------------

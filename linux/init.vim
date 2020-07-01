@@ -30,6 +30,11 @@ let g:gruvbox_contrast_dark='hard'
 
 
 
+" 高亮相关
+" 忽略大小写
+set ignorecase
+
+
 " vim Plug
 call plug#begin('~/.local/share/nvim/site/plugged')
 "call plug#begin('~/.local/share/nvim/plugged')
