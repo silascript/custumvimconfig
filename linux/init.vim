@@ -18,15 +18,21 @@ set noexpandtab
 " 开启真彩色
 set termguicolors
 
-colorscheme gruvbox
-" colorscheme tender
-" colorscheme one
-" colorscheme neodark
-" colorscheme NeoSolarized
-" colorscheme monokai
 
-" gruvbox theme config
-let g:gruvbox_contrast_dark='hard'
+try
+	colorscheme gruvbox
+	" colorscheme tender
+	" colorscheme one
+	" colorscheme neodark
+	" colorscheme NeoSolarized
+	" colorscheme monokai
+
+	" gruvbox theme config
+	let g:gruvbox_contrast_dark='hard'
+
+catch
+	colorscheme evening
+endtry
 
 
 

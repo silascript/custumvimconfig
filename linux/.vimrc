@@ -68,9 +68,13 @@ set showmatch
 " 设置sonokai样式
 " let g:sonokai_style = 'andromeda'
 " gruvbox是真彩配色
-colorscheme gruvbox
-let g:gruvbox_contrast_dark='hard'
-set background=dark
+try
+	colorscheme gruvbox
+	let g:gruvbox_contrast_dark='hard'
+	set background=dark
+catch
+	colorschem evening 
+endtry
 
 " 命令模式显示指令
 set showcmd
