@@ -60,11 +60,18 @@ set showmatch
 "			配色设置
 " ---------------------------
 " colorscheme tomorrow-night 
-colorscheme sonokai 
-" 设置sonokai样式
-let g:sonokai_style = 'andromeda'
+try
+	" colorscheme sonokai 
+	colorscheme gruvbox 
+	" 设置sonokai样式
+	" let g:sonokai_style = 'andromeda'
+	" 设置gruvbox样式
+	let g:gruvbox_contrast_dark='hard'
+	set background=dark
 
-
+catch
+	colorscheme evening
+endtry
 " 命令模式显示指令
 set showcmd
 
@@ -83,6 +90,7 @@ set noswapfile
 set autoindent
 set cindent
 
+set shiftwidth=4
 set tabstop=4
 set softtabstop=4
 " set shifttabstop=4
@@ -149,6 +157,8 @@ filetype off
 "syntax off
 
 call plug#begin('~/vimfiles/plugged')
+
+
 	
 	" 开始页面
 	Plug 'mhinz/vim-startify'
@@ -165,7 +175,10 @@ call plug#begin('~/vimfiles/plugged')
 
 	" sonokai配色
 	Plug 'sainnhe/sonokai'
-
+	
+	" 真彩theme
+	Plug 'morhetz/gruvbox'
+	
 	" emmet
 	Plug 'mattn/emmet-vim'
 
@@ -195,6 +208,13 @@ call plug#begin('~/vimfiles/plugged')
 
 	" 文件类型图标
 	Plug 'ryanoasis/vim-devicons'
+	
+	" Lorem Ipsum
+	Plug 'vim-scripts/loremipsum'
+
+	" git相关
+	Plug 'airblade/vim-gitgutter'
+	Plug 'tpope/vim-fugitive'
 
 
 call plug#end()
@@ -356,6 +376,11 @@ let g:indentLine_char = '┊'
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
 
 
-
+" -----------------------
+"		GitGutter设置
+" -----------------------
+" 开启gitgutter
+let g:gitgutter_enabled = 1
+ 
 
 
