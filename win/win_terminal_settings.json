@@ -29,20 +29,24 @@
         {
             // Put settings here that you want to apply to all profiles.
             //"fontFace":"JetBrainsMono Nerd Font Mono",
-            //"fontFace":"JetBrainsMono NF",
-            "fontFace":"CaskaydiaCove NF",
+            //"fontFace":"JetBrainsMono NF",       
             //"fontFace":"FiraMono NF",
+            // Cascadia Code PL 或 Cascadia Mono PL，包含 Powerline
             //"fontFace":"Cascadia Code PL",
+            "fontFace":"Cascadia Mono PL",
+            //"fontFace":"CaskaydiaCove NF",
             //"fontFace":"NotoMono Nerd Font Mono",
             //"fontFace":"YaHeiMono",
             //"fontFace":"FantasqueSansMono NF",
+            //"fontFace":"Sarasa Fixed Slab SC",
+            //"fontFace":"Sarasa Term SC",
             "fontSize" : 18,
             "initialCols" : 110,
         	  "initialRows" : 30,
 		  //"cursorShape":"filledBox",
 		  "cursorShape":"emptyBox",
 		  "useAcrylic" : true,
-		  "acrylicOpacity":0.75,
+		  "acrylicOpacity":0.70,
             "useAcrylic" : false
         },
         "list":
