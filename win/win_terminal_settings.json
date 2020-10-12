@@ -46,7 +46,7 @@
 		  //"cursorShape":"filledBox",
 		  "cursorShape":"emptyBox",
 		  "useAcrylic" : true,
-		  "acrylicOpacity":0.70,
+		  "acrylicOpacity":0.75,
             "useAcrylic" : false
         },
         "list":
@@ -75,7 +75,9 @@
                 "source": "Windows.Terminal.PowershellCore",
                 //"colorScheme":"Molokai"
                 //"colorScheme":"MaterialOcean"
-                "colorScheme":"Gruvbox-Material Hard Dark"
+                "colorScheme":"Gruvbox-Material Hard Dark",
+                "useAcrylic" : true,
+                "acrylicOpacity":0.75,
                 //"colorScheme":"BlulocoDark"
             },
             {
