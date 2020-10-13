@@ -20,6 +20,8 @@ set cursorline
 " hi cursorline cterm=NONE ctermbg=grey guibg=grey
 " hi cursorline cterm=NONE cterm=standout
 
+
+
 " 设置高亮当前列
 " set cursorcolumn
 
@@ -48,9 +50,9 @@ set showmatch
 " set gcr=n-v-c:ver25-Cursor/lCursor,ve:ver35-Cursor,o:hor50-Cursor,i-ci:ver25-Cursor/lCursor
 
 " if has("autocmd")  
-	" au InsertEnter * silent execute  
-	" au InsertLeave * silent execute
-	" au VimLeave * silent execute 
+    " au InsertEnter * silent execute  
+    " au InsertLeave * silent execute
+    " au VimLeave * silent execute 
 " endif 
 
 
@@ -168,6 +170,10 @@ call plug#begin('~/.vim/plugged')
 	
 	" 开始页面
 	Plug 'mhinz/vim-startify'
+	
+	" 光标样式切换
+	Plug 'jszakmeister/vim-togglecursor'
+
 	" vim中文文档
 	Plug 'yianwillis/vimcdoc'
 
