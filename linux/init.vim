@@ -73,6 +73,9 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	" 语法高亮增强
 	Plug 'sheerun/vim-polyglot'
 	
+	" 高亮当前单词
+	Plug 'itchyny/vim-cursorword'
+
 	" nerdtree
 	Plug 'preservim/nerdtree'
 	

@@ -185,6 +185,9 @@ call plug#begin('~/.vim/plugged')
 	" 语法高亮增强
 	Plug 'sheerun/vim-polyglot'
 	
+	" 高亮当前单词
+	Plug 'itchyny/vim-cursorword'
+
 	" sonokai配色
 	Plug 'sainnhe/sonokai'
 	" 真彩theme
@@ -265,7 +268,8 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 
 " airline样式设置
 " let g:airline_theme = 'dark'
-let g:airline_theme = 'wombat'
+" let g:airline_theme = 'wombat'
+let g:airline_theme = 'base16'
 
 
 if !exists('g:airline_symbols')
