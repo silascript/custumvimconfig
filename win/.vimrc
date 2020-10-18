@@ -72,7 +72,7 @@ try
 catch
 	colorscheme evening
 endtry
-" 命令模式显示指令
+" " 命令模式显示指令
 set showcmd
 
 
@@ -164,6 +164,9 @@ call plug#begin('~/vimfiles/plugged')
 	Plug 'mhinz/vim-startify'
 	" vim中文文档
 	Plug 'yianwillis/vimcdoc'
+
+	" 光标样式切换
+	Plug 'jszakmeister/vim-togglecursor'
 
 	" airline
 	Plug 'vim-airline/vim-airline'
