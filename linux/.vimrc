@@ -1,5 +1,5 @@
 
-" ------------------------------------ "				基础设置 " ------------------------------------ 
+" ------------------------------------  基础设置  ------------------------------------ 
 
 
 set nocompatible
@@ -32,6 +32,7 @@ set cursorline
 if has("termguicolors")
     set termguicolors
 endif
+
 
 
 " 设置当前光标与顶部和底部距离
@@ -77,6 +78,15 @@ try
 catch
 	colorschem evening 
 endtry
+
+" 开启透明背景
+" hi Normal ctermfg=252 ctermbg=none
+
+func! s:transparent_background()
+	hi Normal guibg=NONE ctermbg=NONE
+	hi NonText guibg=NONE ctermbg=NONE
+endf
+autocmd ColorScheme * call s:transparent_background()
 
 " 命令模式显示指令
 set showcmd

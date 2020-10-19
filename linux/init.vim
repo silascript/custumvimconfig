@@ -34,6 +34,12 @@ catch
 	colorscheme evening
 endtry
 
+" 开启透明背景
+func! s:transparent_background()
+    hi Normal guibg=NONE ctermbg=NONE
+    hi NonText guibg=NONE ctermbg=NONE
+endf
+autocmd ColorScheme * call s:transparent_background()
 
 
 " 高亮相关
