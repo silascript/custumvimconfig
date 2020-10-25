@@ -95,7 +95,12 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	" git相关
 	Plug 'airblade/vim-gitgutter'
 	Plug 'tpope/vim-fugitive'
-
+	
+	" snippet相关
+	" snippet调用引擎
+	Plug 'SirVer/ultisnips'
+	" snippet仓库
+	Plug 'honza/vim-snippets'
 
 	" lorem
 	Plug 'vim-scripts/loremipsum'
