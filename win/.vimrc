@@ -12,6 +12,17 @@ set nocompatible
 set backspace=indent,start
 
 
+if has('python3')
+	set pyx=3
+elseif has('python')
+	set pyx=3
+endif
+
+" 配置python相关dll路径
+set pythonthreedll=I:/Scoop/apps/python-beta/current/python38.dll
+
+
+
 " ----------------------
 "			外观
 " ----------------------
@@ -72,6 +83,8 @@ try
 catch
 	colorscheme evening
 endtry
+
+
 " " 命令模式显示指令
 set showcmd
 
@@ -212,6 +225,14 @@ call plug#begin('~/vimfiles/plugged')
 	" 文件类型图标
 	Plug 'ryanoasis/vim-devicons'
 	
+
+	" snippet相关
+	" snippet调用引擎
+	Plug 'SirVer/ultisnips'
+	" snippet仓库
+	Plug 'honza/vim-snippets'
+
+
 	" Lorem Ipsum
 	Plug 'vim-scripts/loremipsum'
 
