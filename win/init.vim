@@ -8,6 +8,14 @@ set noswapfile
 set number
 set cursorline
 
+
+" if has('python3')
+	" set pyx=3
+" elseif has('python')
+	" set pyx=3
+" endif
+
+
 " 开启真彩色
 set termguicolors
 
@@ -52,6 +60,14 @@ call plug#begin('./AppData/Local/nvim-data/site/plugged')
 
 	" NERDTree
 	Plug 'preservim/nerdtree'
+
+
+	" snippet相关
+	" snippet调用引擎
+	Plug 'SirVer/ultisnips'
+	" snippet仓库
+	Plug 'honza/vim-snippets'
+
 	
 	" lorem
 	Plug 'vim-scripts/loremipsum'
