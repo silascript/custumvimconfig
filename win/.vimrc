@@ -12,14 +12,14 @@ set nocompatible
 set backspace=indent,start
 
 
-if has('python3')
-	set pyx=3
-elseif has('python')
-	set pyx=3
-endif
+" if has('python3')
+	" set pyx=3
+" elseif has('python')
+	" set pyx=3
+" endif
 
 " 配置python相关dll路径
-set pythonthreedll=I:/Scoop/apps/python-beta/current/python38.dll
+set pythonthreedll=I:/Scoop/apps/python38/current/python38.dll
 
 
 
