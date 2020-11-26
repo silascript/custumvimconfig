@@ -7,7 +7,8 @@ set nocompatible
 " 格键设置
 " set backspace=indent,eol,start
 " 如果设置了eol就会删除行开头时，下一行会提上来
-set backspace=indent,start
+" set backspace=indent,start
+set backspace=indent,eol,start
 
 
 " ----------------------
@@ -288,25 +289,13 @@ let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 " let g:airline_theme = 'wombat'
 let g:airline_theme = 'base16'
 
+" 使用powerline font
+" let g:airline_powerline_fonts=1
 
 if !exists('g:airline_symbols')
    let g:airline_symbols = {}
 endif
 
-" 使用powerline font
-let g:airline_powerline_fonts=1
-
-
-
-let g:airline_left_sep = '▶'
-let g:airline_right_sep = '◀'
-" let g:airline_left_sep = '»'
-" let g:airline_right_sep = '«'
-let g:airline_symbols.linenr = '☰'
-
-
-
-" powerline font
 
 let g:airline_left_sep = ''
 let g:airline_right_sep = ''
@@ -318,7 +307,15 @@ let g:airline_symbols.maxlinenr = ''
 let g:airline_symbols.branch = ''
 
 let g:airline_symbols.readonly = ''
-let g:airline_symbols.linenr = '☰'
+" let g:airline_symbols.linenr = '☰'
+
+
+" unicode symbols
+" let g:airline_left_sep = '▶'
+" let g:airline_right_sep = '◀'
+" let g:airline_left_sep = '»'
+" let g:airline_right_sep = '«'
+" let g:airline_symbols.linenr = '☰'
 
 
 " -----------------------------
@@ -408,7 +405,6 @@ filetype indent on
 let g:indentLine_char = '┊'
 " 可以使用不同层次不同的字符
 " let g:indentLine_char_list = ['|', '¦', '┆', '┊']
-
 
 
 " -----------------------
