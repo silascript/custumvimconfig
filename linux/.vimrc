@@ -137,7 +137,6 @@ syntax on
 "		 搜索
 " ----------------------
 set showmatch
-set smartcase
 
 " 高亮查找匹配
 set hlsearch
@@ -147,7 +146,8 @@ set incsearch
 " 忽略大小写
 set ignorecase
 
-
+" 如果有一个或以上字母时仍大小写敏感
+set smartcase
 
 
 " ----------------------
@@ -248,6 +248,13 @@ call plug#begin('~/.vim/plugged')
 
 	" Lorem Ipsum
 	Plug 'vim-scripts/loremipsum'
+	
+	
+	" tag相关
+	Plug 'preservim/tagbar'
+
+
+
 
 call plug#end()
 
@@ -413,7 +420,11 @@ let g:indentLine_char = '┊'
 " 开启gitgutter
 let g:gitgutter_enabled = 1
 
-
+" -----------------------
+"		TagBar设置
+" -----------------------
+nmap <Leader>tb :TagbarToggle<CR>
+let g:tagbar_width=25
 
 
 

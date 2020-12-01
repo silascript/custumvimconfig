@@ -108,6 +108,11 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	" html相关
 	Plug 'mattn/emmet-vim'
 
+
+	" tagbar
+	Plug 'preservim/tagbar'
+
+
 call plug#end()
 
 
@@ -189,7 +194,11 @@ let g:gitgutter_enabled = 1
 
 
 
-
+" -----------------------
+" 		tagbar设置
+" -----------------------
+nmap <Leader>tb :TagbarToggle<CR>
+let g:tagbar_width=25
 
 
 
