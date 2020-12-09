@@ -11,6 +11,12 @@ set nocompatible
 set backspace=indent,eol,start
 
 
+
+" UltiSnips插件相关
+" let g:UltiSnipsUsePythonVersion=3
+
+
+
 " ----------------------
 "			外观
 " ----------------------
@@ -242,7 +248,14 @@ call plug#begin('~/.vim/plugged')
 
 	" snippet相关
 	" snippet调用引擎
-	Plug 'SirVer/ultisnips'
+	" ultisnips需要依赖特定的python版本--特别恶心
+	" Plug 'SirVer/ultisnips'
+	
+	"snipmate 引擎	
+	Plug 'MarcWeber/vim-addon-mw-utils'
+	Plug 'tomtom/tlib_vim'
+	Plug 'garbas/vim-snipmate'
+
 	" snippet仓库
 	Plug 'honza/vim-snippets'
 
