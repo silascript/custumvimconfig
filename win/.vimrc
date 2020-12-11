@@ -19,7 +19,7 @@ set backspace=indent,start
 " endif
 
 " 配置python相关dll路径
-set pythonthreedll=I:/Scoop/apps/python38/current/python38.dll
+" set pythonthreedll=I:/Scoop/apps/python38/current/python38.dll
 
 
 
@@ -228,7 +228,14 @@ call plug#begin('~/vimfiles/plugged')
 
 	" snippet相关
 	" snippet调用引擎
-	Plug 'SirVer/ultisnips'
+	" ultisnips需要依赖python，而且是特定版本，太恶心
+	" Plug 'SirVer/ultisnips'
+	"
+	"snipmate 引擎	
+	Plug 'MarcWeber/vim-addon-mw-utils'
+	Plug 'tomtom/tlib_vim'
+	Plug 'garbas/vim-snipmate'
+	
 	" snippet仓库
 	Plug 'honza/vim-snippets'
 
