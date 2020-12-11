@@ -98,7 +98,14 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	
 	" snippet相关
 	" snippet调用引擎
-	Plug 'SirVer/ultisnips'
+	" ultisnips 需要依赖python，而且是依赖特定版本，很恶心
+	" Plug 'SirVer/ultisnips'
+	
+	"snipmate 引擎	
+	Plug 'MarcWeber/vim-addon-mw-utils'
+	Plug 'tomtom/tlib_vim'
+	Plug 'garbas/vim-snipmate'
+
 	" snippet仓库
 	Plug 'honza/vim-snippets'
 
