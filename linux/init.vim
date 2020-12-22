@@ -51,6 +51,10 @@ set ignorecase
 call plug#begin('~/.local/share/nvim/site/plugged')
 "call plug#begin('~/.local/share/nvim/plugged')
 
+
+	" 开始页面
+	Plug 'mhinz/vim-startify'
+
 	" 注释插件
 	Plug 'preservim/nerdcommenter'
 
@@ -75,6 +79,11 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
 	" 环绕符号
 	Plug 'tpope/vim-surround'
+	
+	" 快速选择括号中的元素
+	Plug 'wellle/targets.vim'
+	" 元素快速交换
+	Plug 'tommcdo/vim-exchange'
 
 	" 语法高亮增强
 	Plug 'sheerun/vim-polyglot'

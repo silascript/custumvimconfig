@@ -234,6 +234,11 @@ call plug#begin('~/.vim/plugged')
 
 	" 添加环绕符号 
 	Plug 'tpope/vim-surround'
+	
+	" 快速选择括号中的元素
+	Plug 'wellle/targets.vim'
+	" 元素快速交换
+	Plug 'tommcdo/vim-exchange'
 
 	" 缩进线
 	Plug 'Yggdroot/indentLine'
@@ -261,7 +266,6 @@ call plug#begin('~/.vim/plugged')
 
 	" Lorem Ipsum
 	Plug 'vim-scripts/loremipsum'
-	
 	
 	" tag相关
 	Plug 'preservim/tagbar'
