@@ -216,5 +216,12 @@ let g:gitgutter_enabled = 1
 nmap <Leader>tb :TagbarToggle<CR>
 let g:tagbar_width=25
 
+" -----------------------
+" 		SnipMate设置
+" -----------------------
+let g:snipMate = {'snippet_version' : 1}
+
+
+
 
 
