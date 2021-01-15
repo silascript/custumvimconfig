@@ -444,4 +444,8 @@ let g:indentLine_char = '┊'
 let g:gitgutter_enabled = 1
  
 
+" -----------------------
+"		SnipMate设置
+" -----------------------
+let g:snipMate = {'snippet_version' : 1}
 

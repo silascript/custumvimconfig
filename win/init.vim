@@ -128,3 +128,8 @@ map <leader>nt  :NERDTreeToggle <CR>
 
 
 
+" SnipMate设置
+let g:snipMate = {'snippet_version' : 1}
+
+
+
