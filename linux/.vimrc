@@ -270,7 +270,8 @@ call plug#begin('~/.vim/plugged')
 	" tag相关
 	Plug 'preservim/tagbar'
 
-
+	" Rust相关
+	Plug 'rust-lang/rust.vim'
 
 
 call plug#end()

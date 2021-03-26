@@ -127,6 +127,9 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
 	" tagbar
 	Plug 'preservim/tagbar'
+	
+	" Rust相关
+	Plug 'rust-lang/rust.vim'
 
 
 call plug#end()
