@@ -123,6 +123,12 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
 	" html相关
 	Plug 'mattn/emmet-vim'
+	
+	" css	
+	Plug 'ap/vim-css-color'	
+
+	" XML相关
+	Plug 'othree/xml.vim'
 
 
 	" tagbar

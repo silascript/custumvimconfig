@@ -213,6 +213,10 @@ call plug#begin('~/.vim/plugged')
 
 	" emmet
 	Plug 'mattn/emmet-vim'
+	
+	" css
+	Plug 'ap/vim-css-color'	
+
 
 	" 快速注释
 	Plug 'scrooloose/nerdcommenter'
@@ -267,11 +271,15 @@ call plug#begin('~/.vim/plugged')
 	" Lorem Ipsum
 	Plug 'vim-scripts/loremipsum'
 	
+	" XML相关
+	Plug 'othree/xml.vim'
+
 	" tag相关
 	Plug 'preservim/tagbar'
 
 	" Rust相关
 	Plug 'rust-lang/rust.vim'
+
 
 
 call plug#end()
