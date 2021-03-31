@@ -3,17 +3,66 @@ snippet xml
 	<?xml version="1.0" encoding="UTF-8"?>
 # ELEMENT
 snippet el
-	<!ELEMENT ${1:} ${2}>
+	<!ELEMENT ${1} ${2}>
 
 # ELEMENT ANY
 snippet ela
-	<!ELEMENT ${1:} ANY>
+	<!ELEMENT ${1} ANY>
 
 # ELEMENT EMPTY
 snippet ele
-	<!ELEMENT ${1:} EMPTY>
+	<!ELEMENT ${1} EMPTY>
 
+# ELEMENT PCDATA
+snippet elp
+	<!ELEMENT ${1} (#PCDATA)>
+
+# ELEMENT PCDATA Mix
+snippet elx
+	<!ELEMENT ${1} (#PCDATA | ${2})>
 # ATTLIST
-snippet att
+snippet at
 	<!ATTLIST ${1} ${2} >
+
+# ATTLIST REQUIRED
+snippet atr
+	<!ATTLIST ${1} ${2} ${3} #REQUIRED>
+
+# ATTLIST IMPLIED
+snippet ati
+	<!ATTLIST ${1} ${2} ${3} #IMPLIED>
+
+# ATTLIST FIXED
+snippet atf
+	<!ATTLIST ${1} ${2} ${3} #FIXED>
+
+# ATTLIST NOTATION
+snippet atn
+	<!ATTLIST ${1} ${2} NOTATION (${3}) #${4} "${5}">
+
+# ENTITY
+snippet ent
+	<!ENTITY ${1} "${2}">
+
+# ENTITY Arguments
+snippet ena
+	<!ENTITY % ${1} "${2}">
+
+# ENTITY Out SYSTEM 
+snippet enos
+	<!ENTITY ${1} SYSTEM "${2}">
+
+# ENTITY Out PUBLIC
+snippet enop
+	<!ENTITY ${1} PUBLIC "${2}">
+
+# NOTATION
+snippet nos
+	<!NOTATION ${1} SYSTEM "${2}">
+
+# NOTATION PUBLIC
+snippet nop
+	<!NOTATION ${1} PUBLIC "${2}">
+
+
 
