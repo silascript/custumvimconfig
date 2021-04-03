@@ -1,0 +1,14 @@
+
+BasedOnStyle: Google
+# BasedOnStyle: LLVM
+# BasedOnStyle: Microsoft
+IndentWidth: 4
+TabWidth: 4
+# UseTab: Always
+UseTab: AlignWithSpaces
+AllowShortFunctionsOnASingleLine: Empty
+AllowShortBlocksOnASingleLine: Empty
+AlignConsecutiveAssignments: true
+# AlignConsecutiveDeclarations: true
+
+
