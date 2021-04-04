@@ -76,6 +76,9 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 
 	" 自动成对标点符号
 	Plug 'jiangmiao/auto-pairs'
+	
+	" 彩虹括号
+	Plug 'luochen1990/rainbow'
 
 	" 环绕符号
 	Plug 'tpope/vim-surround'
@@ -175,6 +178,17 @@ let g:airline_theme='wombat'
 " let g:airline_theme='onedark'
 " let g:airline_theme='gruvbox'
 
+
+" -----------------------------------------------
+"					彩虹括号
+" -----------------------------------------------
+" 激活插件
+let g:rainbow_active = 1
+" 颜色设置
+let g:rainbow_conf = {
+	\	'guifgs': ['SlateGray1','MistyRose1', 'PaleGreen3', 'LightGoldenrod1', 'Honeydew1', 'Salmon1'],
+	\	'ctermfgs': ['lightblue', 'lightyellow', 'lightcyan', 'lightmagenta']
+\	}
 
 
 " ---------------------------------------------------------

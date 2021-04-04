@@ -224,7 +224,7 @@ call plug#begin('~/.vim/plugged')
 	" 自动括号
 	Plug 'jiangmiao/auto-pairs'
 	" 彩虹括号
-	" Plug 'luochen1990/rainbow'
+	Plug 'luochen1990/rainbow'
 	
 
 	" nerdtree
@@ -280,6 +280,7 @@ call plug#begin('~/.vim/plugged')
 	" Rust相关
 	Plug 'rust-lang/rust.vim'
 	
+
 	" format
 	Plug 'google/vim-maktaba'
 	Plug 'google/vim-codefmt'
@@ -396,8 +397,13 @@ set undofile
 "			彩虹括号
 " -----------------------------
 " 启用或关闭彩虹括号
-" let g:rainbow_active = 1
+let g:rainbow_active = 1
 " let g:rainbow_active = 0
+" 配色
+let g:rainbow_conf = {
+\	'guifgs': ['SlateGray1','MistyRose1', 'PaleGreen3', 'LightGoldenrod1', 'Honeydew1', 'Salmon1'],
+\	'ctermfgs': ['lightgreen', 'lightyellow', 'lightcyan', 'lightmagenta']
+\	}
 
 
 " ----------------------------------------
