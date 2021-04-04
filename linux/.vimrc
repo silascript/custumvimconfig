@@ -279,7 +279,10 @@ call plug#begin('~/.vim/plugged')
 
 	" Rust相关
 	Plug 'rust-lang/rust.vim'
-
+	
+	" format
+	Plug 'google/vim-maktaba'
+	Plug 'google/vim-codefmt'
 
 
 call plug#end()
