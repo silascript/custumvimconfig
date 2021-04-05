@@ -145,6 +145,11 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	Plug 'google/vim-maktaba'
 	Plug 'google/vim-codefmt',{'on':['FormatCode','FormatLines']}
 
+
+	" Preview
+	Plug 'shime/vim-livedown',{'on':['LivedownPreview','LivedownToggle','LivedownKill']}
+
+
 call plug#end()
 
 

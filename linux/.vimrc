@@ -278,12 +278,13 @@ call plug#begin('~/.vim/plugged')
 
 	" Rust相关
 	Plug 'rust-lang/rust.vim',{'for':'rust'}
-	
 
 	" format
 	Plug 'google/vim-maktaba'
 	Plug 'google/vim-codefmt',{'on':['FormatCode','FormatLines']}
-
+	
+	" Preview
+	Plug 'shime/vim-livedown',{'on':['LivedownPreview','LivedownToggle','LivedownKill']}
 
 call plug#end()
 
