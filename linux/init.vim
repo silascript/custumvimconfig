@@ -145,6 +145,8 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	Plug 'google/vim-maktaba'
 	Plug 'google/vim-codefmt',{'on':['FormatCode','FormatLines']}
 
+	" markdown
+	Plug 'masukomi/vim-markdown-folding'
 
 	" Preview
 	Plug 'shime/vim-livedown',{'on':['LivedownPreview','LivedownToggle','LivedownKill']}
@@ -255,5 +257,9 @@ let g:snipMate = {'snippet_version' : 1}
 
 
 
-
+" -----------------------
+"   vim-markdown-fold
+" -----------------------
+let g:markdown_fold_style = 'nested'
+set foldlevel=3
 

@@ -173,7 +173,8 @@ set wildmenu
 nmap <C-b>n :bnext<CR>
 nmap <C-b>p :bprev<CR>
 
-
+" let g:polyglot_disabled = ['markdown']
+" let g:polyglot_disabled = ['markdown.plugin']
 
 " ---------------------------
 "		vim-Plug 配置
@@ -283,6 +284,10 @@ call plug#begin('~/.vim/plugged')
 	Plug 'google/vim-maktaba'
 	Plug 'google/vim-codefmt',{'on':['FormatCode','FormatLines']}
 	
+
+	" Plug 'plasticboy/vim-markdown'
+	Plug 'masukomi/vim-markdown-folding'	
+
 	" Preview
 	Plug 'shime/vim-livedown',{'on':['LivedownPreview','LivedownToggle','LivedownKill']}
 
@@ -354,6 +359,11 @@ let g:airline_symbols.readonly = ''
 " let g:airline_right_sep = '«'
 " let g:airline_symbols.linenr = '☰'
 
+" -----------------------------
+"		自动符号设置
+" -----------------------------
+
+
 
 " -----------------------------
 " nerdcommenter 设置
@@ -417,6 +427,14 @@ filetype on
 filetype plugin on
 filetype indent on
 
+" 设置折叠
+" set foldenable 
+" set nofoldenable 
+
+" set foldmethod=syntax
+
+" ft-markdown
+" let g:markdown_folding = 1
 
 " ---------------------------------------------------------
 "						 surround使用
@@ -466,5 +484,35 @@ let g:tagbar_width=25
 "		SnipMate设置
 " ------------------------
 let g:snipMate = {'snippet_version' : 1}
+
+
+" ------------------------
+"		Polyglot设置
+" ------------------------
+
+" vim-markdown
+" markdown conceal 级别
+" set conceallevel=0
+" markdown conceal 禁用
+let g:vim_markdown_conceal = 0
+" markdown 代码块 conceal 禁用
+let g:vim_markdown_conceal_code_blocks = 0 
+" markdown 折叠
+" 开启或禁用vim-markdown折叠功能
+" 0:开启 1:禁用
+" let g:vim_markdown_folding_disabled = 0
+" 1-6 级别 没有指定默认是1
+" let g:vim_markdown_folding_level = 3
+" let g:vim_markdown_folding_style_pythonic = 0
+" let g:vim_markdown_override_foldtext = 1
+
+
+" ------------------------
+"	vim-markdown-folding
+" ------------------------
+let g:markdown_fold_style = 'nested'
+set foldlevel=3
+
+
 
 
