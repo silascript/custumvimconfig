@@ -125,25 +125,25 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	Plug 'vim-scripts/loremipsum'
 
 	" html相关
-	Plug 'mattn/emmet-vim'
+	Plug 'mattn/emmet-vim',{'for':'html'}
 	
 	" css	
-	Plug 'ap/vim-css-color'	
+	Plug 'ap/vim-css-color',{'for':['html','css']}	
 
 	" XML相关
-	Plug 'othree/xml.vim'
+	Plug 'othree/xml.vim',{'for':'xml'}
 
 
 	" tagbar
 	Plug 'preservim/tagbar'
 	
 	" Rust相关
-	Plug 'rust-lang/rust.vim'
+	Plug 'rust-lang/rust.vim',{'for':'rust'}
 
 	"format
 	"
 	Plug 'google/vim-maktaba'
-	Plug 'google/vim-codefmt'
+	Plug 'google/vim-codefmt',{'on':['FormatCode','FormatLines']}
 
 call plug#end()
 
