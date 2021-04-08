@@ -60,9 +60,11 @@ set shortmess+=c
 " 弹窗延迟设置
 let ncm2#popup_delay = 5
 
+" 匹配
+let g:ncm2#matcher = 'substrfuzzy'
+
 " 补全结束或离开插入模式时，关闭预览窗口
 autocmd InsertLeave,CompleteDone * if pumvisible() == 0 | pclose | endif
-
 
 " inoremap <expr> <CR> (pumvisible() ? "\<c-y>\<cr>" : "\<CR>")
 " inoremap <c-c> <ESC>
@@ -72,32 +74,25 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 " 注册补全源
 " 定义一个源
-let g:lc_source = {
-	\ 'name': 'lc',
-	\ 'complete_length': 1,
-	\ 'scope':['c','cpp','python'],
-	\ 'mark':'LCS',
-	\ 'on_complete': 'LanguageClient_NCM2OnComplete'
-\ }
-
-" let g:python_source = {
-"	\ 'name': 'c',
-"	\ 'complete_length': 1,
-"	\ 'scope':['python'],
-"	\ 'mark':'LC-Python',
-"	\ 'on_complete': 'LanguageClient_NCM2OnComplete'
-"\ }
+" let g:lc_source = {
+"	\ 'name': 'lc',
+" 	\ 'complete_length': 1,
+" 	\ 'scope':['c','cpp','python'],
+" 	\ 'mark':'LCS',
+" 	\ 'on_complete': 'LanguageClient_NCM2OnComplete'
+" \ }
 
 
 " 注册源
 " au User Ncm2Plugin call ncm2#register_source(g:lc_source)
 
+" -------------------------------------------------
+
 " LCP 配置
-let g:LanguageClient_serverCommands = {
-    \ 'c': ['clangd'],
-    \ 'cpp': ['clangd'],
-    \ 'python': ['pyls'],
-	\ 'javascript': ['typescript-language-server','stdio']
+ let g:LanguageClient_serverCommands = {
+     \ 'c': ['clangd'],
+     \ 'cpp': ['clangd'],
+     \ 'python': ['pyls'],
     \ }
 
 

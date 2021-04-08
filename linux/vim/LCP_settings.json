@@ -1,0 +1,7 @@
+{
+	"clangd":{
+		"completion-style": bundled,
+		//"completion-style": detailed,
+		"header-insertion": never
+	}
+}
