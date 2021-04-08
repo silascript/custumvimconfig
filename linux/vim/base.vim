@@ -64,8 +64,6 @@ set showmatch
 " endif 
 
 
-
-
 " 字体
 " 给gvim用的，在termnilal下是terminal本身字体所决定vim是什么字体
 " set gfn=YaHeiMono:h20
@@ -132,7 +130,6 @@ set fileencodings=utf-8,gbk,gb18030,gb2312,ucs-bom,cp936,big5,euc-jp,euc-kr,shif
 
 " 设置双字宽
 " set ambiwidth=double
-
 
 " ----------------------
 "		 语法高亮

@@ -18,6 +18,19 @@ call plug#begin('~/.vim/plugged')
 call plug#end()
 
 
+" ----------------------------------------
+"				其他设置
+" ----------------------------------------
+
+
+" 开启文件类型
+syntax on
+filetype on
+filetype plugin on
+filetype indent on
+
+
+
 " ----------------------------------
 "			插件设置
 " ----------------------------------
@@ -183,17 +196,6 @@ xmap <leader>x  <Plug>(coc-convert-snippet)
 
 
 
-
-" ----------------------------------------
-"				其他设置
-" ----------------------------------------
-
-
-" 开启文件类型
-syntax on
-filetype on
-filetype plugin on
-filetype indent on
 
 
 
