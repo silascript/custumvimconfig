@@ -165,5 +165,8 @@ set autoread
 " 命令行提示
 set wildmenu
 
-
+"--------------------------------
+"	禁止注释行回车自动添加注释
+"--------------------------------
+autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
 
