@@ -54,5 +54,33 @@ let g:airline_symbols.branch = ''
 let g:airline_symbols.readonly = ''
 
 
+" ----------------------------
+"		 startify设置
+" ----------------------------
+let g:startify_files_number = 8
+let g:startify_custom_header =[
+	\		'+------------------------------+',  
+	\		'|  GoodLuck!!!				    |',  
+	\		'|                              |',  
+	\		'+----------------+-------------+',  
+	\ ] 
+
+
+
+" -----------------------------
+"			彩虹括号
+" -----------------------------
+" 启用或关闭彩虹括号
+let g:rainbow_active = 1
+" let g:rainbow_active = 0
+" 配色
+let g:rainbow_conf = {
+\	'guifgs': ['SlateGray1','MistyRose1', 'PaleGreen3', 'LightGoldenrod1', 'Honeydew1', 'Salmon1'],
+\	'ctermfgs': ['lightgreen', 'lightyellow', 'lightcyan', 'lightmagenta']
+\	}
+
+
+
+
 
 
