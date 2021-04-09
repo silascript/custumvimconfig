@@ -1,0 +1,25 @@
+
+{
+	//	"languageserver": {
+	//		"clangd":{
+	//		"command": "clangd",
+	//		"filetypes": ["c","cpp"]
+	//	}
+
+	//},
+
+    "html-css-support.enabledLanguages": [
+        "html",
+        "vue",
+        "blade"
+    ],
+
+	//coc-explorer
+	"explorer.width": 30,
+	"explorer.icon.enableNerdfont":true
+
+}
+
+
+
+

@@ -18,6 +18,9 @@ call plug#begin('~/.vim/plugged')
 	" 快速注释
 	Plug 'scrooloose/nerdcommenter'
 	
+	" 添加环绕符号 
+	Plug 'tpope/vim-surround'
+
 	" undo
 	Plug 'mbbill/undotree'
 	
@@ -82,7 +85,7 @@ filetype indent on
  "let g:vimspector_enable_mappings = 'HUMAN'
 
 " coc 通用配置
-source ~/.vim/configs/conf_coc_common.vim
+source ~/.vim/configs/conf/conf_coc_all.vim
 
 " coc 插件设置
 let g:coc_global_extensions = ['coc-json', 'coc-git']
@@ -90,7 +93,7 @@ let g:coc_global_extensions = ['coc-json', 'coc-git']
 " 高亮插件
 autocmd CursorHold * silent call CocActionAsync('highlight')
 
-" 
+"
 " nmap <leader>cjds :CocCommand java.debug.vimspector.start<CR>
 
 
