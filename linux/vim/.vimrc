@@ -4,7 +4,7 @@
 
 " 基础配置
 source ~/.vim/configs/basic.vim
-" 非coc插件快捷键映射配置
+" 非插件快捷键映射配置
 source ~/.vim/configs/keymaps/keymaps_common.vim
 "source ~/.vim/configs/keymaps.vim
 " source ~/.vim/configs/plugins_new.vim
@@ -18,4 +18,9 @@ source ~/.vim/configs/conf/conf_plugins_common.vim
 
 " 插件快捷键配置
 source ~/.vim/configs/keymaps/keymaps_plugins.vim
+
+" coc快捷键
+source ~/.vim/configs/keymaps/keymaps_coc_basic.vim
+source ~/.vim/configs/keymaps/keymaps_coc_plugins.vim
+
 
