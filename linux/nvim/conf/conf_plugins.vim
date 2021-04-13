@@ -1,115 +1,7 @@
 
-
-" -----------------------------------------
-" 				插件
-" -----------------------------------------
-
-" vim Plug
-call plug#begin('~/.local/share/nvim/site/plugged')
-"call plug#begin('~/.local/share/nvim/plugged')
-
-
-	" 开始页面
-	Plug 'mhinz/vim-startify'
-
-	" 注释插件
-	Plug 'preservim/nerdcommenter'
-
-	" theme
-	" 支持真彩色的theme
-	Plug 'morhetz/gruvbox'
-	Plug 'jacoborus/tender.vim'
-	Plug 'rakr/vim-one'
-	Plug 'KeitaNakamura/neodark.vim'
-	Plug 'iCyMind/NeoSolarized'
-	Plug 'crusoexia/vim-monokai'
-	
-	" airline
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-	
-	" 文件类型图标
-	Plug 'ryanoasis/vim-devicons'
-
-	" 自动成对标点符号
-	Plug 'jiangmiao/auto-pairs'
-	
-	" 彩虹括号
-	Plug 'luochen1990/rainbow'
-
-	" 环绕符号
-	Plug 'tpope/vim-surround'
-	
-	" 快速选择括号中的元素
-	Plug 'wellle/targets.vim'
-	" 元素快速交换
-	Plug 'tommcdo/vim-exchange'
-
-	" 语法高亮增强
-	Plug 'sheerun/vim-polyglot'
-	
-	" 高亮当前单词
-	Plug 'itchyny/vim-cursorword'
-
-	" nerdtree
-	Plug 'preservim/nerdtree'
-	
-	" motion
-	Plug 'easymotion/vim-easymotion'
-
-	" undo查看
-	Plug 'mbbill/undotree'
-
-
-	" git相关
-	Plug 'airblade/vim-gitgutter'
-	Plug 'tpope/vim-fugitive'
-	
-	" snippet相关
-	" snippet调用引擎
-	" ultisnips 需要依赖python，而且是依赖特定版本，很恶心
-	" Plug 'SirVer/ultisnips'
-	
-	"snipmate 引擎	
-	Plug 'MarcWeber/vim-addon-mw-utils'
-	Plug 'tomtom/tlib_vim'
-	Plug 'garbas/vim-snipmate'
-
-	" snippet仓库
-	Plug 'honza/vim-snippets'
-
-	" lorem
-	Plug 'vim-scripts/loremipsum'
-
-	" html相关
-	Plug 'mattn/emmet-vim',{'for':'html'}
-	
-	" css	
-	Plug 'ap/vim-css-color',{'for':['html','css']}	
-
-	" XML相关
-	Plug 'othree/xml.vim',{'for':'xml'}
-
-
-	" tagbar
-	Plug 'preservim/tagbar'
-	
-	" Rust相关
-	Plug 'rust-lang/rust.vim',{'for':'rust'}
-
-	"format
-	"
-	Plug 'google/vim-maktaba'
-	Plug 'google/vim-codefmt',{'on':['FormatCode','FormatLines']}
-
-	" markdown
-	Plug 'masukomi/vim-markdown-folding'
-
-	" Preview
-	Plug 'shime/vim-livedown',{'on':['LivedownPreview','LivedownToggle','LivedownKill']}
-
-
-call plug#end()
+" ==========================================================
+" 						插件配置
+" ==========================================================
 
 
 " ===================
@@ -173,24 +65,12 @@ let g:rainbow_conf = {
 " ---------------------------------------------------------
 
 
-
-" ---------------------------
-"		NerdTree设置
-" ---------------------------
-" 映射快捷键
-map <leader>nt :NERDTreeToggle <CR>
-
-
 " -----------------------------
 "		UndoTree设置
 " -----------------------------
-"映射快捷键
-nnoremap <leader>udt :UndotreeToggle <CR>
 " 设置undo文件的存放目录
 set undofile
 set undodir=~/.local/share/nvim/.undodir
-
-
 
 
 " -----------------------
@@ -200,19 +80,15 @@ set undodir=~/.local/share/nvim/.undodir
 let g:gitgutter_enabled = 1
 
 
-
 " -----------------------
 " 		tagbar设置
 " -----------------------
-nmap <Leader>tb :TagbarToggle<CR>
 let g:tagbar_width=25
 
 " -----------------------
 " 		SnipMate设置
 " -----------------------
 let g:snipMate = {'snippet_version' : 1}
-
-
 
 " -----------------------
 "   vim-markdown-fold
