@@ -3,11 +3,13 @@
 "			与coc相关的命令
 " -------------------------------------
 
-" :function Opencocexplorer()
-" 
-" 
-" :endfunction
+function Showinfo()
+	
+	" print 'hello'
+
+endfunction
 
 
-:command OpenCocE call explorer_cur_dir() 
+
+:command OpenCE call Showinfo()  
 

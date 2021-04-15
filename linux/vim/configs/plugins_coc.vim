@@ -9,58 +9,15 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 	
-	" 光标样式切换
-	Plug 'jszakmeister/vim-togglecursor'
-
-	" 高亮光标所在词
-	Plug 'itchyny/vim-cursorword'
-
-	" 快速注释
-	Plug 'scrooloose/nerdcommenter'
+	source ~/.vim/configs/plugins/plugins_basice.vim
 	
-	" 添加环绕符号 
-	Plug 'tpope/vim-surround'
+	source ~/.vim/configs/plugins/plugins_themes.vim
 
-	" undo
-	Plug 'mbbill/undotree'
-	
-	"-----------------------------
-
-	" 开始页面
-	Plug 'mhinz/vim-startify'
-	
-
-	" sonokai配色
-	Plug 'sainnhe/sonokai'
-	" 真彩theme
-	Plug 'morhetz/gruvbox'
-
-	" 彩虹括号
-	Plug 'luochen1990/rainbow'
-	
-	" airline
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
-
-	" 文件类型图标
-	" 要在airline之后
-	Plug 'ryanoasis/vim-devicons'
-
-
-
-	"-----------------------------
-
-	" 图形界面debug插件
-	" Plug 'puremourning/vimspector'
-	
-	" snippet 库
-	Plug 'honza/vim-snippets'
-	
-	" Lorem Ipsum
-	Plug 'vim-scripts/loremipsum'
+	source ~/.vim/configs/plugins/plugins_display.vim
 
 	" coc
 	Plug 'neoclide/coc.nvim', {'branch': 'release'}	
+	
 
 call plug#end()
 
@@ -95,6 +52,5 @@ autocmd CursorHold * silent call CocActionAsync('highlight')
 
 "
 " nmap <leader>cjds :CocCommand java.debug.vimspector.start<CR>
-
 
 
