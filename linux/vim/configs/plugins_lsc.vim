@@ -30,6 +30,11 @@ call plug#begin('~/.vim/plugged')
 	" lsc
 	Plug 'natebosch/vim-lsc'
 	
+	" 补全框架
+	source ~/.vim/configs/plugins/plugins_complete.vim
+
+	" linter
+	source ~/.vim/configs/plugins/plugins_linter.vim
 
 	" markdown 插件
 	source ~/.vim/configs/plugins/plugins_markdown.vim
@@ -53,20 +58,16 @@ filetype indent on
 "			插件设置
 " ----------------------------------
 
-autocmd CompleteDone * silent! pclose
+" vim-lsc 配置
+source ~/.vim/configs/conf/conf_plugins_lsc.vim
 
-" 为语言指定lsp
-let g:lsc_server_commands = {'c':'clangd'}
-let g:lsc_server_commands = {'java': 'jdtls'}
-let g:lsc_server_commands = {'python':'pyls'}
+" linter 插件配置
+source ~/.vim/configs/conf/conf_plugins_linter.vim
 
 
-let g:lsc_enable_autocomplete  = v:true
-" let g:lsc_enable_diagnostics   = v:false
-" let g:lsc_reference_highlights = v:false
+" deoplete 配置
+source ~/.vim/configs/conf/conf_plugins_deoplete.vim
 
-" let g:lsc_auto_map = v:true
 
-set completeopt=menu,menuone,noinsert,noselect
 
 

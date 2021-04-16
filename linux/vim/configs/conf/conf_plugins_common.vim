@@ -65,11 +65,15 @@ endif
 let s:aleresult= commands_basic#ExistPlug('vim-airline/vim-airline')
 if s:aleresult==1
 	" let g:airline#extensions#tabline#enabled = 1
-	let g:airline_extensions = ['branch','tabline']
-
+	let s:aleresult = commands_basic#ExistPlug('dense-analysis/ale')
+	if s:aleresult ==? 1
+		let g:airline_extensions = ['branch','tabline','ale']
+	else
+		let g:airline_extensions = ['branch','tabline']
+	endif
 	" buffer文件名及路径显示格式
 	let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-
+	
 	" airline样式设置
 	" let g:airline_theme = 'dark'
 	" let g:airline_theme = 'wombat'

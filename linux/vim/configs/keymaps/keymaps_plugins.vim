@@ -22,8 +22,8 @@
 
 let s:cocoresult=commands_basic#ExistPlug('lfilho/cosco.vim')
 if s:cocoresult ==? 1
-	autocmd FileType c,cpp,java,javascript,css,dart nmap <silent> <Leader>; <Plug>(cosco-commaOrSemiColon)
-	autocmd FileType c,cpp,java,javascript,css,dart imap <silent> <Leader>; <c-o><Plug>(cosco-commaOrSemiColon)
+	autocmd FileType c,cpp,java,javascript,css,rust,dart nmap <silent> <Leader>; <Plug>(cosco-commaOrSemiColon)
+	autocmd FileType c,cpp,java,javascript,css,rust,dart imap <silent> <Leader>; <c-o><Plug>(cosco-commaOrSemiColon)
 
 endif
 
@@ -37,5 +37,15 @@ if s:udtresult ==? 1
 endif
 
 
+" -----------------------------
+"		deoplete key
+" -----------------------------
+let s:deoplresult=commands_basic#ExistPlug('Shougo/deoplete.nvim')
+if s:deoplresult ==? 1
+	inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+	inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+	inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+
+endif
 
 
