@@ -1,7 +1,7 @@
 
 " ----------------------------------------
 "				补全插件集
-"				deoplete + vim-lsp	
+"				coc 简配版	
 " ----------------------------------------
 
 " 关闭缩进及语法高亮
@@ -10,10 +10,8 @@ filetype off
 
 call plug#begin('~/.vim/plugged')
 	
-	" vim-lsp
-	" source ~/.vim/configs/plugins
 
-	" deoplete
+	" coc
 	" source ~/.vim/configs/plugins
 
 call plug#end()

@@ -15,6 +15,9 @@
 	  Plug 'roxma/vim-hug-neovim-rpc'
 	endif
 	
+	" vim-lsc
+	Plug 'natebosch/vim-lsc'
+
 	" c、c++的源
 	"Plug 'Shougo/deoplete-clangx'
 	" 与vim-lsc插件对接

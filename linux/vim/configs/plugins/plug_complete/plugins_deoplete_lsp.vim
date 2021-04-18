@@ -15,11 +15,12 @@
 	  Plug 'roxma/vim-hug-neovim-rpc'
 	endif
 	
+	" vim-lsp
+	Plug 'prabirshrestha/vim-lsp'
+
 	" 用于deoplete 与vim-lsp对接插件
 	Plug 'lighttiger2505/deoplete-vim-lsp'
 
-	" vim-lsp
-	Plug 'prabirshrestha/vim-lsp'
 
 " call plug#end()
 
