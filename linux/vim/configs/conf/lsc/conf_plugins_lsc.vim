@@ -32,6 +32,9 @@ if s:lscresult ==? 1
 	 \ },
 	 \ 'python':{
 	 \  'command':'pyls'
+	 \ },
+	 \ 'rust':{
+	 \  'command':'rls'
 	 \ }
 	 \}
 

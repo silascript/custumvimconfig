@@ -5,7 +5,7 @@
 " --------------------------------------------------
 "				nerdcommenter 设置
 " --------------------------------------------------
-let s:nerdcresult=commands_basic#ExistPlug('mbbill/undotree')
+let s:nerdcresult = commands_basic#ExistPlug('mbbill/undotree')
 if s:nerdcresult ==? 1
 	" 默认快捷键
 	" 注释 <leader>cc 
@@ -22,12 +22,16 @@ if s:nerdcresult ==? 1
 endif
 
 " ---------------------------------------------
-"			coco 设置
+"			cosco 设置
 " ---------------------------------------------
-let g:cosco_filetype_whitelist = ['c','cpp','java','php', 'javascript']
-let g:cosco_filetype_blacklist = ['vim', 'bash']
 
+let s:cocoresult=commands_basic#ExistPlug('lfilho/cosco.vim')
 
+if s:cocoresult ==? 1
+	let g:cosco_filetype_whitelist = ['c','cpp','java','php', 'javascript']
+	let g:cosco_filetype_blacklist = ['vim', 'bash']
+
+endif
 
 " ---------------------------------------------
 "				UndoTree设置

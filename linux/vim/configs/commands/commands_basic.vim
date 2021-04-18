@@ -6,6 +6,7 @@
 " 从plug的uri值截取出plug名称
 " 作者账号/项目 --其实就是github的那个名称样式
 function commands_basic#PlugSubName(pluguri)
+
 	"echom a:pluguri
 	let uriprefix='https://git::@github.com/'
 	let urisubfix='.git'
@@ -23,6 +24,11 @@ endfunction
 " 检测插件是否存在
 function commands_basic#ExistPlug(plugname)
 	
+	if !exists('g:plugs')
+		return 0	
+	endif
+
+
 	" 获取vim-plug插件集合
 	let l:plug_dict=g:plugs
 	"echom l:plug_values
@@ -43,7 +49,7 @@ function commands_basic#ExistPlug(plugname)
 
 	endfor
 		" echom '没有安装 '.a:plugname.' 插件'
-		return 0
+		return -1
 
 endfunction
 

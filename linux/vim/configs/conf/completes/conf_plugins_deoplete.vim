@@ -16,6 +16,7 @@ if s:deoplresult ==? 1
 		\ 'c': ['lsc'],
 		\ 'cpp': ['lsc'],
 		\ 'python': ['lsc'],
+		\ 'rust': ['lsc']
 		\},
 		\ 'min_pattern_length':1
 	\ }
