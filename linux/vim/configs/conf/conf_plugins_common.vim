@@ -139,5 +139,62 @@ if s:rbesult ==? 1
 endif
 
 
+" ------------------------------------------------
+"			vim-devicons 设置
+" ------------------------------------------------
+
+"let s:deviconsreusl = commands_basic#ExistPlug('ryanoasis/vim-devicons')
+
+"if s:deviconsreusl ==? 1
+	
+
+
+"endif
+
+
+" ------------------------------------------------
+"					defx 设置
+" ------------------------------------------------
+let s:defxresult = commands_basic#ExistPlug('Shougo/defx.nvim')
+
+if s:defxresult ==? 1
+	call defx#custom#option('_', {
+		  \ 'winwidth': 30,
+		  \ 'split': 'vertical',
+		  \ 'show_ignored_files': 0,
+		  \ 'buffer_name': 'defxplorer',
+		  \ 'toggle': 1,
+		  \ 'resume': 1
+		  \ })
+
+endif
+
+" ------------------------------------------------
+"				defx-icons 设置
+" ------------------------------------------------
+let s:diconresult = commands_basic#ExistPlug('kristijanhusak/defx-icons')
+
+if s:diconresult ==? 1
+	
+	let g:defx_icons_enable_syntax_highlight = 1
+	let g:defx_icons_column_length = 1
+	let g:defx_icons_directory_icon = ''
+	let g:defx_icons_mark_icon = '*'
+	let g:defx_icons_copy_icon = ''
+	let g:defx_icons_link_icon = ''
+	let g:defx_icons_move_icon = ''
+	let g:defx_icons_parent_icon = ''
+	let g:defx_icons_default_icon = ''
+	let g:defx_icons_directory_symlink_icon = ''
+
+	let g:defx_icons_root_opened_tree_icon = ''
+	let g:defx_icons_nested_opened_tree_icon = ''
+	let g:defx_icons_nested_closed_tree_icon = ''
+
+
+endif
+
+
+
 
 

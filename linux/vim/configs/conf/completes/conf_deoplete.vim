@@ -7,7 +7,8 @@
 	" 启动deoplete
 	let g:deoplete#enable_at_startup = 1
 	let g:auto_complete_delay = 10
-	let g:min_pattern_length = 1	
+	"let g:min_pattern_length = 1	
+	"let g:deoplete#enable_smart_case = 1
 
 	" 源
 	"let g:deoplete#custom#option={

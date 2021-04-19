@@ -17,7 +17,11 @@
 
 	" 文件类型图标
 	" 要在airline之后
-	Plug 'ryanoasis/vim-devicons'
+	"Plug 'ryanoasis/vim-devicons'
+	
+	" themes
+	source ~/.vim/configs/plugins/plugins_themes.vim
+
 
 " call plug#end()
 

@@ -7,6 +7,9 @@ let s:lspresult = commands_basic#ExistPlug('prabirshrestha/vim-lsp')
 
 if s:lspresult ==? 1
 	
+	" 关闭lsp的语法诊断
+	let g:lsp_diagnostics_enabled = 0
+
 	" 设置各语言LSP
 	if executable('clangd')
 		au User lsp_setup call lsp#register_server({

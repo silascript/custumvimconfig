@@ -5,8 +5,7 @@
 
 " call plug#begin('~/.vim/plugged')
 	
-	" NERDTree
-	Plug 'preservim/nerdtree'
+	source ~/.vim/configs/plugins/plugins_directory.vim
 
 " call plug#end()
 

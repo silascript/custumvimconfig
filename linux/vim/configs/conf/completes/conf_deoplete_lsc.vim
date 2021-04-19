@@ -8,6 +8,11 @@ if s:deoplresult ==? 1
 	source ~/.vim/configs/conf/completes/conf_deoplete.vim
 
 	" 源
+
+	call deoplete#custom#source('lsc',
+            \ 'min_pattern_length',
+            \ 1)	
+
 	let g:deoplete#custom#option={
 		\'sources': {
 		\ '_': ['buffer'],
@@ -16,7 +21,7 @@ if s:deoplresult ==? 1
 		\ 'python': ['lsc'],
 		\ 'rust': ['lsc']
 		\},
-		\ 'min_pattern_length':1
+		\'smart_case': v:true,
 	\ }
 endif
 

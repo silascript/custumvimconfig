@@ -12,6 +12,9 @@ call plug#begin('~/.vim/plugged')
 
 	" 基础插件
 	source ~/.vim/configs/plugins/plugins_basic.vim
+	
+	" lorem
+	source ~/.vim/configs/plugins/plugins_lorem.vim
 
 	" 显示界面
 	source ~/.vim/configs/plugins/plugins_display.vim
@@ -19,8 +22,20 @@ call plug#begin('~/.vim/plugged')
 	" deoplete + vim-lsc plugins
 	source ~/.vim/configs/plugins/plug_complete/plugins_deoplete_lsc.vim
 	
+	" linter
+	source ~/.vim/configs/plugins/plugins_linter.vim
+
 	" 标点符号插件
 	source ~/.vim/configs/plugins/plugins_punctuation.vim
+
+	" 目录浏览
+	source ~/.vim/configs/plugins/plugins_directory.vim
+	
+	" 图标
+	source ~/.vim/configs/plugins/plugins_icons.vim
+
+	" markdown
+	source ~/.vim/configs/plugins/plugins_markdown.vim
 
 call plug#end()
 
@@ -45,6 +60,10 @@ source ~/.vim/configs/conf/conf_plugins_common.vim
 
 " deoplete + vim-lsc 插件设置
 source ~/.vim/configs/conf/completes/conf_deoplete_lsc.vim
+
+" ale 插件设置
+source ~/.vim/configs/conf/conf_plugins_linter.vim
+
 
 " ----------------------------------
 "			  key map
