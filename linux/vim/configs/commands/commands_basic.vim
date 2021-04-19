@@ -11,9 +11,12 @@ function commands_basic#PlugSubName(pluguri)
 	let uriprefix='https://git::@github.com/'
 	let urisubfix='.git'
 	
+	" 前缀长度
 	let plen=strlen(l:uriprefix)
-	let strsubidx = stridx(a:pluguri,l:urisubfix)-l:plen
-	let sresult= strpart(a:pluguri,l:plen,l:strsubidx)
+	" 要截取字符串长度
+	let sublen = stridx(a:pluguri,l:urisubfix)-l:plen
+	" 截取
+	let sresult= strpart(a:pluguri,l:plen,l:sublen)
 	"echom l:sresult
 
 	return l:sresult
