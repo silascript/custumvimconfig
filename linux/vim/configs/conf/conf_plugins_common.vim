@@ -112,12 +112,16 @@ let s:startresult=commands_basic#ExistPlug('mhinz/vim-startify')
 
 if s:startresult ==? 1
 	let g:startify_files_number = 8
+
 	let g:startify_custom_header =[
-		\		'+------------------------------+',  
-		\		'|  GoodLuck!!!				    |',  
-		\		'|                              |',  
-		\		'+----------------+-------------+',  
-		\ ] 
+				\ '   __      ___             ',
+                \ '   \ \    / (_)            ',
+                \ '    \ \  / / _ _ __ ___    ',
+                \ '     \ \/ / | | `_ ` _ \   ',
+                \ '      \  /  | | | | | | |  ',
+                \ '       \/   |_|_| |_| |_|  ',
+                \ '',
+                \ ]
 
 endif
 
@@ -177,24 +181,50 @@ let s:diconresult = commands_basic#ExistPlug('kristijanhusak/defx-icons')
 if s:diconresult ==? 1
 	
 	let g:defx_icons_enable_syntax_highlight = 1
-	let g:defx_icons_column_length = 1
-	let g:defx_icons_directory_icon = ''
-	let g:defx_icons_mark_icon = '*'
-	let g:defx_icons_copy_icon = ''
-	let g:defx_icons_link_icon = ''
-	let g:defx_icons_move_icon = ''
-	let g:defx_icons_parent_icon = ''
-	let g:defx_icons_default_icon = ''
-	let g:defx_icons_directory_symlink_icon = ''
+	"let g:defx_icons_column_length = 1
+	"let g:defx_icons_directory_icon = ''
+	"let g:defx_icons_mark_icon = '*'
+	"let g:defx_icons_copy_icon = ''
+	"let g:defx_icons_link_icon = ''
+	"let g:defx_icons_move_icon = ''
+	"let g:defx_icons_parent_icon = ''
+	"let g:defx_icons_default_icon = ''
+	"let g:defx_icons_directory_symlink_icon = ''
 
-	let g:defx_icons_root_opened_tree_icon = ''
-	let g:defx_icons_nested_opened_tree_icon = ''
-	let g:defx_icons_nested_closed_tree_icon = ''
+	"let g:defx_icons_root_opened_tree_icon = ''
+	"let g:defx_icons_nested_opened_tree_icon = ''
+	"let g:defx_icons_nested_closed_tree_icon = ''
 
 
 endif
 
 
+" ------------------------------------------------
+"					fern 设置
+" ------------------------------------------------
 
+"let s:fernnerdresutl =commands_basic#ExistPlug('lambdalisue/fern-renderer-nerdfont.vim') 
+
+let s:ferniconresutl =commands_basic#ExistPlug('lambdalisue/fern-renderer-devicons.vim') 
+
+if s:ferniconresutl ==? 1
+
+	"let g:fern#renderer = 'nerdfont'
+	" 使用了fern-renderer-devicons插件
+	let g:fern#renderer = 'devicons'
+
+endif
+
+
+" ----------------------------------
+"			SnipMate设置
+" ----------------------------------
+let s:snipmateresult = commands_basic#ExistPlug('garbas/vim-snipmate') 
+
+if s:snipmateresult ==? 1
+
+	let g:snipMate = {'snippet_version' : 1}
+
+endif
 
 

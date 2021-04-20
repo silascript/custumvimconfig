@@ -17,9 +17,9 @@
 
 	" LanguageClient-neovim
 	Plug 'autozimu/LanguageClient-neovim', {
-    \ 'branch': 'next',
-    \ 'do': 'bash install.sh',
-    \ }
+	\ 'branch': 'next',
+	\ 'do': 'bash install.sh',
+	\ }
 
 " call plug#end()
 

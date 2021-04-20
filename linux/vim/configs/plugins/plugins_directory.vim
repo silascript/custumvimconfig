@@ -18,8 +18,20 @@ filetype off
 	  "Plug 'roxma/vim-hug-neovim-rpc'
 	"endif
 	
+	" defx 图标
+	"Plug 'kristijanhusak/defx-icons'
+
+
 	" nerd tree 
 	Plug 'preservim/nerdtree'
+	
+	" fern
+	"Plug 'lambdalisue/fern.vim'
+	" fern 显示nerd 图标字体
+	"Plug 'lambdalisue/fern-renderer-devicons.vim'
+	"Plug 'lambdalisue/nerdfont.vim'
+	"Plug 'lambdalisue/fern-renderer-nerdfont.vim'
+	"Plug 'lambdalisue/glyph-palette.vim'
 
 "call plug#end()
 

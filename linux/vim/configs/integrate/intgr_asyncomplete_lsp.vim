@@ -1,7 +1,7 @@
 
 " ----------------------------------------
-"				插件整合
-"	deoplete + LanguageClient-neovim	
+"				补全插件集
+"			asyncomplete + vim-lsp	
 " ----------------------------------------
 
 " 关闭缩进及语法高亮
@@ -12,16 +12,17 @@ call plug#begin('~/.vim/plugged')
 	
 	" 基础插件
 	source ~/.vim/configs/plugins/plugins_basic.vim
-	
-	" lorem
-	source ~/.vim/configs/plugins/plugins_lorem.vim
 
-	" 显示界面
+	" 显示界面插件
 	source ~/.vim/configs/plugins/plugins_display.vim
+	
 
-	" deoplete + Language Client-neovim
-	source ~/.vim/configs/plugins/plug_complete/plugins_deoplete_lcn.vim
+	" snippets
+	source ~/.vim/configs/plugins/plugins_snippets.vim
 
+	" asyncomplete + vim-lsp 插件
+	source ~/.vim/configs/plugins/plug_complete/plugins_asyncomplete_lsp.vim
+	
 	" linter
 	source ~/.vim/configs/plugins/plugins_linter.vim
 
@@ -30,15 +31,14 @@ call plug#begin('~/.vim/plugged')
 
 	" 目录浏览
 	source ~/.vim/configs/plugins/plugins_directory.vim
-	
+
 	" 图标
 	source ~/.vim/configs/plugins/plugins_icons.vim
-
+	
 	" markdown
 	source ~/.vim/configs/plugins/plugins_markdown.vim
 
 call plug#end()
-
 
 " ----------------------------------------
 "				设置
@@ -54,28 +54,28 @@ filetype indent on
 " ----------------------------------
 "			插件设置
 " ----------------------------------
+" 基础配置
+source ~/.vim/configs/conf/conf_basic.vim
 
-	" 基础配置
-	source ~/.vim/configs/conf/conf_basic.vim
+" 常用插件配置 
+source ~/.vim/configs/conf/conf_plugins_common.vim
 
-	" 常用插件配置
-	source ~/.vim/configs/conf/conf_plugins_common.vim
+" asyncomplete vim-lsp 配置
+source ~/.vim/configs/conf/completes/conf_asyncomplete_lsp.vim
 
-	" deoplete 配置
-	source ~/.vim/configs/conf/completes/conf_deoplete_lcn.vim
-	
-	" ale 插件设置
-	source ~/.vim/configs/conf/conf_plugins_linter.vim
+" ale 插件设置
+source ~/.vim/configs/conf/conf_plugins_linter.vim
+
 
 " ----------------------------------
 "			keymap
 " ----------------------------------
-
-" 常用插件 keymap
+" 常用插件keymap
 source ~/.vim/configs/keymaps/keymaps_plugins_basic.vim
 
-" deoplete keymap
-source ~/.vim/configs/keymaps/keymaps_deoplete_basic.vim
+" asyncomplete keymap
+source ~/.vim/configs/keymaps/keymaps_asyncomplete_basic.vim
+
 
 
 
