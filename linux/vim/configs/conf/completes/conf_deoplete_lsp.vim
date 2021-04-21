@@ -9,8 +9,8 @@ if s:deoplresult ==? 1
 	
 	" 源
 	call deoplete#custom#source('lsp',
-            \ 'min_pattern_length',
-            \ 1)
+			\ 'min_pattern_length',
+			\ 1)
 
 	let g:deoplete#custom#option={
 		\'sources': {

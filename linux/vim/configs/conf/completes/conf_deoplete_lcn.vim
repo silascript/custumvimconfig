@@ -8,6 +8,11 @@ if s:deoplresult ==? 1
 	" deoplete 配置
 	source ~/.vim/configs/conf/completes/conf_deoplete.vim
 
+	"call deoplete#custom#source('LanguageClient',
+            "\ 'min_pattern_length',
+            "\ 2)
+
+
 	" 源
 	let g:deoplete#custom#option={
 		\'sources': {
@@ -17,8 +22,7 @@ if s:deoplresult ==? 1
 		\ 'python': ['LanguageClient'],
 		\ 'rugy': ['LanguageClient'],
 		\ 'rust': ['LanguageClient']
-		\},
-		\ 'min_pattern_length':1
+		\}
 	\ }
 
 endif

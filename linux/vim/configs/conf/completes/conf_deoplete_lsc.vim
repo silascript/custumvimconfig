@@ -8,10 +8,10 @@ if s:deoplresult ==? 1
 	source ~/.vim/configs/conf/completes/conf_deoplete.vim
 
 	" 源
-
+	" 设置触发补全的字符数
 	call deoplete#custom#source('lsc',
-            \ 'min_pattern_length',
-            \ 1)	
+		\ 'min_pattern_length',
+		\ 1)	
 
 	let g:deoplete#custom#option={
 		\'sources': {
