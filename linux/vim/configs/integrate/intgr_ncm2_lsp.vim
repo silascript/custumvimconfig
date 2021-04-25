@@ -20,7 +20,6 @@ call plug#begin('~/.vim/plugged')
 	"source ~/.vim/configs/plugins/plugins_snippets.vim
 	source ~/.vim/configs/plugins/plug_snippets/plugins_snippets_snipmate_ncm.vim
 
-
 	" ncm2 + vim-lsp
 	 source ~/.vim/configs/plugins/plug_complete/plugins_ncm2_lsp.vim
 

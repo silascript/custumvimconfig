@@ -12,4 +12,5 @@ let ncm2#complete_length = [[1, 1]]
 " 补全菜单弹出延迟
 let ncm2#popup_delay = 8
 
+set shortmess+=c
 

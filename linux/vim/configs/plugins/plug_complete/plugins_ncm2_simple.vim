@@ -13,7 +13,7 @@
 	" 简单的补全
 	" buffer和路径补全
 	Plug 'ncm2/ncm2-bufword'
-    Plug 'ncm2/ncm2-path'
+	Plug 'ncm2/ncm2-path'
 
 " call plug#end()
 
