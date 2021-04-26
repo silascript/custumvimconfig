@@ -21,7 +21,9 @@
 	
 	" themes
 	source ~/.vim/configs/plugins/plugins_themes.vim
-
+	
+	" color
+	source ~/.vim/configs/plugins/plugins_color.vim
 
 " call plug#end()
 

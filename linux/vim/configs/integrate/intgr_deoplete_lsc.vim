@@ -37,6 +37,10 @@ call plug#begin('~/.vim/plugged')
 	" markdown
 	source ~/.vim/configs/plugins/plugins_markdown.vim
 
+	" html	
+	source ~/.vim/configs/plugins/plugins_html.vim
+
+
 call plug#end()
 
 " ----------------------------------------

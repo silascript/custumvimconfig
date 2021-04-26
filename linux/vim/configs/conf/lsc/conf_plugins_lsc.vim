@@ -22,20 +22,32 @@ if s:lscresult ==? 1
 
 
 	let g:lsc_server_commands = {
-	 \ 'c': {
-	 \    'command': 'clangd --background-index',
-	 \	  'suppress_stderr': v:true
-	 \	},
-	 \ 'cpp':{
-	 \	'command':'clangd --background-index',
-	 \  'suppress_stderr': v:true
-	 \ },
-	 \ 'python':{
-	 \  'command':'pyls'
-	 \ },
-	 \ 'rust':{
-	 \  'command':'rls'
-	 \ }
+		 \ 'c': {
+			 \    'command': 'clangd --background-index',
+			 \	  'suppress_stderr': v:true
+		 \	},
+		 \ 'cpp':{
+			 \	'command':'clangd --background-index',
+			 \  'suppress_stderr': v:true
+		 \ },
+		 \ 'python':{
+			 \  'command':'pyls'
+		 \ },
+		 \ 'rust':{
+			 \  'command':'rls'
+		 \ },
+		 \ 'go':{
+			 \ 'command':'gopls'
+		 \ },
+		 \ 'javascript':{
+			 \ 'command':'typescript-language-server --stdio'
+		 \ },
+		 \ 'html':{
+			 \ 'command':'html-languageserver --stdio'
+		 \ },
+		 \ 'css':{
+			 \ 'command':'css-languageserver --stdio'
+		 \ },
 	 \}
 
 

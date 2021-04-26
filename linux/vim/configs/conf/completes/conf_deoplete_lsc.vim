@@ -13,16 +13,16 @@ if s:deoplresult ==? 1
 		\ 'min_pattern_length',
 		\ 1)	
 
-	let g:deoplete#custom#option={
-		\'sources': {
-		\ '_': ['buffer'],
-		\ 'c': ['lsc'],
-		\ 'cpp': ['lsc'],
-		\ 'python': ['lsc'],
-		\ 'rust': ['lsc']
-		\},
-		\'smart_case': v:true,
-	\ }
+	"let g:deoplete#custom#option={
+		"\'sources': {
+		"\ '_': ['buffer'],
+		"\ 'c': ['lsc'],
+		"\ 'cpp': ['lsc'],
+		"\ 'python': ['lsc'],
+		"\ 'rust': ['lsc']
+		"\},
+		"\'smart_case': v:true,
+	"\ }
 endif
 
 

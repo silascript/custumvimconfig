@@ -12,15 +12,17 @@ if s:deoplresult ==? 1
 			\ 'min_pattern_length',
 			\ 1)
 
-	let g:deoplete#custom#option={
-		\'sources': {
-		\ 'c': ['lsp'],
-		\ 'cpp': ['lsp'],
-		\ 'python': ['lsp'],
-		\ 'rust': ['lsp'],
-		\},
-		\ 'smart_case': v:true
-	\ }
+	"let g:deoplete#custom#option={
+		"\'sources': {
+		"\ 'c': ['lsp'],
+		"\ 'cpp': ['lsp'],
+		"\ 'python': ['lsp'],
+		"\ 'rust': ['lsp'],
+		"\ 'javascript':['lsp'],
+		"\ 'typescript':['lsp'],
+		"\},
+		"\ 'smart_case': v:true
+	"\ }
 
 endif
 

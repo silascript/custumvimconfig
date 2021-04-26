@@ -14,7 +14,7 @@ if s:lspresult ==? 1
 	" c/c++
 	if executable('clangd')
 		au User lsp_setup call lsp#register_server({
-			\ 'name': 'lsp-clangd',
+			\ 'name': 'clangd',
 			\ 'cmd': {server_info->['clangd', '-background-index']},
 			\ 'whitelist': ['c', 'cpp', 'objc', 'objcpp'],
 		\ })
@@ -23,7 +23,7 @@ if s:lspresult ==? 1
 	" python
 	if (executable('pyls'))
 		au User lsp_setup call lsp#register_server({
-		\ 'name': 'lsp-pyls',
+		\ 'name': 'pyls',
 		\ 'cmd': {server_info->['pyls']},
 		\ 'allowlist': ['python']
 		\ })
@@ -33,7 +33,9 @@ if s:lspresult ==? 1
 	if executable('rls')
     au User lsp_setup call lsp#register_server({
         \ 'name': 'lsp-rls',
-        \ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
+        "\ 'cmd': {server_info->['rustup', 'run', 'stable', 'rls']},
+        "\ 'cmd': {server_info->['rustup', 'run', 'nightly', 'rls']},
+        \ 'cmd': {server_info->['rls']},
         "\ 'workspace_config': {'rust': {'clippy_preference': 'on'}},
         \ 'whitelist': ['rust'],
         \ })
@@ -43,7 +45,7 @@ if s:lspresult ==? 1
 	if executable('solargraph')
     " gem install solargraph
     au User lsp_setup call lsp#register_server({
-        \ 'name': 'lsp-solargraph',
+        \ 'name': 'solargraph',
         \ 'cmd': {server_info->[&shell, &shellcmdflag, 'solargraph stdio']},
         \ 'initialization_options': {"diagnostics": "true"},
         \ 'whitelist': ['ruby'],
@@ -60,6 +62,40 @@ if s:lspresult ==? 1
 		autocmd BufWritePre *.go LspDocumentFormatSync
 	endif
 
+
+	" typescript/javascript
+	if executable('typescript-language-server')
+		au User lsp_setup call lsp#register_server({
+		  \ 'name': 'lsp-tsserver',
+		  \ 'cmd': { server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+		  \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact']
+		  \ })
+	endif
+	
+	if executable('typescript-language-server')
+		au User lsp_setup call lsp#register_server({
+			\ 'name': 'lsp-tsserver',
+			\ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
+			\ 'whitelist': ['typescript', 'typescript.tsx'],
+			\ })
+	endif
+	
+	" html
+	"if executable('html-languageserver')
+	  "au User lsp_setup call lsp#register_server({
+		"\ 'name': 'html-languageserver',
+		"\ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
+		"\ 'whitelist': ['html'],
+	  "\ })
+	"endif
+
+	"if executable('css-languageserver')
+    "au User lsp_setup call lsp#register_server({
+        "\ 'name': 'css-languageserver',
+        "\ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
+        "\ 'whitelist': ['css', 'less', 'sass'],
+        "\ })
+	"endif
 
 	"augroup lsp_install
 		"au!

@@ -228,3 +228,15 @@ if s:snipmateresult ==? 1
 endif
 
 
+" ----------------------------------
+"			vim-hexokinase
+"			显示颜色
+" ----------------------------------
+let s:hcolorresult = commands_basic#ExistPlug('RRethy/vim-hexokinase') 
+
+if s:hcolorresult ==? 1
+	let g:Hexokinase_highlighters = ['backgroundfull']
+endif
+
+
+
