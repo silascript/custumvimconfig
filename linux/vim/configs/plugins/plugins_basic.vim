@@ -17,6 +17,9 @@
 	" 添加环绕符号 
 	Plug 'tpope/vim-surround'
 
+	" 文本对象相关
+	Plug 'wellle/targets.vim'
+
 
 " call plug#end()
 
