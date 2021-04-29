@@ -19,6 +19,11 @@ call plug#begin('~/.vim/plugged')
 	" 显示界面
 	source ~/.vim/configs/plugins/plugins_display.vim
 
+	" snippet
+	"source ~/.vim/configs/plugins/plug_snippets/plugins_snippets_snipmate_deo.vim
+	"source ~/.vim/configs/plugins/plug_snippets/plugins_snippets_snipmate.vim
+	source ~/.vim/configs/plugins/plug_snippets/plugins_snippets_ultisnips.vim
+
 	" deoplete + vim-lsc plugins
 	source ~/.vim/configs/plugins/plug_complete/plugins_deoplete_lsc.vim
 	

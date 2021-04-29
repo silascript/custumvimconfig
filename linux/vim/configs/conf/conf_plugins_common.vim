@@ -168,7 +168,6 @@ if s:defxresult ==? 1
 		  \ 'show_ignored_files': 0,
 		  \ 'buffer_name': 'defxplorer',
 		  \ 'toggle': 1,
-		  \ 'resume': 1
 		  \ })
 
 endif
@@ -226,6 +225,25 @@ if s:snipmateresult ==? 1
 	let g:snipMate = {'snippet_version' : 1}
 
 endif
+
+
+
+" ----------------------------------
+"			neosnippet 设置
+" ----------------------------------
+
+let s:nsnipresult = commands_basic#ExistPlug('Shougo/neosnippet.vim')
+
+if s:nsnipresult ==? 1
+
+	" Enable snipMate compatibility feature.
+	let g:neosnippet#enable_snipmate_compatibility = 1
+
+	" Tell Neosnippet about the other snippets
+	let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
+
+endif
+
 
 
 " ----------------------------------

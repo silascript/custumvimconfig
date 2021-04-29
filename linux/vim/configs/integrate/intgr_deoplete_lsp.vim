@@ -18,6 +18,8 @@ call plug#begin('~/.vim/plugged')
 
 	" deoplete + vim-lsp 插件
 	source ~/.vim/configs/plugins/plug_complete/plugins_deoplete_lsp.vim
+	" snippet
+	source ~/.vim/configs/plugins/plug_snippets/plugins_snippets_snipmate.vim
 	
 	" linter
 	source ~/.vim/configs/plugins/plugins_linter.vim

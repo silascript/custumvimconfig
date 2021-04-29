@@ -25,6 +25,10 @@
 	" color
 	source ~/.vim/configs/plugins/plugins_color.vim
 
+
+	" minimap 
+	"Plug 'wfxr/minimap.vim'
+
 " call plug#end()
 
 
