@@ -10,7 +10,10 @@
 
 	" 彩虹括号
 	Plug 'luochen1990/rainbow'
-	
+
+	" mark 显示
+	Plug 'kshenoy/vim-signature'
+
 	" airline
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'

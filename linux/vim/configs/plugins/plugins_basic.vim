@@ -10,6 +10,9 @@
 
 	" 高亮光标所在词
 	Plug 'itchyny/vim-cursorword'
+	
+	" 高亮复制部分
+	Plug 'machakann/vim-highlightedyank'
 
 	" 快速注释
 	Plug 'scrooloose/nerdcommenter'

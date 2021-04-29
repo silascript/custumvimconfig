@@ -261,4 +261,20 @@ if s:hcolorresult ==? 1
 endif
 
 
+" ----------------------------------
+"		vim-highlightedyank
+"			高亮复制
+" ----------------------------------
+
+let s:hlyankresult = commands_basic#ExistPlug('machakann/vim-highlightedyank') 
+if s:hlyankresult ==? 1
+
+	" 设置高亮持续时间 单位为毫秒
+	let g:highlightedyank_highlight_duration = 5000
+
+endif
+
+
+
+
 
