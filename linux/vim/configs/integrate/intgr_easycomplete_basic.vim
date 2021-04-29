@@ -66,12 +66,11 @@ source ~/.vim/configs/conf/conf_basic.vim
 " 常用插件配置
 source ~/.vim/configs/conf/conf_plugins_common.vim
 
-" deoplete + vim-lsc 插件设置
-source ~/.vim/configs/conf/completes/conf_deoplete_lsc.vim
-
 " ale 插件设置
 source ~/.vim/configs/conf/conf_plugins_linter.vim
 
+" easycomplete 设置
+source ~/.vim/configs/conf/completes/conf_easycomplete.vim
 
 " ----------------------------------
 "			  key map
@@ -79,6 +78,7 @@ source ~/.vim/configs/conf/conf_plugins_linter.vim
 " 常用插件keymap
 source ~/.vim/configs/keymaps/keymaps_plugins_basic.vim
 
-" deoplete keymap
-source ~/.vim/configs/keymaps/keymaps_deoplete_basic.vim
+
+
+
 
