@@ -14,15 +14,15 @@ if s:deoplresult ==? 1
 endif
 
 
+
 " -----------------------------
 "		neosnippet
 " -----------------------------
+"let s:dsnipresult = commands_basic#ExistPlug('Shougo/neosnippet.vim')
+"if s:dsnipresult ==? 1
+	"smap <expr> <TAB> neosnippet#expandable_or_jumpable() ?
+	"\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
 
-let s:dsnipresult = commands_basic#ExistPlug('Shougo/neosnippet.vim')
-if s:dsnipresult ==? 1
-	smap <expr><TAB> neosnippet#expandable_or_jumpable() ?
-	\ "\<Plug>(neosnippet_expand_or_jump)" : "\<TAB>"
-
-endif
+"endif
 
 

@@ -201,11 +201,8 @@ endif
 " ------------------------------------------------
 "					fern 设置
 " ------------------------------------------------
-
 "let s:fernnerdresutl =commands_basic#ExistPlug('lambdalisue/fern-renderer-nerdfont.vim') 
-
 let s:ferniconresutl =commands_basic#ExistPlug('lambdalisue/fern-renderer-devicons.vim') 
-
 if s:ferniconresutl ==? 1
 
 	"let g:fern#renderer = 'nerdfont'
@@ -213,6 +210,15 @@ if s:ferniconresutl ==? 1
 	let g:fern#renderer = 'devicons'
 
 endif
+
+" ------------------------------------------------
+"				ultisnips 设置
+" ------------------------------------------------
+"let s:usnipresutl =commands_basic#ExistPlug('SirVer/ultisnips') 
+
+"if s:usnipresutl ==? 1
+	"let g:UltiSnipsExpandTrigger="<tab>"
+"endif
 
 
 " ----------------------------------
@@ -226,23 +232,21 @@ if s:snipmateresult ==? 1
 
 endif
 
-
-
 " ----------------------------------
 "			neosnippet 设置
 " ----------------------------------
 
-let s:nsnipresult = commands_basic#ExistPlug('Shougo/neosnippet.vim')
+"let s:nsnipresult = commands_basic#ExistPlug('Shougo/neosnippet.vim')
 
-if s:nsnipresult ==? 1
+"if s:nsnipresult ==? 1
 
-	" Enable snipMate compatibility feature.
-	let g:neosnippet#enable_snipmate_compatibility = 1
+	"" Enable snipMate compatibility feature.
+	"let g:neosnippet#enable_snipmate_compatibility = 1
 
-	" Tell Neosnippet about the other snippets
-	let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
+	"" Tell Neosnippet about the other snippets
+	"let g:neosnippet#snippets_directory='~/.vim/plugged/vim-snippets/snippets'
 
-endif
+"endif
 
 
 

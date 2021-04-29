@@ -1,7 +1,7 @@
 
 " ----------------------------------------
 "				补全插件集
-"			deoplete + lsc	
+"			easycomplete 整合	
 " ----------------------------------------
 
 " 关闭缩进及语法高亮
@@ -19,14 +19,12 @@ call plug#begin('~/.vim/plugged')
 	" 显示界面
 	source ~/.vim/configs/plugins/plugins_display.vim
 
-	" deoplete + vim-lsc plugins
-	source ~/.vim/configs/plugins/plug_complete/plugins_deoplete_lsc.vim
-
 	" snippet
-	"source ~/.vim/configs/plugins/plug_snippets/plugins_snippets_snipmate_deo.vim
 	"source ~/.vim/configs/plugins/plug_snippets/plugins_snippets_snipmate.vim
 	source ~/.vim/configs/plugins/plug_snippets/plugins_snippets_ultisnips.vim
 
+	" easycomplete 
+	source ~/.vim/configs/plugins/plug_complete/plugins_easycomplete_basic.vim
 	
 	" linter
 	source ~/.vim/configs/plugins/plugins_linter.vim

@@ -48,6 +48,14 @@ if s:ntreeresult ==? 1
 endif
 
 
+" ------------------------------------------------
+"				ultisnips 设置
+" ------------------------------------------------
+let s:usnipresutl =commands_basic#ExistPlug('SirVer/ultisnips') 
+
+if s:usnipresutl ==? 1
+	let g:UltiSnipsExpandTrigger = "<c-j>"
+endif
 
 
 " -----------------------------
