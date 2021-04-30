@@ -9,5 +9,6 @@ if s:ecomresult ==? 1
 	"let g:easycomplete_scheme="sharp"
 	let g:easycomplete_scheme="sharp"
 
+	" 配源
 endif
 

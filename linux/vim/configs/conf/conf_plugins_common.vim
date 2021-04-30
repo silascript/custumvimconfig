@@ -5,13 +5,13 @@
 " --------------------------------------------------
 "				nerdcommenter 设置
 " --------------------------------------------------
-let s:nerdcresult = commands_basic#ExistPlug('mbbill/undotree')
+let s:nerdcresult = commands_basic#ExistPlug('preservim/nerdcommenter')
 if s:nerdcresult ==? 1
 	" 默认快捷键
 	" 注释 <leader>cc 
 	" 取消注释 <leader>c<space> 或者 <leader>cu
 
-	" 注释时插入分隔符
+	" 注释时注释符号后插入一个空格
 	let g:NERDSpaceDelims = 1
 	" 去除尾部空格 
 	" let g:NERDTrimTrailingWhitespace = 1

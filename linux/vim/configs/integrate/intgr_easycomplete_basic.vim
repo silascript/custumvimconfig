@@ -19,6 +19,7 @@ call plug#begin('~/.vim/plugged')
 	" 显示界面
 	source ~/.vim/configs/plugins/plugins_display.vim
 
+
 	" snippet
 	"source ~/.vim/configs/plugins/plug_snippets/plugins_snippets_snipmate.vim
 	source ~/.vim/configs/plugins/plug_snippets/plugins_snippets_ultisnips.vim
@@ -40,6 +41,10 @@ call plug#begin('~/.vim/plugged')
 
 	" markdown
 	source ~/.vim/configs/plugins/plugins_markdown.vim
+	
+
+	" 语法
+	"source ~/.vim/configs/plugins/plugins_syntax.vim
 
 	" html	
 	source ~/.vim/configs/plugins/plugins_html.vim

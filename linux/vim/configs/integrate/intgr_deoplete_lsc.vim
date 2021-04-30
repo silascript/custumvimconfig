@@ -45,7 +45,9 @@ call plug#begin('~/.vim/plugged')
 
 	" html	
 	source ~/.vim/configs/plugins/plugins_html.vim
-
+	
+	" 语法增强
+	source ~/.vim/configs/plugins/plugins_syntax.vim
 
 call plug#end()
 
