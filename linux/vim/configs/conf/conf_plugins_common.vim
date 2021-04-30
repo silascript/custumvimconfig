@@ -1,12 +1,12 @@
 " ---------------------------------------------------------
-"					插件配置(非coc)
+"					插件配置(非补全插件)
 " ---------------------------------------------------------
 
 " --------------------------------------------------
 "				nerdcommenter 设置
 " --------------------------------------------------
-let s:nerdcresult = commands_basic#ExistPlug('preservim/nerdcommenter')
-if s:nerdcresult ==? 1
+let s:nerdcommcresult = commands_basic#ExistPlug('preservim/nerdcommenter')
+if s:nerdcommcresult ==? 1
 	" 默认快捷键
 	" 注释 <leader>cc 
 	" 取消注释 <leader>c<space> 或者 <leader>cu
@@ -18,12 +18,14 @@ if s:nerdcresult ==? 1
 
 	" 注释前插入空行
 	let g:NERDCommentEmptyLines = 1
+	
+	let g:NERDAltDelims_java = 1
 
 endif
 
-" ---------------------------------------------
-"			cosco 设置
-" ---------------------------------------------
+" ------------------------------------------------
+"					cosco 设置
+" ------------------------------------------------
 
 let s:cocoresult=commands_basic#ExistPlug('lfilho/cosco.vim')
 
@@ -67,7 +69,7 @@ endif
 "					airline设置
 " ------------------------------------------------
 let s:aleresult= commands_basic#ExistPlug('vim-airline/vim-airline')
-if s:aleresult==1
+if s:aleresult ==? 1
 	" let g:airline#extensions#tabline#enabled = 1
 	let s:aleresult = commands_basic#ExistPlug('dense-analysis/ale')
 	if s:aleresult ==? 1
@@ -104,10 +106,9 @@ if s:aleresult==1
 
 endif
 
-" ------------------------------------------
-"				startify设置
-" ------------------------------------------
-
+" ------------------------------------------------
+"					startify设置
+" ------------------------------------------------
 let s:startresult=commands_basic#ExistPlug('mhinz/vim-startify')
 
 if s:startresult ==? 1
@@ -214,16 +215,16 @@ endif
 " ------------------------------------------------
 "				ultisnips 设置
 " ------------------------------------------------
-"let s:usnipresutl =commands_basic#ExistPlug('SirVer/ultisnips') 
+"let s:usnipresutl = commands_basic#ExistPlug('SirVer/ultisnips') 
 
 "if s:usnipresutl ==? 1
 	"let g:UltiSnipsExpandTrigger="<tab>"
 "endif
 
 
-" ----------------------------------
-"			SnipMate设置
-" ----------------------------------
+" ------------------------------------------------
+"					SnipMate设置
+" ------------------------------------------------
 let s:snipmateresult = commands_basic#ExistPlug('garbas/vim-snipmate') 
 
 if s:snipmateresult ==? 1
@@ -232,10 +233,9 @@ if s:snipmateresult ==? 1
 
 endif
 
-" ----------------------------------
-"			neosnippet 设置
-" ----------------------------------
-
+" ------------------------------------------------
+"				neosnippet 设置
+" ------------------------------------------------
 "let s:nsnipresult = commands_basic#ExistPlug('Shougo/neosnippet.vim')
 
 "if s:nsnipresult ==? 1
@@ -249,11 +249,10 @@ endif
 "endif
 
 
-
-" ----------------------------------
-"			vim-hexokinase
-"			显示颜色
-" ----------------------------------
+" ------------------------------------------------
+"				vim-hexokinase
+"					显示颜色
+" ------------------------------------------------
 let s:hcolorresult = commands_basic#ExistPlug('RRethy/vim-hexokinase') 
 
 if s:hcolorresult ==? 1
@@ -261,17 +260,15 @@ if s:hcolorresult ==? 1
 endif
 
 
-" ----------------------------------
-"		vim-highlightedyank
-"			高亮复制
-" ----------------------------------
-
+" ------------------------------------------------
+"			vim-highlightedyank
+"				高亮复制
+" ------------------------------------------------
 let s:hlyankresult = commands_basic#ExistPlug('machakann/vim-highlightedyank') 
-if s:hlyankresult ==? 1
 
+if s:hlyankresult ==? 1
 	" 设置高亮持续时间 单位为毫秒
 	let g:highlightedyank_highlight_duration = 5000
-
 endif
 
 

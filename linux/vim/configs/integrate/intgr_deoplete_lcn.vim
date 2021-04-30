@@ -22,6 +22,9 @@ call plug#begin('~/.vim/plugged')
 	" deoplete + Language Client-neovim
 	source ~/.vim/configs/plugins/plug_complete/plugins_deoplete_lcn.vim
 
+	" snip
+	source ~/.vim/configs/plugins/plug_snippets/plugins_snippets_ultisnips.vim
+
 	" linter
 	source ~/.vim/configs/plugins/plugins_linter.vim
 
@@ -36,6 +39,12 @@ call plug#begin('~/.vim/plugged')
 
 	" markdown
 	source ~/.vim/configs/plugins/plugins_markdown.vim
+
+	" 语法增强
+	source ~/.vim/configs/plugins/plugins_syntax.vim
+
+	" git相关
+	source ~/.vim/configs/plugins/plugins_git.vim
 
 call plug#end()
 

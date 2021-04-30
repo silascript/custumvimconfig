@@ -43,6 +43,9 @@ call plug#begin('~/.vim/plugged')
 	" 语法增强
 	source ~/.vim/configs/plugins/plugins_syntax.vim
 
+	" git相关
+	source ~/.vim/configs/plugins/plugins_git.vim
+
 call plug#end()
 
 " ----------------------------------------
