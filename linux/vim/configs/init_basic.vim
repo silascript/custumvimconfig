@@ -11,6 +11,9 @@ call plug#begin('~/.vim/plugged')
 
 	source ~/.vim/configs/plugins/plugins_basic.vim
 
+	" 默认statusline 插件
+	source ~/.vim/configs/plugins/plugins_statusline.vim
+
 call plug#end()
 
 

@@ -46,6 +46,15 @@ call plug#begin('~/.vim/plugged')
 	" git相关
 	source ~/.vim/configs/plugins/plugins_git.vim
 
+	" 各种指示器 如缩进线
+	"source ~/.vim/configs/plugins/plugins_indicator.vim
+
+	" 格式化
+	source ~/.vim/configs/plugins/plugins_format.vim
+
+	" 搜索
+	source ~/.vim/configs/plugins/plugins_search.vim
+
 call plug#end()
 
 
@@ -69,6 +78,9 @@ filetype indent on
 
 	" 常用插件配置
 	source ~/.vim/configs/conf/conf_plugins_common.vim
+
+	" statusline 配置
+	source ~/.vim/configs/conf/conf_plugins_statusline.vim
 
 	" deoplete 配置
 	source ~/.vim/configs/conf/completes/conf_deoplete_lcn.vim

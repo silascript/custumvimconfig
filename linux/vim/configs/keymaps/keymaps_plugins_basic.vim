@@ -98,3 +98,22 @@ if s:defxresult ==? 1
 	"endfunction
 
 endif
+
+
+
+
+" ------------------------------------------------
+"					fzf.vim keymap
+" ------------------------------------------------
+
+let s:fzfkresult = commands_basic#ExistPlug('junegunn/fzf.vim')
+if s:fzfkresult ==? 1
+	
+	" 
+	"nmap <leader><tab> <plug>(fzf-maps-n)
+    "xmap <leader><tab> <plug>(fzf-maps-x)
+    "omap <leader><tab> <plug>(fzf-maps-o)
+
+endif
+
+

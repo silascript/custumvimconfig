@@ -14,9 +14,10 @@
 	" mark 显示
 	Plug 'kshenoy/vim-signature'
 
-	" airline
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
+	" statusline
+	"lightline
+	"source ~/.vim/configs/plugins/plugins_statusline.vim
+	source ~/.vim/configs/plugins/plug_statusline/plugins_statusline_lightline_ale.vim
 
 	" 文件类型图标
 	" 要在airline之后
@@ -27,7 +28,9 @@
 	
 	" color
 	source ~/.vim/configs/plugins/plugins_color.vim
-
+	
+	" 指示器
+	"source ~/.vim/configs/plugins/plugins_indicator.vim
 
 	" minimap 
 	"Plug 'wfxr/minimap.vim'

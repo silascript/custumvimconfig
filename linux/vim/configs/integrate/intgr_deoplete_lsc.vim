@@ -52,6 +52,12 @@ call plug#begin('~/.vim/plugged')
 	" git相关
 	source ~/.vim/configs/plugins/plugins_git.vim
 
+	" 格式化
+	source ~/.vim/configs/plugins/plugins_format.vim
+
+	" 搜索
+	source ~/.vim/configs/plugins/plugins_search.vim
+
 call plug#end()
 
 " ----------------------------------------
@@ -72,6 +78,9 @@ source ~/.vim/configs/conf/conf_basic.vim
 
 " 常用插件配置
 source ~/.vim/configs/conf/conf_plugins_common.vim
+
+" statusline 配置
+source ~/.vim/configs/conf/conf_plugins_statusline.vim
 
 " deoplete + vim-lsc 插件设置
 source ~/.vim/configs/conf/completes/conf_deoplete_lsc.vim

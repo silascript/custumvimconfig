@@ -60,6 +60,9 @@ source ~/.vim/configs/conf/conf_basic.vim
 " 常用插件配置 
 source ~/.vim/configs/conf/conf_plugins_common.vim
 
+" statusline 配置
+source ~/.vim/configs/conf/conf_plugins_statusline.vim
+
 " asyncomplete vim-lsp 配置
 source ~/.vim/configs/conf/completes/conf_asyncomplete_lsp.vim
 
@@ -72,6 +75,8 @@ source ~/.vim/configs/conf/conf_plugins_linter.vim
 " ----------------------------------
 " 常用插件keymap
 source ~/.vim/configs/keymaps/keymaps_plugins_basic.vim
+
+
 
 " asyncomplete keymap
 source ~/.vim/configs/keymaps/keymaps_asyncomplete_basic.vim

@@ -45,8 +45,9 @@ endif
 " 设置当前光标与顶部和底部距离
 set scrolloff=5
 
-" 设置状态栏
+" 设置状态栏及标签栏
 set laststatus=2
+set showtabline=2
 set ruler
 
 " 高亮显示匹配的括号

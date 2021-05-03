@@ -15,6 +15,9 @@ if s:lcnresult ==? 1
     \ 'ruby': ['solargraph', 'stdio'],
     \ }
 
+    
+   let g:LanguageClient_hoverPreview = "Never"
+
 
 endif
 

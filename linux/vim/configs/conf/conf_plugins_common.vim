@@ -66,47 +66,6 @@ endif
 
 
 " ------------------------------------------------
-"					airline设置
-" ------------------------------------------------
-let s:aleresult= commands_basic#ExistPlug('vim-airline/vim-airline')
-if s:aleresult ==? 1
-	" let g:airline#extensions#tabline#enabled = 1
-	let s:aleresult = commands_basic#ExistPlug('dense-analysis/ale')
-	if s:aleresult ==? 1
-		let g:airline_extensions = ['branch','tabline','ale']
-	else
-		let g:airline_extensions = ['branch','tabline']
-	endif
-	" buffer文件名及路径显示格式
-	let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
-	
-	" airline样式设置
-	" let g:airline_theme = 'dark'
-	" let g:airline_theme = 'wombat'
-	let g:airline_theme = 'base16'
-
-	" 使用powerline font
-	 "let g:airline_powerline_fonts=1
-
-	if !exists('g:airline_symbols')
-	   let g:airline_symbols = {}
-	endif
-
-
-	let g:airline_left_sep = ''
-	let g:airline_right_sep = ''
-
-	let g:airline_left_alt_sep = ''
-	let g:airline_right_alt_sep = ''
-
-	let g:airline_symbols.maxlinenr = ''
-	let g:airline_symbols.branch = ''
-
-	let g:airline_symbols.readonly = ''
-
-endif
-
-" ------------------------------------------------
 "					startify设置
 " ------------------------------------------------
 let s:startresult=commands_basic#ExistPlug('mhinz/vim-startify')
@@ -273,5 +232,76 @@ endif
 
 
 
+" ------------------------------------------------
+"					缩进线设置
+" ------------------------------------------------
+let s:inlineresult = commands_basic#ExistPlug('Yggdroot/indentLine') 
 
+if s:inlineresult ==? 1
+	let g:indentLine_enabled = 1
+	
+	"let g:indent_guides_start_level =1
+	"let g:indentLine_showFirstIndentLevel = 0
+	"let g:indentLine_setColors = 0
+
+	"let g:indentLine_setConceal = 0
+	"let g:indentLine_conceallevel = 2
+
+	let g:indentLine_char = '┊'
+	"let g:indentLine_char_list = ['|', '¦', '┆', '┊']
+
+endif
+
+
+" ------------------------------------------------
+"			vim-indent-guides 设置
+" ------------------------------------------------
+let s:inguiresult = commands_basic#ExistPlug('nathanaelkane/vim-indent-guides') 
+
+if s:inguiresult ==? 1
+	let g:indent_guides_enable_on_vim_startup = 1
+	let g:indent_guides_start_level = 1 
+	" 缩进线宽度
+	let g:indent_guides_guide_size = 1
+
+endif
+
+
+" ------------------------------------------------
+"					fzf.vim 设置
+" ------------------------------------------------
+
+let s:fzfresult = commands_basic#ExistPlug('junegunn/fzf.vim') 
+if s:fzfresult  ==? 1
+	
+	" 布局
+	" window 是弹出窗口
+	"let g:fzf_layout = { 'window': { 'width': 0.9, 'height': 0.6} }
+	" down是在底部显示 值是窗口占比
+	let g:fzf_layout = { 'down':'40%' }
+	"if has('nvim') && !exists('g:fzf_layout')
+	  "autocmd! FileType fzf
+	  "autocmd  FileType fzf set laststatus=0 noshowmode noruler
+		"\| autocmd BufLeave <buffer> set laststatus=2 showmode ruler
+	"endif
+
+
+endif
+
+
+
+" ------------------------------------------------
+"				LeaderF 设置
+" ------------------------------------------------
+
+let s:leaderfresult = commands_basic#ExistPlug('Yggdroot/LeaderF') 
+if s:leaderfresult ==? 1
+	
+	" 弹出窗口
+	"let g:Lf_WindowPosition = 'popup'
+
+	let g:Lf_ShowDevIcons = 1	
+	let g:Lf_DevIconsFont = "Sarasa Term SC Regular"
+
+endif
 

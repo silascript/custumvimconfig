@@ -23,6 +23,8 @@
 	" 文本对象相关
 	Plug 'wellle/targets.vim'
 
+	" 滚动status 
+	"Plug 'ojroques/vim-scrollstatus'
 
 " call plug#end()
 

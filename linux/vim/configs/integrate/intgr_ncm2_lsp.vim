@@ -62,6 +62,9 @@ filetype indent on
 	" 常用插件配置 
 	source ~/.vim/configs/conf/conf_plugins_common.vim
 
+	" statusline 配置
+	source ~/.vim/configs/conf/conf_plugins_statusline.vim
+
 	" ncm2 + vim-lsp 配置
 	source ~/.vim/configs/conf/completes/conf_ncm2_lsp.vim
 
