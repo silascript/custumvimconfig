@@ -22,6 +22,9 @@
 
 	" 文本对象相关
 	Plug 'wellle/targets.vim'
+	
+	" tags
+	source ~/.vim/configs/plugins/plugins_tagtools.vim
 
 	" 滚动status 
 	"Plug 'ojroques/vim-scrollstatus'

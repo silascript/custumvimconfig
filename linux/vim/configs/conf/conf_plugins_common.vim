@@ -293,7 +293,6 @@ endif
 " ------------------------------------------------
 "				LeaderF 设置
 " ------------------------------------------------
-
 let s:leaderfresult = commands_basic#ExistPlug('Yggdroot/LeaderF') 
 if s:leaderfresult ==? 1
 	
@@ -305,3 +304,15 @@ if s:leaderfresult ==? 1
 
 endif
 
+
+
+
+" ------------------------------------------------
+"				tagbar 设置
+" ------------------------------------------------
+let s:tagbarfresult = commands_basic#ExistPlug('preservim/tagbar') 
+if s:tagbarfresult ==? 1
+	" 设置显示窗口宽度
+	let g:tagbar_width = max([25, winwidth(0) / 5])
+
+endif
