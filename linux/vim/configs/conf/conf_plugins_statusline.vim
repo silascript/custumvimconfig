@@ -151,7 +151,7 @@ if s:lightlineresult ==? 1
 			\ &filetype ==? 'vista_kind'       ? ' ' :
 			\ &filetype ==? 'vista'            ? ' ' :
 			\ &filetype =~? '\v^mundo(diff)?$' ? ' ' :
-			\ printf(' %2ld%% ☰ %3ld:%3ld', 100*line('.')/line('$'),  line('.'), col('.'))
+			\ printf(' %3ld%% ☰ %4ld:%3ld', 100*line('.')/line('$'),  line('.'), col('.'))
 	endfunction
 
 endif
