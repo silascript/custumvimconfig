@@ -94,7 +94,8 @@ if s:lightlineresult ==? 1
 			\ 'filetype': 'MyFiletype',
 				\ 'fileformat': 'MyFileformat',
 				\ 'gitbranch': 'FugitiveHead',
-				\ 'lineinfo':'LightlineLineinfo'
+				\ 'lineinfo':'LightlineLineinfo',
+				\ 'method': 'NearestMethodOrFunction'
 			\ }
 		\ }
 
@@ -129,7 +130,6 @@ if s:lightlineresult ==? 1
 			"\ 'paste': '&paste',
 			"\ 'spell': '&spell' }
 
-
 	endif
 	
 		" 使用vim-devicons显示文件类型及系统图标
@@ -152,6 +152,11 @@ if s:lightlineresult ==? 1
 			\ &filetype ==? 'vista'            ? ' ' :
 			\ &filetype =~? '\v^mundo(diff)?$' ? ' ' :
 			\ printf(' %3ld%% ☰ %4ld:%3ld', 100*line('.')/line('$'),  line('.'), col('.'))
+	endfunction
+	
+	" 在状态栏显示vista插件获取的函数
+	function! NearestMethodOrFunction() abort
+	  return get(b:, 'vista_nearest_method_or_function', '')
 	endfunction
 
 endif

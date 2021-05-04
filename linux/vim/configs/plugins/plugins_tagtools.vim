@@ -10,7 +10,9 @@
 "call plug#begin('~/.vim/plugged')
 
 	" tagbar
-	Plug 'preservim/tagbar'
+	"Plug 'preservim/tagbar'
+	" vista
+	Plug 'liuchengxu/vista.vim'
 
 "call plug#end()
 

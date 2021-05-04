@@ -305,8 +305,6 @@ if s:leaderfresult ==? 1
 endif
 
 
-
-
 " ------------------------------------------------
 "				tagbar 设置
 " ------------------------------------------------
@@ -316,3 +314,29 @@ if s:tagbarfresult ==? 1
 	let g:tagbar_width = max([25, winwidth(0) / 5])
 
 endif
+
+
+" ------------------------------------------------
+"				vista 设置
+" ------------------------------------------------
+
+let s:vistaresult = commands_basic#ExistPlug('liuchengxu/vista.vim') 
+if s:vistaresult ==? 1
+
+	"let g:vista_icon_indent = ["╰─▸ ", "├─▸ "]
+	let g:vista_default_executive = 'ctags'
+	"let g:vista#renderer#enable_icon = 1	
+
+	"let g:vista#renderer#icons = {
+		"\ "function": "\uf794",
+		"\ "variable": "\uf71b",
+	"\ }
+
+	
+endif
+
+
+
+
+
+

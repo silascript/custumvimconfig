@@ -22,7 +22,10 @@
 
 	" 文本对象相关
 	Plug 'wellle/targets.vim'
-	
+
+	" 动态选择
+	Plug 'terryma/vim-expand-region'
+
 	" tags
 	source ~/.vim/configs/plugins/plugins_tagtools.vim
 
