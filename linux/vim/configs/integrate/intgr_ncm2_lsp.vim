@@ -14,6 +14,7 @@ call plug#begin('~/.vim/plugged')
 	source ~/.vim/configs/plugins/plugins_basic.vim
 
 	" 显示界面插件
+	" 界面插件集中的 statusline 插件集已加入ale
 	source ~/.vim/configs/plugins/plugins_display.vim
 	
 	" sinppet
@@ -23,8 +24,8 @@ call plug#begin('~/.vim/plugged')
 	" ncm2 + vim-lsp
 	 source ~/.vim/configs/plugins/plug_complete/plugins_ncm2_lsp.vim
 
-	" linter
-	source ~/.vim/configs/plugins/plugins_linter.vim
+	" linter ale
+	"source ~/.vim/configs/plugins/plugins_linter.vim
 
 	" 标点符号插件
 	source ~/.vim/configs/plugins/plugins_punctuation.vim
