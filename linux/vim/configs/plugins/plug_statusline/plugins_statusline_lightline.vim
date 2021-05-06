@@ -14,5 +14,6 @@
 
 	" lightline color theme
 	Plug 'sainnhe/lightline_foobar.vim'
+	"Plug 'jacoborus/tender.vim'
 "call plug#end()
 

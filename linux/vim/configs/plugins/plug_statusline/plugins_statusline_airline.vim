@@ -13,7 +13,8 @@
 	Plug 'vim-airline/vim-airline'
 	Plug 'vim-airline/vim-airline-themes'
 
-
+	" color theme
+	Plug 'jacoborus/tender.vim'
 
 
 "call plug#end()

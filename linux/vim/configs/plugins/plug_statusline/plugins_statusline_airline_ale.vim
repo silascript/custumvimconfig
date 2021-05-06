@@ -10,8 +10,9 @@
 "call plug#begin('~/.vim/plugged')
 
 	" airline
-	Plug 'vim-airline/vim-airline'
-	Plug 'vim-airline/vim-airline-themes'
+	"Plug 'vim-airline/vim-airline'
+	"Plug 'vim-airline/vim-airline-themes'
+	source ~/.vim/configs/plugins/plug_statusline/plugins_statusline_airline.vim
 
 	" ale
 	Plug 'w0rp/ale'

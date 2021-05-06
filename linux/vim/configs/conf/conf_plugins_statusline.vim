@@ -14,13 +14,33 @@ if s:aleresult ==? 1
 	else
 		let g:airline_extensions = ['branch','tabline']
 	endif
-	" buffer文件名及路径显示格式
-	let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
 	
+	" 状态栏只显示文件名
+	let g:airline_section_c_only_filename = 1
+
+	" 显示vista 信息
+	let g:airline#extensions#vista#enabled = 1
+
+	" branch 样式
+	"let g:airline#extensions#branch#format = 1
+	"let g:airline#extensions#capslock#enabled = 1
+	
+	
+	" buffer文件名及路径显示格式
+	"let g:airline#extensions#tabline#formatter = 'unique_tail_improved'
+	"let g:airline#extensions#tabline#show_tab_count = 1
+
+	" 标签栏显示关闭按钮
+	 let g:airline#extensions#tabline#show_close_button = 1
+	 "let g:airline#extensions#tabline#close_symbol = 'X'
+	
+
 	" airline样式设置
-	" let g:airline_theme = 'dark'
-	" let g:airline_theme = 'wombat'
-	let g:airline_theme = 'base16'
+	try
+		let g:airline_theme = 'tender'
+	catch
+		let g:airline_theme = 'base16'
+	endtry
 
 	" 使用powerline font
 	 "let g:airline_powerline_fonts=1
@@ -28,7 +48,6 @@ if s:aleresult ==? 1
 	if !exists('g:airline_symbols')
 	   let g:airline_symbols = {}
 	endif
-
 
 	let g:airline_left_sep = ''
 	let g:airline_right_sep = ''
@@ -81,7 +100,6 @@ if s:lightlineresult ==? 1
 					\ [
 						\ 'filetype',
 						\ 'fileformat',
-						\ 'fileencoding', 
 						\ 'hex', 
 						\ 'asc', 
 						\ 'lineinfo'
@@ -93,15 +111,18 @@ if s:lightlineresult ==? 1
 			\ 'component_function':{
 			\ 'filetype': 'MyFiletype',
 				\ 'fileformat': 'MyFileformat',
-				\ 'gitbranch': 'FugitiveHead',
+				\ 'gitbranch': 'BranchFugitiveHead',
 				\ 'lineinfo':'LightlineLineinfo',
-				\ 'method': 'NearestMethodOrFunction'
+				\ 'method': 'NearestMethodOrFunction',
 			\ }
 		\ }
 
+		" tab设置
+		let g:lightline.tab_component_function = {
+			\ 'filename':'TabsFnameFunc',
+		\ }
 
 		let g:lightline.component = {
-			\ 'lineinfo': ' '.'%l:%c',
 			\ 'readonly':  '%{&readonly?"":""}',
 		\ }	
 
@@ -138,7 +159,7 @@ if s:lightlineresult ==? 1
 		endfunction
 
 		function! MyFileformat()
-		  return winwidth(0) > 70 ? ('' . WebDevIconsGetFileFormatSymbol()) : ''
+		  return winwidth(0) > 70 ? (&fileencoding . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
 		endfunction
 		
 		" 行信息
@@ -151,22 +172,44 @@ if s:lightlineresult ==? 1
 			\ &filetype ==? 'vista_kind'       ? ' ' :
 			\ &filetype ==? 'vista'            ? ' ' :
 			\ &filetype =~? '\v^mundo(diff)?$' ? ' ' :
-			\ printf(' %3ld%% ☰ %4ld:%3ld', 100*line('.')/line('$'),  line('.'), col('.'))
+			\ printf('%3ld%% %4ld:%3ld', 100*line('.')/line('$'),  line('.'), col('.'))
 	endfunction
 	
 	" 在状态栏显示vista插件获取的函数
 	function! NearestMethodOrFunction() abort
 	  return get(b:, 'vista_nearest_method_or_function', '')
 	endfunction
+	
+	" gitbranch显示样式
+	function! BranchFugitiveHead() abort
+			try
+				let fh= FugitiveHead()
+				return fh !=''?' '.fh : ''
+			catch
+				return ''
+			endtry
+	endfunction
 
-endif
+	" tabs样式 给tab上的文件名后加上文件类型图标
+	function! TabsFnameFunc(n) abort
+		 let fname = lightline#tab#filename(a:n)
+		 return fname == '[No Name]' ? fname:fname .' '.WebDevIconsGetFileTypeSymbol() 
+		"return 'test'
+	endfunction
 
 " ----------------------------------------------
 " lightline color theme 插件设置
-let s:llthemeresult = commands_basic#ExistPlug('sainnhe/lightline_foobar.vim')
-if s:llthemeresult ==? 1
-	" 
-	" 可选 theme: colored_dark hypsteria_alter neodark_alter deus_beta_dark
-	let g:lightline.colorscheme = 'deus_beta_dark' 
-endif
+	"let s:llthemeresult = commands_basic#ExistPlug('sainnhe/lightline_foobar.vim')
+	"if s:llthemeresult ==? 1
 
+		try
+			" tender插件的theme
+			let g:lightline.colorscheme = 'deus_beta_dark' 
+		catch
+			" foobar 的theme
+			" 可选 theme: colored_dark hypsteria_alter neodark_alter deus_beta_dark
+			let g:lightline.colorscheme = 'default' 
+
+		endtry
+	"endif
+endif
