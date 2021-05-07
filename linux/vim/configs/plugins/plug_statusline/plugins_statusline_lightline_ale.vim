@@ -14,7 +14,9 @@
 	source ~/.vim/configs/plugins/plug_statusline/plugins_statusline_lightline.vim
 	
 	" ale
-	Plug 'w0rp/ale' 
+	"Plug 'w0rp/ale' 
+	Plug 'dense-analysis/ale'
+	" lightline ale 插件
 	Plug 'maximbaz/lightline-ale'
 
 "call plug#end()

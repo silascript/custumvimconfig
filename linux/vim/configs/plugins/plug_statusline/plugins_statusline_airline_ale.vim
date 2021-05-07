@@ -15,7 +15,9 @@
 	source ~/.vim/configs/plugins/plug_statusline/plugins_statusline_airline.vim
 
 	" ale
-	Plug 'w0rp/ale'
+	Plug 'dense-analysis/ale'
+
+	"Plug 'w0rp/ale'
 
 
 "call plug#end()
