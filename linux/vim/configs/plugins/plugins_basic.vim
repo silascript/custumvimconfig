@@ -29,6 +29,9 @@
 	" tags
 	source ~/.vim/configs/plugins/plugins_tagtools.vim
 
+	" 文档
+	source ~/.vim/configs/plugins/plugins_docs.vim
+
 	" 滚动status 
 	"Plug 'ojroques/vim-scrollstatus'
 
