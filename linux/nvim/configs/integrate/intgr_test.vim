@@ -13,6 +13,12 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	" 引入基础插件集
 	source ~/.config/nvim/configs/plugins/plugins_basic.vim	
 
+	" 图标
+	source ~/.config/nvim/configs/plugins/plugins_icons.vim
+
+	" statusline ale
+	source ~/.config/nvim/configs/plugins/plug_statusline/plugins_statusline_lightline_ale.vim
+	
 call plug#end()
 
 " ----------------------------------------

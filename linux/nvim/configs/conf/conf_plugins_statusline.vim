@@ -214,3 +214,8 @@ if s:lightlineresult ==? 1
 		endtry
 	"endif
 endif
+
+
+
+
+

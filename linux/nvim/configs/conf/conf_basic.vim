@@ -6,6 +6,15 @@
 set fileencoding=utf-8
 set fileencodings=utf-8,gbk,gb18030,gb2312,ucs-bom,cp936,big5,euc-jp,euc-kr,shift-jis,latin1
 
+
+" ---------------------------
+" 取消自动备份及产生swp文件
+" ---------------------------
+set noundofile
+set nobackup
+set noswapfile
+
+
 set number
 set scrolloff=5
 " 高亮当前行
