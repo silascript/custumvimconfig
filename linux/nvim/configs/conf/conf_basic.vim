@@ -49,3 +49,18 @@ autocmd ColorScheme * call s:transparent_background()
 set ignorecase
 
 
+"--------------------------------
+"	禁止注释行回车自动添加注释
+"--------------------------------
+" autocmd FileType * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+augroup Format-Options
+    autocmd!
+    autocmd BufEnter * setlocal formatoptions-=c formatoptions-=r formatoptions-=o
+
+    " This can be done as well instead of the previous line, for setting formatoptions as you choose:
+    autocmd BufEnter * setlocal formatoptions=crqn2l1j
+augroup END
+
+
+
+
