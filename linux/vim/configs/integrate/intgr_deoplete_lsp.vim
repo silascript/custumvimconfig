@@ -71,7 +71,7 @@ filetype indent on
 "			插件设置
 " ----------------------------------
 " 基础配置
-source ~/.vim/configs/conf/conf_basic.vim
+"source ~/.vim/configs/conf/conf_basic.vim
 
 " 常用插件配置 
 source ~/.vim/configs/conf/conf_plugins_common.vim
