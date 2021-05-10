@@ -29,7 +29,7 @@ call plug#begin('~/.vim/plugged')
 	source ~/.vim/configs/plugins/plugins_directory.vim
 	
 	" 图标
-	source ~/.vim/configs/plugins/plugins_icons.vim
+	"source ~/.vim/configs/plugins/plugins_icons.vim
 
 	" markdown
 	source ~/.vim/configs/plugins/plugins_markdown.vim

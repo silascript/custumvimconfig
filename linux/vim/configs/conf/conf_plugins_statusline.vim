@@ -1,6 +1,9 @@
 " ---------------------------------------------------------
 "				 statusline	插件配置
 " ---------------------------------------------------------
+" 启用标签栏
+set showtabline=2
+
 
 " ------------------------------------------------
 "					airline设置
@@ -81,7 +84,7 @@ if s:lightlineresult ==? 1
 		let g:lightline = {
 			\ 'colorscheme': 'materia',
 			\ 'tabline': {
-			  \ 'left': [ [ 'tabs' ] ],
+			  \ 'left': [ [ 'buffers' ] ],
 			  \ 'right': [ ['close'],[ 'gitbranch'] ],
 			\ },
 			\ 'active':{
@@ -119,9 +122,19 @@ if s:lightlineresult ==? 1
 		\ }
 
 		" tab设置
-		let g:lightline.tab_component_function = {
-			\ 'filename':'TabsFnameFunc',
-		\ }
+		"let g:lightline.tab_component_function = {
+			"\ 'filename':'TabsFnameFunc',
+		"\ }
+		" 启用文件类型图标
+		let g:lightline#bufferline#enable_devicons = 1
+		" 图标位置 可选left right first 默认left 
+		"let g:lightline#bufferline#icon_position
+		" 未命名文件名
+		let g:lightline#bufferline#unnamed      = '[No Name]'
+		" 启用unicode字符 显示"只读" "修改中"等状态
+		let g:lightline#bufferline#unicode_symbols =1
+
+
 
 		let g:lightline.component = {
 			\ 'readonly':  '%{&readonly?"":""}',
@@ -130,6 +143,7 @@ if s:lightlineresult ==? 1
 
 		" 设置ale
 		let g:lightline.component_expand = {
+		  \ 'buffers':'lightline#bufferline#buffers',
 		  \  'linter_checking': 'lightline#ale#checking',
 		  \  'linter_infos': 'lightline#ale#infos',
 		  \  'linter_warnings': 'lightline#ale#warnings',
@@ -138,6 +152,7 @@ if s:lightlineresult ==? 1
 		\ }		
 		
 		let g:lightline.component_type = {
+		  \ 'buffers': 'tabsel',
 		  \ 'linter_checking': 'right',
 		  \ 'linter_infos': 'right',
 		  \ 'linter_warnings': 'warning',
@@ -192,11 +207,11 @@ if s:lightlineresult ==? 1
 	endfunction
 
 	" tabs样式 给tab上的文件名后加上文件类型图标
-	function! TabsFnameFunc(n) abort
-		 let fname = lightline#tab#filename(a:n)
-		 return fname == '[No Name]' ? fname:fname .' '.WebDevIconsGetFileTypeSymbol() 
-		"return 'test'
-	endfunction
+	"function! TabsFnameFunc(n) abort
+		 "let fname = lightline#tab#filename(a:n)
+		 "return fname == '[No Name]' ? fname:fname .' '.WebDevIconsGetFileTypeSymbol() 
+		""return 'test'
+	"endfunction
 
 " ----------------------------------------------
 " lightline color theme 插件设置

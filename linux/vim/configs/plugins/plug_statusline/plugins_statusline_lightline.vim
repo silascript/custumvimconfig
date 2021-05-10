@@ -11,6 +11,9 @@
 
 	" lightline
 	Plug 'itchyny/lightline.vim'
+	
+	" lightline buffer
+	Plug 'mengelbrecht/lightline-bufferline'
 
 	" lightline color theme
 	Plug 'sainnhe/lightline_foobar.vim'

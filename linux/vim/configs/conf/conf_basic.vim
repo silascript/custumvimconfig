@@ -11,10 +11,8 @@ set nocompatible
 set backspace=indent,eol,start
 
 
-
 " UltiSnips插件相关
 " let g:UltiSnipsUsePythonVersion=3
-
 
 
 " ----------------------
@@ -47,7 +45,6 @@ set scrolloff=5
 
 " 设置状态栏及标签栏
 set laststatus=2
-set showtabline=2
 set ruler
 
 " 高亮显示匹配的括号

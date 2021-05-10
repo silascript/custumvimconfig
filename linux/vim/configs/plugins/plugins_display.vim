@@ -15,16 +15,18 @@
 	Plug 'kshenoy/vim-signature'
 
 	" statusline
+	source ~/.vim/configs/plugins/plugins_statusline_ale.vim
+
 	"lightline
 	"source ~/.vim/configs/plugins/plugins_statusline.vim
-	source ~/.vim/configs/plugins/plug_statusline/plugins_statusline_lightline_ale.vim
+	"source ~/.vim/configs/plugins/plug_statusline/plugins_statusline_lightline_ale.vim
 
 	"airline
 	"source ~/.vim/configs/plugins/plug_statusline/plugins_statusline_airline_ale.vim
 
 	" 文件类型图标
 	" 要在airline之后
-	"Plug 'ryanoasis/vim-devicons'
+	Plug 'ryanoasis/vim-devicons'
 	
 	" themes
 	source ~/.vim/configs/plugins/plugins_themes.vim
