@@ -14,10 +14,14 @@ call plug#begin('~/.local/share/nvim/site/plugged')
 	source ~/.config/nvim/configs/plugins/plugins_basic.vim	
 
 	" 图标
-	source ~/.config/nvim/configs/plugins/plugins_icons.vim
+	" source ~/.config/nvim/configs/plugins/plugins_icons.vim
+	
+	" 显示插件集
+	" 包括theme 和 statusline图标
+	source ~/.config/nvim/configs/plugins/plugins_display.vim
 
 	" statusline ale
-	source ~/.config/nvim/configs/plugins/plug_statusline/plugins_statusline_lightline_ale.vim
+	" source ~/.config/nvim/configs/plugins/plug_statusline/plugins_statusline_lightline_ale.vim
 	
 call plug#end()
 

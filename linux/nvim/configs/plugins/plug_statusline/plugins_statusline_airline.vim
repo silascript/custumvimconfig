@@ -7,7 +7,7 @@
 "filetype off
 "syntax off
 
-"call plug#begin('~/.vim/plugged')
+"call plug#begin('~/.local/share/nvim/site/plugged')
 
 	" airline
 	Plug 'vim-airline/vim-airline'

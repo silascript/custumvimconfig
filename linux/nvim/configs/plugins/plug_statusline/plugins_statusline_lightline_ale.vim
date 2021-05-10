@@ -11,7 +11,7 @@
 
 	" lightline
 	"Plug 'itchyny/lightline.vim'
-	source ~/.vim/configs/plugins/plug_statusline/plugins_statusline_lightline.vim
+	source ~/.config/nvim/configs/plugins/plug_statusline/plugins_statusline_lightline.vim
 	
 	" ale
 	"Plug 'w0rp/ale' 
