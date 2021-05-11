@@ -109,8 +109,8 @@ if s:lightlineresult ==? 1
 					\ ],
 				\ ] 
 			\ },
-			\ 'separator': { 'left': "", 'right': ""},
-			\ 'subseparator': { 'left': "", 'right': ""},
+			\ 'separator': { 'left': '', 'right': ''},
+			\ 'subseparator': { 'left': '', 'right': ''},
 			\ 'component_function':{
 			\ 'filetype': 'MyFiletype',
 				\ 'fileformat': 'MyFileformat',

@@ -300,7 +300,7 @@ if s:leaderfresult ==? 1
 	"let g:Lf_WindowPosition = 'popup'
 
 	let g:Lf_ShowDevIcons = 1	
-	let g:Lf_DevIconsFont = "Sarasa Term SC Regular"
+	let g:Lf_DevIconsFont = 'Sarasa Term SC Regular'
 
 endif
 
