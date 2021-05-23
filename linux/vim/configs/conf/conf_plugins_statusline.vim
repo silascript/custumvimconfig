@@ -125,15 +125,15 @@ if s:lightlineresult ==? 1
 		"let g:lightline.tab_component_function = {
 			"\ 'filename':'TabsFnameFunc',
 		"\ }
+
 		" 启用文件类型图标
 		let g:lightline#bufferline#enable_devicons = 1
 		" 图标位置 可选left right first 默认left 
 		"let g:lightline#bufferline#icon_position
 		" 未命名文件名
-		let g:lightline#bufferline#unnamed      = '[No Name]'
+		let g:lightline#bufferline#unnamed  = '[No Name]'
 		" 启用unicode字符 显示"只读" "修改中"等状态
-		let g:lightline#bufferline#unicode_symbols =1
-
+		let g:lightline#bufferline#unicode_symbols = 1
 
 
 		let g:lightline.component = {
@@ -171,11 +171,14 @@ if s:lightlineresult ==? 1
 	
 		" 使用vim-devicons显示文件类型及系统图标
 		function! MyFiletype()
-		  return winwidth(0) > 70 ? (strlen(&filetype) ? '' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
-		endfunction
+		  "return winwidth(0) > 70 ? (strlen(&filetype) ? '' . WebDevIconsGetFileTypeSymbol() : 'no ft') : ''
+	return winwidth(0) > 70 ? (&filetype !=#'' ? WebDevIconsGetFileTypeSymbol(): 'no ft') : ''	
+	  endfunction
 
+		" 显示系统及文件编码
 		function! MyFileformat()
-		  return winwidth(0) > 70 ? (&fileencoding . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+		  "return winwidth(0) > 70 ? (&fileencoding . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
+		  return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc.' '.WebDevIconsGetFileFormatSymbol(): &enc . ' ' . WebDevIconsGetFileFormatSymbol()) : ''. WebDevIconsGetFileFormatSymbol()
 		endfunction
 		
 		" 行信息
@@ -229,3 +232,7 @@ if s:lightlineresult ==? 1
 		endtry
 	"endif
 endif
+
+
+
+
