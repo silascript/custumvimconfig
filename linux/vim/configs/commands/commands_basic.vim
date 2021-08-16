@@ -58,5 +58,9 @@ endfunction
 
 command -nargs=1 ExistPlug call commands_basic#ExistPlug(<args>)
 
+" ----------------------------------------------
+" 引入markdown 小工具
+"source ./markdown_tools.vim
+
 
 
