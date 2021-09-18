@@ -25,6 +25,9 @@
 
 	" 动态选择
 	Plug 'terryma/vim-expand-region'
+	
+	" 多光标
+	Plug 'mg979/vim-visual-multi', {'branch': 'master'}
 
 	" tags
 	source ~/.vim/configs/plugins/plugins_tagtools.vim
