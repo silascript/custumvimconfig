@@ -34,7 +34,7 @@ set cursorline
 " set t_Co=256
 " 开启真彩
 " set termguicolors
-if has("termguicolors")
+if has('termguicolor')
     set termguicolors
 endif
 
@@ -73,17 +73,95 @@ set showmatch
 " colorscheme sonokai 
 " 设置sonokai样式
 " let g:sonokai_style = 'andromeda'
-" gruvbox是真彩配色
+
+" gruvbox 配色 
+" gruvbox系列的本色是真彩配色
+"try
+	"" 设置是深色系还是浅色系
+	"set background=dark
+	"colorscheme gruvbox
+	"let g:gruvbox_contrast_dark='hard'
+	"catch
+		"colorscheme evening
+"endtry
+
+" gruvbox8 配色(gruvbox8 是gruvbox的变体)
+"try
+	"" 设置是深色系还是浅色系
+	"set background=dark
+	"" 设置不同的对比度
+	"" gruvbox8 对比度是使用不同的colorscheme文件，所以直接设置colorscheme即可
+	"" gruvbox8: 'medium' 对比度
+	"" gruvbox8_hard: 'hard' 对比度
+	"" gruvbox8_soft: 'soft' 对比度
+	""colorscheme gruvbox8
+	"colorscheme gruvbox8_hard
+	""colorscheme gruvbox8_soft
+	"" 开启透明背景
+	""let g:gruvbox_transp_bg = 1
+"catch
+	"colorschem evening 
+"endtry
+
+" gruvbox-material 配色(同样也是gruvbox的变体)
+" gruvbox_material 不但要把 color 目录中的配色文件复制到.vim/colors/目录
+" 连 autoload 目录中的配色文件也要复制到.vim/autoload目录中
+" 只有这 color 和 autoload 这两目录中均存在配色文件，colorscheme设置才会生效
+" 至于 airline 或 lightline 配色，就根据需要复制相应的文件到对应目录，再对 airline 或 lightline 进行相应设置
 try
-	colorscheme gruvbox
-	let g:gruvbox_contrast_dark='hard'
+	" 设置是深色系还是浅色系
+	"set background=light 
 	set background=dark
+
+	" 设置 colorscheme
+	colorscheme gruvbox-material	
+
+	" 设置对比度
+	" 有 'hard' 'medium' 和 'soft' 三种对比度
+	let g:gruvbox_material_background = 'hard'
+	
+	" 设置启用粗体
+	let g:gruvbox_material_enable_bold = 1
+
+	" 设置注释禁止使用斜体
+	"let g:gruvbox_material_disable_italic_comment = 1
+
+	" 设置光标的颜色
+	" 这个设置只运行在图形界面中
+	" 'auto' 'red' 'orange' 'yellow' 'green' 'aqua' 'blue' 'purple'
+	" 默认为 'auto'
+	"let g:gruvbox_material_cursor = 'purple'
+	
+
+	" 下拉菜单的颜色
+	" 可选项与光标颜色相同 默认为 'grey'
+	let g:gruvbox_material_menu_selection_background = 'green'
+	
+	" 选中后的高亮
+	" 'grey background' 'green background' 'blue background' 'red background' 'reverse'
+	" 默认 'grey background'
+	"let g:gruvbox_material_visual = ''
+
+	" 诊断高亮
+	"let g:gruvbox_material_diagnostic_text_highlight = 1
+	" 诊断所在行高亮
+	"let g:gruvbox_material_diagnostic_line_highlight = 1
+	
+	" 设置当前单词高亮的样式
+	" 'grey background' 'bold' 'underline' 'italic'
+	"let g:gruvbox_material_current_word = 'bold'
+
+	" 设置透明背景
+	"let g:gruvbox_material_transparent_background = 1
+
 catch
-	colorschem evening 
+	colorscheme evening
 endtry
 
+
+
 " 开启透明背景
-" hi Normal ctermfg=252 ctermbg=none
+ hi Normal ctermfg=252 ctermbg=none
 
 func! s:transparent_background()
 	hi Normal guibg=NONE ctermbg=NONE

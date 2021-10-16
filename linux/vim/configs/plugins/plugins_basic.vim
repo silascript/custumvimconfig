@@ -38,6 +38,7 @@
 	" 滚动status 
 	"Plug 'ojroques/vim-scrollstatus'
 
+
 " call plug#end()
 
 
