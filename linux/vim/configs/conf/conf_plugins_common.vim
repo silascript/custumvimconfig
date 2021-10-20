@@ -5,11 +5,17 @@
 " --------------------------------------------------
 "				nerdcommenter 设置
 " --------------------------------------------------
-let s:nerdcommcresult = commands_basic#ExistPlug('preservim/nerdcommenter')
-if s:nerdcommcresult ==? 1
+" scrooloose/nerdcommenter 已更为为 preservim/nerdcommenter 
+let s:nerdcomresult=commands_basic#ExistPlug('preservim/nerdcommenter')
+
+if s:nerdcomresult ==? 1
+	"filetype plugin on
+	"echom 'nerdcommenter '.nerdcommcresult
+
 	" 默认快捷键
-	" 注释 <leader>cc 
-	" 取消注释 <leader>c<space> 或者 <leader>cu
+	" <leader>cc 注释 
+	" <leader>cu 取消注释
+	" <leader>c<space> 智能判断是注释还是取消注释
 
 	" 注释时注释符号后插入一个空格
 	let g:NERDSpaceDelims = 1
@@ -20,6 +26,8 @@ if s:nerdcommcresult ==? 1
 	let g:NERDCommentEmptyLines = 1
 	
 	let g:NERDAltDelims_java = 1
+	
+	let g:NERDCustomDelimiters = { 'c': { 'left': '//' } }
 
 endif
 

@@ -15,7 +15,8 @@
 	Plug 'machakann/vim-highlightedyank'
 
 	" 快速注释
-	Plug 'scrooloose/nerdcommenter'
+	"Plug 'scrooloose/nerdcommenter' " 更名为下面 狗屎的
+	Plug 'preservim/nerdcommenter' 
 	
 	" 添加环绕符号 
 	Plug 'tpope/vim-surround'
