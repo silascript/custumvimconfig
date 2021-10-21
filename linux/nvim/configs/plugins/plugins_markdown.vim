@@ -1,17 +1,13 @@
 
 " ----------------------------------------
-"				Theme	
+"				Markdown插件	
 " ----------------------------------------
 
 " call plug#begin('~/.local/share/nvim/site/plugged')
 	
+	" markdown预览
+	Plug 'iamcco/markdown-preview.nvim', {'do':{ -> mkdp#util#install() },'for':['markdown', 'vim-plug']}
 
-	" sonokai配色
-	" Plug 'sainnhe/sonokai'
-	" 真彩theme
-	Plug 'morhetz/gruvbox'
-	
 
 " call plug#end()
-
 

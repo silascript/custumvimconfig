@@ -21,6 +21,8 @@ if s:nerdcommcresult ==? 1
 	let g:NERDCommentEmptyLines = 1
 	
 	let g:NERDAltDelims_java = 1
+	
+	let g:NERDCustomDelimiters = { 'c': { 'left': '//' } }	
 
 endif
 

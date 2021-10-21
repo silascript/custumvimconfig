@@ -1,17 +1,12 @@
 
 " ----------------------------------------
-"				Theme	
+"			乱数假文插件	
 " ----------------------------------------
 
 " call plug#begin('~/.local/share/nvim/site/plugged')
 	
-
-	" sonokai配色
-	" Plug 'sainnhe/sonokai'
-	" 真彩theme
-	Plug 'morhetz/gruvbox'
-	
+	" Lorem Ipsum
+	Plug 'vim-scripts/loremipsum'
 
 " call plug#end()
-
 
