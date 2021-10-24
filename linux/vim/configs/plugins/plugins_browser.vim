@@ -1,6 +1,6 @@
 
 " ----------------------------------------
-"			vim  html相关插件 
+"			vim  浏览器相关插件 
 " ----------------------------------------
 
 " 关闭缩进及语法高亮
@@ -9,11 +9,12 @@
 
 "call plug#begin('~/.vim/plugged')
 	
-	" emmet
-	Plug 'mattn/emmet-vim'
 
-	" 自动关闭tag
-	Plug 'alvan/vim-closetag'
+	" 在浏览器打开
+	Plug 'tyru/open-browser.vim'
+	
+	" 在浏览器打开github
+	Plug 'tyru/open-browser-github.vim'
 
 
 "call plug#end()

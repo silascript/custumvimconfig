@@ -110,8 +110,8 @@ if s:lightlineresult ==? 1
 					\ ],
 				\ ] 
 			\ },
-			\ 'separator': { 'left': "", 'right': ""},
-			\ 'subseparator': { 'left': "", 'right': ""},
+			\ 'separator': { 'left': '', 'right': ''},
+			\ 'subseparator': { 'left': '', 'right': ''},
 			\ 'component_function':{
 			\ 'filetype': 'MyFiletype',
 				\ 'fileformat': 'MyFileformat',
@@ -178,7 +178,7 @@ if s:lightlineresult ==? 1
 		" 显示系统及文件编码
 		function! MyFileformat()
 		  "return winwidth(0) > 70 ? (&fileencoding . ' ' . WebDevIconsGetFileFormatSymbol()) : ''
-		  return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc.' '.WebDevIconsGetFileFormatSymbol(): &enc . ' ' . WebDevIconsGetFileFormatSymbol()) : ''. WebDevIconsGetFileFormatSymbol()
+		  return winwidth(0) > 70 ? (&fileencoding!=# '' ? &fileencoding.' '.WebDevIconsGetFileFormatSymbol(): &encoding . ' ' . WebDevIconsGetFileFormatSymbol()) : ''. WebDevIconsGetFileFormatSymbol()
 		endfunction
 		
 		" 行信息
@@ -203,7 +203,7 @@ if s:lightlineresult ==? 1
 	function! BranchFugitiveHead() abort
 			try
 				let fh= FugitiveHead()
-				return fh !=''?' '.fh : ''
+				return fh !=#''?' '.fh : ''
 			catch
 				return ''
 			endtry

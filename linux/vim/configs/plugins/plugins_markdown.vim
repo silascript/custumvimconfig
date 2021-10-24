@@ -13,7 +13,8 @@
 	" 依赖python
 	"Plug 'JamshedVesuna/vim-markdown-preview'
 	"Plug 'D0n9X1n/markdown-preview.vim'
-
+	
+	" Plug 'greyblake/vim-preview'
 
 	" 快速生成表格
 	Plug 'nora75/markdowntable'
