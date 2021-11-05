@@ -4,8 +4,8 @@
 
 
 " emmet 插件配置
-let s:emmemt_vim = commands_basic#ExistPlug('mattn/emmet-vim')
-if s:emmemt_vim ==? 1
+let s:emmet_vim_exis = commands_basic#ExistPlug('mattn/emmet-vim')
+if s:emmet_vim_exis ==? 1
 	let g:user_emmet_settings = {
 		\  'html': {
 		\    'snippets': {
