@@ -3,9 +3,9 @@
 " ---------------------------------------------------------
 
 
-" JamshedVesuna/vim-markdown-preview 预览插件配置
-let s:emmemt_mdpre = commands_basic#ExistPlug('mattn/emmet-vim')
-if s:emmemt_mdpre ==? 1
+" emmet 插件配置
+let s:emmemt_vim = commands_basic#ExistPlug('mattn/emmet-vim')
+if s:emmemt_vim ==? 1
 	let g:user_emmet_settings = {
 		\  'html': {
 		\    'snippets': {
