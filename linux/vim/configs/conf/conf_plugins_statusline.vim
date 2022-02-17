@@ -223,7 +223,8 @@ if s:lightlineresult ==? 1
 
 		try
 			" tender插件的theme
-			let g:lightline.colorscheme = 'deus_beta_dark' 
+			" let g:lightline.colorscheme = 'deus_beta_dark' 
+			let g:lightline.colorscheme = 'gruvbox_material' 
 		catch
 			" foobar 的theme
 			" 可选 theme: colored_dark hypsteria_alter neodark_alter deus_beta_dark
