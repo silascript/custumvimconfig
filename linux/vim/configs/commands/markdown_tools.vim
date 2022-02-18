@@ -14,6 +14,10 @@ function markdown_tools#CreateMDImageDirectory()
 		" 获取当前文件名
 		" 只取文件名不要路径和后缀名
 		let cfilename = expand('%:t:r')
+		
+		" 当前文件所除目录的绝对路径
+		let current_file_dir_path=expand('%:p:h')
+		" echom l:current_file_dir_path
 
 		" 处理下图片目录名字
 		" 图片目录名:
@@ -21,8 +25,11 @@ function markdown_tools#CreateMDImageDirectory()
 		let	img_dir_name_str = l:cfilename . '.assets' 
 
 		" 检测目录是否已存在
-		let dirnamepath = './'.l:img_dir_name_str
+		" let dirnamepath = './'.l:img_dir_name_str
+		let dirnamepath = l:current_file_dir_path.'/'.l:img_dir_name_str
 		
+		" echom l:dirnamepath
+
 		" 使用 getfsize 检测目录
 		" getfsize 返回文件字节大小
 		" 目录返回 0，找不到文件返回 -1，文件过大，超出了 vim 的数值的范围，返回 -2
