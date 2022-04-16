@@ -13,6 +13,10 @@ if s:jam_mdpre ==? 1
 
 endif
 
-
+" lissaferreira/markdown-preview.vim 预览配置
+" let s:lissaferreira_mp = commands_basic#ExistPlug('lissaferreira/markdown-preview.vim')
+" if s:lissaferreira_mp ==? 1
+	" let g:markdownpreview#browser = 'google-chrome'
+" endif
 
 
