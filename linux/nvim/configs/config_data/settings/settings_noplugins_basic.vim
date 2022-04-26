@@ -2,9 +2,15 @@
 "			无插件配置
 " -------------------------------
 
+" 禁止生成各种文件
+set noundofile
+set nobackup
+set noswapfile
+
 " 行号
 set number
 " 开启相对行号
+set relativenumber
 
 " 开启真彩色
 if has('termguicolor')
@@ -23,10 +29,12 @@ set guicursor=n-v-c:block,i-ci-ve:ver25,r-cr:hor20,o:hor50
   \,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor
   \,sm:block-blinkwait175-blinkoff150-blinkon175
 
-" 禁止生成各种文件
-set noundofile
-set nobackup
-set noswapfile
+
+" 高亮当前行
+set cursorline
+
+" 复制高亮
+au TextYankPost * silent! lua vim.highlight.on_yank {higroup="IncSearch", timeout=1500}
 
 " 与底部保持固定行距
 set scrolloff=5

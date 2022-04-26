@@ -22,7 +22,7 @@ call plug#end()
 " 配置
 
 " 无插件基础配置
-" source ~/.config/nvim/configs/config_data/settings/settings_noplugins_basic.vim
+source ~/.config/nvim/configs/config_data/settings/settings_noplugins_basic.vim
 
 " 基础插件配置
 source ~/.config/nvim/configs/config_data/settings/settings_plugins_basic.vim 
