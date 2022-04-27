@@ -9,7 +9,12 @@ source ~/.config/nvim/configs/commands/commands_basic.vim
 " ---------------------------------------
 
 " 插件集
+
+call plug#begin()
+
 " source 
+
+call plug#end()
 
 " ---------------------------------------
 

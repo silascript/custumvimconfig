@@ -2,7 +2,7 @@
 "      插件配置模板
 " ------------------------
 
-" nere commenter 插件配置
+"  插件配置
 " let s:xxxresult = commands_basic#ExistPlug('插件名')
 " if s:xxxresult ==? 1
 " 
