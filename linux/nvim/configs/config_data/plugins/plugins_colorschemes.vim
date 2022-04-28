@@ -8,7 +8,9 @@ Plug 'jacoborus/tender.vim'
 
 Plug 'ajmwagar/vim-deus'
 
-Plug 'rakr/vim-one'
+Plug 'joshdick/onedark.vim'
+
+" Plug 'rakr/vim-one'
 
 Plug 'kaicataldo/material.vim', { 'branch': 'main' }
 
@@ -18,7 +20,16 @@ Plug 'morhetz/gruvbox'
 
 Plug 'sainnhe/gruvbox-material'
 
+Plug 'lifepillar/vim-gruvbox8'
+
 Plug 'luisiacc/gruvbox-baby'
+
+" Plug 'arcticicestudio/nord-vim'
+
+Plug 'shaunsingh/nord.nvim'
+
+" Plug 'cocopon/iceberg.vim'
+
 
 " Plug ''
 

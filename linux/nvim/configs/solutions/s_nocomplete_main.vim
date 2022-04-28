@@ -17,6 +17,9 @@ call plug#begin()
 	" 配色插件集
 	source ~/.config/nvim/configs/config_data/plugins/plugins_colorschemes.vim
 
+	" 语法高亮插件集
+	source ~/.config/nvim/configs/config_data/plugins/plugins_syntaxhl.vim
+
 call plug#end()
 
 " ---------------------------------------
@@ -32,6 +35,9 @@ source ~/.config/nvim/configs/config_data/settings/settings_plugins_basic.vim
 
 " 配色插件配置
 source ~/.config/nvim/configs/config_data/settings/settings_colorschemes.vim
+
+
+
 
 " ---------------------------------------
 
