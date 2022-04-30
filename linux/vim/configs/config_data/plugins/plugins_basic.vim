@@ -13,7 +13,7 @@ Plug 'tpope/vim-surround'
 Plug 'itchyny/vim-cursorword'
 
 " 高亮复制的内容
-" Plug 'machakann/vim-highlightedyank'
+Plug 'machakann/vim-highlightedyank'
 
 " 自动补全括号
 Plug 'jiangmiao/auto-pairs'

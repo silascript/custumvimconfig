@@ -20,6 +20,11 @@ call plug#begin()
 	" 语法高亮插件集
 	source ~/.vim/configs/config_data/plugins/plugins_syntaxhl.vim
 
+	" 显示插件集
+	" 包括 statusline 文件类型图标 mark标记显示等
+	source ~/.vim/configs/config_data/plugins/plugins_display.vim
+
+
 call plug#end()
 
 " ---------------------------------------
@@ -37,7 +42,8 @@ source ~/.vim/configs/config_data/settings/settings_plugins_basic.vim
 source ~/.vim/configs/config_data/settings/settings_colorschemes.vim
 
 
-
+" statusline 插件配置
+source ~/.vim/configs/config_data/settings/settings_plugins_statusline.vim
 
 " ---------------------------------------
 

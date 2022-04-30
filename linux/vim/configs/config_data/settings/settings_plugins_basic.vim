@@ -36,17 +36,9 @@ let s:startify_result = commands_basic#ExistPlug('mhinz/vim-startify')
 if s:startify_result ==? 1
   let g:startify_files_number = 8
 
-	" let g:startify_custom_header =[
-		" \ '  _   ___      _______ __  __  ',
-		" \ ' | \ | \ \    / /_   _|  \/  | ',
-		" \ ' |  \| |\ \  / /  | | | \  / | ',
-		" \ ' | . ` | \ \/ /   | | | |\/| | ',
-		" \ ' | |\  |  \  /   _| |_| |  | | ',
-		" \ ' |_| \_|   \/   |_____|_|  |_| ',
-	" \ ]
     
     " 使用 figlet 来生成文字图案
     let g:startify_custom_header =
-       \ startify#pad(split(system('figlet -f banner3 -w 100 NEOVIM'), '\n'))
+       \ startify#pad(split(system('figlet -f banner -w 100 Hello VIM'), '\n'))
 endif
 
