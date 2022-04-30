@@ -34,7 +34,7 @@ set cursorline
 " set t_Co=256
 " 开启真彩
 " set termguicolors
-if has('termguicolor')
+if has('termguicolors')
     set termguicolors
 endif
 
