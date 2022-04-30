@@ -13,7 +13,7 @@ set number
 set relativenumber
 
 " 开启真彩色
-if has('termguicolor')
+if has('termguicolors')
 	set termguicolors
 endif
 
