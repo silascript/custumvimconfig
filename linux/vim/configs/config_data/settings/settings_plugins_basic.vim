@@ -34,11 +34,21 @@ endif
 " startify 插件配置
 let s:startify_result = commands_basic#ExistPlug('mhinz/vim-startify')
 if s:startify_result ==? 1
-  let g:startify_files_number = 8
+	let g:startify_files_number = 8
 
     
     " 使用 figlet 来生成文字图案
-    let g:startify_custom_header =
+	let g:startify_custom_header =
        \ startify#pad(split(system('figlet -f banner -w 100 Hello VIM'), '\n'))
 endif
+
+
+" --------------------------------------------
+" vim-togglecursor 插件配置
+let s:togglecursor_result = commands_basic#ExistPlug('jszakmeister/vim-togglecursor')
+if s:togglecursor_result ==? 1
+	" let g:togglecursor_insert = "line"
+	" let g:togglecursor_leave = "line"
+endif
+
 

@@ -6,6 +6,9 @@
 " 快速注释
 Plug 'preservim/nerdcommenter'
 
+" 光标样式切换
+Plug 'jszakmeister/vim-togglecursor'
+
 " 快速操作环绕字符
 Plug 'tpope/vim-surround'
 
