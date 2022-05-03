@@ -8,7 +8,9 @@
 " source ~/.vim/configs/solutions/s_plugins_basic.vim
 
 " 无补全插件方案
-source ~/.vim/configs/solutions/s_nocomplete_main.vim
+" source ~/.vim/configs/solutions/s_nocomplete_main.vim
+" 整合 snippets 插件方案
+source ~/.vim/configs/solutions/s_plugins_snippets.vim
 
 
 
