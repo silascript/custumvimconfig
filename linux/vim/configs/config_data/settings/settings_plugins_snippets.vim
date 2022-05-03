@@ -14,7 +14,9 @@ endif
 "  ultisnips 插件配置
 let s:ultisnips_result = commands_basic#ExistPlug('SirVer/ultisnips')
 if s:ultisnips_result ==? 1
-
+	" let g:UltiSnipsExpandTrigger="<tab>"
+	" let g:UltiSnipsJumpForwardTrigger="<c-b>"
+	" let g:UltiSnipsJumpBackwardTrigger="<c-z>"
 endif
 
 

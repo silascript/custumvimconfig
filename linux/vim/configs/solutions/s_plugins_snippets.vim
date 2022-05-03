@@ -26,9 +26,9 @@ call plug#begin()
 	
 	" snippet 插件集 选择一个
 	" snipmate
-	source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_snipmate.vim
+	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_snipmate.vim
 	" ultisnips
-	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_ultisnips.vim
+	source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_ultisnips.vim
 
 call plug#end()
 
