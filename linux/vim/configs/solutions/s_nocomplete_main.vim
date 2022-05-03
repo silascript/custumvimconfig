@@ -31,6 +31,10 @@ call plug#begin()
 	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_snipmate.vim
 	source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_ultisnips.vim
 
+	" Git 插件集
+	source ~/.vim/configs/config_data/plugins/plugins_git.vim
+
+
 call plug#end()
 
 " ---------------------------------------

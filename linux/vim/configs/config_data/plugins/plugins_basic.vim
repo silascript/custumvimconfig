@@ -28,3 +28,8 @@ Plug 'easymotion/vim-easymotion'
 " 开始页面
 Plug 'mhinz/vim-startify'
 
+" 检测各插件影响 vim 性能
+Plug 'dstein64/vim-startuptime'
+
+
+
