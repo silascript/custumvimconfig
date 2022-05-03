@@ -24,6 +24,12 @@ call plug#begin()
 	" 包括 statusline 文件类型图标 mark标记显示等
 	source ~/.vim/configs/config_data/plugins/plugins_display.vim
 
+	" 格式化插件
+	source ~/.vim/configs/config_data/plugins/plugins_format.vim
+
+	" snippets 插件 选择其中一个
+	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_snipmate.vim
+	source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_ultisnips.vim
 
 call plug#end()
 
@@ -37,13 +43,19 @@ source ~/.vim/configs/config_data/settings/settings_noplugins_basic.vim
 " 基础插件配置
 source ~/.vim/configs/config_data/settings/settings_plugins_basic.vim
 
-
 " 配色插件配置
 source ~/.vim/configs/config_data/settings/settings_colorschemes.vim
 
-
 " statusline 插件配置
 source ~/.vim/configs/config_data/settings/settings_plugins_statusline.vim
+
+
+" 格式化插件配置
+source ~/.vim/configs/config_data/settings/settings_format.vim
+
+" snippets 插件配置
+source ~/.vim/configs/config_data/settings/settings_plugins_snippets.vim
+
 
 " ---------------------------------------
 
