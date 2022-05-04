@@ -14,5 +14,8 @@
 " source ~/.vim/configs/solutions/s_nocomplete_main.vim
 
 " ncm2 补全框架插件方案
-source ~/.vim/configs/solutions/complete/s_complete_ncm2.vim
+" source ~/.vim/configs/solutions/complete/s_complete_ncm2.vim
+" ncm vim-lsp 整合补全方案
+source ~/.vim/configs/solutions/complete/s_complete_ncm2_vimlsp.vim
+
 

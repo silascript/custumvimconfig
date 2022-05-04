@@ -1,5 +1,5 @@
 " -----------------------------
-"	 ncm2 补全插件整合方案
+" ncm2 vim-lsp 补全插件整合方案
 " -----------------------------
 
 " 命令
@@ -44,10 +44,10 @@ call plug#begin()
 
 
 	" ncm2 vim-lsp snipmate 整合插件集
-	source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_ncm2_lsp_snipmate.vim
+	" source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_ncm2_lsp_snipmate.vim
 
 	" ncm2 vim-lsp ultisnips 整合插件集
-	" source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_ncm2_lsp_ultisnips.vim
+	source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_ncm2_lsp_ultisnips.vim
 
 
 call plug#end()
@@ -77,7 +77,9 @@ source ~/.vim/configs/config_data/settings/settings_plugins_snippets.vim
 
 
 " ncm2 框架插件配置
-source ~/.vim/configs/config_data/settings/complete/settings_complete_ncm_basic.vim
+" source ~/.vim/configs/config_data/settings/complete/settings_complete_ncm.vim
+source ~/.vim/configs/config_data/settings/complete/settings_complete_ncm_vimlsp.vim
+
 
 
 " ---------------------------------------
