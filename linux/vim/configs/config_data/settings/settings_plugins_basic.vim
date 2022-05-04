@@ -44,11 +44,26 @@ endif
 
 
 " --------------------------------------------
+
 " vim-togglecursor 插件配置
 let s:togglecursor_result = commands_basic#ExistPlug('jszakmeister/vim-togglecursor')
 if s:togglecursor_result ==? 1
 	" let g:togglecursor_insert = "line"
 	" let g:togglecursor_leave = "line"
 endif
+
+
+" --------------------------------------------
+
+" cosco 插件配置
+source ~/.vim/configs/config_data/settings/settings_plugins_punctuation.vim
+
+
+" --------------------------------------------
+
+" let s:_result = commands_basic#ExistPlug('')
+" if s:_result ==? 1
+" 
+" endif
 
 

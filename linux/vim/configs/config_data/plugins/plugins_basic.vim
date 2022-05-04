@@ -18,15 +18,16 @@ Plug 'itchyny/vim-cursorword'
 " 高亮复制的内容
 Plug 'machakann/vim-highlightedyank'
 
-" 自动补全括号
-Plug 'jiangmiao/auto-pairs'
-
 " 跳转增强
 Plug 'easymotion/vim-easymotion'
 
 
 " 开始页面
 Plug 'mhinz/vim-startify'
+
+
+" 标点符号
+source ~/.vim/configs/config_data/plugins/plugins_punctuation.vim
 
 " 检测各插件影响 vim 性能
 Plug 'dstein64/vim-startuptime'

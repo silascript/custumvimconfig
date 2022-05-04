@@ -66,4 +66,10 @@ source ~/.vim/configs/config_data/settings/settings_plugins_snippets.vim
 " keymaps
 " source 
 
+" 基础插件 快捷键配置
+source ~/.vim/configs/config_data/keymaps/keymaps_plugins_basic.vim
+
+
+
+
 
