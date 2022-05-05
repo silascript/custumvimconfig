@@ -37,7 +37,9 @@
 " ----------------------------------------------------------------
 
 " asyncomplete 补全方案
-source ~/.vim/configs/solutions/complete/s_complete_asyncomplete.vim
+" source ~/.vim/configs/solutions/complete/s_complete_asyncomplete.vim
+" asyncomplete vim-lsp ultisnips 整合方案
+source ~/.vim/configs/solutions/complete/s_complete_asyncomplete_vimlsp.vim
 
 
 
