@@ -4,6 +4,10 @@
 " 无插件方案
 " source ~/.vim/configs/solutions/s_noplugins_basic.vim
 
+
+" ----------------------------------------------------------------
+
+
 " 基础插件方案
 " source ~/.vim/configs/solutions/s_plugins_basic.vim
 
@@ -13,9 +17,27 @@
 " 无补全插件方案
 " source ~/.vim/configs/solutions/s_nocomplete_main.vim
 
+
+" ----------------------------------------------------------------
+
+
 " ncm2 补全框架插件方案
 " source ~/.vim/configs/solutions/complete/s_complete_ncm2.vim
 " ncm vim-lsp 整合补全方案
-source ~/.vim/configs/solutions/complete/s_complete_ncm2_vimlsp.vim
+" source ~/.vim/configs/solutions/complete/s_complete_ncm2_vimlsp.vim
+
+
+" ----------------------------------------------------------------
+
+
+" easycomplete 补全方案
+" source ~/.vim/configs/solutions/complete/s_complete_easycomplete.vim
+
+
+" ----------------------------------------------------------------
+
+" asyncomplete 补全方案
+source ~/.vim/configs/solutions/complete/s_complete_asyncomplete.vim
+
 
 

@@ -6,24 +6,7 @@
 " Plug ''
 
 " ncm2 框架
-Plug 'ncm2/ncm2'
-
-" nvim-yarp  需要三个条件 
-" 1. vim-hug-neovim-rpc 
-" 2. 系统装有python
-" 3. pynvim (pip install pynvim)
-Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'roxma/nvim-yarp'
-
-
-
-" 补充功能
-" buff 补全
-Plug 'ncm2/ncm2-bufword'
-
-" 路径补全
-Plug 'ncm2/ncm2-path'
-
+source ~/.vim/configs/configs/config_data/plugins/plug_complete/plugins_complete_ncm2_basic.vim
 
 " ncm snipmate 接口
 Plug 'ncm2/ncm2-snipmate'
