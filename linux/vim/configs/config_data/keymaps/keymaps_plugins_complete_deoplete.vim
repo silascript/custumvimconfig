@@ -13,6 +13,20 @@ if s:deoplete_kresult ==? 1
 	inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 	inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
+
+	let s:deoplete_ultisnips_result = commands_basic#ExistPlug('SirVer/ultisnips')
+	if s:deoplete_ultisnips_result ==? 1
+
+
+		" 将 ultisnips 展开代码的快捷键设成其他，这样避免与 deoplete 默认的 Tab 选择候选项快捷键冲突
+		let g:UltiSnipsExpandTrigger		= "<c-e>"
+		let g:UltiSnipsJumpForwardTrigger	= "<c-j>"
+		let g:UltiSnipsJumpBackwardTrigger	= "<c-k>"
+		let g:UltiSnipsRemoveSelectModeMappings = 0
+
+	endif
+
+
 endif
 
 
