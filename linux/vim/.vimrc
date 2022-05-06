@@ -7,7 +7,6 @@
 
 " ----------------------------------------------------------------
 
-
 " 基础插件方案
 " source ~/.vim/configs/solutions/s_plugins_basic.vim
 
@@ -20,7 +19,6 @@
 
 " ----------------------------------------------------------------
 
-
 " ncm2 补全框架插件方案
 " source ~/.vim/configs/solutions/complete/s_complete_ncm2.vim
 " ncm vim-lsp 整合补全方案
@@ -28,7 +26,6 @@
 
 
 " ----------------------------------------------------------------
-
 
 " easycomplete 补全方案
 " source ~/.vim/configs/solutions/complete/s_complete_easycomplete.vim
@@ -39,7 +36,24 @@
 " asyncomplete 补全方案
 " source ~/.vim/configs/solutions/complete/s_complete_asyncomplete.vim
 " asyncomplete vim-lsp ultisnips 整合方案
-source ~/.vim/configs/solutions/complete/s_complete_asyncomplete_vimlsp.vim
+" source ~/.vim/configs/solutions/complete/s_complete_asyncomplete_vimlsp.vim
+
+
+" ----------------------------------------------------------------
+
+" deoplete 补全方案
+" deoplete 基础方案
+" source ~/.vim/configs/solutions/complete/s_complete_deoplete.vim
+
+" deoplete vim-lsp 整合方案
+" source ~/.vim/configs/solutions/complete/s_complete_deoplete_vimlsp.vim
+
+" deoplete neosnippet 整合方案
+" source ~/.vim/configs/solutions/complete/s_complete_deoplete_neosnippet.vim
+
+" deoplete snipmate 整合方案
+source ~/.vim/configs/solutions/complete/s_complete_deoplete_snipmate.vim
+
 
 
 

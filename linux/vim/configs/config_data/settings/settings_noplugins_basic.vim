@@ -71,6 +71,9 @@ set incsearch
 set ignorecase
 set smartcase
 
+
+" set completeopt=menu
+
 " 语法高亮
 syntax on
 " 文件类型侦测
