@@ -58,7 +58,10 @@
 " source ~/.vim/configs/solutions/complete/s_complete_deoplete_ultisnips.vim
 
 " deoplete vim-lsp snipmate 整合方案
-source ~/.vim/configs/solutions/complete/s_complete_deoplete_vimlsp_snipmate.vim
+" source ~/.vim/configs/solutions/complete/s_complete_deoplete_vimlsp_snipmate.vim
+
+" deoplete vim-lsp ultisnips 整合方案
+source ~/.vim/configs/solutions/complete/s_complete_deoplete_vimlsp_ultisnips.vim
 
 
 
