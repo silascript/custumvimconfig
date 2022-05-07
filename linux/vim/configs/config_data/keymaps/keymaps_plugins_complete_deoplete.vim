@@ -14,6 +14,15 @@ if s:deoplete_kresult ==? 1
 	inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 
 
+
+
+	" snipmate 快捷键配置
+	let s:deoplete_snipmate_result = commands_basic#ExistPlug('garbas/vim-snipmate')
+	if s:deoplete_snipmate_result ==? 1
+		imap <C-E> <Plug>snipMateTrigger 
+	endif
+
+	" ultisnips 快捷键配置
 	let s:deoplete_ultisnips_result = commands_basic#ExistPlug('SirVer/ultisnips')
 	if s:deoplete_ultisnips_result ==? 1
 
