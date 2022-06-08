@@ -221,16 +221,17 @@ if s:lightlineresult ==? 1
 	"let s:llthemeresult = commands_basic#ExistPlug('sainnhe/lightline_foobar.vim')
 	"if s:llthemeresult ==? 1
 
-		try
+		" try
 			" tender插件的theme
 			" let g:lightline.colorscheme = 'deus_beta_dark' 
-			let g:lightline.colorscheme = 'gruvbox_material' 
-		catch
+			" let g:lightline.colorscheme = 'gruvbox_material' 
+			" let g:lightline.colorscheme = 'gruvbox-material' 
+		" catch
 			" foobar 的theme
 			" 可选 theme: colored_dark hypsteria_alter neodark_alter deus_beta_dark
-			let g:lightline.colorscheme = 'default' 
-
-		endtry
+			" let g:lightline.colorscheme = 'default' 
+" 
+		" endtry
 	"endif
 endif
 
