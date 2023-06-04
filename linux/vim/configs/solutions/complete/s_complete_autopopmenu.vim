@@ -80,7 +80,7 @@ source ~/.vim/configs/config_data/settings/complete/settings_complete_autopopmen
 source ~/.vim/configs/config_data/keymaps/keymaps_plugins_basic.vim
 
 " vim-auto-popmenu 快捷键配置
-" source ~/.vim/configs/config_data/keymaps/keymaps_plugins_complete_deoplete.vim
+" source ~/.vim/configs/config_data/keymaps/keymaps_plugins_complete_autopopmenu.vim
 
 
 

@@ -20,10 +20,10 @@
 " --------------------------------vim-auto-popmenu 补全方案----------------------
 " vim-auto-popmenu 补全方案无需 LSP，属于极简的轻量级补全方案
 " 无字典 vim-auto-popmenu
-" source ~/.vim/configs/solutions/complete/s_complete_autopopmenu.vim
+source ~/.vim/configs/solutions/complete/s_complete_autopopmenu.vim
 
 " 带简单字典 vim-auto-popmenu
-source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_dict.vim
+" source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_dict.vim
 
 
 " ----------------------------   ncm2 补全方案 ----------------------------
