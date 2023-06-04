@@ -1,5 +1,5 @@
 " -------------------------------------
-"	deoplete vim-lsp 补全插件整合方案
+"	deoplete vim-lsc 补全插件整合方案
 " -------------------------------------
 
 
@@ -36,8 +36,8 @@ call plug#begin()
 	source ~/.vim/configs/config_data/plugins/plugins_git.vim
 
 	" deoplete 补全框架插件集
-	" deoplete vim-lsp 整合插件集
-	source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_deoplete_lsp.vim
+	" deoplete vim-lsc 整合插件集
+	source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_deoplete_lsc.vim
 
 
 
@@ -67,8 +67,8 @@ source ~/.vim/configs/config_data/settings/settings_format.vim
 " source ~/.vim/configs/config_data/settings/settings_plugins_snippets.vim
 
 
-" deoplete vim-lsp 插件整合配置
-source ~/.vim/configs/config_data/settings/complete/settings_complete_deoplete_vimlsp.vim
+" deoplete vim-lsc 插件整合配置
+source ~/.vim/configs/config_data/settings/complete/settings_complete_deoplete_vimlsc.vim
 
 
 

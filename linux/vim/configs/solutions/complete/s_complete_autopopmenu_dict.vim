@@ -1,6 +1,6 @@
-" -------------------------------------
-"	deoplete vim-lsp 补全插件整合方案
-" -------------------------------------
+" ------------------------------------------
+"	vim-auto-popmenu + 字典 补全插件整合方案
+" ------------------------------------------
 
 
 " 命令
@@ -35,9 +35,8 @@ call plug#begin()
 	" Git 插件集
 	source ~/.vim/configs/config_data/plugins/plugins_git.vim
 
-	" deoplete 补全框架插件集
-	" deoplete vim-lsp 整合插件集
-	source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_deoplete_lsp.vim
+	" vim-auto-popmenu +字典整合插件集
+	source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_autopopmenu_dict.vim
 
 
 
@@ -59,7 +58,6 @@ source ~/.vim/configs/config_data/settings/settings_colorschemes.vim
 " statusline 插件配置
 source ~/.vim/configs/config_data/settings/settings_plugins_statusline.vim
 
-
 " 格式化插件配置
 source ~/.vim/configs/config_data/settings/settings_format.vim
 
@@ -67,8 +65,10 @@ source ~/.vim/configs/config_data/settings/settings_format.vim
 " source ~/.vim/configs/config_data/settings/settings_plugins_snippets.vim
 
 
-" deoplete vim-lsp 插件整合配置
-source ~/.vim/configs/config_data/settings/complete/settings_complete_deoplete_vimlsp.vim
+" vim-auto-popmenu 框架插件基础配置
+" source ~/.vim/configs/config_data/settings/complete/settings_complete_autopopmenu_basic.vim
+" vim-auto-popmenu + 字典插件套件配置
+source ~/.vim/configs/config_data/settings/complete/settings_complete_autopopmenu_dict.vim
 
 
 
@@ -80,8 +80,8 @@ source ~/.vim/configs/config_data/settings/complete/settings_complete_deoplete_v
 " 基础插件 快捷键配置
 source ~/.vim/configs/config_data/keymaps/keymaps_plugins_basic.vim
 
-" deoplete 快捷键配置
-source ~/.vim/configs/config_data/keymaps/keymaps_plugins_complete_deoplete.vim
+" vim-auto-popmenu 快捷键配置
+" source ~/.vim/configs/config_data/keymaps/
 
 
 

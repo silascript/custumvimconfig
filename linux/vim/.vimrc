@@ -17,31 +17,37 @@
 " source ~/.vim/configs/solutions/s_nocomplete_main.vim
 
 
-" ----------------------------------------------------------------
+" --------------------------------vim-auto-popmenu 补全方案----------------------
+" vim-auto-popmenu 补全方案无需 LSP，属于极简的轻量级补全方案
+" 无字典 vim-auto-popmenu
+" source ~/.vim/configs/solutions/complete/s_complete_autopopmenu.vim
 
-" ncm2 补全框架插件方案
+" 带简单字典 vim-auto-popmenu
+source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_dict.vim
+
+
+" ----------------------------   ncm2 补全方案 ----------------------------
+
 " source ~/.vim/configs/solutions/complete/s_complete_ncm2.vim
 " ncm vim-lsp 整合补全方案
 " source ~/.vim/configs/solutions/complete/s_complete_ncm2_vimlsp.vim
 
 
-" ----------------------------------------------------------------
 
-" easycomplete 补全方案
+" ----------------------------  easycomplete 补全方案 ----------------------------
+
 " source ~/.vim/configs/solutions/complete/s_complete_easycomplete.vim
 
 
-" ----------------------------------------------------------------
+" ----------------------------  asyncomplete 补全方案 ----------------------------
 
-" asyncomplete 补全方案
 " source ~/.vim/configs/solutions/complete/s_complete_asyncomplete.vim
 " asyncomplete vim-lsp ultisnips 整合方案
 " source ~/.vim/configs/solutions/complete/s_complete_asyncomplete_vimlsp.vim
 
 
-" ----------------------------------------------------------------
+" ---------------------------- deoplete 补全方案 ----------------------------
 
-" deoplete 补全方案
 " deoplete 基础方案
 " source ~/.vim/configs/solutions/complete/s_complete_deoplete.vim
 
@@ -61,7 +67,20 @@
 " source ~/.vim/configs/solutions/complete/s_complete_deoplete_vimlsp_snipmate.vim
 
 " deoplete vim-lsp ultisnips 整合方案
-source ~/.vim/configs/solutions/complete/s_complete_deoplete_vimlsp_ultisnips.vim
+" source ~/.vim/configs/solutions/complete/s_complete_deoplete_vimlsp_ultisnips.vim
+
+" deoplete vim-lsc 整合方案
+" source ~/.vim/configs/solutions/complete/s_complete_deoplete_vimlsc.vim
+
+
+
+
+
+" -------------------------------------------------------------------------------
+
+
+" -------------------------------------------------------------------------------
+
 
 
 
