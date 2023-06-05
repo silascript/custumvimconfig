@@ -10,7 +10,7 @@
   " Plugin 'roxma/vim-hug-neovim-rpc'
 " endif
 
-Plugin 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet.vim'
 " vim-snippets 仓库
-Plugin 'honza/vim-snippets'	
+Plug 'honza/vim-snippets'	
 

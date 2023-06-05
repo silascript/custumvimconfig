@@ -24,7 +24,7 @@
 " ----------------------------------------------------
 
 
-" 配置
+" neosnippet 快捷键配置
 let s:neosnippet_result = commands_basic#ExistPlug('Shougo/neosnippet.vim')
 if s:neosnippet_result ==? 1
 

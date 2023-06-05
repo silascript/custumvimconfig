@@ -1,6 +1,6 @@
-" --------------------------------------------------
-"	neosnippet + neosnippet-snippets 插件的整合方案
-" --------------------------------------------------
+" -------------------------------------------------
+"	 neosnippet + vim-snippets 插件的整合方案
+" -------------------------------------------------
 
 " 命令
 " 基本命令
@@ -52,12 +52,13 @@ source ~/.vim/configs/config_data/settings/settings_plugins_statusline.vim
 " snippets 插件配置
 " settings_plugins_snippets 这个配置中引入了 snipmate ultisnips 及neosnippet 三个snippet引擎的配置
 " source ~/.vim/configs/config_data/settings/settings_plugins_snippets.vim
-" neosnippet + neosnippet-snippets 配置
-source ~/.vim/configs/config_data/settings/snippet/settings_plugins_snippets_neosnippet.vim
+" neosnippet + vim-snippets 配置
+source ~/.vim/configs/config_data/settings/snippet/settings_plugins_snippets_neosnippet_vimsnippets.vim
 
 " ---------------------------------------
 
 " keymaps
 " source 
+" neosnippet
 source ~/.vim/configs/config_data/keymaps/keymaps_plugins_snippet_neosnippet.vim
 

@@ -10,7 +10,7 @@
   " Plugin 'roxma/vim-hug-neovim-rpc'
 " endif
 
-Plugin 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet.vim'
 " snippets 仓库 这是neosnippet 官方默认的snippets 仓库
-Plugin 'Shougo/neosnippet-snippets'	
+Plug 'Shougo/neosnippet-snippets'	
 
