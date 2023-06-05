@@ -10,7 +10,7 @@ if s:autopopmenu_result ==? 1
 	" let g:apc_enable=1
 
 	" 设置要开启补全的文件类型
-	let g:apc_enable_ft = {'text':1, 'markdown':1,'sh':1,'vim':1, 'php':1,'c':1,'cpp':1,'java':1,'python':1,'go':1,'javascript':1,'ruby':1,'rust':1,'lua':1,'html':1,'less':1,'perl':1,'snippet':1,'zsh':1}	
+	let g:apc_enable_ft = {'text':1, 'markdown':1,'sh':1,'vim':1,'php':1,'c':1,'cpp':1,'java':1,'python':1,'go':1,'javascript':1,'ruby':1,'rust':1,'lua':1,'html':1,'css':1,'less':1,'perl':1,'snippet':1,'zsh':1}	
 
 	" 最小触发字符字数
 	let g:apc_min_length=1

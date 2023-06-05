@@ -29,6 +29,9 @@ call plug#begin()
 	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_snipmate.vim
 	" ultisnips
 	source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_ultisnips.vim
+	" neosnippet
+	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_neosnippet.vim
+	
 
 call plug#end()
 
@@ -52,6 +55,7 @@ source ~/.vim/configs/config_data/settings/settings_plugins_statusline.vim
 
 
 " snippets 插件配置
+" settings_plugins_snippets 这个配置文件包括了snipmate ultisnips 及neosnippet 三个snippets 引擎配置
 source ~/.vim/configs/config_data/settings/settings_plugins_snippets.vim
 
 " ---------------------------------------

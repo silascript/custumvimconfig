@@ -1,6 +1,6 @@
-" -----------------------------------
-"	没有补全但有snippets插件整合方案
-" -----------------------------------
+" --------------------------------------
+"	没有补全也没有 snippet 插件整合方案
+" --------------------------------------
 
 " 命令
 " 基本命令
@@ -27,19 +27,6 @@ call plug#begin()
 	" 格式化插件
 	source ~/.vim/configs/config_data/plugins/plugins_format.vim
 
-	" snippets 插件 任选一个
-	" snipmate
-	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_snipmate.vim
-	" ultisnips
-	source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_ultisnips.vim
-	
-	" neosnippet
-	" 使用 neosnippet-snippets为仓库的neosnippet
-	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_neosnippet.vim
-	" 使用 vim-snippets 为仓库的 neosnippet
-	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_neosnippet_vimsnippets.vim
-
-
 	" Git 插件集
 	source ~/.vim/configs/config_data/plugins/plugins_git.vim
 
@@ -65,9 +52,6 @@ source ~/.vim/configs/config_data/settings/settings_plugins_statusline.vim
 
 " 格式化插件配置
 source ~/.vim/configs/config_data/settings/settings_format.vim
-
-" snippets 插件配置
-source ~/.vim/configs/config_data/settings/settings_plugins_snippets.vim
 
 
 " ---------------------------------------

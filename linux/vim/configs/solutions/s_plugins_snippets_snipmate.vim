@@ -1,6 +1,6 @@
-" -----------------------------------
-"	没有补全但有snippets插件整合方案
-" -----------------------------------
+" ------------------------------------
+"	 整全了 snipmate 插件的整合方案
+" ------------------------------------
 
 " 命令
 " 基本命令
@@ -23,26 +23,10 @@ call plug#begin()
 	" 显示插件集
 	" 包括 statusline 文件类型图标 mark标记显示等
 	source ~/.vim/configs/config_data/plugins/plugins_display.vim
-
-	" 格式化插件
-	source ~/.vim/configs/config_data/plugins/plugins_format.vim
-
-	" snippets 插件 任选一个
-	" snipmate
-	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_snipmate.vim
-	" ultisnips
-	source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_ultisnips.vim
 	
-	" neosnippet
-	" 使用 neosnippet-snippets为仓库的neosnippet
-	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_neosnippet.vim
-	" 使用 vim-snippets 为仓库的 neosnippet
-	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_neosnippet_vimsnippets.vim
-
-
-	" Git 插件集
-	source ~/.vim/configs/config_data/plugins/plugins_git.vim
-
+	" snipmate
+	source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_snipmate.vim
+	
 
 call plug#end()
 
@@ -56,29 +40,24 @@ source ~/.vim/configs/config_data/settings/settings_noplugins_basic.vim
 " 基础插件配置
 source ~/.vim/configs/config_data/settings/settings_plugins_basic.vim
 
+
 " 配色插件配置
 source ~/.vim/configs/config_data/settings/settings_colorschemes.vim
+
 
 " statusline 插件配置
 source ~/.vim/configs/config_data/settings/settings_plugins_statusline.vim
 
 
-" 格式化插件配置
-source ~/.vim/configs/config_data/settings/settings_format.vim
-
 " snippets 插件配置
-source ~/.vim/configs/config_data/settings/settings_plugins_snippets.vim
-
+" settings_plugins_snippets 这个配置引入了snipmate ultisnips 及 neosnippet 三个snippets引擎的配置
+" source ~/.vim/configs/config_data/settings/settings_plugins_snippets.vim
+" snipmate 配置
+source ~/.vim/configs/config_data/settings/snippet/settings_plugins_snippets_snipmate.vim
 
 " ---------------------------------------
 
 " keymaps
 " source 
-
-" 基础插件 快捷键配置
-source ~/.vim/configs/config_data/keymaps/keymaps_plugins_basic.vim
-
-
-
 
 
