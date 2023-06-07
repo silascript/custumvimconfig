@@ -5,7 +5,7 @@
 " source ~/.vim/configs/solutions/s_noplugins_basic.vim
 
 
-" ----------------------------------------------------------------
+" ----------------------------------------------------------------------------------------
 
 " 基础插件方案
 " source ~/.vim/configs/solutions/s_plugins_basic.vim
@@ -16,6 +16,17 @@
 " 无补全插件方案
 " source ~/.vim/configs/solutions/s_nocomplete_main.vim
 
+" ---------------------------------只加snippet插件方案----------------------------------------
+
+" neosnippet 插件
+" neosnippet + neosnippet-snippets
+" source ~/.vim/configs/solutions/s_plugins_snippets_neosnippet.vim
+" neosnippet + vim-snippets
+" source ~/.vim/configs/solutions/s_plugins_snippets_neosnippet_vimsnippets.vim
+
+
+
+" ----------------------------------------------------------------------------------------
 
 " --------------------------------vim-auto-popmenu 补全方案----------------------
 " vim-auto-popmenu 补全方案无需 LSP，属于极简的轻量级补全方案
@@ -25,14 +36,23 @@
 " 带简单字典 vim-auto-popmenu
 " source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_dict.vim
 
+" 整合 neosnippet
+" source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_neosnippet.vim
 
-" -----------------------------------只加snippet插件--------------------------------------------
 
-" neosnippet 插件
-" neosnippet + neosnippet-snippets
-" source ~/.vim/configs/solutions/s_plugins_snippets_neosnippet.vim
-" neosnippet + vim-snippets
-source ~/.vim/configs/solutions/s_plugins_snippets_neosnippet_vimsnippets.vim
+" ----------------------------------------------------------------------------------------
+
+
+" -------------------------------completor 补全方案---------------------------------------
+
+" 默认 completor 补全方案
+source ~/.vim/configs/solutions/complete/s_complete_completor_ultisnips.vim
+
+
+
+
+" ----------------------------------------------------------------------------------------
+
 
 
 
@@ -43,10 +63,13 @@ source ~/.vim/configs/solutions/s_plugins_snippets_neosnippet_vimsnippets.vim
 " source ~/.vim/configs/solutions/complete/s_complete_ncm2_vimlsp.vim
 
 
+" ----------------------------------------------------------------------------------------
 
-" ----------------------------  easycomplete 补全方案 ----------------------------
+" -------------------------------  easycomplete 补全方案 -------------------------------
 
 " source ~/.vim/configs/solutions/complete/s_complete_easycomplete.vim
+
+" ----------------------------------------------------------------------------------------
 
 
 " ----------------------------  asyncomplete 补全方案 ----------------------------
@@ -54,6 +77,10 @@ source ~/.vim/configs/solutions/s_plugins_snippets_neosnippet_vimsnippets.vim
 " source ~/.vim/configs/solutions/complete/s_complete_asyncomplete.vim
 " asyncomplete vim-lsp ultisnips 整合方案
 " source ~/.vim/configs/solutions/complete/s_complete_asyncomplete_vimlsp.vim
+
+
+" ----------------------------------------------------------------------------------------
+
 
 
 " ---------------------------- deoplete 补全方案 ----------------------------
@@ -84,12 +111,13 @@ source ~/.vim/configs/solutions/s_plugins_snippets_neosnippet_vimsnippets.vim
 
 
 
+" ----------------------------------------------------------------------------------------
 
 
-" -------------------------------------------------------------------------------
+" ----------------------------------------------------------------------------------------
 
 
-" -------------------------------------------------------------------------------
+" ----------------------------------------------------------------------------------------
 
 
 
