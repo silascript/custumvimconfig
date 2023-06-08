@@ -9,9 +9,7 @@
 source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_deoplete_basic.vim
 
 " neosnippet 插件
-Plug 'Shougo/neosnippet.vim'
-
-" snippet 仓库
-Plug 'honza/vim-snippets'
+" 使用 neosnippet-snippets 仓库
+source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_neosnippet.vim
 
 

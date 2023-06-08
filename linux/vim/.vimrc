@@ -46,7 +46,7 @@
 " -------------------------------completor 补全方案---------------------------------------
 
 " 默认 completor 补全方案
-source ~/.vim/configs/solutions/complete/s_complete_completor_ultisnips.vim
+" source ~/.vim/configs/solutions/complete/s_complete_completor_ultisnips.vim
 
 
 
@@ -92,7 +92,10 @@ source ~/.vim/configs/solutions/complete/s_complete_completor_ultisnips.vim
 " source ~/.vim/configs/solutions/complete/s_complete_deoplete_vimlsp.vim
 
 " deoplete neosnippet 整合方案
+" 使用 neosnippet 自己的 neosnippet-snippets 仓库
 " source ~/.vim/configs/solutions/complete/s_complete_deoplete_neosnippet.vim
+" 使用 vim-snippets 作为snippets仓库
+source ~/.vim/configs/solutions/complete/s_complete_deoplete_neosnippet_vimsnippets.vim
 
 " deoplete snipmate 整合方案
 " source ~/.vim/configs/solutions/complete/s_complete_deoplete_snipmate.vim

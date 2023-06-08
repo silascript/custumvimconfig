@@ -1,6 +1,6 @@
-" ----------------------------------------
-"	deoplete neosnippet 补全插件整合方案
-" ----------------------------------------
+" ---------------------------------------------------
+"	deoplete neosnippet vim-snippets 补全插件整合方案
+" ---------------------------------------------------
 
 
 " 命令
@@ -28,18 +28,19 @@ call plug#begin()
 	" 格式化插件
 	source ~/.vim/configs/config_data/plugins/plugins_format.vim
 
-	" snippets 插件 选择其中一个
-	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_snipmate.vim
-	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_ultisnips.vim
 
 	" Git 插件集
 	source ~/.vim/configs/config_data/plugins/plugins_git.vim
 
 	" deoplete 补全框架插件集
 	" deoplete neosnippet 插件整合集
-	source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_deoplete_neosnippet.vim
+	" 使用 vim-snippets 作为snippets仓库
+	source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_deoplete_neosnippet_vimsnippets.vim
 
 
+	" snippets 插件 选择其中一个
+	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_snipmate.vim
+	" source ~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_ultisnips.vim
 
 call plug#end()
 
@@ -67,9 +68,9 @@ source ~/.vim/configs/config_data/settings/settings_format.vim
 " source ~/.vim/configs/config_data/settings/settings_plugins_snippets.vim
 
 
-" deoplete neosnippet 插件整合配置
+" deoplete neosnippet vim-snippets 插件整合配置
 " source ~/.vim/configs/config_data/settings/complete/settings_complete_deoplete_neosnippet.vim
-source ~/.vim/configs/config_data/settings/complete/settings_complete_deoplete_neosnippet.vim
+source ~/.vim/configs/config_data/settings/complete/settings_complete_deoplete_neosnippet_vimsnippets.vim
 
 
 

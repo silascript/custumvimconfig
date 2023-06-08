@@ -1,6 +1,6 @@
-" ----------------------------------
-"		completor 快捷键设置
-" ----------------------------------
+" ------------------------------------
+"	completor + neosnippet 快捷键设置
+" ------------------------------------
 
 
 " completor 快捷键配置
@@ -48,7 +48,7 @@ if s:completor_kresult ==? 1
 	inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 
 	" Use tab to trigger auto completion.  Default suggests completions as you type.
-	" let g:completor_auto_trigger = 0
+	let g:completor_auto_trigger = 0
 	inoremap <expr> <Tab> Tab_Or_Complete()
 	
 	" 回车确定
@@ -56,16 +56,12 @@ if s:completor_kresult ==? 1
 
 
 
-	" ultisnips 快捷键配置
-	let s:deoplete_ultisnips_result = commands_basic#ExistPlug('SirVer/ultisnips')
-	if s:deoplete_ultisnips_result ==? 1
+	" neosnippet 快捷键配置
+	let s:completor_neosnippet_kresult = commands_basic#ExistPlug('maralla/completor-neosnippet')
+	if s:completor_neosnippet_kresult ==? 1
 
 
-		" 将 ultisnips 展开代码的快捷键设成其他，这样避免与 completor 默认的 Tab 选择候选项快捷键冲突
-		let g:UltiSnipsExpandTrigger		= "<c-e>"
-		let g:UltiSnipsJumpForwardTrigger	= "<c-j>"
-		let g:UltiSnipsJumpBackwardTrigger	= "<c-k>"
-		let g:UltiSnipsRemoveSelectModeMappings = 0
+		" 将 这样避免与 completor 默认的 Tab 选择候选项快捷键冲突
 
 	endif
 

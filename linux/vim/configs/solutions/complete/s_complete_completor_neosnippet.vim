@@ -1,5 +1,5 @@
 " ----------------------------------------
-"	deoplete neosnippet 补全插件整合方案
+"	completor neosnippet 补全插件整合方案
 " ----------------------------------------
 
 
@@ -35,9 +35,9 @@ call plug#begin()
 	" Git 插件集
 	source ~/.vim/configs/config_data/plugins/plugins_git.vim
 
-	" deoplete 补全框架插件集
-	" deoplete neosnippet 插件整合集
-	source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_deoplete_neosnippet.vim
+	" completor 补全框架插件集
+	" completor neosnippet 插件整合集
+	source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_completor_neosnippet_vimsnippets.vim
 
 
 
@@ -63,13 +63,13 @@ source ~/.vim/configs/config_data/settings/settings_plugins_statusline.vim
 " 格式化插件配置
 source ~/.vim/configs/config_data/settings/settings_format.vim
 
+
+
+" completor neosnipet 插件整合配置
+" source ~/.vim/configs/config_data/settings/complete/settings_complete_completor_basic.vim
+
 " snippets 插件配置
 " source ~/.vim/configs/config_data/settings/settings_plugins_snippets.vim
-
-
-" deoplete neosnippet 插件整合配置
-" source ~/.vim/configs/config_data/settings/complete/settings_complete_deoplete_neosnippet.vim
-source ~/.vim/configs/config_data/settings/complete/settings_complete_deoplete_neosnippet.vim
 
 
 
@@ -81,10 +81,9 @@ source ~/.vim/configs/config_data/settings/complete/settings_complete_deoplete_n
 " 基础插件 快捷键配置
 source ~/.vim/configs/config_data/keymaps/keymaps_plugins_basic.vim
 
-" deoplete 快捷键配置
-source ~/.vim/configs/config_data/keymaps/keymaps_plugins_complete_deoplete.vim
+"  快捷键配置
+" completor 快捷键配置
+source ~/.vim/configs/config_data/keymaps/keymaps_plugins_complete_completor.vim
 
-" neosnippet 快捷键配置
-source ~/.vim/configs/config_data/keymaps/keymaps_plugins_snippet_neosnippet.vim
 
 

@@ -9,6 +9,9 @@ if s:deoplete_result ==? 1
 	let g:deoplete#enable_at_startup = 1
 	
 	let g:auto_complete_delay = 10
+	
+	" 设置显示菜单
+	set completeopt=menu,menuone,noselect
 
 	" 智能大小写
 	call deoplete#custom#source('_', 'smart_case', v:true)
