@@ -1,5 +1,5 @@
 " ------------------------------------
-"	completor + neosnippet 快捷键设置
+"	completor + ultisnips 快捷键设置
 " ------------------------------------
 
 
@@ -7,8 +7,8 @@
 
 source ~/.vim/configs/config_data/keymaps/keymaps_plugins_complete_completor_basic.vim
 
-" neosnippet 快捷键配置
-source ~/.vim/configs/config_data/keymaps/keymaps_plugins_snippet_neosnippet.vim
+" ultisnips 快捷键配置
+source ~/.vim/configs/config_data/keymaps/keymaps_plugins_snippet_ultisnips.vim
 
 
 

@@ -1,21 +1,20 @@
-" ------------------------------------
-"	completor + neosnippet 快捷键设置
-" ------------------------------------
+" ----------------------------------------
+"	deoplete neosnippet 套件快捷键设置
+" ----------------------------------------
 
 
-" completor 快捷键配置
+" ----------------------------------------------------
 
-source ~/.vim/configs/config_data/keymaps/keymaps_plugins_complete_completor_basic.vim
+" deoplete 快捷键配置
+source ~/.vim/configs/config_data/keymaps/keymaps_plugins_complete_deoplete_basic.vim
 
 " neosnippet 快捷键配置
 source ~/.vim/configs/config_data/keymaps/keymaps_plugins_snippet_neosnippet.vim
 
 
-
-
 " ----------------------------------------------------
 
-" 配置
+
 
 
 " ----------------------------------------------------

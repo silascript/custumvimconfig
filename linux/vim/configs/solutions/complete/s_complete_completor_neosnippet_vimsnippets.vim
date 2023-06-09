@@ -1,6 +1,6 @@
-" ----------------------------------------
-"	completor neosnippet 补全插件整合方案
-" ----------------------------------------
+" ----------------------------------------------------
+"	completor neosnippet vim-snippets 补全插件整合方案
+" ----------------------------------------------------
 
 
 " 命令
@@ -67,8 +67,9 @@ source ~/.vim/configs/config_data/settings/settings_format.vim
 
 
 
-" completor neosnipet 插件整合配置
-source ~/.vim/configs/config_data/settings/complete/settings_complete_completor_neosnippet.vim
+" completor neosnipet vim-snippets 插件整合配置
+" 使用 vim-snippets 作为snippets仓库
+source ~/.vim/configs/config_data/settings/complete/settings_complete_completor_neosnippet_vimsnippets.vim
 
 " snippets 插件配置
 " neosnippet 配置
@@ -86,9 +87,7 @@ source ~/.vim/configs/config_data/keymaps/keymaps_plugins_basic.vim
 
 "  快捷键配置
 " completor 快捷键配置
-" source ~/.vim/configs/config_data/keymaps/keymaps_plugins_complete_completor.vim
-source ~/.vim/configs/config_data/keymaps/keymaps_plugins_complete_completor_neosnippet.vim
-
+source ~/.vim/configs/config_data/keymaps/keymaps_plugins_complete_completor.vim
 
 
 
