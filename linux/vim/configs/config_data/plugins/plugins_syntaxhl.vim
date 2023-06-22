@@ -7,5 +7,9 @@
 Plug 'sheerun/vim-polyglot'
 
 
+" 颜色高亮
+" Plug 'rrethy/vim-hexokinase', { 'do': 'make hexokinase' }
+
+
 " treesitter
 

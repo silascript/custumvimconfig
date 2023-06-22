@@ -18,6 +18,7 @@ call plug#begin()
 	" 配色插件集
 	source ~/.vim/configs/config_data/plugins/plugins_colorschemes.vim
 
+
 	" 语法高亮插件集
 	source ~/.vim/configs/config_data/plugins/plugins_syntaxhl.vim
 
@@ -34,6 +35,7 @@ call plug#begin()
 
 	" Git 插件集
 	source ~/.vim/configs/config_data/plugins/plugins_git.vim
+	
 
 	" vim-auto-popmenu +字典整合插件集
 	source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_autopopmenu_dict.vim

@@ -34,7 +34,7 @@
 " source ~/.vim/configs/solutions/complete/s_complete_autopopmenu.vim
 
 " 带简单字典 vim-auto-popmenu
-" source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_dict.vim
+source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_dict.vim
 
 " 整合 neosnippet
 " source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_neosnippet.vim
@@ -91,7 +91,7 @@
 " deoplete 基础方案
 " source ~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete.vim
 " deoplete + deoplete-clangx 整合方案
-source ~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_clang.vim
+" source ~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_clang.vim
 
 " deoplete vim-lsp 整合方案
 " source ~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_vimlsp.vim

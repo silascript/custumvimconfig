@@ -29,6 +29,10 @@ Plug 'mhinz/vim-startify'
 " 标点符号
 source ~/.vim/configs/config_data/plugins/plugins_punctuation.vim
 
+
+" 乱数假文插件
+source ~/.vim/configs/config_data/plugins/plugins_lorem.vim
+
 " 检测各插件影响 vim 性能
 Plug 'dstein64/vim-startuptime'
 
