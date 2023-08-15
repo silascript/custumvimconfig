@@ -106,14 +106,20 @@ if s:vimlsp_result ==? 1
 		  \ })
 	endif
 	
-	if executable('typescript-language-server')
+	
+	" -----------------------------------------------------------
+	
+	" markdown
+	" 使用 marksman为lsp
+	if executable('marksman')
 		au User lsp_setup call lsp#register_server({
-			\ 'name': 'lsp-tsserver',
-			\ 'cmd': {server_info->[&shell, &shellcmdflag, 'typescript-language-server --stdio']},
-			\ 'whitelist': ['typescript', 'typescript.tsx'],
+			\ 'name': 'marksman',
+			\ 'cmd': {server_info->[&shell,&shellcmdflag,'marksman server']},
+			\ 'whitelist': ['markdown'],
 			\ })
 	endif
-	
+
+
 
 	" -----------------------------------------------------------
 

@@ -52,6 +52,9 @@ if s:vimlsc_result ==? 1
 		 \ 'css':{
 			 \ 'command':'css-languageserver --stdio'
 		 \ },
+		 \ 'markdown':{
+			 \ 'command':'marksman server'
+		 \ },
 	 \}
 
 

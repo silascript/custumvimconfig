@@ -1,5 +1,9 @@
 
 
+" let g:python_host_prog = expand('/usr/bin/python')
+" let g:python3_host_prog = expand('/usr/bin/python')
+
+
 " 导入整合方案
 " 无插件方案
 " source ~/.vim/configs/solutions/s_noplugins_basic.vim
@@ -34,7 +38,7 @@
 " source ~/.vim/configs/solutions/complete/s_complete_autopopmenu.vim
 
 " 带简单字典 vim-auto-popmenu
-source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_dict.vim
+" source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_dict.vim
 
 " 整合 neosnippet
 " source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_neosnippet.vim
@@ -94,7 +98,7 @@ source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_dict.vim
 " source ~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_clang.vim
 
 " deoplete vim-lsp 整合方案
-" source ~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_vimlsp.vim
+source ~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_vimlsp.vim
 
 " deoplete neosnippet 整合方案
 " 使用 neosnippet 自己的 neosnippet-snippets 仓库
@@ -109,7 +113,7 @@ source ~/.vim/configs/solutions/complete/s_complete_autopopmenu_dict.vim
 " source ~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_ultisnips.vim
 
 " deoplete vim-lsp snipmate 整合方案
-" source ~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_vimlsp_snipmate.vim
+ " source ~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_vimlsp_snipmate.vim
 
 " deoplete vim-lsp ultisnips 整合方案
 " source ~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_vimlsp_ultisnips.vim

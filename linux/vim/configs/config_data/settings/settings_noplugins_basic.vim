@@ -9,6 +9,10 @@ set nocompatible
 set backspace=indent,eol,start
 
 
+" 一些变量设置
+" let g:python3_host_prog = expand('/usr/bin/python')
+
+
 " 禁止生成各种文件
 set noundofile
 set nobackup
