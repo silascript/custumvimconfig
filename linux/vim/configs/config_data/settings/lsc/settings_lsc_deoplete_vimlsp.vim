@@ -179,27 +179,72 @@ let s:vimlsp_result = commands_basic#ExistPlug('prabirshrestha/vim-lsp')
 				augroup END
 			endif
 
+		" -----------------------------------------------------------
 
+		if executable('vim-language-server')
+		  augroup LspVim
+			autocmd!
+			autocmd User lsp_setup call lsp#register_server({
+				\ 'name': 'vim-language-server',
+				\ 'cmd': {server_info->['vim-language-server', '--stdio']},
+				\ 'whitelist': ['vim'],
+				\ 'initialization_options': {
+				\   'vimruntime': $VIMRUNTIME,
+				\   'runtimepath': &rtp,
+				\ }})
+		  augroup END
+		endif
+
+		" -----------------------------------------------------------
+
+		if executable('yaml-language-server')
+		  augroup LspYaml
+			autocmd!
+			autocmd User lsp_setup call lsp#register_server({
+			   \ 'name': 'yaml-language-server',
+			   \ 'cmd': {server_info->['yaml-language-server', '--stdio']},
+			   \ 'allowlist': ['yaml', 'yaml.ansible'],
+			   \ 'workspace_config': {
+			   \   'yaml': {
+			   \     'validate': v:true,
+			   \     'hover': v:true,
+			   \     'completion': v:true,
+			   \     'customTags': [],
+			   \     'schemas': {},
+			   \     'schemaStore': { 'enable': v:true },
+			   \   }
+			   \ }
+			   \})
+		  augroup END
+		endif
 
 
 		" -----------------------------------------------------------
 
 		" html
-		"if executable('html-languageserver')
-		  "au User lsp_setup call lsp#register_server({
-			"\ 'name': 'html-languageserver',
-			"\ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
-			"\ 'whitelist': ['html'],
-		  "\ })
-		"endif
+		if executable('html-languageserver')
+			augroup LspHTML
+				autocmd!
+				au User lsp_setup call lsp#register_server({
+							  \ 'name': 'html-languageserver',
+							  \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
+							  \ 'whitelist': ['html'],
+							  \ })
+			augroup END
+		endif
 
-		"if executable('css-languageserver')
-		"au User lsp_setup call lsp#register_server({
-			"\ 'name': 'css-languageserver',
-			"\ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
-			"\ 'whitelist': ['css', 'less', 'sass'],
-			"\ })
-		"endif
+		" -----------------------------------------------------------
+
+		" css
+		if executable('css-languageserver')
+			augroup LspCSS
+				au User lsp_setup call lsp#register_server({
+					\ 'name': 'css-languageserver',
+					\ 'cmd': {server_info->[&shell, &shellcmdflag, 'css-languageserver --stdio']},
+					\ 'whitelist': ['css', 'less', 'sass'],
+					\ })
+			augroup END
+		endif
 
 		"augroup lsp_install
 			"au!
