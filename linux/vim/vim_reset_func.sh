@@ -30,19 +30,25 @@ function deleteAll(){
 # 重置所有
 function resetAll(){
   
-  rc_file=~/.vimrc
-  vim_rdir=~/.vim
+	rc_file=~/.vimrc
+	vim_rdir=~/.vim
+	sh_cache=.Cache
 
-  # 删除所有
-  deleteAll
+	# 删除所有
+	deleteAll
   
-  # 生成 .vim 目录
-  mkdir $vim_rdir 
+	# 生成 .vim 目录
+	mkdir $vim_rdir 
 
-  # 复制初始化.vimrc到用户根目录下
-  echo -e "\e[96m生成 \e[92m$rc_file \e[96m...\n \e[0m"
-  cp -f vim_init.vimrc $rc_file
 
+	# 复制初始化.vimrc到用户根目录下
+	echo -e "\e[96m生成 \e[92m$rc_file \e[96m...\n \e[0m"
+	cp -f vim_init.vimrc $rc_file
+
+	# 生成shell脚本缓存目录
+	# 这个目录用来存一些临时文件
+	echo -e "\e[96m生成shell脚本临时目录 \e[92m$sh_cache \e[96m...\n \e[0m"
+	mkdir $sh_cache  
 
 }
 
@@ -52,4 +58,4 @@ function resetAll(){
 
 #deleteAll
 
-#resetAll
+resetAll
