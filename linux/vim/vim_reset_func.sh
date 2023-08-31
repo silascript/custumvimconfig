@@ -3,7 +3,22 @@
 # 			重置函数脚本
 # ---------------------------------------------------- #
 
-# 删除.vim目录及vimrc
+# 清理脚本临时缓存
+function clearCache(){
+
+	sh_cache=.Cache
+
+	if [ -d $sh_cache ];then
+		echo -e "\e[96m清理 \e[92m$sh_cache \e[96m...\n \e[0m"	
+		rm -rf $sh_cache/*
+	else
+		echo -e "\e[96m $sh_cache 不存在，不用清理了！\n \e[0m"	
+	fi
+
+}
+
+
+# 删除 .vim 目录及 .vimrc文件
 function deleteAll(){
 
   rc_file=~/.vimrc
@@ -35,20 +50,30 @@ function resetAll(){
 	sh_cache=.Cache
 
 	# 删除所有
+    # 删除 .vim 目录
+	# 删除 .vimrc 文件
 	deleteAll
   
-	# 生成 .vim 目录
-	mkdir $vim_rdir 
-
-
-	# 复制初始化.vimrc到用户根目录下
-	echo -e "\e[96m生成 \e[92m$rc_file \e[96m...\n \e[0m"
-	cp -f vim_init.vimrc $rc_file
-
 	# 生成shell脚本缓存目录
 	# 这个目录用来存一些临时文件
-	echo -e "\e[96m生成shell脚本临时目录 \e[92m$sh_cache \e[96m...\n \e[0m"
-	mkdir $sh_cache  
+	if [ ! -d $sh_cache ];then
+		echo -e "\e[96m生成shell脚本临时目录 \e[92m$sh_cache \e[96m...\n \e[0m"
+		mkdir $sh_cache  
+	else
+		echo -e "\e[92m$sh_cache \e[96m已存在 ...\n \e[0m"
+		# 清理 .Cache 目录
+		clearCache
+	fi
+
+	###############################################
+
+	# 生成 .vim 目录
+	echo -e "\e[96m生成 \e[92m$vim_rdir \e[96m...\n \e[0m"
+	mkdir $vim_rdir 
+
+	# 复制初始化配置 vim_init.vimrc 到用户根目录下完成初始化
+	echo -e "\e[96m生成 \e[92m$rc_file \e[96m...\n \e[0m"
+	cp -f vim_init.vimrc $rc_file
 
 }
 
@@ -58,4 +83,8 @@ function resetAll(){
 
 #deleteAll
 
-resetAll
+#resetAll
+
+#clearCache
+
+
