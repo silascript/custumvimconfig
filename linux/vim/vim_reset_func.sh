@@ -17,6 +17,19 @@ function clearCache(){
 
 }
 
+# 创建shell临时缓存目录.Cache
+function createCache(){
+	sh_cache=.Cache
+
+	if [ ! -d $sh_cache ];then
+		echo -e "\e[96m创建 \e[92m$sh_cache \e[96m目录... \n \e[0m"	
+		mkdir $sh_cache
+	else
+		echo -e "\e[96m $sh_cache 已存在！\n \e[0m"	
+	fi
+
+}
+
 
 # 删除 .vim 目录及 .vimrc文件
 function deleteAll(){
@@ -87,4 +100,5 @@ function resetAll(){
 
 #clearCache
 
+#createCache
 

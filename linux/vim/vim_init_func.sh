@@ -28,22 +28,25 @@ function install_plug(){
 		echo -e "\e[92m$vplug_dir \e[96m目录已存在！\n \e[0m"
 	fi
 	
+	# 检测 .Cache 目录是否存在
+	if [ ! -d $sh_cache_dir ];then
+		# 创建 .Cache 目录
+		createCache
+	fi
+
 	# 下载 vim-plug
-	if [ -d $sh_cache_dir ];then
-		echo -e "\e[96m开始下载vim-plug...\n \e[0m"
-		git clone https://github.com/junegunn/vim-plug $sh_cache_dir/vim-plug
+	echo -e "\e[96m开始下载vim-plug...\n \e[0m"
+	git clone https://github.com/junegunn/vim-plug $sh_cache_dir/vim-plug
 		
-		# 复制 plug.vim 到 ~/.vim/autoload 目录
-		if [ -d "$sh_cache_dir/vim-plug" ];then
-			# plug.vim 文件
-		    plug_file=$sh_cache_dir/vim-plug/plug.vim	
-			echo -e "\e[96m复制 \e[92mplug.vim \e[96m文件至 $vplug_dir \e[96m目录中...\n \e[0m"
-			cp $plug_file $vplug_dir
-		else
-			echo -e "\e[93mvim-plug 下载失败！\n \e[0m"
-		fi
+	# 复制 plug.vim 到 ~/.vim/autoload 目录
+	if [ -d "$sh_cache_dir/vim-plug" ];then
+		echo "\e[96m下载成功！\n \e[0m"
+		# plug.vim 文件
+		plug_file=$sh_cache_dir/vim-plug/plug.vim	
+		echo -e "\e[96m开始复制 \e[92mplug.vim \e[96m文件至 $vplug_dir \e[96m目录中...\n \e[0m"
+		cp $plug_file $vplug_dir
 	else
-		echo -e "\e[93m$sh_cache_dir \e[96m目录不存在！\n \e[0m"
+		echo -e "\e[93mvim-plug 下载失败！\n \e[0m"
 	fi
 
 }
