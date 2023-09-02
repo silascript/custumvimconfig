@@ -5,6 +5,7 @@
 
 # ---------------------------引入脚本---------------------------- #
 
+# 引入重置函数脚本
 source ./vim_reset_func.sh
 
 # -----------------------------函数区---------------------------------- #
@@ -45,6 +46,8 @@ function install_plug(){
 		plug_file=$sh_cache_dir/vim-plug/plug.vim	
 		echo -e "\e[96m开始复制 \e[92mplug.vim \e[96m文件至 $vplug_dir \e[96m目录中...\n \e[0m"
 		cp $plug_file $vplug_dir
+		# 添加临时缓存目录
+		clearCache
 	else
 		echo -e "\e[93mvim-plug 下载失败！\n \e[0m"
 	fi
@@ -86,6 +89,8 @@ function copy_config(){
 # 初始化
 function vim_init(){
 
+	echo -e "\e[96m开始初始化... \n \e[0m"
+
 	# 重置
 	# 生成.vim目录及初始化.vimrc
 	resetAll
@@ -99,13 +104,15 @@ function vim_init(){
 	# 复制配置文件
 	copy_config
 
+	echo -e "\e[96m初始化完成！\n \e[0m"
+
 }
 
 
 
 # --------------------------测试------------------------------------- #
 
-vim_init
+# vim_init
 
 
 
