@@ -6,8 +6,10 @@
 
 " Plug ''
 
-" 自动补全括号
-Plug 'jiangmiao/auto-pairs'
+" vim 8 版本 成对符号自动补全
+" Plug 'jiangmiao/auto-pairs'
+" vim 9 版的成对符号补全
+Plug 'Eliot00/auto-pairs'
 
 " 添加分号
 " cosco依赖vim-repeat插件

@@ -20,6 +20,8 @@ Plug 'machakann/vim-highlightedyank'
 
 " 跳转增强
 Plug 'easymotion/vim-easymotion'
+" vim 9 版的easymotion
+" Plug 'monkoose/vim9-stargate'
 
 
 " 开始页面
