@@ -17,6 +17,15 @@ endif
 
 " ----------------------------------------------------
 
+let s:easymotion_result = commands_basic#ExistPlug('easymotion/vim-easymotion')
+if s:easymotion_result ==? 1
+	
+	map <Leader><Leader>h <Plug>(easymotion-linebackward)
+	map <Leader><Leader>l <Plug>(easymotion-lineforward)
+
+endif
+
+" ----------------------------------------------------
 
 " 配置
 " let s:xxxresult = commands_basic#ExistPlug('插件名')
