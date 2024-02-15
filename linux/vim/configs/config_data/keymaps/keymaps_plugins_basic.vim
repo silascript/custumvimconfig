@@ -23,6 +23,15 @@ if s:easymotion_result ==? 1
 	map <Leader><Leader>h <Plug>(easymotion-linebackward)
 	map <Leader><Leader>l <Plug>(easymotion-lineforward)
 
+
+	" Move to line
+	map <Leader><Leader>L <Plug>(easymotion-bd-jk)
+	nmap <Leader><Leader>L <Plug>(easymotion-overwin-line)
+
+	" Move to word
+	map <Leader><Leader>w <Plug>(easymotion-bd-w)
+	nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
+
 endif
 
 let s:vim9stargate_result = commands_basic#ExistPlug('monkoose/vim9-stargate')
