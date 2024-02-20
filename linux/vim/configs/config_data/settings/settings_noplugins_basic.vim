@@ -29,6 +29,7 @@ set showcmd
 " 补全时候选菜单显示在命令行上方
 set wildmenu
 
+
 " 开启真彩色
 if has('termguicolors')
 	set termguicolors
@@ -83,6 +84,15 @@ syntax on
 " 文件类型侦测
 filetype on
 filetype plugin on
+
+
+"--------------------------------
+" vim9新设置
+"--------------------------------
+
+" 命令行模式候选项竖排显示
+set wildoptions=pum
+
 
 
 "--------------------------------
