@@ -13,7 +13,25 @@ return {
 		end	
 
 	},
+
+	-- nvim-cursorline
+	{
+		"yamatsum/nvim-cursorline",
+		config = function()
+			require('nvim-cursorline').setup({
+				cursorword = {
+					enable = true,
+					min_length = 2,
+					hl = { underline = true },
+				  },
+				cursorline = {
+					enable = false,
+				}
+			})
+		end,
+	},
 	
+	-- nvim-surround
 	{
 		"kylechui/nvim-surround",
 		version = "*", -- Use for stability; omit to use `main` branch for the latest features
@@ -23,6 +41,26 @@ return {
 				-- Configuration here, or leave empty to use defaults
 			})
 		end
+	},
+
+	-- comment
+	{
+		'numToStr/Comment.nvim',
+		config = function()
+			require('Comment').setup({
+
+				-- NORMAL模式
+				toggler = {
+					line = '<leader>cc',
+				 },
+				
+				-- NORMAL模式及VISUAL模式
+				opleader = {
+					line = '<leader>cc',
+				},
+
+			})
+		end,
 	},
 
 }
