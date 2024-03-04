@@ -20,5 +20,8 @@ require("lazy").setup({{import = "plugins"}})
 --  加载基础配置
 require("basic")
 
+-- 加载配色配置
+require("settings_colorscheme")
+
 
 
