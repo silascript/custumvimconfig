@@ -4,6 +4,41 @@
 
 return {
 	
+	-- dashboard 
+	{
+	  'nvimdev/dashboard-nvim',
+	  event = 'VimEnter',
+	  config = function()
+		  require('dashboard').setup({
+			-- theme = "doom",
+			theme = "hyper",
+			hide = {
+				-- statusline = false,
+			},
+			config = {
+				-- header = vim.fn.system('figlet -w 100 NVIM'),
+				header = vim.split(vim.fn.system('figlet -w 100 NVIM'),"\n"),
+				-- week_header = {
+				-- 	enable = true
+				-- },
+				-- center = {
+				-- { action = "ene | startinsert", desc = " New file", icon = " ", key = "n" },
+				-- { action = "LazyExtras", desc = " Lazy Extras", icon = " ", key = "x" },
+				-- { action = "Lazy", desc = " Lazy", icon = "󰒲 ", key = "l" },
+				-- { action = "qa", desc = " Quit", icon = " ", key = "q" },
+
+				shortcut = {
+					-- { desc = '󰊳 Update', group = '@property', action = 'Lazy update', key = 'u' },
+					{ desc = '󰊳 Lazy', group = '@property', action = 'Lazy', key = 'l' },
+				},
+
+			} --config
+
+		  })
+	  end,
+	  dependencies = { {'nvim-tree/nvim-web-devicons'}}
+	},
+
 	-- nvim-tree
 
 	{

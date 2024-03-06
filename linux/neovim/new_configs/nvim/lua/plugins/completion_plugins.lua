@@ -15,7 +15,8 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 			"onsails/lspkind.nvim",
         },
-		-- event = { "InsertEnter", "CmdlineEnter" },
+		event = { "InsertEnter", "CmdlineEnter" },
+		-- event = "VeryLazy",
         config = function()
 
 			local has_words_before = function()
