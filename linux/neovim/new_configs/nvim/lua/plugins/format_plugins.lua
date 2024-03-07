@@ -4,6 +4,10 @@ return {
     -- formatter.nvim
     {
         "mhartington/formatter.nvim",
+		-- event = "VimEnter",
+		-- event = {"BufReadPre","CmdlineEnter"},
+		-- event = {"CmdlineEnter"},
+		event = { "BufReadPost" },
         config = function()
             require("formatter").setup(
                 {

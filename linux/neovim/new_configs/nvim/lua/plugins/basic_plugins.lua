@@ -39,6 +39,7 @@ return {
     -- comment
     {
         "numToStr/Comment.nvim",
+        event = "VimEnter",
         config = function()
             require("Comment").setup(
                 {

@@ -18,6 +18,9 @@ return {
 
 		},
 
+		-- event = "VeryLazy",
+		event = "InsertEnter",
+		-- event = {"InsertEnter","CmdlineEnter"},
 		config =function()
 			require("luasnip").config.setup({
 
