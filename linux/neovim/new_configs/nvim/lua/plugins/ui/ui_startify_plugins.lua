@@ -44,16 +44,24 @@ return {
         end,
         dependencies = {{"nvim-tree/nvim-web-devicons"}}
     },
-
-
-	-- alpha-nvim
+    -- alpha-nvim
     {
         "goolord/alpha-nvim",
         dependencies = {"nvim-tree/nvim-web-devicons"},
-		event = { "VimEnter" },
+        enabled = true,
+        event = {"VimEnter"},
         config = function()
             require "alpha".setup(require "alpha.themes.startify".config)
             -- require "alpha".setup(require'alpha.themes.dashboard'.config)
         end
     }
+    -- startup-nvim
+    --   {
+    --       "startup-nvim/startup.nvim",
+    --       dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
+    -- enabled = false,
+    --       config = function()
+    --           require "startup".setup({})
+    --       end
+    --   },
 }

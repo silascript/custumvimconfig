@@ -15,6 +15,8 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 			"onsails/lspkind.nvim",
         },
+
+
 		-- event = { "InsertEnter", "CmdlineEnter" },
 		event = { "InsertEnter" },
 		-- event = { "BufEnter" },
@@ -48,6 +50,7 @@ return {
 						-- winhighlight = "Normal:Pmenu,FloatBorder:Pmenu",
 						col_offset = -3,
 						side_padding = 0,
+
 					},
 
 
@@ -76,11 +79,17 @@ return {
 									nvim_lsp = "[LSP]",
 									luasnip = "[LuaSnip]",
 									nvim_lua = "[Lua]",
-									latex_symbols = "[LaTeX]",
+									-- latex_symbols = "[LaTeX]",
 								})[entry.source.name]
 							return vim_item
 					    end
 					}),
+				},
+
+				snippet = {
+					expand = function(args)
+						require'luasnip'.lsp_expand(args.body)
+					end,
 				},
 
 				sources = cmp.config.sources({
@@ -149,7 +158,6 @@ return {
 					}),
 
 
-
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
 					["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "s" }),
@@ -157,17 +165,31 @@ return {
 
 					-- ["<CR>"] = cmp.mapping.confirm({select = true})
 
+
+					
 					["<CR>"] = cmp.mapping({
-					   i = function(fallback)
-						 if cmp.visible() and cmp.get_active_entry() then
-						   cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
-						 else
-						   fallback()
-						 end
-					   end,
-					   s = cmp.mapping.confirm({ select = true }),
-					   c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
-					 }),
+						i = function(fallback)
+							if cmp.visible() then
+								cmp.confirm({  behavior = cmp.ConfirmBehavior.Replace, select = false })
+							else
+								fallback()
+							end
+						end,
+						s = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+					}),
+
+
+					-- ["<CR>"] = cmp.mapping({
+					--    i = function(fallback)
+					-- 	 if cmp.visible() and cmp.get_active_entry() then
+					-- 	   cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+					-- 	 else
+					-- 	   fallback()
+					-- 	 end
+					--    end,
+					--    s = cmp.mapping.confirm({ select = true }),
+					--    c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+					--  }),
 
 					-- ["<CR>"] = cmp.mapping({
 					-- 	i = function(fallback)
