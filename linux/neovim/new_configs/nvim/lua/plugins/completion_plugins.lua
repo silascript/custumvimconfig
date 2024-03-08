@@ -17,34 +17,49 @@ return {
         },
 		-- event = { "InsertEnter", "CmdlineEnter" },
 		event = { "InsertEnter" },
+		-- event = { "BufEnter" },
 		-- event = "VeryLazy",
         config = function()
 
-			local has_words_before = function()
-			  unpack = unpack or table.unpack
-			  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
-			  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
-			end
+			-- local has_words_before = function()
+			--   unpack = unpack or table.unpack
+			--   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+			--   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+			-- end
 
 
 			local cmp = require("cmp")
-			local luasnip = require("luasnip")
+			-- local luasnip = require("luasnip")
 			local lspkind = require('lspkind')
-			-- local rikka = require("rikka")
+			--
+			-- local has_words_before = function()
+			--   unpack = unpack or table.unpack
+			--   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+			--   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+			-- end
 
 			cmp.setup({
 				window = {
 				  -- completion = cmp.config.window.bordered(),
 					completion = {
 						-- border = rikka.border,
-						-- winhighlight = "Normal:CmpNormal",
-						winhighlight = "Normal:CmpNormal,FloatBorder:Pmenu,Search:None",
+						-- winhighlight = "Normal:CmpNormal,FloatBorder:Pmenu,Search:None",
 						-- winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
+						-- winhighlight = "Normal:Pmenu,FloatBorder:Pmenu",
 						col_offset = -3,
 						side_padding = 0,
 					},
 
+
 				  -- documentation = cmp.config.window.bordered(),
+				},
+
+				view = {
+					entries = {
+						-- "custom", "wildmenu" or "native"
+						name = 'custom',
+						selection_order = 'near_cursor',
+					}
 				},
 
 				formatting = {
@@ -81,49 +96,89 @@ return {
 
 					-- ["<C-n>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert}),
 					-- ["<C-p>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert}),
-					
 
 					-- ["<Tab>"] = cmp.mapping.select_next_item({ behavior = cmp.SelectBehavior.Insert}),
 					-- ["<S-Tab>"] = cmp.mapping.select_prev_item({ behavior = cmp.SelectBehavior.Insert}),
 
+					-- luasnip
+					--  ["<Tab>"] = cmp.mapping(function(fallback)
+					--   if cmp.visible() then
+					-- 	cmp.select_next_item()
+					--   elseif luasnip.expand_or_jumpable() then
+					-- 	luasnip.expand_or_jump()
+					--   elseif has_words_before() then
+					-- 	cmp.complete()
+					--   else
+					-- 	fallback()
+					--   end
+					-- end, { "i", "s" }),
+					--
+					-- ["<S-Tab>"] = cmp.mapping(function(fallback)
+					--   if cmp.visible() then
+					-- 	cmp.select_prev_item()
+					--   elseif luasnip.jumpable(-1) then
+					-- 	luasnip.jump(-1)
+					--   else
+					-- 	fallback()
+					--   end
+					-- end, { "i", "s" }),
 
-					 ["<Tab>"] = cmp.mapping(function(fallback)
+
+					--
+					-- No snippet plugin
+					["<Tab>"] = cmp.mapping(function(fallback)
 					  if cmp.visible() then
-						cmp.select_next_item()
-					  elseif luasnip.expand_or_jumpable() then
-						luasnip.expand_or_jump()
-					  elseif has_words_before() then
-						cmp.complete()
+						cmp.select_next_item({ behavior = cmp.SelectBehavior.Select })
 					  else
 						fallback()
 					  end
-					end, { "i", "s" }),
+					end, {
+					  "i",
+					  "s",
+					}),
 
 					["<S-Tab>"] = cmp.mapping(function(fallback)
 					  if cmp.visible() then
-						cmp.select_prev_item()
-					  elseif luasnip.jumpable(-1) then
-						luasnip.jump(-1)
+						cmp.select_prev_item( { behavior = cmp.SelectBehavior.Select })
 					  else
 						fallback()
 					  end
-					end, { "i", "s" }),
+					end, {
+					  "i",
+					  "s",
+					}),
+
+
 
 					["<C-b>"] = cmp.mapping.scroll_docs(-4),
 					["<C-f>"] = cmp.mapping.scroll_docs(4),
 					["<C-Space>"] = cmp.mapping(cmp.mapping.complete(), { "i", "s" }),
 					["<C-e>"] = cmp.mapping(cmp.mapping.abort(), { "i", "s" }),
+
 					-- ["<CR>"] = cmp.mapping.confirm({select = true})
+
 					["<CR>"] = cmp.mapping({
-						i = function(fallback)
-							if cmp.visible() then
-								cmp.confirm({ select = true })
-							else
-								fallback()
-							end
-						end,
-						s = cmp.mapping.confirm({ select = true }),
-					}),
+					   i = function(fallback)
+						 if cmp.visible() and cmp.get_active_entry() then
+						   cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
+						 else
+						   fallback()
+						 end
+					   end,
+					   s = cmp.mapping.confirm({ select = true }),
+					   c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
+					 }),
+
+					-- ["<CR>"] = cmp.mapping({
+					-- 	i = function(fallback)
+					-- 		if cmp.visible() then
+					-- 			cmp.confirm({ select = true })
+					-- 		else
+					-- 			fallback()
+					-- 		end
+					-- 	end,
+					-- 	s = cmp.mapping.confirm({ select = true }),
+					-- }),
 				})
 			}) --require("cmp")
         end,
