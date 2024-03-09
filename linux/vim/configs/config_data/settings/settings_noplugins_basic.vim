@@ -55,6 +55,9 @@ set cursorline
 set laststatus=2
 set ruler
 
+" 用标签页打开文件时才显示tab栏
+set showtabline=1
+
 " 高亮匹配
 set showmatch
 

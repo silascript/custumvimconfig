@@ -39,7 +39,7 @@ if s:startify_result ==? 1
     
     " 使用 figlet 来生成文字图案
 	let g:startify_custom_header =
-       \ startify#pad(split(system('figlet -f banner -w 100 Hello VIM'), '\n'))
+       \ startify#pad(split(system('figlet -f "ANSI Shadow" Hello VIM'), '\n'))
 endif
 
 
