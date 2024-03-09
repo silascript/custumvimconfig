@@ -14,13 +14,33 @@ return {
     -- lualine 插件
     {
         "nvim-lualine/lualine.nvim",
-        dependencies = {"nvim-tree/nvim-web-devicons"},
+        dependencies = { "nvim-tree/nvim-web-devicons" },
         -- event = "InsertEnter,",
         -- event = "VimEnter",
+        event = "BufEnter",
+        -- event = "BufWinEnter",
         -- event = {"VimEnter","BufReadPre","BufNewFile"},
+
         config = function()
+
             require("lualine").setup {
-                options = {theme = "gruvbox"}
+                -- 设置样式
+                options = {
+                    --theme = "gruvbox",
+                    --theme = "ayu_mirage",
+                    -- theme = "everforest",
+                    -- theme = "material",
+                    -- theme = "onedark",
+                    theme = "auto",
+                    -- theme = "OceanicNext",
+                    -- section_separators = "",
+                    -- component_separators = ""
+                    -- section_separators = { left = '', right = '' },
+                    -- component_separators = { left = '', right = '' }
+
+                    -- component_separators = { left = '', right = ''},
+                    -- section_separators = { left = '', right = ''},
+                }
             }
         end
     },
