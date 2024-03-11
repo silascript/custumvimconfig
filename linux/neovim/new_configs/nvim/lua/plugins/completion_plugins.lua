@@ -14,10 +14,8 @@ return {
 			"L3MON4D3/LuaSnip",
 			"saadparwaiz1/cmp_luasnip",
 			"onsails/lspkind.nvim",
-			-- 
         },
 
-		
 		-- event = { "InsertEnter", "CmdlineEnter" },
 		event = { "InsertEnter" },
 		-- event = { "BufEnter" },
@@ -52,6 +50,7 @@ return {
 						-- winhighlight = "Normal:Pmenu,FloatBorder:Pmenu",
 						col_offset = -3,
 						side_padding = 0,
+						completeopt = 'menu,menuone,oninsert,noselect'
 
 					},
 
@@ -168,7 +167,6 @@ return {
 					-- ["<CR>"] = cmp.mapping.confirm({select = true})
 
 
-					
 					["<CR>"] = cmp.mapping({
 						i = function(fallback)
 							if cmp.visible() then

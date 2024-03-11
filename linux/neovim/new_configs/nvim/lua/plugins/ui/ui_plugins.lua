@@ -6,42 +6,9 @@ return {
         "nvim-tree/nvim-tree.lua",
         version = "*",
         dependencies = {"nvim-tree/nvim-web-devicons"},
-        event = "VimEnter",
+        event = "UIEnter",
         config = function()
             require("nvim-tree").setup {}
-        end
-    },
-    -- lualine 插件
-    {
-        "nvim-lualine/lualine.nvim",
-        dependencies = { "nvim-tree/nvim-web-devicons" },
-        -- event = "InsertEnter,",
-        -- event = "VimEnter",
-        event = "BufEnter",
-        -- event = "BufWinEnter",
-        -- event = {"VimEnter","BufReadPre","BufNewFile"},
-
-        config = function()
-
-            require("lualine").setup {
-                -- 设置样式
-                options = {
-                    --theme = "gruvbox",
-                    --theme = "ayu_mirage",
-                    -- theme = "everforest",
-                    -- theme = "material",
-                    -- theme = "onedark",
-                    theme = "auto",
-                    -- theme = "OceanicNext",
-                    -- section_separators = "",
-                    -- component_separators = ""
-                    -- section_separators = { left = '', right = '' },
-                    -- component_separators = { left = '', right = '' }
-
-                    -- component_separators = { left = '', right = ''},
-                    -- section_separators = { left = '', right = ''},
-                }
-            }
         end
     },
     -- bufferline 插件
@@ -49,10 +16,10 @@ return {
         "akinsho/bufferline.nvim",
         version = "*",
         dependencies = "nvim-tree/nvim-web-devicons",
-        -- event = {"BufReadPre","BufNewFile"},
+        -- event = {"BufReadPre"},
         -- event = {"VeryLazy"},
-        -- event = {"VimEnter"},
-        event = {"BufReadPost"},
+        event = {"VimEnter"},
+        -- event = {"BufReadPost"},
         config = function()
             require("bufferline").setup {}
         end
@@ -61,9 +28,9 @@ return {
     {
         "nvim-treesitter/nvim-treesitter",
         -- event = "BufReadPre",
-        -- event = "VimEnter",
+        event = "VimEnter",
         -- event = {"BufReadPre","BufNewFile"},
-        event = {"BufReadPost"},
+        -- event = {"BufReadPost"},
         config = function()
             require("nvim-treesitter.configs").setup(
                 {
@@ -74,6 +41,7 @@ return {
                         "perl",
                         "html",
                         "css",
+                        "scss",
                         "json",
                         "vim",
                         "lua",
@@ -86,6 +54,7 @@ return {
                         "rust",
                         "java",
                         "groovy",
+                        "kotlin",
                         "gitignore",
                         "git_config",
                         "markdown",

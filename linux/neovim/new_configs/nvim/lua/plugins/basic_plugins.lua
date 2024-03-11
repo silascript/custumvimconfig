@@ -12,6 +12,8 @@ return {
     -- nvim-cursorline
     {
         "yamatsum/nvim-cursorline",
+		-- event = "UIEnter",
+		event = "BufReadPost",
         config = function()
             require("nvim-cursorline").setup(
                 {
@@ -39,7 +41,7 @@ return {
     -- comment
     {
         "numToStr/Comment.nvim",
-        event = "VimEnter",
+        event = "BufReadPost",
         config = function()
             require("Comment").setup(
                 {

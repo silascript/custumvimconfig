@@ -6,6 +6,7 @@ return {
         "cpea2506/one_monokai.nvim",
         enabled = false,
         -- enabled = true,
+        priority = 1000,
         config = function()
             require("one_monokai").setup(
                 {
@@ -19,6 +20,7 @@ return {
         "marko-cerovac/material.nvim",
         enabled = false,
         -- enabled = true,
+        priority = 1000,
         config = function()
             -- material_style 要写在 vim.cmd.colorscheme之前才能生效
             -- vim.g.material_style = "deep ocean"
@@ -38,7 +40,7 @@ return {
         "ellisonleao/gruvbox.nvim",
         enabled = false,
         -- enabled = true,
-        -- priority = 1000 ,
+        priority = 1000 ,
         -- config = true,
         config = function()
 			-- vim.o.background = "dark",
@@ -80,6 +82,7 @@ return {
         "RRethy/base16-nvim",
         enabled = true,
         -- enabled = false,
+		priority = 1000,
         config = function()
             require("base16-colorscheme").with_config(
                 {
@@ -95,7 +98,7 @@ return {
 					-- 多种配色：https://github.com/RRethy/base16-nvim
                     -- vim.cmd.colorscheme "base16-ayu-mirage"
                     -- vim.cmd.colorscheme "base16-catppuccin-macchiato"
-                    -- vim.cmd.colorscheme "base16-catppuccin-mocha"
+                    vim.cmd.colorscheme "base16-catppuccin-mocha"
                     -- vim.cmd.colorscheme "base16-monokai"
                     -- vim.cmd.colorscheme "base16-materia"
                     -- vim.cmd.colorscheme "base16-material"
@@ -107,7 +110,7 @@ return {
                     -- vim.cmd.colorscheme "base16-tomorrow-night"
                     -- vim.cmd.colorscheme "base16-gruvbox-dark-medium"
                     -- vim.cmd.colorscheme "base16-gruvbox-material-dark-medium"
-                    vim.cmd.colorscheme "base16-everforest"
+                    -- vim.cmd.colorscheme "base16-everforest"
                 }
             )
         end

@@ -2,9 +2,10 @@ return {
     -- dashboard
     {
         "nvimdev/dashboard-nvim",
-        event = "VimEnter",
         -- 开启或禁用此插件
         enabled = false,
+        -- enabled = true,
+        event = "VimEnter",
         config = function()
             -- 获取当前时间
             -- local dstr = os.date("%Y-%m-%d",os.time())
@@ -16,7 +17,8 @@ return {
                     config = {
                         -- header = vim.fn.system('figlet -w 100 NVIM'),
                         -- header = vim.split(vim.fn.system('figlet -w 100 NVIM'),"\n"),
-                        header = vim.split(vim.fn.system("figlet -f 'ANSI Shadow' 'NEOVIM' "), "\n"),
+						head = {},
+                        -- header = vim.split(vim.fn.system("figlet -f 'ANSI Shadow' 'NEOVIM' "), "\n"),
                         week_header = {
                             enable = false
                             -- concat = "test concat"
@@ -49,19 +51,11 @@ return {
         "goolord/alpha-nvim",
         dependencies = {"nvim-tree/nvim-web-devicons"},
         enabled = true,
+        -- enabled = false,
         event = {"VimEnter"},
         config = function()
             require "alpha".setup(require "alpha.themes.startify".config)
             -- require "alpha".setup(require'alpha.themes.dashboard'.config)
         end
-    }
-    -- startup-nvim
-    --   {
-    --       "startup-nvim/startup.nvim",
-    --       dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-    -- enabled = false,
-    --       config = function()
-    --           require "startup".setup({})
-    --       end
-    --   },
+    },
 }

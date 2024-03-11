@@ -12,6 +12,9 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+--  加载基础配置
+require("basic")
+
 -- 使用lazy 加载所需的插件
 require("lazy").setup({
 	{ import = "plugins" },
@@ -20,13 +23,9 @@ require("lazy").setup({
 
 })
 
---  加载基础配置
-require("basic")
-
-
 
 
 -- 加载配色配置
-require("settings_colorscheme")
+-- require("settings_colorscheme")
 
 
