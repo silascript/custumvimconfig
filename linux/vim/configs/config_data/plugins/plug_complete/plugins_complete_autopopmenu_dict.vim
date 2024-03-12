@@ -11,5 +11,6 @@
 source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_autopopmenu_basic.vim
 
 " 字典
+" Plug 'skywind3000/vim-dict',{'on':'BufReadPost'}
 Plug 'skywind3000/vim-dict'
 

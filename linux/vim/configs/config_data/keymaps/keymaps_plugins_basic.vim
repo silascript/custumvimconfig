@@ -28,8 +28,8 @@ if s:easymotion_result ==? 1
 	nmap <Leader><Leader>L <Plug>(easymotion-overwin-line)
 
 	" Move to word
-	" map <Leader><Leader>w <Plug>(easymotion-bd-w)
-	" nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
+	map <Leader><Leader>w <Plug>(easymotion-bd-w)
+	nmap <Leader><Leader>w <Plug>(easymotion-overwin-w)
 
 endif
 
