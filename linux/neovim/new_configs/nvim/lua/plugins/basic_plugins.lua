@@ -80,4 +80,37 @@ return {
             require("nvim-ts-autotag").setup()
         end
     },
+    -- hop.nvim
+    {
+        "smoka7/hop.nvim",
+        event = {"BufRead"},
+        config = function()
+            require("hop").setup(
+                {
+                    -- 行间跳转
+                    -- 向下行间跳转
+                    vim.api.nvim_set_keymap("n", "<leader><leader>j", "<cmd>HopLineAC<cr>", {silent = true}),
+                    -- 向上行间跳转
+                    vim.api.nvim_set_keymap("n", "<leader><leader>k", "<cmd>HopLineBC<cr>", {silent = true}),
+                    -- 单词级跳转
+                    -- 可视范围所有地方单词跳转
+                    vim.api.nvim_set_keymap("n", "<leader><leader>w", "<cmd>HopWord<cr>", {silent = true}),
+                    -- 当前行往下可视范围所有单词跳转
+                    vim.api.nvim_set_keymap("n", "<leader><leader>wj", "<cmd>HopWordAC<cr>", {silent = true}),
+                    -- 当前行往上可视范围所有单词跳转
+                    vim.api.nvim_set_keymap("n", "<leader><leader>wk", "<cmd>HopWordBC<cr>", {silent = true}),
+                    -- 当前行所有单词跳转
+                    vim.api.nvim_set_keymap("n", "<leader><leader>wl", "<cmd>HopWordCurrentLine<cr>", {silent = true}),
+                    -- 当前行向左所有单词跳转
+                    vim.api.nvim_set_keymap("n", "<leader><leader>h", "<cmd>HopWordCurrentLineBC<cr>", {silent = true}),
+                    -- 当前行向右所有单词跳转
+                    vim.api.nvim_set_keymap("n", "<leader><leader>l", "<cmd>HopWordCurrentLineAC<cr>", {silent = true})
+                }
+            )
+        end
+    },
+    -- plenary.nvim
+    {
+        "nvim-lua/plenary.nvim"
+    }
 }

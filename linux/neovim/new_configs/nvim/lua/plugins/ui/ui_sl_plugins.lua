@@ -5,15 +5,15 @@ return {
         "nvim-lualine/lualine.nvim",
         dependencies = {"nvim-tree/nvim-web-devicons"},
         -- event = { "VimEnter" },
-        event = { "UIEnter" },
+        event = {"UIEnter"},
         -- enabled = false,
         enabled = true,
         config = function()
             require("lualine").setup {
                 options = {
-					-- globalstatus = true,
+                    -- globalstatus = true,
 
-					-- 设置样式
+                    -- 设置样式
                     -- 使用 auto 意味着状态栏配色使用全局配色
                     -- 即使用 vim.cmd.colorscheme 指定的配色
                     -- theme = "auto"
@@ -80,26 +80,7 @@ return {
         enabled = false,
         -- enabled = true,
         config = function()
-            require("yasl").setup(
-                {
-
-                }
-            )
+            require("yasl").setup({})
         end
     },
-    -- bufferline 插件
-    {
-        "akinsho/bufferline.nvim",
-        version = "*",
-        dependencies = "nvim-tree/nvim-web-devicons",
-        -- event = {"BufReadPre"},
-        -- event = {"VeryLazy"},
-        event = {"VimEnter"},
-        -- event = {"BufReadPost"},
-        enabled = true,
-        -- enabled = false,
-        config = function()
-            require("bufferline").setup {}
-        end
-    }
 }
