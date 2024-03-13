@@ -1,17 +1,19 @@
-" ---------------------------------
-"	deoplete vim-lsp 整合插件集
-" ---------------------------------
+vim9script
 
-" 插件管理器使用 vim-plug
-" Plug ''
+# ---------------------------------
+#	deoplete vim-lsp 整合插件集
+# ---------------------------------
 
-" deoplete 基础插件
-source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_deoplete_basic.vim
+# 插件管理器使用 vim-plug
+# Plug ''
 
-" vim-lsp 插件
+# deoplete 基础插件
+import "~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_deoplete_basic.vim"
+
+# vim-lsp 插件
 Plug 'prabirshrestha/vim-lsp'
 
-" 用于deoplete 与vim-lsp对接插件
+# 用于deoplete 与vim-lsp对接插件
 Plug 'lighttiger2505/deoplete-vim-lsp'
 
 

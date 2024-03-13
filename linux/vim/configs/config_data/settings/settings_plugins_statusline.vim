@@ -1,24 +1,26 @@
-" ------------------------
-"      状态栏插件配置
-" ------------------------
+vim9script
 
-" 启用标签栏
+# ------------------------
+#      状态栏插件配置
+# ------------------------
+
+# 启用标签栏
 set showtabline=2
 
-" --------------------------------------------
+# --------------------------------------------
 
-"  插件配置
-let s:lightline_result = commands_basic#ExistPlug('itchyny/lightline.vim')
-if s:lightline_result ==? 1
-	" 检测是否已装 vim-devicons 图标插件	
-	let s:devicons_result = commands_basic#ExistPlug('ryanoasis/vim-devicons')
+#  插件配置
+var lightline_result = commands_basic#ExistPlug('itchyny/lightline.vim')
+if lightline_result ==? 1
+	# 检测是否已装 vim-devicons 图标插件	
+	var devicons_result = commands_basic#ExistPlug('ryanoasis/vim-devicons')
 
-	let g:lightline = {
+	g:lightline = {
 		\ 'colorscheme': 'wombat',
-		\ 'active':{
+		\ 'active': {
 				\ 'left': [ 
 					\ [ 'mode', 'paste' ],
-					\ [ 'readonly','gitbranch', 'filename', 'modified'],
+					\ [ 'readonly', 'gitbranch', 'filename', 'modified'],
 					\ [ 'gitinfo', 'method' ]
 				\ ],
 				\ 'right': [
@@ -33,41 +35,41 @@ if s:lightline_result ==? 1
 		\ },
 		\ 'separator': { 'left': '', 'right': ''},
 		\ 'subseparator': { 'left': '', 'right': ''},
-		\ 'component_function':{
+		\ 'component_function': {
 		\ 'filetype': 'MyFiletype',
 			\ 'fileformat': 'MyFileformat',
 			\ 'gitbranch': 'BranchFugitiveHead',
-			\ 'lineinfo':'LightlineLineinfo',
+			\ 'lineinfo': 'LightlineLineinfo',
 		\ }
 	\ }
 
-	let g:lightline.component = {
+	g:lightline.component = {
 		\ 'readonly':  '%{&readonly?"":""}',
 	\ }	
 
-	" -------------------------------------------------------
+	# -------------------------------------------------------
 
-	" 显示标签栏
-	let s:llbuffer_result = commands_basic#ExistPlug('mengelbrecht/lightline-bufferline')
-	if s:llbuffer_result ==? 1
+	# 显示标签栏
+	var llbuffer_result = commands_basic#ExistPlug('mengelbrecht/lightline-bufferline')
+	if llbuffer_result ==? 1
 	
-		" let g:lightline                  = {}
-		let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
-		let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
-		let g:lightline.component_type   = {'buffers': 'tabsel'}
+		# let g:lightline                  = {}
+		g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+		g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+		g:lightline.component_type   = {'buffers': 'tabsel'}
 
-		if s:devicons_result ==? 1
-			" 启用文件类型图标
-			let g:lightline#bufferline#enable_devicons = 1
-			" 图标位置 可选left right first 默认left 
-			"let g:lightline#bufferline#icon_position
+		if devicons_result ==? 1
+			# 启用文件类型图标
+			g:lightline#bufferline#enable_devicons = 1
+			# 图标位置 可选left right first 默认left 
+			# g:lightline#bufferline#icon_position
 		endif
-		" 未命名文件名
-		let g:lightline#bufferline#unnamed  = '[No Name]'
-		" 启用unicode字符 显示"只读" "修改中"等状态
-		let g:lightline#bufferline#unicode_symbols = 1
+		# 未命名文件名
+		g:lightline#bufferline#unnamed  = '[No Name]'
+		# 启用unicode字符 显示"只读" "修改中"等状态
+		g:lightline#bufferline#unicode_symbols = 1
 
-	" --------------------------------------
+	# --------------------------------------
 
 
 	endif
@@ -76,18 +78,19 @@ if s:lightline_result ==? 1
 endif
 
 
-" ----------------------------------------
+# ----------------------------------------
 
+# 检测是否已装 vim-devicons 图标插件	
+var devicons_result = commands_basic#ExistPlug('ryanoasis/vim-devicons')
+if devicons_result ==? 1
 
-if s:devicons_result ==? 1
-
-	" 显示文件类型
-	function! MyFiletype()
+	# 显示文件类型
+	function MyFiletype()
 		return winwidth(0) > 70 ? (&filetype !=#'' ? WebDevIconsGetFileTypeSymbol(): 'no ft') : ''	
 	endfunction
 
-	" 显示系统及文件编码
-	function! MyFileformat()
+	# 显示系统及文件编码
+	function MyFileformat()
 		return winwidth(0) > 70 ? (&fileencoding!=# '' ? &fileencoding.' '.WebDevIconsGetFileFormatSymbol(): &encoding . ' ' . WebDevIconsGetFileFormatSymbol()) : ''. WebDevIconsGetFileFormatSymbol()
 	endfunction	
 
@@ -95,8 +98,8 @@ if s:devicons_result ==? 1
 endif
 
 
-" 行信息
-function! LightlineLineinfo() abort
+# 行信息
+function LightlineLineinfo() abort
 	return &filetype ==? 'help'		   ? ''  :
 	\ &filetype ==? 'defx'             ? ' ' :
 	\ &filetype ==? 'coc-explorer'     ? ' ' :
@@ -108,10 +111,10 @@ function! LightlineLineinfo() abort
 	\ printf('%3ld%% %4ld:%3ld', 100*line('.')/line('$'),  line('.'), col('.'))
 endfunction
 
-" gitbranch显示样式
-function! BranchFugitiveHead() abort
+# gitbranch显示样式
+function BranchFugitiveHead() abort
 	try
-		let fh= FugitiveHead()
+		let fh = FugitiveHead()
 		return fh !=#''?' '.fh : ''
 	catch
 		return ''
@@ -120,12 +123,12 @@ endfunction
 
 
 
-" --------------------------------------------
+# --------------------------------------------
 
-"  插件配置
-" let s:xxxresult = commands_basic#ExistPlug('插件名')
-" if s:xxxresult ==? 1
-" 
-  " ...
-" 
-" endif
+#  插件配置
+# let s:xxxresult = commands_basic#ExistPlug('插件名')
+# if s:xxxresult ==? 1
+# 
+  # ...
+# 
+# endif
