@@ -209,9 +209,9 @@ endif
 
 #  nord.nvim 配置
 var nordn_result = commands_basic#ExistPlug('shaunsingh/nord.nvim')
-if nordn_result ==? 1
+if nordn_result == 1
   # # 检测当前 colorscheme  
-  if g:colors_name ==? 'nord'
+  if g:colors_name == 'nord'
     
     # colorscheme nord
   endif

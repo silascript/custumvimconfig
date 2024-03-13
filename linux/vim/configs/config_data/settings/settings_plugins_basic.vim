@@ -6,7 +6,7 @@ vim9script
 
 # nere commenter 插件配置
 var nerdcommc_result = commands_basic#ExistPlug('preservim/nerdcommenter')
-if nerdcommc_result ==? 1
+if nerdcommc_result == 1
  
   # 注释时注释符号后插入一个空格
    g:NERDSpaceDelims = 1
@@ -25,7 +25,7 @@ endif
 # highlightedyank 插件配置
 var hly_result = commands_basic#ExistPlug('machakann/vim-highlightedyank')
 
-if hly_result ==? 1
+if hly_result == 1
   # 高亮时长
   g:highlightedyank_highlight_duration = 1500
 endif
@@ -35,7 +35,7 @@ endif
 
 # startify 插件配置
 var startify_result = commands_basic#ExistPlug('mhinz/vim-startify')
-if startify_result ==? 1
+if startify_result == 1
 	g:startify_files_number = 8
 
     
@@ -49,7 +49,7 @@ endif
 
 # vim-togglecursor 插件配置
 var togglecursor_result = commands_basic#ExistPlug('jszakmeister/vim-togglecursor')
-if togglecursor_result ==? 1
+if togglecursor_result == 1
 	# var togglecursor_insert = "line"
 	# var togglecursor_leave = "line"
 endif

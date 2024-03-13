@@ -6,7 +6,7 @@ vim9script
 
 # neosnippet 配置
 var neosnippet_result = commands_basic#ExistPlug('Shougo/neosnippet.vim')
-if neosnippet_result ==? 1
+if neosnippet_result == 1
 	
 	# 使用 neosnippet-snippets 作为snippet仓库
 	g:neosnippet#snippets_directory = '~/.vim/plugged/neosnippet-snippets/neosnippets'

@@ -6,7 +6,7 @@ vim9script
 
 #  completor 插件配置
 var completor_result = commands_basic#ExistPlug('maralla/completor.vim')
-if completor_result ==? 1
+if completor_result == 1
 	
 	# buffer 及ultisnips 最小触发补全字符
 	# 默认是2个字符

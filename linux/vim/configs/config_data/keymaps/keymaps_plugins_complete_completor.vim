@@ -7,7 +7,7 @@ vim9script
 
 # completor 快捷键配置
 var completor_kresult = commands_basic#ExistPlug('maralla/completor.vim')
-if completor_kresult ==? 1
+if completor_kresult == 1
 
 	# 使用 Tab键补全
 	# inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -54,13 +54,13 @@ if completor_kresult ==? 1
 	inoremap <expr> <Tab> Tab_Or_Complete()
 	
 	# 回车确定
-	inoremap <expr> <cr> pumvisible()? "\<c-y>" : "\<cr>"
+	inoremap <expr> <cr> pumvisible() ? "\<c-y>" : "\<cr>"
 
 
 
 	# ultisnips 快捷键配置
 	var deoplete_ultisnips_result = commands_basic#ExistPlug('SirVer/ultisnips')
-	if deoplete_ultisnips_result ==? 1
+	if deoplete_ultisnips_result == 1
 
 
 		# 将 ultisnips 展开代码的快捷键设成其他，这样避免与 completor 默认的 Tab 选择候选项快捷键冲突
