@@ -19,6 +19,7 @@ require("basic")
 require("lazy").setup({
 	{ import = "plugins" },
 	{ import = "plugins/ui" },
+	{ import = "plugins/telescope" },
 	-- { import = "plugins/*/" },
 
 })
