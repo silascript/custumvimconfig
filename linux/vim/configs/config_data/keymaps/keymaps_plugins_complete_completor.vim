@@ -19,7 +19,6 @@ if completor_kresult == 1
 	# inoremap <expr> <Tab> pumvisible() ? "<C-N>" : "<C-R>=completor#do('complete')<CR>"
 
 
-
 	# --------------------------------------------- 
 
 
@@ -30,20 +29,15 @@ if completor_kresult == 1
 	# Never type the same word twice and maybe learn a new spellings!
 	# Use the Linux dictionary when spelling is in doubt.
 	function Tab_Or_Complete() abort
-	  # If completor is already open the `tab` cycles through suggested completions.
 	  if pumvisible()
 		return "\<C-N>"
-	  # If completor is not open and we are in the middle of typing a word then
-	  # `tab` opens completor menu.
 	  elseif col('.')>1 && strpart( getline('.'), col('.')-2, 3 ) =~ '^[[:keyword:][:ident:]]'
 		return "\<C-R>=completor#do('complete')\<CR>"
-		# return "\<C-R>=completor#do('complete')"
 	  else
-		# If we aren't typing a word and we press `tab` simply do the normal `tab`
-		# action.
 		return "\<Tab>"
 	  endif
 	endfunction
+
 
 	# Use `tab` key to select completions.  Default is arrow keys.
 	inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
