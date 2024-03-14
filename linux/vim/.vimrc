@@ -52,7 +52,7 @@ vim9script
 # 默认 completor 补全方案
 # import "~/.vim/configs/solutions/complete/s_complete_completor_ultisnips.vim"
 # 使用 neosnippet + neosnippet-snippets 补全方案
-import "~/.vim/configs/solutions/complete/s_complete_completor_neosnippet.vim"
+# import "~/.vim/configs/solutions/complete/s_complete_completor_neosnippet.vim"
 # 使用 neosnippet + vim-snippets 补全方案
 # import "~/.vim/configs/solutions/complete/s_complete_completor_neosnippet_vimsnippets.vim"
 
@@ -74,7 +74,7 @@ import "~/.vim/configs/solutions/complete/s_complete_completor_neosnippet.vim"
 
 # -------------------------------  easycomplete 补全方案 -------------------------------
 
-# import "~/.vim/configs/solutions/complete/s_complete_easycomplete.vim"
+import "~/.vim/configs/solutions/complete/s_complete_easycomplete.vim"
 
 # ----------------------------------------------------------------------------------------
 
