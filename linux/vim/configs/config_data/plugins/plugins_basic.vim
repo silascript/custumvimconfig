@@ -30,6 +30,9 @@ Plug 'easymotion/vim-easymotion'
 Plug 'mhinz/vim-startify'
 
 
+# 命令行模式提示
+Plug 'girishji/autosuggest.vim'
+
 # 标点符号
 import "~/.vim/configs/config_data/plugins/plugins_punctuation.vim"
 

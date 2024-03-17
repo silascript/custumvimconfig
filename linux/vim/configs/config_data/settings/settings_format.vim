@@ -13,6 +13,8 @@ var googlecodefmt_result = commands_basic#ExistPlug('google/vim-codefmt')
 if googlecodefmt_result ==? 1
 
 	call glaive#Install()
+
+
 	# 配置 shfmt
 	Glaive codefmt shfmt_options=`['-i', '0', '-sr', '-ci']`
 
