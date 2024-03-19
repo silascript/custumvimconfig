@@ -6,5 +6,9 @@
 " Plug ''
 
 " Lorem Ipsum 插件
-Plug 'vim-scripts/loremipsum'
+Plug 'vim-scripts/loremipsum',{'on': []}
+augroup load_loremipsum
+    autocmd!
+    autocmd BufEnter * call plug#load('loremipsum') | autocmd! load_loremipsum
+augroup END
 

@@ -12,5 +12,9 @@ source ~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_autopop
 
 " 字典
 " Plug 'skywind3000/vim-dict',{'on':'BufReadPost'}
-Plug 'skywind3000/vim-dict'
+Plug 'skywind3000/vim-dict',{'on': []}
+augroup load_vimdict
+    autocmd!
+    autocmd BufEnter * call plug#load('vim-dict') | autocmd! load_vimdict 
+augroup END
 

@@ -5,8 +5,11 @@
 " 插件管理器使用 vim-plug
 " Plug ''
 
-" Plug 'skywind3000/vim-auto-popmenu',{'on':'BufReadPost'}
-Plug 'skywind3000/vim-auto-popmenu'
+Plug 'skywind3000/vim-auto-popmenu',{'on': []}
+augroup load_autopopmenu
+    autocmd!
+    autocmd BufEnter * call plug#load('vim-auto-popmenu') | autocmd! load_autopopmenu 
+augroup END
 
 
 
