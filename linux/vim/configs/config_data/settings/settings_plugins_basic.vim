@@ -4,8 +4,13 @@ vim9script
 #       基础插件配置
 # ------------------------
 
+# 导入通用函数
+import "~/.vim/configs/commands/commands_basic.vim"
+
 # nere commenter 插件配置
-var nerdcommc_result = commands_basic#ExistPlug('preservim/nerdcommenter')
+# var nerdcommc_result = commands_basic#ExistPlug('preservim/nerdcommenter')
+# vim9 语法
+var nerdcommc_result = commands_basic.ExistPlug('preservim/nerdcommenter')
 if nerdcommc_result == 1
  
   # 注释时注释符号后插入一个空格
@@ -23,7 +28,8 @@ endif
 # --------------------------------------------
 
 # highlightedyank 插件配置
-var hly_result = commands_basic#ExistPlug('machakann/vim-highlightedyank')
+# var hly_result = commands_basic#ExistPlug('machakann/vim-highlightedyank')
+var hly_result = commands_basic.ExistPlug('machakann/vim-highlightedyank')
 
 if hly_result == 1
   # 高亮时长
@@ -34,7 +40,8 @@ endif
 # --------------------------------------------
 
 # startify 插件配置
-var startify_result = commands_basic#ExistPlug('mhinz/vim-startify')
+# var startify_result = commands_basic#ExistPlug('mhinz/vim-startify')
+var startify_result = commands_basic.ExistPlug('mhinz/vim-startify')
 if startify_result == 1
 	g:startify_files_number = 8
 
@@ -48,7 +55,8 @@ endif
 # --------------------------------------------
 
 # vim-togglecursor 插件配置
-var togglecursor_result = commands_basic#ExistPlug('jszakmeister/vim-togglecursor')
+# var togglecursor_result = commands_basic#ExistPlug('jszakmeister/vim-togglecursor')
+var togglecursor_result = commands_basic.ExistPlug('jszakmeister/vim-togglecursor')
 if togglecursor_result == 1
 	# var togglecursor_insert = "line"
 	# var togglecursor_leave = "line"

@@ -4,11 +4,14 @@ vim9script
 #			基础插件 快捷键设置
 # ----------------------------------
 
+# 导入通用脚本
+import "~/.vim/configs/commands/commands_basic.vim"
 
 # ----------------------------------------------------
 
 # cosco 插件快捷键配置
-var cosco_kresult = commands_basic#ExistPlug('lfilho/cosco.vim')
+# var cosco_kresult = commands_basic#ExistPlug('lfilho/cosco.vim')
+var cosco_kresult = commands_basic.ExistPlug('lfilho/cosco.vim')
 if cosco_kresult == 1
 
 	autocmd FileType c,cpp,java,javascript,css,rust,dart nmap <silent> <Leader>; <Plug>(cosco-commaOrSemiColon)
@@ -19,7 +22,8 @@ endif
 
 # ----------------------------------------------------
 
-var easymotion_result = commands_basic#ExistPlug('easymotion/vim-easymotion')
+# var easymotion_result = commands_basic#ExistPlug('easymotion/vim-easymotion')
+var easymotion_result = commands_basic.ExistPlug('easymotion/vim-easymotion')
 if easymotion_result == 1
 	
 	map <Leader><Leader>h <Plug>(easymotion-linebackward)
@@ -35,7 +39,8 @@ if easymotion_result == 1
 
 endif
 
-var vim9stargate_result = commands_basic#ExistPlug('monkoose/vim9-stargate')
+# var vim9stargate_result = commands_basic#ExistPlug('monkoose/vim9-stargate')
+var vim9stargate_result = commands_basic.ExistPlug('monkoose/vim9-stargate')
 if vim9stargate_result == 1
 
 	# for the start of a word

@@ -4,6 +4,8 @@ vim9script
 #       配色配置
 # ------------------------
 
+import "~/.vim/configs/commands/commands_basic.vim"
+
 # 设置配色
 # 
 # colorscheme tender
@@ -39,7 +41,8 @@ colorscheme gruvbox-material
 # --------------------------------------------
 
 #   设置
-var material_result = commands_basic#ExistPlug('kaicataldo/material.vim')
+# var material_result = commands_basic#ExistPlug('kaicataldo/material.vim')
+var material_result = commands_basic.ExistPlug('kaicataldo/material.vim')
 if material_result ==? 1
   # # 检测当前 colorscheme  
   if g:colors_name ==? 'material'
@@ -61,7 +64,8 @@ endif
 # --------------------------------------------
 
 #  sonokai 设置
-var sonokai_result = commands_basic#ExistPlug('sainnhe/sonokai')
+# var sonokai_result = commands_basic#ExistPlug('sainnhe/sonokai')
+var sonokai_result = commands_basic.ExistPlug('sainnhe/sonokai')
 if sonokai_result ==? 1
   # @ 检测当前 colorscheme  
   if g:colors_name ==? 'sonokai'
@@ -79,7 +83,8 @@ endif
 # --------------------------------------------
 
 #  gruvbox 配置
-var gruvbox_result = commands_basic#ExistPlug('morhetz/gruvbox')
+# var gruvbox_result = commands_basic#ExistPlug('morhetz/gruvbox')
+var gruvbox_result = commands_basic.ExistPlug('morhetz/gruvbox')
 if gruvbox_result ==? 1
   # # 检测当前 colorscheme  
   if g:colors_name ==? 'gruvbox'
@@ -96,7 +101,8 @@ endif
 # --------------------------------------------
 
 #  gruvbox-material 设置
-var gruvboxm_result = commands_basic#ExistPlug('sainnhe/gruvbox-material')
+# var gruvboxm_result = commands_basic#ExistPlug('sainnhe/gruvbox-material')
+var gruvboxm_result = commands_basic.ExistPlug('sainnhe/gruvbox-material')
 if gruvboxm_result ==? 1
   # # 检测当前 colorscheme  
   if g:colors_name ==? 'gruvbox-material'
@@ -134,7 +140,8 @@ endif
 # --------------------------------------------
 
 #   配置
-var gruvbox8_result = commands_basic#ExistPlug('lifepillar/vim-gruvbox8')
+# var gruvbox8_result = commands_basic#ExistPlug('lifepillar/vim-gruvbox8')
+var gruvbox8_result = commands_basic.ExistPlug('lifepillar/vim-gruvbox8')
 if gruvbox8_result ==? 1
   # 检测当前 colorscheme  
   if g:colors_name ==? 'gruvbox8'
@@ -158,7 +165,8 @@ endif
 # --------------------------------------------
 
 #   配置
-var gruvboxbb_result = commands_basic#ExistPlug('luisiacc/gruvbox-baby')
+# var gruvboxbb_result = commands_basic#ExistPlug('luisiacc/gruvbox-baby')
+var gruvboxbb_result = commands_basic.ExistPlug('luisiacc/gruvbox-baby')
 if gruvboxbb_result ==? 1
   # # 检测当前 colorscheme  
   if g:colors_name ==? 'gruvbox-baby'
@@ -178,7 +186,8 @@ endif
 # --------------------------------------------
 
 #   配置
-var onedark_result = commands_basic#ExistPlug('joshdick/onedark.vim')
+# var onedark_result = commands_basic#ExistPlug('joshdick/onedark.vim')
+var onedark_result = commands_basic.ExistPlug('joshdick/onedark.vim')
 if onedark_result ==? 1
   # 检测当前 colorscheme  
   if g:colors_name ==? 'onedark'
@@ -192,7 +201,8 @@ endif
 # --------------------------------------------
 
 #  nord-vim 配置
-var nord_result = commands_basic#ExistPlug('arcticicestudio/nord-vim')
+# var nord_result = commands_basic#ExistPlug('arcticicestudio/nord-vim')
+var nord_result = commands_basic.ExistPlug('arcticicestudio/nord-vim')
 if nord_result ==? 1
   # 检测当前 colorscheme  
   if g:colors_name ==? 'nord'

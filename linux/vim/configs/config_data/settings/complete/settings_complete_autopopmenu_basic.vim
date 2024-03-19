@@ -4,8 +4,12 @@ vim9script
 #   vim-auto-popmenu 插件基础配置
 # -------------------------------
 
+# vim9脚本需要导入才能调函数
+import "~/.vim/configs/commands/commands_basic.vim"
+
 #  vim-auto-popmenu 插件配置
-var autopopmenu_result = commands_basic#ExistPlug('skywind3000/vim-auto-popmenu')
+# var autopopmenu_result = commands_basic#ExistPlug('skywind3000/vim-auto-popmenu')
+var autopopmenu_result = commands_basic.ExistPlug('skywind3000/vim-auto-popmenu')
 if autopopmenu_result ==? 1
 	# 启用 	vim-auto-popmenu
 	# 默认开启 禁用设为0
