@@ -1,9 +1,11 @@
-" ---------------------------------
-"		vim-auto-popmenu 插件基础集
-" ---------------------------------
+vim9script
 
-" 插件管理器使用 vim-plug
-" Plug ''
+# ---------------------------------
+#		vim-auto-popmenu 插件基础集
+# ---------------------------------
+
+# 插件管理器使用 vim-plug
+# Plug ''
 
 Plug 'skywind3000/vim-auto-popmenu',{'on': []}
 augroup load_autopopmenu
