@@ -15,6 +15,7 @@ return {
     {
         "derektata/lorem.nvim",
         event = "VeryLazy",
+		enabled = false,
         config = function()
             require("lorem").setup(
                 {
