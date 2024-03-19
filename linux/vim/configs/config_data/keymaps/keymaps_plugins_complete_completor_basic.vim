@@ -2,9 +2,12 @@
 "		completor 快捷键基础设置
 " ----------------------------------
 
+" 导入通用脚本
+import "~/.vim/configs/commands/commands_basic.vim"
 
 " completor 快捷键配置
-let s:completor_kresult = commands_basic#ExistPlug('maralla/completor.vim')
+" let s:completor_kresult = commands_basic#ExistPlug('maralla/completor.vim')
+let s:completor_kresult = s:commands_basic.ExistPlug('maralla/completor.vim')
 if s:completor_kresult ==? 1
 
 	" 使用 Tab键补全

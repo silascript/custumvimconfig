@@ -4,8 +4,11 @@ vim9script
 #   neosnippet + neosnippet-snippets 插件配置
 # --------------------------------------------
 
+import "~/.vim/configs/commands/commands_basic.vim"
+
 # neosnippet 配置
-var neosnippet_result = commands_basic#ExistPlug('Shougo/neosnippet.vim')
+# var neosnippet_result = commands_basic#ExistPlug('Shougo/neosnippet.vim')
+var neosnippet_result = commands_basic.ExistPlug('Shougo/neosnippet.vim')
 if neosnippet_result == 1
 	
 	# 使用 neosnippet-snippets 作为snippet仓库

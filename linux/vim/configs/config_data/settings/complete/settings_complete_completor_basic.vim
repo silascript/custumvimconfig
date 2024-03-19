@@ -4,8 +4,11 @@ vim9script
 #   completor 插件基础配置
 # -------------------------------
 
+# 导入通用脚本
+import "~/.vim/configs/commands/commands_basic.vim"
+
 #  completor 插件配置
-var completor_result = commands_basic#ExistPlug('maralla/completor.vim')
+var completor_result = commands_basic.ExistPlug('maralla/completor.vim')
 if completor_result == 1
 	
 	# buffer 及ultisnips 最小触发补全字符

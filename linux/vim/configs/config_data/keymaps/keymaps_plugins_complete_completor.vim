@@ -4,9 +4,11 @@ vim9script
 #		completor 快捷键设置
 # ----------------------------------
 
+# 导入通用脚本
+import "~/.vim/configs/commands/commands_basic.vim"
 
 # completor 快捷键配置
-var completor_kresult = commands_basic#ExistPlug('maralla/completor.vim')
+var completor_kresult = commands_basic.ExistPlug('maralla/completor.vim')
 if completor_kresult == 1
 
 	# 使用 Tab键补全
@@ -38,7 +40,6 @@ if completor_kresult == 1
 	  endif
 	endfunction
 
-
 	# Use `tab` key to select completions.  Default is arrow keys.
 	inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
 	inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
@@ -53,7 +54,7 @@ if completor_kresult == 1
 
 
 	# ultisnips 快捷键配置
-	var deoplete_ultisnips_result = commands_basic#ExistPlug('SirVer/ultisnips')
+	var deoplete_ultisnips_result = commands_basic.ExistPlug('SirVer/ultisnips')
 	if deoplete_ultisnips_result == 1
 
 

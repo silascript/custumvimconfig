@@ -4,9 +4,12 @@ vim9script
 #      ultisnips 插件配置
 # ------------------------
 
+# 导入通用脚本
+import "~/.vim/configs/commands/commands_basic.vim"
 
 #  ultisnips 插件配置
-var ultisnips_result = commands_basic#ExistPlug('SirVer/ultisnips')
+# var ultisnips_result = commands_basic#ExistPlug('SirVer/ultisnips')
+var ultisnips_result = commands_basic.ExistPlug('SirVer/ultisnips')
 if ultisnips_result ==? 1
 	# let g:UltiSnipsExpandTrigger="<tab>"
 	# let g:UltiSnipsJumpForwardTrigger="<c-b>"
