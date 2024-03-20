@@ -20,6 +20,7 @@ if deoplete_result == 1
 
 	# 智能大小写
 	call deoplete#custom#source('_', 'smart_case', v:true)
+	# call deoplete.custom.source('_', 'smart_case', v:true)
 endif
 
 

@@ -30,7 +30,7 @@ import "~/.vim/configs/commands/commands_basic.vim"
 
 # neosnippet 快捷键配置
 var neosnippet_result = commands_basic.ExistPlug('Shougo/neosnippet.vim')
-if neosnippet_result ==? 1
+if neosnippet_result == 1
 
 	# imap <expr><TAB>
 	# \ pumvisible() ? "\<C-n>" :
