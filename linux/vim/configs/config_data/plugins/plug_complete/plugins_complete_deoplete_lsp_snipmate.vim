@@ -14,6 +14,9 @@ import "~/.vim/configs/config_data/plugins/plug_complete/plugins_complete_deople
 import "~/.vim/configs/config_data/plugins/plug_snippets/plugins_snippets_snipmate.vim"
 
 # deoplete 与 snipmate 接口插件
-Plug 'dcampos/deoplete-snipmate'
-
+Plug 'dcampos/deoplete-snipmate',{'on': []}
+augroup load_dsnipmate
+	autocmd!
+	autocmd BufEnter * call plug#load('deoplete-snipmate') | autocmd! load_dsnipmate
+augroup END
 

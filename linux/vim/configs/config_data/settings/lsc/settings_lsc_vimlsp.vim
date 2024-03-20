@@ -3,13 +3,16 @@
 "	deoplete-vim-lsp 是作为 deoplete补全框架使用vim-lsp数据源的整合插件
 " ---------------------------------------------------------------------
 
+" 导入通用脚本
+import "~/.vim/configs/commands/commands_basic.vim"
+
 " vim-lsp 插件配置
-let s:vimlsp_result = commands_basic#ExistPlug('prabirshrestha/vim-lsp')
+let s:vimlsp_result = s:commands_basic.ExistPlug('prabirshrestha/vim-lsp')
 	if s:vimlsp_result ==? 1
 	" 关闭lsp的语法诊断
 		let g:lsp_diagnostics_enabled = 0
 
-		let s:deo_vimlsp_result = commands_basic#ExistPlug('lighttiger2505/deoplete-vim-lsp')
+		let s:deo_vimlsp_result = s:commands_basic.ExistPlug('lighttiger2505/deoplete-vim-lsp')
 		if s:deo_vimlsp_result ==? 1
 	
 			" 设置各语言LSP

@@ -6,7 +6,11 @@ vim9script
 
 # 插件管理器使用 vim-plug
 # Plug ''
-Plug 'sheerun/vim-polyglot'
+Plug 'sheerun/vim-polyglot',{'on': []}
+augroup load_polyglot
+	autocmd!
+	autocmd BufEnter * call plug#load('vim-polyglot') | autocmd! load_polyglot
+augroup END
 
 
 # 颜色高亮
