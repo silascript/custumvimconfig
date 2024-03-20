@@ -4,11 +4,14 @@ vim9script
 #	vim-snipmate 快捷键设置
 # ----------------------------------
 
+# 导入通用脚本
+import "~/.vim/configs/commands/commands_basic.vim"
 
 # ----------------------------------------------------
 
 # snipmate 快捷键配置
-var snipmate_kresult = commands_basic#ExistPlug('garbas/vim-snipmate')
+var snipmate_kresult = commands_basic.ExistPlug('garbas/vim-snipmate')
+
 if snipmate_kresult == 1
 	
 	# imap <C-E> <Plug>snipMateTrigger

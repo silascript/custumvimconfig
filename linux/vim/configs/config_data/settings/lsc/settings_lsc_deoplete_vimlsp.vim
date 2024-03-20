@@ -3,13 +3,22 @@
 "	deoplete-vim-lsp 是作为 deoplete补全框架使用vim-lsp数据源的整合插件
 " ---------------------------------------------------------------------
 
-" vim-lsp 插件配置
-let s:vimlsp_result = commands_basic#ExistPlug('prabirshrestha/vim-lsp')
-	if s:vimlsp_result ==? 1
-	" 关闭lsp的语法诊断
-		let g:lsp_diagnostics_enabled = 0
+" 导入通用脚本
+import "~/.vim/configs/commands/commands_basic.vim"
 
-		let s:deo_vimlsp_result = commands_basic#ExistPlug('lighttiger2505/deoplete-vim-lsp')
+" vim-lsp 插件配置
+" let s:vimlsp_result = commands_basic#ExistPlug('prabirshrestha/vim-lsp')
+let s:vimlsp_result = s:commands_basic.ExistPlug('prabirshrestha/vim-lsp')
+	if s:vimlsp_result ==? 1
+		" 关闭lsp的语法诊断
+		let g:lsp_diagnostics_enabled = 0
+		
+		" 开启log
+		" let g:lsp_log_verbose = 1
+		" let g:lsp_log_file = expand('~/vim-lsp.log')
+
+		" let s:deo_vimlsp_result = commands_basic#ExistPlug('lighttiger2505/deoplete-vim-lsp')
+		let s:deo_vimlsp_result = s:commands_basic.ExistPlug('lighttiger2505/deoplete-vim-lsp')
 		if s:deo_vimlsp_result ==? 1
 	
 			" 设置各语言LSP
@@ -222,12 +231,23 @@ let s:vimlsp_result = commands_basic#ExistPlug('prabirshrestha/vim-lsp')
 		" -----------------------------------------------------------
 
 		" html
-		if executable('html-languageserver')
+		" if executable('html-languageserver')
+			" augroup LspHTML
+				" autocmd!
+				" au User lsp_setup call lsp#register_server({
+							  " \ 'name': 'html-languageserver',
+							  " \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
+							  " \ 'allowlist': ['html'],
+							  " \ })
+			" augroup END
+		" endif
+
+		if executable('vscode-html-language-server')
 			augroup LspHTML
 				autocmd!
 				au User lsp_setup call lsp#register_server({
-							  \ 'name': 'html-languageserver',
-							  \ 'cmd': {server_info->[&shell, &shellcmdflag, 'html-languageserver --stdio']},
+							  \ 'name': 'vscode-html-language-server',
+							  \ 'cmd': {server_info->[&shell, &shellcmdflag, 'vscode-html-language-server --stdio']},
 							  \ 'whitelist': ['html'],
 							  \ })
 			augroup END
@@ -253,6 +273,7 @@ let s:vimlsp_result = commands_basic#ExistPlug('prabirshrestha/vim-lsp')
 		"augroup END
 	endif
 endif
+
 
 
 

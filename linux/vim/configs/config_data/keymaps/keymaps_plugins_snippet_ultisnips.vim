@@ -4,11 +4,14 @@ vim9script
 #		ultisnips 快捷键设置
 # ----------------------------------
 
+# 导入通用脚本
+import "~/.vim/configs/commands/commands_basic.vim"
+
 
 # ----------------------------------------------------
 
 # ultisnips 快捷键配置
-var ultisnips_kresult = commands_basic#ExistPlug('SirVer/ultisnips')
+var ultisnips_kresult = commands_basic.ExistPlug('SirVer/ultisnips')
 if ultisnips_kresult == 1
 	# 
 	# inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -31,9 +34,8 @@ endif
 
 # ----------------------------------------------------
 
-
 # neosnippet 快捷键配置
-var neosnippet_result = commands_basic#ExistPlug('Shougo/neosnippet.vim')
+var neosnippet_result = commands_basic.ExistPlug('Shougo/neosnippet.vim')
 if neosnippet_result == 1
 
 	# imap <expr><TAB>

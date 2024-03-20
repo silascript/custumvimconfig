@@ -12,9 +12,15 @@ vim9script
 # 不过需要其他两个插件
 Plug 'MarcWeber/vim-addon-mw-utils'
 Plug 'tomtom/tlib_vim'
-Plug 'garbas/vim-snipmate'
+Plug 'garbas/vim-snipmate',{'on': []}
+augroup load_vimsnipmate
+	autocmd!
+	autocmd BufEnter * call plug#load('vim-snipmate') | autocmd! load_vimsnipmate
+augroup END
 
 # snippet 库
-Plug 'honza/vim-snippets'
-
-
+Plug 'honza/vim-snippets',{'on': []}
+augroup load_vimsnippets
+	autocmd!
+	autocmd BufEnter * call plug#load('vim-snippets') | autocmd! load_vimsnippets
+augroup END
