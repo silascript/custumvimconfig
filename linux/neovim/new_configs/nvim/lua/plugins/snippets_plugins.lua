@@ -19,7 +19,7 @@ return {
                 -- require("luasnip.loaders.from_vscode").load()
             end
         },
-        -- enabled = false,
+        enabled = false,
         event = "VeryLazy",
         -- event = "InsertEnter",
         -- event = {"InsertEnter","CmdlineEnter"},
@@ -44,11 +44,25 @@ return {
                 }
             )
         end
-    }
+    },
     -- friendly-snippets
     -- snippet 库
     --    {
     -- 	"rafamadriz/friendly-snippets",
     -- 	event = { "BufReadPre" }
     -- }
+
+    -- nvim-snippy
+    {
+        "dcampos/nvim-snippy",
+        dependencies = {
+            "honza/vim-snippets"
+        },
+        -- enabled = false,
+        enabled = true,
+        event = {"BufEnter"},
+        config = function()
+            require("snippy").setup({})
+        end
+    }
 }
