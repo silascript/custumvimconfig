@@ -41,7 +41,8 @@ return {
     -- comment
     {
         "numToStr/Comment.nvim",
-        event = "BufReadPost",
+        -- event = "BufReadPost",
+        event = "BufEnter",
         config = function()
             require("Comment").setup(
                 {
@@ -65,7 +66,8 @@ return {
         "JoosepAlviste/nvim-ts-context-commentstring",
         dependencies = {"nvim-treesitter/nvim-treesitter"},
         -- lazy = true,
-        event = {"BufReadPost"},
+        -- event = {"BufReadPost"},
+        event = {"BufEnter"},
         config = function()
             require("ts_context_commentstring").setup {}
         end
@@ -75,7 +77,8 @@ return {
     {
         "windwp/nvim-ts-autotag",
         dependencies = {"nvim-treesitter/nvim-treesitter"},
-        event = {"BufReadPost"},
+        -- event = {"BufReadPost"},
+        event = {"BufEnter"},
         config = function()
             require("nvim-ts-autotag").setup()
         end
@@ -83,7 +86,8 @@ return {
     -- hop.nvim
     {
         "smoka7/hop.nvim",
-        event = {"BufRead"},
+        -- event = {"BufRead"},
+        event = {"BufEnter"},
         config = function()
             require("hop").setup(
                 {

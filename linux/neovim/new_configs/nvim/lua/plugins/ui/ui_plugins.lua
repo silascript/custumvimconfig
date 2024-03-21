@@ -6,7 +6,8 @@ return {
         "nvim-tree/nvim-tree.lua",
         version = "*",
         dependencies = {"nvim-tree/nvim-web-devicons"},
-        event = "UIEnter",
+        -- event = "UIEnter",
+        event = "VimEnter",
         config = function()
             require("nvim-tree").setup {}
         end
@@ -16,9 +17,10 @@ return {
         "akinsho/bufferline.nvim",
         version = "*",
         dependencies = "nvim-tree/nvim-web-devicons",
+        event = {"BufEnter","BufNewFile"},
         -- event = {"BufReadPre"},
         -- event = {"VeryLazy"},
-        event = {"VimEnter"},
+        -- event = {"VimEnter"},
         -- event = {"BufReadPost"},
         config = function()
             require("bufferline").setup {}
@@ -28,7 +30,8 @@ return {
     {
         "nvim-treesitter/nvim-treesitter",
         -- event = "BufReadPre",
-        event = "VimEnter",
+        -- event = "VimEnter",
+        event = "BufEnter",
         -- event = {"BufReadPre","BufNewFile"},
         -- event = {"BufReadPost"},
         config = function()
