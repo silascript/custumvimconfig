@@ -74,7 +74,7 @@ vim9script
 
 # -------------------------------  easycomplete 补全方案 -------------------------------
 
-import "~/.vim/configs/solutions/complete/s_complete_easycomplete.vim"
+# import "~/.vim/configs/solutions/complete/s_complete_easycomplete.vim"
 
 # ----------------------------------------------------------------------------------------
 
@@ -120,6 +120,8 @@ import "~/.vim/configs/solutions/complete/s_complete_easycomplete.vim"
 
 # deoplete vim-lsc 整合方案
 # import "~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_vimlsc.vim"
+# deoplete vim-lsc snipmate 整合方案
+import "~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_vimlsc_snipmate.vim"
 
 
 
