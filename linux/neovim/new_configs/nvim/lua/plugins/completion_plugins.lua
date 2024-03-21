@@ -19,8 +19,8 @@ return {
             "dcampos/cmp-snippy",
             "onsails/lspkind.nvim"
         },
-        -- event = { "InsertEnter", "CmdlineEnter" },
-        event = {"InsertEnter"},
+        event = {"InsertEnter", "CmdlineEnter"},
+        -- event = {"InsertEnter"},
         -- event = { "BufEnter" },
         -- event = "VeryLazy",
         config = function()
@@ -76,7 +76,7 @@ return {
                                         buffer = "[Buffer]",
                                         nvim_lsp = "[LSP]",
                                         -- luasnip = "[LuaSnip]",
-										snippy = "[nvim-snippy]",
+                                        snippy = "[nvim-snippy]",
                                         nvim_lua = "[Lua]"
                                         -- latex_symbols = "[LaTeX]",
                                     })[entry.source.name]
@@ -209,6 +209,27 @@ return {
                     )
                 }
             ) --require("cmp")
+
+            -- cmdline
+            cmp.setup.cmdline(
+                ":",
+                {
+                    mapping = cmp.mapping.preset.cmdline(),
+                    sources = cmp.config.sources(
+                        {
+                            {name = "path"}
+                        },
+                        {
+                            {
+                                name = "cmdline",
+                                option = {
+                                    ignore_cmds = {"Man", "!"}
+                                }
+                            }
+                        }
+                    )
+                }
+            ) --cmdline
         end
     }
 }
