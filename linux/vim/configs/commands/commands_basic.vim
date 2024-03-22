@@ -59,7 +59,7 @@ export def ExistPlug(plugname: string): number
 enddef
 
 # command -nargs=1 ExistPlug call commands_basic#ExistPlug(<args>)
-command -nargs=1 ExistPlugin call ExistPlug(<args>)
+command! -nargs=1 ExistPlugin call ExistPlug(<args>)
 
 # ----------------------------------------------
 # 引入markdown 小工具

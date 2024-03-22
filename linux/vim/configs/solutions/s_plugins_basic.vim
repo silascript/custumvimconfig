@@ -1,35 +1,37 @@
-" -----------------------------
-"			基础插件整合方案
-" -----------------------------
+vim9script
 
-" 命令
-" 基本命令
-source ~/.vim/configs/commands/commands_basic.vim
+# -----------------------------
+#			基础插件整合方案
+# -----------------------------
 
-" ---------------------------------------
+# 命令
+# 基本命令
+import "~/.vim/configs/commands/commands_basic.vim"
 
-" 插件集
-" source 
+# ---------------------------------------
+
+# 插件集
+# source 
 call plug#begin()
 
-	" 引入基础插件集
-	source ~/.vim/configs/config_data/plugins/plugins_basic.vim
+	# 引入基础插件集
+	import "~/.vim/configs/config_data/plugins/plugins_basic.vim"
 
 call plug#end()
 
-" ---------------------------------------
+# ---------------------------------------
 
-" 配置
+# 配置
 
-" 无插件基础配置
-source ~/.vim/configs/config_data/settings/settings_noplugins_basic.vim
+# 无插件基础配置
+import "~/.vim/configs/config_data/settings/settings_noplugins_basic.vim" 
 
-" 基础插件配置
-source ~/.vim/configs/config_data/settings/settings_plugins_basic.vim 
+# 基础插件配置
+import "~/.vim/configs/config_data/settings/settings_plugins_basic.vim"
 
-" ---------------------------------------
+# ---------------------------------------
 
-" keymaps
-" source 
+# keymaps
+# source 
 
 

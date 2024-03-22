@@ -16,7 +16,8 @@ vim9script
 Plug 'Eliot00/auto-pairs',{'on': []}
 augroup load_autopairs
     autocmd!
-    autocmd BufNewFile,BufReadPre,BufEnter * call plug#load('auto-pairs') | autocmd! load_autopairs
+    # autocmd BufNewFile,BufReadPre,BufEnter * call plug#load('auto-pairs') | autocmd! load_autopairs
+    autocmd BufEnter * call plug#load('auto-pairs') | autocmd! load_autopairs
 augroup END
 
 # 添加分号
