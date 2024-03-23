@@ -4,7 +4,7 @@ vim9script
 #     标点符号插件配置
 # ------------------------
 
-import "~/.vim/configs/commands/commands_basic.vim"
+import "~/.vim/configs_new/commands/commands_basic.vim"
 
 # --------------------------------------------
 

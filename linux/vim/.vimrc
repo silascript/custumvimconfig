@@ -11,6 +11,10 @@ vim9script
 
 # ----------------------------------------------------------------------------------------
 
+# --------------------------------------------------------------------------------- #
+#								使用 vim-plug 来管理插件
+# ----------------------------------------------------------------------------------#
+
 # 基础插件方案
 # import "~/.vim/configs/solutions/s_plugins_basic.vim"
 
@@ -121,14 +125,40 @@ vim9script
 # deoplete vim-lsc 整合方案
 # import "~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_vimlsc.vim"
 # deoplete vim-lsc snipmate 整合方案
-import "~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_vimlsc_snipmate.vim"
+# import "~/.vim/configs/solutions/complete/deoplete/s_complete_deoplete_vimlsc_snipmate.vim"
 
+
+# ----------------------------------------------------------------------------------------
+
+# --------------------------------------------------------------------------------- #
+#								使用Pluggac来管理插件
+# ----------------------------------------------------------------------------------#
+
+# 无插件方案
+# import "~/.vim/configs_new/solutions/s_noplugins_basic.vim"
+# 基础插件方案
+# import "~/.vim/configs_new/solutions/s_plugins_basic.vim"
 
 
 # ----------------------------------------------------------------------------------------
 
+# 整合 snippets 插件方案
+# import "~/.vim/configs_new/solutions/s_plugins_snippets.vim"
 
-# ----------------------------------------------------------------------------------------
+# 无补全插件方案
+# import "~/.vim/configs_new/solutions/s_nocomplete_main.vim"
+
+# ---------------------------------vim-auto-popmenu 补全方案------------------------------
+
+# 无字典 vim-auto-popmenu
+# import "~/.vim/configs_new/solutions/complete/s_complete_autopopmenu.vim"
+# 带简单字典 vim-auto-popmenu
+# import "~/.vim/configs_new/solutions/complete/s_complete_autopopmenu_dict.vim"
+
+
+# -------------------------------  easycomplete 补全方案 -------------------------------
+
+import "~/.vim/configs_new/solutions/complete/s_complete_easycomplete.vim"
 
 
 # ----------------------------------------------------------------------------------------

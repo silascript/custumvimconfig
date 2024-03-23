@@ -14,7 +14,10 @@ import "~/.vim/configs_new/commands/commands_basic.vim"
 # 插件集
 # 使用 plugpac 来管理
 # call plug#begin()
-plugpac#Begin()
+plugpac#Begin({
+	status_open: 'vertical',
+	verbose: 2,
+})
 
 	# 引入基础插件集
 	import "~/.vim/configs_new/config_data/plugins/plugins_basic.vim"
