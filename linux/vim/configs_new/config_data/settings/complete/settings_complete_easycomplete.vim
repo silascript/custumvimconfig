@@ -17,5 +17,9 @@ if easyc_result == 1
 
 	g:easycomplete_cursor_word_hl = 1
 
+	# 关闭检查
+	g:easycomplete_diagnostics_enable = 0
+	g:easycomplete_lsp_checking = 0
+
 endif
 

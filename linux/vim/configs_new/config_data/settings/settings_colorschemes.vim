@@ -7,12 +7,36 @@ vim9script
 import "~/.vim/configs_new/commands/commands_basic.vim"
 
 # 设置配色
+
+# 获取自带配色名称
+# 配色名称列表
+var colorname_list = commands_basic.FindDefaultColorSchemeName("")
+
+# echo colorname_list[0]
+# 判断 color_name 存在不存在
+# 不存在证明未设置 colorscheme
+# 那就设置个 vim 自带的 colorscheme
+if !exists('g:colors_name')
+  if !empty(colorname_list)
+    try
+      exec "colorscheme " .. colorname_list[8]
+    catch
+      colorscheme default
+    endtry
+  else
+      # 取不到自带配色就设为 default
+      colorscheme default
+  endif
+endif
+
+
+
 # 
 # colorscheme tender
 # colorscheme material
-# colorscheme sonokai
+colorscheme sonokai
 # colorscheme gruvbox
-colorscheme gruvbox-material
+# colorscheme gruvbox-material
 # colorscheme gruvbox8
 # colorscheme gruvbox8_hard
 # colorscheme gruvbox8_soft
@@ -43,7 +67,7 @@ colorscheme gruvbox-material
 #   设置
 # var material_result = commands_basic#ExistPlug('kaicataldo/material.vim')
 var material_result = commands_basic.ExistPlug('kaicataldo/material.vim')
-if material_result ==? 1
+if material_result == 1
   # # 检测当前 colorscheme  
   if g:colors_name ==? 'material'
     
@@ -66,7 +90,7 @@ endif
 #  sonokai 设置
 # var sonokai_result = commands_basic#ExistPlug('sainnhe/sonokai')
 var sonokai_result = commands_basic.ExistPlug('sainnhe/sonokai')
-if sonokai_result ==? 1
+if sonokai_result == 1
   # @ 检测当前 colorscheme  
   if g:colors_name ==? 'sonokai'
     # colorscheme evening
