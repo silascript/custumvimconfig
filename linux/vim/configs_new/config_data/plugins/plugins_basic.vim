@@ -6,7 +6,7 @@ vim9script
 # --------------------------------
 
 # 快速注释
-Pack 'preservim/nerdcommenter'
+Pack 'preservim/nerdcommenter', { 'type': 'delay' }
 # augroup load_nerdcommenter
 	# autocmd!
 	# autocmd BufEnter * call plug#load('nerdcommenter') | autocmd! load_nerdcommenter 
@@ -43,7 +43,7 @@ Pack 'machakann/vim-highlightedyank'
 # augroup END
 
 # 跳转增强
-Pack 'easymotion/vim-easymotion'
+Pack 'easymotion/vim-easymotion', { 'type': 'delay' }
 # augroup load_easymotion
 	# autocmd!
 	# autocmd BufEnter * call plug#load('vim-easymotion') | autocmd! load_easymotion 

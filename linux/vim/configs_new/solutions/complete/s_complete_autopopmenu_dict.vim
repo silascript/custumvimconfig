@@ -15,6 +15,7 @@ import "~/.vim/configs_new/commands/commands_basic.vim"
 
 plugpac#Begin({
   status_open: 'vertical',
+  progress_open: 'vertical',
   verbose: 2,
 })
 

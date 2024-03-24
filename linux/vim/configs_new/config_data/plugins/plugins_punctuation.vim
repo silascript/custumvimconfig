@@ -13,7 +13,7 @@ vim9script
 # Plug 'jiangmiao/auto-pairs'
 
 # vim 9 版的成对符号补全
-Pack 'Eliot00/auto-pairs'
+Pack 'Eliot00/auto-pairs', { 'type': 'delay' }
 # augroup load_autopairs
     # autocmd!
     # # autocmd BufNewFile,BufReadPre,BufEnter * call plug#load('auto-pairs') | autocmd! load_autopairs
