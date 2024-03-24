@@ -6,6 +6,9 @@ vim9script
 
 # 插件管理器使用 Plugpac
 # Pack ''
+
+Pack 'sainnhe/everforest'
+
 Pack 'jacoborus/tender.vim'
 
 Pack 'ajmwagar/vim-deus'

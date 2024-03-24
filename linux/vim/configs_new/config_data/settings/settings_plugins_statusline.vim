@@ -1,8 +1,8 @@
 " vim9script
 
-" ------------------------
-"      状态栏插件配置
-" ------------------------
+" --------------------------------------------
+"				状态栏插件配置
+" --------------------------------------------
 
 " source ~/.vim/configs_new/commands/commands_basic.vim
 import "~/.vim/configs_new/commands/commands_basic.vim"
@@ -20,7 +20,6 @@ if s:lightline_result ==? 1
 	let s:devicons_result = s:commands_basic.ExistPlug('ryanoasis/vim-devicons')
 
 	let g:lightline = {
-		\ 'colorscheme': 'wombat',
 		\ 'active': {
 				\ 'left': [ 
 					\ [ 'mode', 'paste' ],
@@ -67,6 +66,18 @@ if s:lightline_result ==? 1
 		endfunction	
 
 
+	endif
+
+	" 设置配色
+	" 判断 g:colors_name 存在不存在
+	if !exists('g:colors_name')
+		let g:lightline.colorscheme = 'wombat'
+	else
+		try
+			let g:lightline.colorscheme = g:colors_name
+		catch
+			let g:lightline.colorscheme = 'wombat'
+		endtry
 	endif
 
 	" -------------------------------------------------------
