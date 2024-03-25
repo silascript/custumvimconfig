@@ -7,6 +7,12 @@ vim9script
 # 插件管理器使用 Plugpac
 # Pack ''
 
+Pack 'tinted-theming/base16-vim'
+
+Pack 'timmajani/tokyonightnoir-vim'
+
+Pack 'tiagovla/tokyodark.nvim'
+
 Pack 'sainnhe/everforest'
 
 Pack 'jacoborus/tender.vim'

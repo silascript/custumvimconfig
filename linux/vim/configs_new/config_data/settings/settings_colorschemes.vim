@@ -8,7 +8,6 @@ vim9script
 import "~/.vim/configs_new/commands/commands_basic.vim"
 
 # -----------------------------------------------------------------------
-
 # 获取自带配色名称
 # 配色名称列表
 # var colorname_list = commands_basic.FindDefaultColorSchemeName("")
@@ -16,6 +15,11 @@ var colorname_list = commands_basic.FindDefaultColorSchemeName("$VIMRUNTIME/colo
 
 # 使用深色系配色
 set background=dark
+
+# 开启真彩色
+if has('termguicolors')
+	set termguicolors
+endif
 
 # 判断 color_name 存在不存在
 # 不存在证明未设置 colorscheme
@@ -36,7 +40,10 @@ endif
 # -----------------------------------------------------------------------
 # 设置配色
 
-colorscheme everforest
+# base16默认配色
+colorscheme base16-default-dark 
+# colorscheme tokyonight 
+# colorscheme everforest
 # colorscheme tender
 # colorscheme material
 # colorscheme sonokai
@@ -55,6 +62,51 @@ colorscheme everforest
 # -----------------------------------------------------------------------
 #                         各配色配置
 # -----------------------------------------------------------------------
+
+# -----------------------------------------------------------------------
+# tinted-theming/base16-vim
+var base16_result = commands_basic.ExistPlug('tinted-theming/base16-vim')
+if base16_result == 1
+  try
+    # if g:colors_name ==? 'base16-default-dark'
+    # 检测当前 colorscheme 的名称是不是以 base-16-开头
+    if match(g:colors_name, 'base16-') > -1
+      # echom '设置了base16'
+      # base16_colorspace = 256
+      # 设配色
+      # colorscheme base16-ayu-mirage
+      # colorscheme base16-catppuccin-macchiato
+      # 获取 base16 所有配色的名称
+      var base16_color_list = commands_basic.FindDefaultColorSchemeName("~/.vim/pack/minpac/start/base16-vim/colors")
+      if !empty(base16_color_list)
+        # 设置配色
+        # 根据索引值设置
+        # exec "colorscheme " .. base16_color_list[25]
+        exec "colorscheme " .. base16_color_list[25]
+      endif
+    endif
+  catch
+  endtry
+endif
+
+# -----------------------------------------------------------------------
+# timmajani/tokyonightnoir-vim
+var tokyonightnoir_result = commands_basic.ExistPlug('timmajani/tokyonightnoir-vim')
+if tokyonightnoir_result == 1
+  try
+    if g:colors_name ==? "tokyonight"
+      # available: night, storm
+      g:tokyonight_style = 'night' 
+      # g:tokyonight_style = "storm" 
+      g:tokyonight_enable_italic = 1
+      # 下拉菜单选中项的背影颜色
+      # green red blue 默认是green
+      g:tokyonight_menu_selection_background = "blue"
+    endif
+  catch
+  endtry
+
+endif
 
 # -----------------------------------------------------------------------
 
