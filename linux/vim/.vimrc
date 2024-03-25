@@ -134,11 +134,13 @@ vim9script
 #								使用Pluggac来管理插件
 # ----------------------------------------------------------------------------------#
 
+
 # 无插件方案
-# import "~/.vim/configs_new/solutions/s_noplugins_basic.vim"
+#import "~/.vim/configs_new/solutions/s_noplugins_basic.vim"
 # 基础插件方案
 # import "~/.vim/configs_new/solutions/s_plugins_basic.vim"
-
+# 基础插件增强方案 添加第三方配色插件
+# import "~/.vim/configs_new/solutions/s_plugins_basic_plus.vim"
 
 # ----------------------------------------------------------------------------------------
 
@@ -158,11 +160,32 @@ vim9script
 
 # -------------------------------  easycomplete 补全方案 -------------------------------
 
-import "~/.vim/configs_new/solutions/complete/s_complete_easycomplete.vim"
+# import "~/.vim/configs_new/solutions/complete/s_complete_easycomplete.vim"
+
+
+# ----------------------------- asyncomplete 补全方案 ------------------------------------
+# import "~/.vim/configs_new/solutions/complete/s_complete_asyncomplete.vim"
+import "~/.vim/configs_new/solutions/complete/s_complete_asyncomplete_vimlsp.vim"
 
 
 # ----------------------------------------------------------------------------------------
 
 
 
+# ----------------------------------------------------------------------------------------
 
+
+
+# ----------------------------------------------------------------------------------------
+
+
+
+# ----------------------------------------------------------------------------------------
+
+
+
+# ----------------------------------------------------------------------------------------
+
+
+
+# ----------------------------------------------------------------------------------------
