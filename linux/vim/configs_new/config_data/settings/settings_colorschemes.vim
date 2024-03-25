@@ -6,12 +6,10 @@ vim9script
 
 # 导入通用脚本
 import "~/.vim/configs_new/commands/commands_basic.vim"
+# 导入 colorscheme 工具脚本
+import "~/.vim/configs_new/commands/commands_colorscheme.vim"
 
 # -----------------------------------------------------------------------
-# 获取自带配色名称
-# 配色名称列表
-# var colorname_list = commands_basic.FindDefaultColorSchemeName("")
-var colorname_list = commands_basic.FindDefaultColorSchemeName("$VIMRUNTIME/colors")
 
 # 使用深色系配色
 set background=dark
@@ -25,16 +23,14 @@ endif
 # 不存在证明未设置 colorscheme
 # 那就设置个 vim 自带的 colorscheme
 if !exists('g:colors_name')
-  if !empty(colorname_list)
-    try
-      exec "colorscheme " .. colorname_list[16]
-    catch
-      colorscheme default
-    endtry
-  else
-      # 取不到自带配色就设为 default
-      colorscheme default
-  endif
+      # 获取自带配色名称列表
+      var colorname_list = commands_colorscheme.FindDefaultColorSchemeNameList()
+      if !empty(colorname_list)
+        # 使用列表方式设置
+        exec "colorscheme " .. colorname_list[16]
+      else
+         colorscheme default
+      endif
 endif
 
 # -----------------------------------------------------------------------
@@ -77,12 +73,12 @@ if base16_result == 1
       # colorscheme base16-ayu-mirage
       # colorscheme base16-catppuccin-macchiato
       # 获取 base16 所有配色的名称
-      var base16_color_list = commands_basic.FindDefaultColorSchemeName("~/.vim/pack/minpac/start/base16-vim/colors")
+      var base16_color_list = commands_colorscheme.FindColorSchemeNameListByPath("~/.vim/pack/minpac/start/base16-vim/colors")
       if !empty(base16_color_list)
         # 设置配色
         # 根据索引值设置
         # exec "colorscheme " .. base16_color_list[25]
-        exec "colorscheme " .. base16_color_list[25]
+        exec "colorscheme " .. base16_color_list[27]
       endif
     endif
   catch
