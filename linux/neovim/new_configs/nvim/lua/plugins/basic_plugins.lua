@@ -36,7 +36,7 @@ return {
     {
         "sontungexpt/stcursorword",
         event = "VeryLazy",
-		enabled =true,
+        enabled = true,
         config = function()
             require("stcursorword").setup(
                 {
@@ -129,9 +129,5 @@ return {
                 }
             )
         end
-    },
-    -- plenary.nvim
-    {
-        "nvim-lua/plenary.nvim"
     }
 }
