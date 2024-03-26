@@ -40,11 +40,11 @@ return {
         "ellisonleao/gruvbox.nvim",
         enabled = false,
         -- enabled = true,
-        priority = 1000 ,
+        priority = 1000,
         -- config = true,
         config = function()
-			-- vim.o.background = "dark",
-			-- vim.o.background = "light"
+            -- vim.o.background = "dark",
+            -- vim.o.background = "light"
             require("gruvbox").setup(
                 {
                     -- "hard" "soft" empty
@@ -80,9 +80,9 @@ return {
     -- base16nvim
     {
         "RRethy/base16-nvim",
-        enabled = true,
-        -- enabled = false,
-		priority = 1000,
+        -- enabled = true,
+        enabled = false,
+        priority = 1000,
         config = function()
             require("base16-colorscheme").with_config(
                 {
@@ -95,7 +95,7 @@ return {
                     -- dapui = true,
 
                     -- 设置配色
-					-- 多种配色：https://github.com/RRethy/base16-nvim
+                    -- 多种配色：https://github.com/RRethy/base16-nvim
                     -- vim.cmd.colorscheme "base16-ayu-mirage"
                     -- vim.cmd.colorscheme "base16-catppuccin-macchiato"
                     vim.cmd.colorscheme "base16-catppuccin-mocha"
@@ -114,5 +114,63 @@ return {
                 }
             )
         end
-    } -- base16-nvim
+    }, -- base16-nvim
+    -- evergarden
+    {
+        "comfysage/evergarden",
+        enabled = true,
+        -- enabled = false,
+        config = function()
+            require("evergarden").setup(
+                {
+                    vim.cmd.colorscheme "evergarden",
+                    transparent_background = false,
+                    contrast_dark = "soft", -- 'hard'|'medium'|'soft'
+                    override_terminal = true,
+                    style = {
+                        tabline = {reverse = true, color = "green"},
+                        search = {reverse = false, inc_reverse = true},
+                        types = {italic = true},
+                        keyword = {italic = true},
+                        comment = {italic = false}
+                    }
+                    -- overrides = {} -- add custom overrides
+                }
+            )
+        end
+    },
+    -- tokyonight
+    {
+        "folke/tokyonight.nvim",
+        -- lazy = false,
+        priority = 1000,
+        -- enabled = true,
+        enabled = false,
+        config = function()
+            require("tokyonight").setup(
+                {
+                    -- 有四种风格可设置
+                    -- tokyonight-night
+                    -- tokyonight-storm
+                    -- tokyonight-day
+                    -- tokyonight-moon
+                    vim.cmd.colorscheme "tokyonight-moon"
+                }
+            )
+        end
+    },
+    -- node
+    {
+        "shaunsingh/nord.nvim",
+        priority = 1000,
+        -- enabled = true,
+        enabled = false,
+        config = function()
+            require("nord").set(
+                {
+                    vim.cmd.colorscheme "nord"
+                }
+            )
+        end
+    }
 }

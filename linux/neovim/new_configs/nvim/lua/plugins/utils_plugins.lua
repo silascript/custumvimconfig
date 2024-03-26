@@ -12,10 +12,11 @@ return {
         end,
         opts = {}
     },
+    -- lorem.nvim
     {
         "derektata/lorem.nvim",
         event = "VeryLazy",
-		enabled = false,
+        enabled = false,
         config = function()
             require("lorem").setup(
                 {

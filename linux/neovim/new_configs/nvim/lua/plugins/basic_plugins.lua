@@ -13,7 +13,10 @@ return {
     {
         "yamatsum/nvim-cursorline",
         -- event = "UIEnter",
-        event = "BufReadPost",
+        -- event = "BufReadPost",
+        event = "VimEnter",
+        enabled = false,
+        -- enabled = true,
         config = function()
             require("nvim-cursorline").setup(
                 {
@@ -25,6 +28,20 @@ return {
                     cursorline = {
                         enable = false
                     }
+                }
+            )
+        end
+    },
+    -- stcursorword
+    {
+        "sontungexpt/stcursorword",
+        event = "VeryLazy",
+		enabled =true,
+        config = function()
+            require("stcursorword").setup(
+                {
+                    min_word_length = 2,
+                    max_word_length = 50
                 }
             )
         end

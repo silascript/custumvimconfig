@@ -7,6 +7,8 @@ vim9script
 # 插件管理器使用 Plugpac
 # Pack ''
 
+# Pack ''
+
 Pack 'tinted-theming/base16-vim'
 
 Pack 'timmajani/tokyonightnoir-vim'
@@ -35,9 +37,8 @@ Pack 'lifepillar/vim-gruvbox8'
 
 Pack 'luisiacc/gruvbox-baby'
 
-# Pack 'arcticicestudio/nord-vim'
+Pack 'casonadams/nord.vim'
 
-Pack 'shaunsingh/nord.nvim'
 
 # Pack 'cocopon/iceberg.vim'
 

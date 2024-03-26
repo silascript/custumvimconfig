@@ -37,7 +37,7 @@ endif
 # 设置配色
 
 # base16默认配色
-colorscheme base16-default-dark 
+# colorscheme base16-default-dark 
 # colorscheme tokyonight 
 # colorscheme everforest
 # colorscheme tender
@@ -50,10 +50,8 @@ colorscheme base16-default-dark
 # colorscheme gruvbox8_soft
 # colorscheme gruvbox-baby
 # colorscheme onedark
-# colorscheme nord
 # colorscheme iceberg
-# colorscheme nord
-
+colorscheme nord
 
 # -----------------------------------------------------------------------
 #                         各配色配置
@@ -82,6 +80,8 @@ if base16_result == 1
       endif
     endif
   catch
+    # 出错就设置成vim自带配色
+    colorscheme evening 
   endtry
 endif
 
@@ -92,14 +92,16 @@ if tokyonightnoir_result == 1
   try
     if g:colors_name ==? "tokyonight"
       # available: night, storm
-      g:tokyonight_style = 'night' 
-      # g:tokyonight_style = "storm" 
+      # g:tokyonight_style = 'night' 
+      g:tokyonight_style = "storm" 
       g:tokyonight_enable_italic = 1
       # 下拉菜单选中项的背影颜色
       # green red blue 默认是green
       g:tokyonight_menu_selection_background = "blue"
     endif
   catch
+    # 出错就设置成vim自带配色
+    colorscheme evening 
   endtry
 
 endif
@@ -119,6 +121,8 @@ if everforest_result == 1
       # g:everforest_better_performance = 1
     endif
   catch
+    # 出错就设置成vim自带配色
+    colorscheme evening 
   endtry
 endif
 
@@ -142,6 +146,8 @@ if material_result == 1
       colorscheme material 
     endif
   catch
+    # 出错就设置成vim自带配色
+    colorscheme evening 
   endtry
 
 endif
@@ -164,7 +170,8 @@ if sonokai_result == 1
       colorscheme sonokai
     endif
   catch
-
+    # 出错就设置成vim自带配色
+    colorscheme evening 
   endtry
 
 endif
@@ -186,7 +193,8 @@ if gruvbox_result ==? 1
       colorscheme gruvbox
     endif
   catch
-
+    # 出错就设置成vim自带配色
+    colorscheme evening 
   endtry
 
 endif
@@ -229,6 +237,8 @@ if gruvboxm_result ==? 1
       colorscheme gruvbox-material
     endif
   catch
+    # 出错就设置成vim自带配色
+    colorscheme evening 
   endtry
 
 endif
@@ -257,6 +267,8 @@ if gruvbox8_result ==? 1
 
     endif
   catch
+    # 出错就设置成vim自带配色
+    colorscheme evening 
   endtry
 
 endif
@@ -281,6 +293,8 @@ if gruvboxbb_result == 1
       colorscheme gruvbox-baby
     endif
   catch
+    # 出错就设置成vim自带配色
+    colorscheme evening 
   endtry
 
 endif
@@ -298,6 +312,8 @@ if onedark_result == 1
       # g:onedark_termcolors=256 
     endif
   catch
+    # 出错就设置成vim自带配色
+    colorscheme evening 
   endtry
 
 endif
@@ -307,17 +323,19 @@ endif
 
 #  nord-vim 配置
 # var nord_result = commands_basic#ExistPlug('arcticicestudio/nord-vim')
-var nord_result = commands_basic.ExistPlug('arcticicestudio/nord-vim')
+var nord_result = commands_basic.ExistPlug('casonadams/nord.vim')
 if nord_result == 1
   try
     # 检测当前 colorscheme  
     if g:colors_name ==? 'nord'
-      g:nord_cursor_line_number_background = 1
-      g:nord_uniform_status_lines = 1 
+      # g:nord_cursor_line_number_background = 1
+      # g:nord_uniform_status_lines = 1 
       
-      colorscheme nord
+      # colorscheme nord
     endif
   catch
+    # 出错就设置成vim自带配色
+    colorscheme evening 
   endtry
 
 endif
@@ -334,6 +352,8 @@ endif
     #   
     # endif
   # catch
+    # 出错就设置成vim自带配色
+    # colorscheme evening 
   # endtry
 # 
 # endif

@@ -16,10 +16,10 @@ return {
                     -- 设置样式
                     -- 使用 auto 意味着状态栏配色使用全局配色
                     -- 即使用 vim.cmd.colorscheme 指定的配色
-                    -- theme = "auto"
-                    theme = "nord"
-                    --theme = "gruvbox",
-                    --theme = "ayu_mirage",
+                    theme = "auto"
+                    -- theme = "nord"
+                    -- theme = "gruvbox",
+                    -- theme = "ayu_mirage",
                     -- theme = "everforest",
                     -- theme = "material",
                     -- theme = "onedark",
@@ -63,11 +63,12 @@ return {
                     -- theme = "catppuccin_minimal"
                     -- theme = "codeschool_dark"
                     -- theme = "jellybeans"
-                    theme = "nord"
+                    -- theme = "nord"
                     -- theme = "nordic"
                     -- theme = "one"
                     -- theme = "gruvbox_minimal"
                     -- theme = "gruvbox"
+                    -- theme = "evergarden"
                 }
             )
         end
