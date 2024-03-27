@@ -4,8 +4,9 @@ return {
     {
         "nvim-lualine/lualine.nvim",
         dependencies = {"nvim-tree/nvim-web-devicons"},
-        -- event = { "VimEnter" },
-        event = {"UIEnter"},
+		lazy = true,
+		-- event = { "BufReadPost", "BufAdd", "BufNewFile" },
+		event = {"VimEnter"},
         -- enabled = false,
         enabled = true,
         config = function()

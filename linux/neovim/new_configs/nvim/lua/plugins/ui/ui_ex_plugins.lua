@@ -26,6 +26,7 @@ return {
     -- smartcolumn
     {
         "m4xshen/smartcolumn.nvim",
+		-- lazy = true,
         event = {"VeryLazy"},
         opts = {}
     },
@@ -33,6 +34,7 @@ return {
     {
         "chentoast/marks.nvim",
         -- event = { "BufReadPost" },
+		-- lazy = true,
         event = { "BufEnter" },
 		-- enabled = false,
         config = function()

@@ -19,10 +19,10 @@ return {
             "dcampos/cmp-snippy",
             "onsails/lspkind.nvim"
         },
+
+		lazy = true,
+		-- event = { "CursorHold", "CursorHoldI" },
         event = {"InsertEnter", "CmdlineEnter"},
-        -- event = {"InsertEnter"},
-        -- event = { "BufEnter" },
-        -- event = "VeryLazy",
         config = function()
             -- local has_words_before = function()
             --   unpack = unpack or table.unpack

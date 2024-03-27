@@ -4,6 +4,7 @@ return {
     --成对符号自动补全
     {
         "windwp/nvim-autopairs",
+		lazy = true,
         event = "InsertEnter",
         config = function()
             require("nvim-autopairs").setup {}
@@ -13,8 +14,9 @@ return {
     {
         "yamatsum/nvim-cursorline",
         -- event = "UIEnter",
-        -- event = "BufReadPost",
-        event = "VimEnter",
+		lazy = true,
+        event = "BufReadPost",
+        -- event = "VimEnter",
         enabled = false,
         -- enabled = true,
         config = function()
@@ -35,7 +37,8 @@ return {
     -- stcursorword
     {
         "sontungexpt/stcursorword",
-        event = "VeryLazy",
+		lazy = true,
+        event = "BufEnter",
         enabled = true,
         config = function()
             require("stcursorword").setup(
@@ -58,8 +61,8 @@ return {
     -- comment
     {
         "numToStr/Comment.nvim",
-        -- event = "BufReadPost",
-        event = "BufEnter",
+        event = "BufReadPost",
+        -- event = "BufEnter",
         config = function()
             require("Comment").setup(
                 {
@@ -83,8 +86,8 @@ return {
         "JoosepAlviste/nvim-ts-context-commentstring",
         dependencies = {"nvim-treesitter/nvim-treesitter"},
         -- lazy = true,
-        -- event = {"BufReadPost"},
-        event = {"BufEnter"},
+        event = {"BufReadPost"},
+        -- event = {"BufEnter"},
         config = function()
             require("ts_context_commentstring").setup {}
         end
@@ -94,8 +97,12 @@ return {
     {
         "windwp/nvim-ts-autotag",
         dependencies = {"nvim-treesitter/nvim-treesitter"},
-        -- event = {"BufReadPost"},
-        event = {"BufEnter"},
+        -- event = {"VeryLazy"},
+        event = {"BufRead"},
+		ft = {
+			"html",
+			"xml",
+		},
         config = function()
             require("nvim-ts-autotag").setup()
         end

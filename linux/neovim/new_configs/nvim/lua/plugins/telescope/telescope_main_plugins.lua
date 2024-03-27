@@ -5,6 +5,7 @@ return {
     {
         "nvim-telescope/telescope.nvim",
         dependencies = {"nvim-lua/plenary.nvim"},
+		lazy = true,
         event = {"VimEnter"},
         config = function()
 			-- 内置功能

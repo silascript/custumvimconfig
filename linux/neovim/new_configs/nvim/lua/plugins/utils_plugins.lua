@@ -35,7 +35,14 @@ return {
     -- css 等颜色代码高亮
     {
         "NvChad/nvim-colorizer.lua",
-        envent = {"BufPost"},
+        -- event = { "VeryLazy" },
+        -- event = { "BufReadPost" },
+		ft = {
+			"css",
+			"sass",
+			"html",
+			"javascript"
+		},
         enabled = true,
         config = function()
             require("colorizer").setup(

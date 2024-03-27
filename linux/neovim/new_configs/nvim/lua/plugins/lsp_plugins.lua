@@ -5,7 +5,9 @@ return {
     {
         "neovim/nvim-lspconfig",
         -- event = {"BufReadPre","BufNewFile"},
-        event = {"BufReadPost", "BufNewFile"},
+        -- event = {"BufReadPre"},
+		lazy = true,
+        event = {"VeryLazy"},
         config = function()
             local lspconfig = require("lspconfig")
 

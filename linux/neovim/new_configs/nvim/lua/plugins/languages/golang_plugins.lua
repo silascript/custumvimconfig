@@ -10,11 +10,10 @@ return {
             "neovim/nvim-lspconfig",
             "nvim-treesitter/nvim-treesitter"
         },
+		-- event = {"BufReadPost *.go","BufReadPost *.mod"},
         config = function()
             require("go").setup()
         end,
-        -- event = {"CmdlineEnter"},
-        event = {"BufReadPost"},
         ft = {"go", "gomod"}
     }
 }

@@ -60,7 +60,8 @@ return {
         },
         -- enabled = false,
         enabled = true,
-        event = {"BufEnter"},
+        -- event = {"BufEnter"},
+        event = {"BufReadPost"},
         config = function()
             require("snippy").setup({})
         end
