@@ -17,7 +17,7 @@ return {
                     config = {
                         -- header = vim.fn.system('figlet -w 100 NVIM'),
                         -- header = vim.split(vim.fn.system('figlet -w 100 NVIM'),"\n"),
-						head = {},
+                        head = {},
                         -- header = vim.split(vim.fn.system("figlet -f 'ANSI Shadow' 'NEOVIM' "), "\n"),
                         week_header = {
                             enable = false
@@ -54,8 +54,24 @@ return {
         -- enabled = false,
         event = {"VimEnter"},
         config = function()
-            require "alpha".setup(require "alpha.themes.startify".config)
+            local alpha = require "alpha"
+
+            -- 不同的样式：dashboard startify
+            -- 对样式什么都不配置，可以直接将样式加入到setup中
+            -- require "alpha".setup(require "alpha.themes.startify".config)
             -- require "alpha".setup(require'alpha.themes.dashboard'.config)
+
+            -- 对样式进行设置
+            -- local dashboard = require "alpha.themes.dashboard"
+            local startify = require "alpha.themes.startify"
+            -- 设置 header
+            -- 使用到了figlet
+            startify.section.header.val = vim.split(vim.fn.system("figlet -f 'ANSI Shadow' 'HELLO NVIM' "), "\n")
+            -- dashboard.section.header.val = {"NEOVIM"}
+
+            -- 加载样式配置
+            -- alpha.setup(dashboard.config)
+            alpha.setup(startify.config)
         end
-    },
+    }
 }
