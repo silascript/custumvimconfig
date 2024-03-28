@@ -33,9 +33,8 @@ return {
     -- marks.nvim
     {
         "chentoast/marks.nvim",
-        -- event = { "BufReadPost" },
-		-- lazy = true,
-        event = { "BufEnter" },
+        lazy = true,
+        event = { "BufReadPost" },
 		-- enabled = false,
         config = function()
             require("marks").setup(
