@@ -7,7 +7,8 @@ return {
 		lazy = true,
 		-- event = { "BufReadPost", "BufAdd", "BufNewFile" },
 		-- event = {"VimEnter"},
-		event = {"UIEnter"},
+		-- event = {"UIEnter"},
+		event = {"VeryLazy"},
         -- enabled = false,
         enabled = true,
         config = function()

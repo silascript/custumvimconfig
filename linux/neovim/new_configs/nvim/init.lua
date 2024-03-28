@@ -19,14 +19,14 @@ require("basic")
 -- 使用lazy 加载所需的插件
 require("lazy").setup(
     {
-        spec = {
-            {import = "plugins"},
-            -- 界面相关的插件
-            {import = "plugins/ui"},
-            -- telescope相关的插件
-            {import = "plugins/telescope"},
-            -- 各种编程语言相关的插件
-            {import = "plugins/languages"}
+         spec = {
+            { import = "plugins" },
+            -- -- 界面相关的插件
+            -- {import = "plugins/ui"},
+            -- -- telescope相关的插件
+            -- {import = "plugins/telescope"},
+            -- -- 各种编程语言相关的插件
+            -- {import = "plugins/languages"}
             -- { import = "plugins/*/" },
         },
         -- concurrency = 12,

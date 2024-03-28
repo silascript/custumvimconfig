@@ -9,6 +9,7 @@ return {
     -- guihua
     {
         "ray-x/guihua.lua",
-        event = {"VimEnter"}
+		lazy = true,
+        event = {"VeryLazy"}
     }
 }
