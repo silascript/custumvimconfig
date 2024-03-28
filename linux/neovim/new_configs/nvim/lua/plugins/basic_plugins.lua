@@ -13,10 +13,8 @@ return {
     -- nvim-cursorline
     {
         "yamatsum/nvim-cursorline",
-        -- event = "UIEnter",
 		lazy = true,
         event = "BufReadPost",
-        -- event = "VimEnter",
         enabled = false,
         -- enabled = true,
         config = function()
@@ -38,7 +36,7 @@ return {
     {
         "sontungexpt/stcursorword",
 		lazy = true,
-        event = "BufEnter",
+        event = "BufReadPost",
         enabled = true,
         config = function()
             require("stcursorword").setup(
@@ -61,8 +59,9 @@ return {
     -- comment
     {
         "numToStr/Comment.nvim",
+		lazy = true,
         event = "BufReadPost",
-        -- event = "BufEnter",
+        -- event = {"CursorHold", "CursorHoldI"},
         config = function()
             require("Comment").setup(
                 {
@@ -85,9 +84,8 @@ return {
     {
         "JoosepAlviste/nvim-ts-context-commentstring",
         dependencies = {"nvim-treesitter/nvim-treesitter"},
-        -- lazy = true,
+        lazy = true,
         event = {"BufReadPost"},
-        -- event = {"BufEnter"},
         config = function()
             require("ts_context_commentstring").setup {}
         end
@@ -97,12 +95,12 @@ return {
     {
         "windwp/nvim-ts-autotag",
         dependencies = {"nvim-treesitter/nvim-treesitter"},
-        -- event = {"VeryLazy"},
-        event = {"BufRead"},
-		ft = {
-			"html",
-			"xml",
-		},
+		lazy = true,
+        event = {"InsertEnter"},
+		-- ft = {
+		-- 	"html",
+		-- 	"xml",
+		-- },
         config = function()
             require("nvim-ts-autotag").setup()
         end
@@ -110,8 +108,9 @@ return {
     -- hop.nvim
     {
         "smoka7/hop.nvim",
-        -- event = {"BufRead"},
-        event = {"BufEnter"},
+		lazy = true,
+        -- event = {"CursorHold", "CursorHoldI"},
+        event = {"VeryLazy"},
         config = function()
             require("hop").setup(
                 {

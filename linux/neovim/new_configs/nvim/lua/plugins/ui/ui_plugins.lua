@@ -5,9 +5,15 @@ return {
     {
         "nvim-tree/nvim-tree.lua",
         version = "*",
+        lazy = true,
+        cmd = {
+            "NvimTreeToggle",
+            "NvimTreeOpen",
+            "NvimTreeFindFile",
+            "NvimTreeFindFileToggle",
+            "NvimTreeRefresh"
+        },
         dependencies = {"nvim-tree/nvim-web-devicons"},
-        -- event = "UIEnter",
-        event = "VeryLazy",
         config = function()
             require("nvim-tree").setup {}
         end
@@ -17,8 +23,8 @@ return {
         "akinsho/bufferline.nvim",
         version = "*",
         dependencies = "nvim-tree/nvim-web-devicons",
-		lazy = true,
-		event = { "BufReadPost", "BufAdd", "BufNewFile" },
+        lazy = true,
+        event = {"BufReadPost", "BufAdd", "BufNewFile"},
         -- event = {"BufReadPre"},
         -- event = {"VeryLazy"},
         -- event = {"VimEnter"},

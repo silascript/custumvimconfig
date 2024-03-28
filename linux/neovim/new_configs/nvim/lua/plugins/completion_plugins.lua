@@ -4,13 +4,14 @@ return {
     -- nvim-cmp
     {
         "hrsh7th/nvim-cmp",
+        -- lazy = true,
+        event = {"InsertEnter"},
         dependencies = {
             "neovim/nvim-lspconfig",
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
             "hrsh7th/cmp-calc",
-            "hrsh7th/cmp-cmdline",
             -- 使用luasnip
             -- "L3MON4D3/LuaSnip",
             -- "saadparwaiz1/cmp_luasnip",
@@ -19,10 +20,6 @@ return {
             "dcampos/cmp-snippy",
             "onsails/lspkind.nvim"
         },
-
-		lazy = true,
-		-- event = { "CursorHold", "CursorHoldI" },
-        event = {"InsertEnter", "CmdlineEnter"},
         config = function()
             -- local has_words_before = function()
             --   unpack = unpack or table.unpack
@@ -39,7 +36,6 @@ return {
             --   local line, col = unpack(vim.api.nvim_win_get_cursor(0))
             --   return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
             -- end
-
             cmp.setup(
                 {
                     window = {
@@ -182,34 +178,20 @@ return {
                                     s = cmp.mapping.confirm({behavior = cmp.ConfirmBehavior.Replace, select = true})
                                 }
                             )
-
-                            -- ["<CR>"] = cmp.mapping({
-                            --    i = function(fallback)
-                            -- 	 if cmp.visible() and cmp.get_active_entry() then
-                            -- 	   cmp.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = false })
-                            -- 	 else
-                            -- 	   fallback()
-                            -- 	 end
-                            --    end,
-                            --    s = cmp.mapping.confirm({ select = true }),
-                            --    c = cmp.mapping.confirm({ behavior = cmp.ConfirmBehavior.Replace, select = true }),
-                            --  }),
-
-                            -- ["<CR>"] = cmp.mapping({
-                            -- 	i = function(fallback)
-                            -- 		if cmp.visible() then
-                            -- 			cmp.confirm({ select = true })
-                            -- 		else
-                            -- 			fallback()
-                            -- 		end
-                            -- 	end,
-                            -- 	s = cmp.mapping.confirm({ select = true }),
-                            -- }),
                         }
                     )
                 }
             ) --require("cmp")
+        end
+    }, -- cmp
 
+	-- cmp-cmdline
+    {
+        "hrsh7th/cmp-cmdline",
+        keys = {":", "/", "?"},
+        dependencies = {"hrsh7th/nvim-cmp"},
+        config = function()
+			local cmp =require("cmp")
             -- cmdline
             cmp.setup.cmdline(
                 ":",

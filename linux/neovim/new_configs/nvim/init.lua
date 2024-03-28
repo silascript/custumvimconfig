@@ -35,4 +35,4 @@ require("lazy").setup(
 )
 
 -- 加载配色配置
--- require("settings_colorscheme")
+require("settings_colorscheme")

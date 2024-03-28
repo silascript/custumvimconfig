@@ -6,7 +6,8 @@ return {
         dependencies = {"nvim-tree/nvim-web-devicons"},
 		lazy = true,
 		-- event = { "BufReadPost", "BufAdd", "BufNewFile" },
-		event = {"VimEnter"},
+		-- event = {"VimEnter"},
+		event = {"UIEnter"},
         -- enabled = false,
         enabled = true,
         config = function()

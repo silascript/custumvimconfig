@@ -22,6 +22,9 @@
 -- catppuccin
 -- vim.cmd.colorscheme "catppuccin"
 
+-- evergarden
+vim.cmd.colorscheme "evergarden"
+
 
 
 

@@ -18,6 +18,7 @@ return {
     -- material
     {
         "marko-cerovac/material.nvim",
+		lazy = true,
         enabled = false,
         -- enabled = true,
         priority = 1000,
@@ -120,6 +121,7 @@ return {
         "comfysage/evergarden",
         enabled = true,
         -- enabled = false,
+		lazy = true,
         config = function()
             require("evergarden").setup(
                 {
@@ -142,7 +144,7 @@ return {
     -- tokyonight
     {
         "folke/tokyonight.nvim",
-        -- lazy = false,
+        lazy = true,
         priority = 1000,
         -- enabled = true,
         enabled = false,
@@ -164,6 +166,7 @@ return {
         "shaunsingh/nord.nvim",
         priority = 1000,
         -- enabled = true,
+		lazy = true,
         enabled = false,
         config = function()
             require("nord").set(

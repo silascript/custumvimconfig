@@ -4,15 +4,15 @@ return {
     -- file-browser
     {
         "nvim-telescope/telescope-file-browser.nvim",
+		lazy = true,
         dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-		event = "VimEnter"
     },
 
 	-- fzf-native
     {
         "nvim-telescope/telescope-fzf-native.nvim",
+		lazy = true,
         dependencies = {"nvim-telescope/telescope.nvim", "nvim-lua/plenary.nvim"},
-		event = "VimEnter",
         build = "make"
     }
 }

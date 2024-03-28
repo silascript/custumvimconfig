@@ -5,8 +5,9 @@ return {
     {
         "nvim-telescope/telescope.nvim",
         dependencies = {"nvim-lua/plenary.nvim"},
+		cmd = "Telescope",
 		lazy = true,
-        event = {"VimEnter"},
+        -- event = {"VimEnter"},
         config = function()
 			-- 内置功能
             local builtin = require("telescope.builtin")
