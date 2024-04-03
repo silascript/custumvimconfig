@@ -26,8 +26,8 @@ return {
     -- smartcolumn
     {
         "m4xshen/smartcolumn.nvim",
-		-- lazy = true,
-        event = {"VeryLazy"},
+		lazy = true,
+        event = {"BufReadPost","BufNewFile"},
         opts = {}
     },
     -- marks.nvim

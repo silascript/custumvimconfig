@@ -27,15 +27,20 @@ return {
             lspconfig.tsserver.setup {}
             -- lspconfig.jdtls.setup{ capabilities = capabilities }
             lspconfig.jdtls.setup {}
-            lspconfig.ruff_lsp.setup {
-                init_options = {
-                    settings = {
-                        -- Any extra CLI arguments for `ruff` go here.
-                        args = {}
-                    }
+
+            lspconfig.ruff.setup {}
+
+            -- lspconfig.ruff_lsp.setup {}
+            lspconfig.solargraph.setup {
+                -- root_dir = function(fname)
+                root_dir = function()
+                    return vim.fn.getcwd()
+                end,
+
+                settings = {
+                    solargraph = {}
                 }
             }
-            lspconfig.solargraph.setup {}
             lspconfig.rust_analyzer.setup {
                 settings = {
                     ["rust-analyzer"] = {}

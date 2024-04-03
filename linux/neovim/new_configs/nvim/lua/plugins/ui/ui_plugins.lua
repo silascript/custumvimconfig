@@ -54,7 +54,7 @@ return {
                         -- auto_attach = false,
                         -- on_attach = on_attach,
                         -- preference = {"clangd", "gopls"}
-                        preference = {"ruff-lsp","solargraph","bash-language-server"}
+                        preference = {"ruff-lsp", "solargraph", "typescript-language-server", "bash-language-server"}
                     }
                 }
             )

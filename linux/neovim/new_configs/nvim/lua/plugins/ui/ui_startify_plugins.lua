@@ -53,7 +53,7 @@ return {
         dependencies = {"nvim-tree/nvim-web-devicons"},
         enabled = true,
         -- enabled = false,
-		-- lazy = true,
+        -- lazy = true,
         event = {"VimEnter"},
         config = function()
             local alpha = require "alpha"
@@ -66,14 +66,67 @@ return {
             -- 对样式进行设置
             -- local dashboard = require "alpha.themes.dashboard"
             local startify = require "alpha.themes.startify"
+
             -- 设置 header
-            -- 使用到了figlet
-            startify.section.header.val = vim.split(vim.fn.system("figlet -f 'ANSI Shadow' 'HELLO NVIM' "), "\n")
+            -- header.val 接受的就是一个字典，以回车换行分隔的字符字典
+            -- 所以将 figlet生成的 ASII字符以回车换行符切割
+            -- startify.section.header.val = vim.split(vim.fn.system("figlet -f 'ANSI Shadow' 'HELLO NVIM' "), "\n")
+            local header_str = vim.split(vim.fn.system("figlet -f 'ANSI Shadow' 'HELLO NVIM' "), "\n")
+            -- local head = {
+            -- startify.section.header.val = header_str
+            startify.section.header.val = header_str
+            startify.section.header.opts.position = "center"
+
             -- dashboard.section.header.val = {"NEOVIM"}
+
+            startify.section.mru_cwd.val = {{type = "padding", val = 0}}
+
+            -- startify 布局
+            -- local s_config = {
+            --     layout = {
+            --         {type = "padding", val = 1},
+            --         head,
+            --         {type = "padding", val = 1},
+            --         startify.section.mru,
+            --         {type = "padding", val = 1},
+            --         foot
+            --     }
+            -- }
 
             -- 加载样式配置
             -- alpha.setup(dashboard.config)
             alpha.setup(startify.config)
+
+			-- footer 设置
+			-- 使用回调函数
+			-- 因为需要获取插件相关信息
+            vim.api.nvim_create_autocmd(
+                "User",
+                {
+                    callback = function()
+                        local stats = require("lazy").stats()
+                        local plugins_count = stats.loaded .. "/" .. stats.count
+                        -- 获取启动时长
+                        local stms = math.floor(stats.startuptime * 100) / 100
+                        local fline1 = " " .. plugins_count .. " plugins loaded in " .. stms .. "ms"
+
+                        startify.section.footer.val = {
+                            {
+                                type = "text",
+                                -- val = "footer",
+                                val = fline1,
+                                opts = {
+                                    position = "center"
+                                    -- hl = "Number"
+                                }
+                            }
+                        }
+                        pcall(vim.cmd.AlphaRedraw)
+                    end
+                }
+            )
+
+            -- alpha.setup(s_config)
         end
     }
 }
