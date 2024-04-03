@@ -4,12 +4,19 @@
 return {
     -- plenary.nvim
     {
-        "nvim-lua/plenary.nvim"
+        "nvim-lua/plenary.nvim",
+		lazy = true,
     },
     -- guihua
     {
         "ray-x/guihua.lua",
 		lazy = true,
-        event = {"VeryLazy"}
-    }
+        -- event = {"VeryLazy"}
+    },
+
+	-- nui
+	{
+		"MunifTanjim/nui.nvim",
+		lazy = true,
+	}
 }

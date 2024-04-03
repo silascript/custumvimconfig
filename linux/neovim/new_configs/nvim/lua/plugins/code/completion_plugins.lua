@@ -4,8 +4,9 @@ return {
     -- nvim-cmp
     {
         "hrsh7th/nvim-cmp",
-        -- lazy = true,
+        lazy = true,
         event = {"InsertEnter"},
+        -- event = {"VeryLazy"},
         dependencies = {
             "neovim/nvim-lspconfig",
             "hrsh7th/cmp-nvim-lsp",
@@ -81,14 +82,22 @@ return {
                     },
                     sources = cmp.config.sources(
                         {
-                            {name = "nvim_lsp"},
+                            {name = "nvim_lsp", priority = 1000},
                             -- {name = "luasnip"},
-                            {name = "snippy"},
-                            {name = "path"},
-                            {name = "calc"}
+                            {name = "snippy", priority = 750},
+                            {name = "path", priority = 200},
+                            {name = "calc",priority = 100}
                         },
                         {
-                            {name = "buffer", keyword_length = 3}
+                            {
+								name = "buffer", 
+								keyword_length = 3,
+								priority = 500,
+								option = {
+									-- indexing_interval = 5000,
+									-- max_indexed_line_length = 300
+								}
+							}
                         }
                     ),
                     mapping = cmp.mapping.preset.insert(

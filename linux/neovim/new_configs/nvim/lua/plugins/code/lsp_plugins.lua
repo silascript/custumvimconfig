@@ -4,9 +4,9 @@ return {
     -- nvim-lspconfig
     {
         "neovim/nvim-lspconfig",
-		-- lazy = true,
-        event = {"BufReadPre","BufNewFile"},
-		-- event = { "CursorHold", "CursorHoldI" },
+        lazy = true,
+        event = {"BufReadPre", "BufNewFile"},
+        -- event = { "CursorHold", "CursorHoldI" },
         config = function()
             local lspconfig = require("lspconfig")
 
@@ -27,7 +27,14 @@ return {
             lspconfig.tsserver.setup {}
             -- lspconfig.jdtls.setup{ capabilities = capabilities }
             lspconfig.jdtls.setup {}
-            lspconfig.ruff_lsp.setup {}
+            lspconfig.ruff_lsp.setup {
+                init_options = {
+                    settings = {
+                        -- Any extra CLI arguments for `ruff` go here.
+                        args = {}
+                    }
+                }
+            }
             lspconfig.solargraph.setup {}
             lspconfig.rust_analyzer.setup {
                 settings = {

@@ -76,7 +76,8 @@ return {
         "smoka7/hop.nvim",
 		lazy = true,
         -- event = {"CursorHold", "CursorHoldI"},
-        event = {"VeryLazy"},
+        -- event = {"VeryLazy"},
+        event = {"BufReadPost"},
         config = function()
             require("hop").setup(
                 {

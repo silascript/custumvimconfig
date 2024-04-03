@@ -5,7 +5,8 @@ return {
         -- 开启或禁用此插件
         enabled = false,
         -- enabled = true,
-        event = "VimEnter",
+        -- event = "VimEnter",
+        event = "UIEnter",
         config = function()
             -- 获取当前时间
             -- local dstr = os.date("%Y-%m-%d",os.time())

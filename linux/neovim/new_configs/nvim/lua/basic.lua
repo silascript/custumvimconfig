@@ -1,6 +1,6 @@
--- 基础配置
---
-
+--          ╭─────────────────────────────────────────────────────────╮
+--          │						基础配置                          │
+--          ╰─────────────────────────────────────────────────────────╯
 
 -- 显示行号
 vim.opt.number = true
@@ -9,7 +9,9 @@ vim.opt.relativenumber = true
 -- 高亮当前行
 vim.opt.cursorline = true
 -- 状态栏样式
--- vim.opt.laststatus = 2
+-- 2 为每个window独立的状态栏
+-- 3为全局，即两个window共用同一个状态栏
+vim.opt.laststatus = 3
 -- 命令行高
 
 -- 开启真彩
@@ -38,6 +40,10 @@ vim.opt.completeopt = "menu,menuone,noinsert"
 
 -- 补全显示的行数
 vim.opt.pumheight = 10
+
+-- 自动切换工作路径
+vim.opt.autochdir = true
+
 
 -- 取消注释行回车自动注释
 vim.api.nvim_create_autocmd(
