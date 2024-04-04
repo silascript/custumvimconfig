@@ -4,13 +4,46 @@ return {
     -- which-key
     {
         "folke/which-key.nvim",
-        enabled = false,
-        event = "VeryLazy",
-        init = function()
+        lazy = true,
+        -- enabled = false,
+        -- event = "VeryLazy",
+        cmd = {"WhichKey"},
+        config = function()
             vim.o.timeout = true
             vim.o.timeoutlen = 300
-        end,
-        opts = {}
+            require("which-key").setup({})
+        end
+    },
+    -- nvim-notify
+    {
+        "rcarriga/nvim-notify",
+        lazy = true,
+        event = {"BufReadPre", "BufNewFile"},
+        config = function()
+            local notify = require("notify")
+            notify.setup(
+                {
+                    -- 样式
+                    -- default minimal simple compact wrapped-compact
+                    render = "default",
+                    -- 动画样式
+                    -- slide fade static fade_in_slide_out
+                    stages = "slide",
+					on_open = nil,
+					on_close = nil,
+					background_colour = "Normal",
+					-- 长宽
+                    max_width = math.floor(vim.api.nvim_win_get_width(0) / 2),
+                    max_height = math.floor(vim.api.nvim_win_get_height(0) / 4),
+					-- 响应级别
+					level = "TRACE",
+                    -- 信息停留时长
+                    timeout = 3000
+                }
+            )
+            -- 将信息重定向到notify中显示
+            vim.notify = notify
+        end
     },
     -- lorem.nvim
     {
@@ -37,12 +70,12 @@ return {
         "NvChad/nvim-colorizer.lua",
         -- event = { "VeryLazy" },
         -- event = { "BufReadPost" },
-		ft = {
-			"css",
-			"sass",
-			"html",
-			"javascript"
-		},
+        ft = {
+            "css",
+            "sass",
+            "html",
+            "javascript"
+        },
         enabled = true,
         config = function()
             require("colorizer").setup(
