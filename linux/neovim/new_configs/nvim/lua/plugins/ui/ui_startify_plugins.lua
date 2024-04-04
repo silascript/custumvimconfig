@@ -119,8 +119,8 @@ return {
                                 -- val = "footer",
                                 val = fline1,
                                 opts = {
-                                    position = "center"
-                                    -- hl = "Number"
+                                    position = "center",
+                                    hl = "Number"
                                 }
                             }
                         }
