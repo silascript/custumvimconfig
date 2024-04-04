@@ -22,7 +22,9 @@ return {
             lspconfig.html.setup {
                 capabilities = capabilities
             }
-            lspconfig.cssls.setup {}
+            lspconfig.cssls.setup {
+                capabilities = capabilities
+            }
             lspconfig.gopls.setup {}
             lspconfig.tsserver.setup {}
             -- lspconfig.jdtls.setup{ capabilities = capabilities }
@@ -36,7 +38,6 @@ return {
                 root_dir = function()
                     return vim.fn.getcwd()
                 end,
-
                 settings = {
                     solargraph = {}
                 }

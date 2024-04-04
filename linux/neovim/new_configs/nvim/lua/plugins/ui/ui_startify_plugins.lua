@@ -79,7 +79,10 @@ return {
 
             -- dashboard.section.header.val = {"NEOVIM"}
 
-            startify.section.mru_cwd.val = {{type = "padding", val = 0}}
+            -- mru 设置
+            --禁用 mru 或 mru_cwd
+            -- startify.section.mru_cwd.val = {{type = "padding", val = 0}}
+            startify.section.mru.val = {{type = "padding", val = 0}}
 
             -- startify 布局
             -- local s_config = {
@@ -97,9 +100,9 @@ return {
             -- alpha.setup(dashboard.config)
             alpha.setup(startify.config)
 
-			-- footer 设置
-			-- 使用回调函数
-			-- 因为需要获取插件相关信息
+            -- footer 设置
+            -- 使用回调函数
+            -- 因为需要获取插件相关信息
             vim.api.nvim_create_autocmd(
                 "User",
                 {
@@ -121,6 +124,7 @@ return {
                                 }
                             }
                         }
+
                         pcall(vim.cmd.AlphaRedraw)
                     end
                 }
