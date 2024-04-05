@@ -29,16 +29,16 @@ return {
                     -- 动画样式
                     -- slide fade static fade_in_slide_out
                     stages = "slide",
-					on_open = nil,
-					on_close = nil,
-					background_colour = "Normal",
-					-- 长宽
+                    on_open = nil,
+                    on_close = nil,
+                    -- background_colour = "Normal",
+                    -- 长宽
                     max_width = math.floor(vim.api.nvim_win_get_width(0) / 2),
                     max_height = math.floor(vim.api.nvim_win_get_height(0) / 4),
-					-- 响应级别
-					level = "TRACE",
+                    -- 响应级别
+                    level = "TRACE",
                     -- 信息停留时长
-                    timeout = 3000
+                    timeout = 2500
                 }
             )
             -- 将信息重定向到notify中显示
