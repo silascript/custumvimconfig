@@ -4,16 +4,17 @@ return {
     --成对符号自动补全
     {
         "windwp/nvim-autopairs",
-		lazy = true,
+        lazy = true,
         event = "InsertEnter",
         config = function()
             require("nvim-autopairs").setup {}
         end
     },
     -- nvim-cursorline
+    -- 高亮当前行及当前单词
     {
         "yamatsum/nvim-cursorline",
-		lazy = true,
+        lazy = true,
         event = "BufReadPost",
         enabled = false,
         -- enabled = true,
@@ -33,9 +34,10 @@ return {
         end
     },
     -- stcursorword
+    -- 高亮当前单词
     {
         "sontungexpt/stcursorword",
-		lazy = true,
+        lazy = true,
         event = "BufReadPost",
         enabled = true,
         config = function()
@@ -51,7 +53,8 @@ return {
     {
         "kylechui/nvim-surround",
         version = "*", -- Use for stability; omit to use `main` branch for the latest features
-        event = "VeryLazy",
+        lazy = true,
+        event = {"BufReadPost", "BufAdd", "BufNewFile"},
         config = function()
             require("nvim-surround").setup({})
         end
@@ -61,12 +64,12 @@ return {
     {
         "windwp/nvim-ts-autotag",
         dependencies = {"nvim-treesitter/nvim-treesitter"},
-		lazy = true,
+        lazy = true,
         event = {"InsertEnter"},
-		-- ft = {
-		-- 	"html",
-		-- 	"xml",
-		-- },
+        -- ft = {
+        -- 	"html",
+        -- 	"xml",
+        -- },
         config = function()
             require("nvim-ts-autotag").setup()
         end
@@ -74,7 +77,7 @@ return {
     -- hop.nvim
     {
         "smoka7/hop.nvim",
-		lazy = true,
+        lazy = true,
         -- event = {"CursorHold", "CursorHoldI"},
         -- event = {"VeryLazy"},
         event = {"BufReadPost"},
@@ -101,6 +104,20 @@ return {
                     vim.api.nvim_set_keymap("n", "<leader><leader>l", "<cmd>HopWordCurrentLineAC<cr>", {silent = true})
                 }
             )
+        end
+    }, -- hop
+    -- sentiment
+    -- 高亮当前块成对括号
+    {
+        "utilyre/sentiment.nvim",
+        version = "*",
+        lazy = true,
+        -- event = "VeryLazy", -- keep for lazy loading
+        event = {"BufReadPost", "BufAdd", "BufNewFile"},
+        opts = {},
+        init = function()
+            -- `matchparen.vim` needs to be disabled manually in case of lazy loading
+            vim.g.loaded_matchparen = 1
         end
     }
 }

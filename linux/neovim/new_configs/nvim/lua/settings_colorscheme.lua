@@ -20,10 +20,10 @@
 -- vim.cmd.colorscheme "gruvbox"
 
 -- catppuccin
--- vim.cmd.colorscheme "catppuccin"
+vim.cmd.colorscheme "catppuccin"
 
 -- evergarden
-vim.cmd.colorscheme "evergarden"
+-- vim.cmd.colorscheme "evergarden"
 
 
 

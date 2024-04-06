@@ -32,5 +32,15 @@ return {
         config = function()
             require("bufferline").setup {}
         end
+    },
+    -- colorful-winsep
+    -- 高亮当前window
+    {
+        "nvim-zh/colorful-winsep.nvim",
+        lazy = true,
+        event = {"WinNew"},
+        config = function()
+            require("colorful-winsep").setup({})
+        end
     }
 }
