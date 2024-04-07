@@ -147,6 +147,9 @@ return {
         config = function()
             require("yanky").setup(
                 {
+                    system_clipboard = {
+                        sync_with_ring = false
+                    },
                     highlight = {
                         on_put = true,
                         on_yank = true,
