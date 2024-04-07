@@ -45,6 +45,9 @@ vim.opt.pumheight = 10
 vim.opt.autochdir = true
 
 
+vim.keymap.set( "n", "<c-i>", "<c-i>")
+
+
 -- 取消注释行回车自动注释
 vim.api.nvim_create_autocmd(
     {"FileType"},

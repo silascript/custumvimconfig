@@ -45,5 +45,51 @@ return {
                 default_mappings = true
             }
         end
-    }
+    },
+    -- Cybu
+    -- 快速切换Buffer
+    {
+        "ghillb/cybu.nvim",
+        lazy = true,
+        event = {"BufReadPost", "BufNewFile", "BufAdd"},
+        dependencies = {"nvim-tree/nvim-web-devicons", "nvim-lua/plenary.nvim"},
+        enabled = false,
+        config = function()
+            local ok, cybu = pcall(require, "cybu")
+            if not ok then
+                return
+            end
+            cybu.setup({})
+            -- 快捷键设置
+            -- vim.keymap.set("n", "<leader>bp", "<Plug>(CybuPrev)")
+            -- vim.keymap.set("n", "<leader>bn", "<Plug>(CybuNext)")
+            -- vim.keymap.set("n", "<c-s-Tab>", "<plug>(CybuPrev)")
+            -- vim.keymap.set("n", "<c-Tab>", "<plug>(CybuNext)")
+            -- vim.keymap.set({"n","v"}, "<c-s-Tab>", "<Plug>(CybuLastusedPrev)")
+            -- vim.keymap.set({"n","v"}, "<c-Tab>", "<Plug>(CybuLastusedNext)")
+            vim.keymap.set("n", "<c-s-tab>", "<cmd>CybuPrev<cr>")
+            vim.keymap.set("n", "<c-tab>", "<cmd>CybuNext<cr>")
+        end
+    }, -- cybu
+    -- nap.nvim
+    -- 快速切换buffer、tag、tab
+    {
+        "liangxianzhe/nap.nvim",
+        lazy = true,
+        event = {"BufReadPost", "BufNewFile", "BufAdd"},
+        enabled = false,
+        config = function()
+            require("nap").setup(
+                {
+                    next_prefix = "]",
+                    prev_prefix = "[",
+                    next_repeat = "<c-n>",
+                    prev_repeat = "<c-p>",
+                    -- to exclude some keys from the default
+                    exclude_default_operators = {"a", "A", "b", "B"}
+                }
+            )
+        end
+    }, --nap.nvim
+
 }

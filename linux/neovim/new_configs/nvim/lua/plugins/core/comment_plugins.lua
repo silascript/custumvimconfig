@@ -37,8 +37,19 @@ return {
     },
     -- comment-box
     {
-		"LudoPinelli/comment-box.nvim",
-		lazy = true,
-		event = { "BufReadPost" }
-	}
+        "LudoPinelli/comment-box.nvim",
+        lazy = true,
+        event = {"BufReadPost"}
+    },
+    -- todo-comments
+    -- 高亮注释关键字
+    {
+        "folke/todo-comments.nvim",
+        dependencies = {"nvim-lua/plenary.nvim"},
+        lazy = true,
+        event = {"BufReadPost", "BufAdd"},
+        config = function()
+            require("todo-comments").setup({})
+        end
+    }
 }

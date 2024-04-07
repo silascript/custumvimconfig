@@ -7,6 +7,7 @@ return {
         lazy = true,
         event = {"BufReadPre", "BufNewFile"},
         -- event = { "CursorHold", "CursorHoldI" },
+		-- enabled = false,
         config = function()
             local lspconfig = require("lspconfig")
 

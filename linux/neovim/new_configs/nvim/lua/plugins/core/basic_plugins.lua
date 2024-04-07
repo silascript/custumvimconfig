@@ -6,6 +6,7 @@ return {
         "windwp/nvim-autopairs",
         lazy = true,
         event = "InsertEnter",
+        -- enabled = false,
         config = function()
             require("nvim-autopairs").setup {}
         end
@@ -119,5 +120,40 @@ return {
             -- `matchparen.vim` needs to be disabled manually in case of lazy loading
             vim.g.loaded_matchparen = 1
         end
-    }
+    },
+    -- smoothcursor
+    {
+        "gen740/SmoothCursor.nvim",
+        lazy = true,
+        event = {"BufReadPost", "BufAdd", "BufNewFile"},
+        config = function()
+            require("smoothcursor").setup(
+                {
+                    -- fancy 模式
+                    fancy = {
+                        enable = true
+                    },
+                    speed = 50
+                }
+            )
+        end
+    },
+    -- yanky
+    {
+        "gbprod/yanky.nvim",
+        dependencies = {"kkharji/sqlite.lua"},
+        lazy = true,
+        event = {"BufReadPost", "BufAdd", "BufNewFile"},
+        config = function()
+            require("yanky").setup(
+                {
+                    highlight = {
+                        on_put = true,
+                        on_yank = true,
+                        timer = 2000
+                    }
+                }
+            )
+        end
+    } -- yanky
 }

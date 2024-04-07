@@ -7,6 +7,7 @@ return {
         lazy = true,
         event = {"InsertEnter"},
         -- event = {"VeryLazy"},
+		-- enabled = false,
         dependencies = {
             "neovim/nvim-lspconfig",
             "hrsh7th/cmp-nvim-lsp",
