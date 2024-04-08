@@ -5,9 +5,11 @@ return {
     {
         "lewis6991/gitsigns.nvim",
         lazy = true,
-        event = {"BufReadPost"},
+        event = {"BufReadPost", "BufNewFile"},
         config = function()
-            require("gitsigns").setup()
+            require("gitsigns").setup({
+
+			})
         end
     },
     -- deffview
@@ -15,6 +17,6 @@ return {
     {
         "sindrets/diffview.nvim",
         lazy = true,
-        event = {"BufReadPost"},
+        event = {"BufReadPost", "BufNewFile"}
     }
 }
