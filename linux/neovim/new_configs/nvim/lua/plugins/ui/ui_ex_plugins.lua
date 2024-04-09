@@ -8,8 +8,7 @@ return {
         -- dependencies = "mawkler/onedark.nvim", -- Add your colorscheme plugin here
         dependencies = "catppuccin/nvim",
         enabled = false,
-        -- event = {"BufReadPost"},
-        event = {"VimEnter"},
+        event = {"BufReadPost"},
         init = function()
             -- These are required for Modicator to work
             vim.o.cursorline = true

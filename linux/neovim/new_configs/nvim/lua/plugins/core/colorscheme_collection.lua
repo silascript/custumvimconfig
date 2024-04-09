@@ -121,8 +121,8 @@ return {
     -- evergarden
     {
         "comfysage/evergarden",
-        enabled = true,
-        -- enabled = false,
+        -- enabled = true,
+        enabled = false,
         lazy = true,
         config = function()
             require("evergarden").setup(
@@ -143,13 +143,27 @@ return {
             )
         end
     },
+    -- everforest
+    {
+        "neanias/everforest-nvim",
+        lazy = true,
+        config = function()
+            require("everforest").setup(
+                {
+                    ---Controls the "hardness" of the background. Options are "soft", "medium" or "hard".
+                    ---Default is "medium".
+                    background = "hard"
+                }
+            )
+        end
+    },
     -- tokyonight
     {
         "folke/tokyonight.nvim",
         lazy = true,
         priority = 1000,
         -- enabled = true,
-        enabled = false,
+        -- enabled = false,
         config = function()
             require("tokyonight").setup(
                 {
@@ -166,16 +180,16 @@ return {
     -- node
     {
         "shaunsingh/nord.nvim",
-        priority = 1000,
         -- enabled = true,
         lazy = true,
+        priority = 1000,
         enabled = false,
         config = function()
-            require("nord").set(
-                {
-                    vim.cmd.colorscheme "nord"
-                }
-            )
+            vim.g.nord_bold = true
+            vim.g.nord_contrast = true
+            -- 为window加边框
+            vim.g.nord_borders = true
+            require("nord").set({})
         end
     },
     -- mellow.nvim
@@ -183,13 +197,50 @@ return {
         "mellow-theme/mellow.nvim",
         lazy = true,
         -- enabled = false,
-        enabled = true,
+        -- enabled = true,
         config = function()
             -- 关键字加粗
             vim.g.mellow_bold_keywords = true
             vim.g.mellow_bold_functions = true
             -- 函数斜体
             vim.g.mellow_italic_functions = true
+        end
+    },
+    -- rasmus
+    {
+        "kvrohit/rasmus.nvim",
+        lazy = true,
+        config = function()
+            vim.g.rasmus_italic_functions = true
+            vim.g.rasmus_bold_keywords = true
+            -- 配色：monochrome 和 dark
+            -- monochrome 配色 黑灰白配色
+            -- vim.g.rasmus_variant = "monochrome"
+            vim.g.rasmus_variant = "dark"
+        end
+    },
+    -- sweet-fusion
+    {
+        "DanielEliasib/sweet-fusion",
+        name = "sweet-fusion",
+        lazy = true,
+        priority = 1000,
+        enabled = false,
+        opts = {
+            -- Set transparent background
+            transparency = false,
+            dim_inactive = true,
+            hl_styles = {
+                -- comments = {italic = true}
+                keywords = {bold = true}
+            }
+        }
+    },
+    -- mosel
+    {
+        "Domeee/mosel.nvim",
+        lazy = true,
+        config = function()
         end
     }
 }

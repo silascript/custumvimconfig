@@ -23,5 +23,23 @@
 -- evergarden
 -- vim.cmd.colorscheme "evergarden"
 
+-- nord
+-- vim.cmd.colorscheme "nord"
+
 -- mellow
 vim.cmd.colorscheme "mellow"
+
+-- rasmus
+-- vim.cmd.colorscheme "rasmus"
+
+-- sweet-fusion
+-- vim.cmd.colorscheme "sweet-fusion"
+
+-- noir
+-- vim.cmd.colorscheme "noir"
+
+-- mosel
+-- vim.cmd.colorscheme "mosel"
+
+-- everforest
+vim.cmd.colorscheme "everforest"
