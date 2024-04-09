@@ -1,8 +1,6 @@
-
-
---
--- 配色配置
--- 
+--          ╭─────────────────────────────────────────────────────────╮
+--          │						配色配置                          │
+--          ╰─────────────────────────────────────────────────────────╯
 
 -- 设置配色
 -- one_monokai
@@ -20,12 +18,10 @@
 -- vim.cmd.colorscheme "gruvbox"
 
 -- catppuccin
-vim.cmd.colorscheme "catppuccin"
+-- vim.cmd.colorscheme "catppuccin"
 
 -- evergarden
 -- vim.cmd.colorscheme "evergarden"
 
-
-
-
-
+-- mellow
+vim.cmd.colorscheme "mellow"

@@ -18,7 +18,7 @@ return {
     -- material
     {
         "marko-cerovac/material.nvim",
-		lazy = true,
+        lazy = true,
         enabled = false,
         -- enabled = true,
         priority = 1000,
@@ -61,7 +61,7 @@ return {
     {
         "catppuccin/nvim",
         name = "catppuccin",
-		lazy = true,
+        lazy = true,
         priority = 1000,
         -- enabled = false,
         -- enabled = true,
@@ -82,6 +82,7 @@ return {
     -- base16nvim
     {
         "RRethy/base16-nvim",
+        lazy = true,
         -- enabled = true,
         enabled = false,
         priority = 1000,
@@ -122,7 +123,7 @@ return {
         "comfysage/evergarden",
         enabled = true,
         -- enabled = false,
-		lazy = true,
+        lazy = true,
         config = function()
             require("evergarden").setup(
                 {
@@ -167,7 +168,7 @@ return {
         "shaunsingh/nord.nvim",
         priority = 1000,
         -- enabled = true,
-		lazy = true,
+        lazy = true,
         enabled = false,
         config = function()
             require("nord").set(
@@ -175,6 +176,20 @@ return {
                     vim.cmd.colorscheme "nord"
                 }
             )
+        end
+    },
+    -- mellow.nvim
+    {
+        "mellow-theme/mellow.nvim",
+        lazy = true,
+        -- enabled = false,
+        enabled = true,
+        config = function()
+            -- 关键字加粗
+            vim.g.mellow_bold_keywords = true
+            vim.g.mellow_bold_functions = true
+            -- 函数斜体
+            vim.g.mellow_italic_functions = true
         end
     }
 }
