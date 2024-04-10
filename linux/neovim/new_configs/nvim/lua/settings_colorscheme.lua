@@ -26,8 +26,17 @@
 -- nord
 -- vim.cmd.colorscheme "nord"
 
+-- everforest
+-- vim.cmd.colorscheme "everforest"
+
+-- miasma
+-- vim.cmd.colorscheme "miasma"
+
+-- bamboo
+vim.cmd.colorscheme "bamboo"
+
 -- mellow
-vim.cmd.colorscheme "mellow"
+-- vim.cmd.colorscheme "mellow"
 
 -- rasmus
 -- vim.cmd.colorscheme "rasmus"
@@ -41,5 +50,7 @@ vim.cmd.colorscheme "mellow"
 -- mosel
 -- vim.cmd.colorscheme "mosel"
 
--- everforest
-vim.cmd.colorscheme "everforest"
+-- no-clown-fiesta
+-- vim.cmd.colorscheme "no-clown-fiesta"
+-- nano-theme
+-- vim.cmd.colorscheme "nano-theme"

@@ -192,6 +192,41 @@ return {
             require("nord").set({})
         end
     },
+    -- bamboo
+    {
+        "ribru17/bamboo.nvim",
+        lazy = false,
+        priority = 1000,
+        config = function()
+            require("bamboo").setup(
+                {
+                    -- Main options --
+                    --  'vulgaris' (regular), 'multiplex' (greener) ,'light'
+                    style = "vulgaris",
+                    -- style = "multiplex",
+                    -- 代码样式设置
+                    code_style = {
+                        keywords = {bold = true}
+                    },
+                    -- 高亮设置
+                    highlights = {
+                        -- 注释设为灰色
+                        ["@comment"] = {fg = "$grey"}
+                    }
+                }
+            )
+            require("bamboo").load()
+        end
+    },
+    -- miasma
+    {
+        "xero/miasma.nvim",
+        lazy = true,
+        priority = 1000,
+        config = function()
+            -- vim.cmd("colorscheme miasma")
+        end
+    },
     -- mellow.nvim
     {
         "mellow-theme/mellow.nvim",
@@ -241,6 +276,29 @@ return {
         "Domeee/mosel.nvim",
         lazy = true,
         config = function()
+        end
+    },
+    -- no-clown-fiesta
+    {
+        "aktersnurra/no-clown-fiesta.nvim",
+        lazy = true,
+        config = function()
+            require("no-clown-fiesta").setup(
+                {
+                    style = {
+                        type = {bold = true}
+                    }
+                }
+            )
+        end
+    },
+    --  nano-theme.nvim
+    {
+        "ronisbr/nano-theme.nvim",
+        lazy = true,
+        init = function()
+            vim.o.background = "dark"
+            -- vim.o.background = "light"
         end
     }
 }

@@ -12,7 +12,6 @@ vim.opt.cursorline = true
 -- 2 为每个window独立的状态栏
 -- 3为全局，即两个window共用同一个状态栏
 vim.opt.laststatus = 3
--- 命令行高
 
 -- 开启真彩
 vim.opt.termguicolors = true
@@ -44,9 +43,7 @@ vim.opt.pumheight = 10
 -- 自动切换工作路径
 vim.opt.autochdir = true
 
-
-vim.keymap.set( "n", "<c-i>", "<c-i>")
-
+vim.keymap.set("n", "<c-i>", "<c-i>")
 
 -- 取消注释行回车自动注释
 vim.api.nvim_create_autocmd(
