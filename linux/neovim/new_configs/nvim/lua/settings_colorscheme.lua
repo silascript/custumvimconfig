@@ -33,7 +33,7 @@
 -- vim.cmd.colorscheme "miasma"
 
 -- bamboo
-vim.cmd.colorscheme "bamboo"
+-- vim.cmd.colorscheme "bamboo"
 
 -- mellow
 -- vim.cmd.colorscheme "mellow"
@@ -42,7 +42,7 @@ vim.cmd.colorscheme "bamboo"
 -- vim.cmd.colorscheme "rasmus"
 
 -- sweet-fusion
--- vim.cmd.colorscheme "sweet-fusion"
+vim.cmd.colorscheme "sweet-fusion"
 
 -- noir
 -- vim.cmd.colorscheme "noir"
@@ -54,3 +54,5 @@ vim.cmd.colorscheme "bamboo"
 -- vim.cmd.colorscheme "no-clown-fiesta"
 -- nano-theme
 -- vim.cmd.colorscheme "nano-theme"
+
+

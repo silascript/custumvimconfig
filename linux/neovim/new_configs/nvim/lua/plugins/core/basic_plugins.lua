@@ -138,6 +138,24 @@ return {
             )
         end
     },
+    -- cursor.nvim
+    -- 设置光标样式
+    {
+        "rasulomaroff/cursor.nvim",
+        config = function()
+            require("cursor").setup(
+                {
+                    cursors = {
+                        {
+                            -- 让光标闪烁
+                            mode = "a",
+                            blink = {wait = 200, default = 400}
+                        }
+                    }
+                }
+            )
+        end
+    },
     -- yanky
     {
         "gbprod/yanky.nvim",

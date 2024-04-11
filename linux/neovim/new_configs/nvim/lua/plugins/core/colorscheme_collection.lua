@@ -195,7 +195,7 @@ return {
     -- bamboo
     {
         "ribru17/bamboo.nvim",
-        lazy = false,
+        lazy = true,
         priority = 1000,
         config = function()
             require("bamboo").setup(
@@ -215,7 +215,7 @@ return {
                     }
                 }
             )
-            require("bamboo").load()
+            -- require("bamboo").load()
         end
     },
     -- miasma
@@ -260,7 +260,7 @@ return {
         name = "sweet-fusion",
         lazy = true,
         priority = 1000,
-        enabled = false,
+        -- enabled = false,
         opts = {
             -- Set transparent background
             transparency = false,
