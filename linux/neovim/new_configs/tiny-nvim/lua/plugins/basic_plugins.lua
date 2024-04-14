@@ -4,7 +4,7 @@ return {
     --成对符号自动补全
     {
         "windwp/nvim-autopairs",
-		lazy = true,
+        lazy = true,
         event = "InsertEnter",
         config = function()
             require("nvim-autopairs").setup {}
@@ -13,7 +13,7 @@ return {
     -- stcursorword
     {
         "sontungexpt/stcursorword",
-		lazy = true,
+        lazy = true,
         event = "BufReadPost",
         enabled = true,
         config = function()
@@ -29,7 +29,8 @@ return {
     {
         "kylechui/nvim-surround",
         version = "*", -- Use for stability; omit to use `main` branch for the latest features
-        event = "VeryLazy",
+        lazy = true,
+        event = {"BufReadPost", "BufAdd", "BufNewFile"},
         config = function()
             require("nvim-surround").setup({})
         end
@@ -37,7 +38,7 @@ return {
     -- comment
     {
         "numToStr/Comment.nvim",
-		lazy = true,
+        lazy = true,
         event = "BufReadPost",
         -- event = {"CursorHold", "CursorHoldI"},
         config = function()
@@ -73,12 +74,12 @@ return {
     {
         "windwp/nvim-ts-autotag",
         dependencies = {"nvim-treesitter/nvim-treesitter"},
-		lazy = true,
+        lazy = true,
         event = {"InsertEnter"},
-		-- ft = {
-		-- 	"html",
-		-- 	"xml",
-		-- },
+        -- ft = {
+        -- 	"html",
+        -- 	"xml",
+        -- },
         config = function()
             require("nvim-ts-autotag").setup()
         end
@@ -86,9 +87,9 @@ return {
     -- hop.nvim
     {
         "smoka7/hop.nvim",
-		lazy = true,
+        lazy = true,
         -- event = {"CursorHold", "CursorHoldI"},
-        event = {"VeryLazy"},
+        event = {"BufReadPost", "BufNewFile"},
         config = function()
             require("hop").setup(
                 {

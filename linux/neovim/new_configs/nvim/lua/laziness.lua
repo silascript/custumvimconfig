@@ -13,6 +13,30 @@ if not vim.loop.fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
+-- vim.api.nvim_create_autocmd(
+--     "User",
+--     {
+--         pattern = "VeryLazy",
+--         callback = function()
+--             local function _trigger()
+--                 vim.api.nvim_exec_autocmds("User", {pattern = "IceLoad"})
+--             end
+--
+--             if vim.bo.filetype == "alpha" then
+--                 vim.api.nvim_create_autocmd(
+--                     "BufRead",
+--                     {
+--                         once = true,
+--                         callback = _trigger
+--                     }
+--                 )
+--             else
+--                 _trigger()
+--             end
+--         end
+--     }
+-- )
+
 -- 使用lazy 加载所需的插件
 -- require("lazy").setup("plugins")
 require("lazy").setup(

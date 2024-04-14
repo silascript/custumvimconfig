@@ -9,6 +9,7 @@ return {
         dependencies = "catppuccin/nvim",
         enabled = false,
         event = {"BufReadPost"},
+        -- event = {"User IceLoad"},
         init = function()
             -- These are required for Modicator to work
             vim.o.cursorline = true
@@ -25,20 +26,22 @@ return {
     -- smartcolumn
     {
         "m4xshen/smartcolumn.nvim",
-		lazy = true,
-        event = {"BufReadPost","BufNewFile"},
+        lazy = true,
+        event = {"BufReadPost", "BufNewFile"},
+        -- event = {"User IceLoad"},
         opts = {}
     },
     -- marks.nvim
     {
         "chentoast/marks.nvim",
         lazy = true,
-        event = { "BufReadPost" },
-		-- enabled = false,
+        event = {"BufReadPost", "BufNewFile"},
+        -- event = {"User IceLoad"},
+        -- enabled = false,
         config = function()
             require("marks").setup(
                 {
-					force_write_shada = true,
+                    force_write_shada = true,
                     -- marks.nvim allows you to configure up to 10 bookmark groups, each with its own
                     -- sign/virttext. Bookmarks can be used to group together positions and quickly move
                     -- across multiple buffers. default sign is '!@#$%^&*()' (from 0 to 9), and

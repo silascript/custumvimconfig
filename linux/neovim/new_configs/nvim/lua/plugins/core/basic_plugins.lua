@@ -16,7 +16,7 @@ return {
     {
         "yamatsum/nvim-cursorline",
         lazy = true,
-        event = "BufReadPost",
+        event = {"BufReadPost", "BufNewFile", "BufAdd"},
         enabled = false,
         -- enabled = true,
         config = function()
@@ -39,7 +39,7 @@ return {
     {
         "sontungexpt/stcursorword",
         lazy = true,
-        event = "BufReadPost",
+        event = {"BufReadPost", "BufAdd", "BufNewFile"},
         enabled = true,
         config = function()
             require("stcursorword").setup(
@@ -81,7 +81,7 @@ return {
         lazy = true,
         -- event = {"CursorHold", "CursorHoldI"},
         -- event = {"VeryLazy"},
-        event = {"BufReadPost"},
+        event = {"BufReadPost", "BufAdd", "BufNewFile"},
         config = function()
             require("hop").setup(
                 {
@@ -115,10 +115,15 @@ return {
         lazy = true,
         -- event = "VeryLazy", -- keep for lazy loading
         event = {"BufReadPost", "BufAdd", "BufNewFile"},
-        opts = {},
-        init = function()
-            -- `matchparen.vim` needs to be disabled manually in case of lazy loading
-            vim.g.loaded_matchparen = 1
+        --       opts = {
+        --
+        -- },
+        -- init = function()
+        --     -- `matchparen.vim` needs to be disabled manually in case of lazy loading
+        --     vim.g.loaded_matchparen = 1
+        -- end
+        config = function()
+            require("sentiment").setup({})
         end
     },
     -- smoothcursor
@@ -142,6 +147,9 @@ return {
     -- 设置光标样式
     {
         "rasulomaroff/cursor.nvim",
+        lazy = true,
+        -- event = {"BufReadPost", "BufAdd", "BufNewFile"},
+        event = {"BufEnter"},
         config = function()
             require("cursor").setup(
                 {

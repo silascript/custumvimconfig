@@ -9,6 +9,7 @@ return {
         -- event = {"VimEnter"},
         -- event = {"UIEnter"},
         -- event = {"VeryLazy"},
+        -- event = {"User IceLoad"},
         -- enabled = false,
         enabled = true,
         config = function()

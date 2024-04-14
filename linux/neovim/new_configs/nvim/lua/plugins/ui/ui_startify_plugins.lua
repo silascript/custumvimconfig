@@ -6,7 +6,8 @@ return {
         enabled = false,
         -- enabled = true,
         -- event = "VimEnter",
-        event = "UIEnter",
+        -- event = "UIEnter",
+        event = "BufEnter",
         config = function()
             -- 获取当前时间
             -- local dstr = os.date("%Y-%m-%d",os.time())
@@ -53,8 +54,11 @@ return {
         dependencies = {"nvim-tree/nvim-web-devicons"},
         enabled = true,
         -- enabled = false,
-        -- lazy = true,
-        event = {"VimEnter"},
+        lazy = false,
+        -- event = {"VimEnter"},
+        event = {"BufRead"},
+        -- event = {"VeryLazy"},
+        -- event = {"User IceLoad"},
         config = function()
             local alpha = require "alpha"
 

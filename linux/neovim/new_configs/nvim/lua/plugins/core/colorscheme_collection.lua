@@ -291,14 +291,5 @@ return {
                 }
             )
         end
-    },
-    --  nano-theme.nvim
-    {
-        "ronisbr/nano-theme.nvim",
-        lazy = true,
-        init = function()
-            vim.o.background = "dark"
-            -- vim.o.background = "light"
-        end
     }
 }

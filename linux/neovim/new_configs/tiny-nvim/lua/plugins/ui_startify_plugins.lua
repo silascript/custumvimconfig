@@ -6,7 +6,7 @@ return {
         enabled = true,
         -- enabled = false,
 		-- lazy = true,
-        event = {"VimEnter"},
+        event = {"BufEnter"},
         config = function()
             local alpha = require "alpha"
 
