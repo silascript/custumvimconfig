@@ -19,6 +19,10 @@
 
 -- catppuccin
 -- vim.cmd.colorscheme "catppuccin"
+-- vim.cmd.colorscheme "catppuccin-latte"
+-- vim.cmd.colorscheme "catppuccin-frappe"
+-- vim.cmd.colorscheme "catppuccin-macchiato"
+-- vim.cmd.colorscheme "catppuccin-mocha"
 
 -- evergarden
 -- vim.cmd.colorscheme "evergarden"
@@ -54,5 +58,3 @@ vim.cmd.colorscheme "bamboo"
 -- vim.cmd.colorscheme "no-clown-fiesta"
 -- nano-theme
 -- vim.cmd.colorscheme "nano-theme"
-
-

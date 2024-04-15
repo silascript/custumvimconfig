@@ -74,7 +74,7 @@ return {
                     -- vim.cmd.colorscheme "catppuccin-latte"
                     -- vim.cmd.colorscheme "catppuccin-frappe"
                     -- vim.cmd.colorscheme "catppuccin-macchiato"
-                    vim.cmd.colorscheme "catppuccin-mocha"
+                    -- vim.cmd.colorscheme "catppuccin-mocha"
                 }
             )
         end
@@ -84,8 +84,8 @@ return {
         "RRethy/base16-nvim",
         lazy = true,
         -- enabled = true,
-        enabled = false,
-        priority = 1000,
+        enabled = true,
+        -- priority = 1000,
         config = function()
             require("base16-colorscheme").with_config(
                 {
@@ -101,7 +101,7 @@ return {
                     -- 多种配色：https://github.com/RRethy/base16-nvim
                     -- vim.cmd.colorscheme "base16-ayu-mirage"
                     -- vim.cmd.colorscheme "base16-catppuccin-macchiato"
-                    vim.cmd.colorscheme "base16-catppuccin-mocha"
+                    -- vim.cmd.colorscheme "base16-catppuccin-mocha"
                     -- vim.cmd.colorscheme "base16-monokai"
                     -- vim.cmd.colorscheme "base16-materia"
                     -- vim.cmd.colorscheme "base16-material"
