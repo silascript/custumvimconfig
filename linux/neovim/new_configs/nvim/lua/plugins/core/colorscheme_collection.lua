@@ -66,17 +66,7 @@ return {
         -- enabled = false,
         -- enabled = true,
         config = function()
-            require("catppuccin").setup(
-                {
-                    -- latte frappe macchiato mocha
-                    -- flavour = "mocha",
-                    -- vim.cmd.colorscheme "catppuccin"
-                    -- vim.cmd.colorscheme "catppuccin-latte"
-                    -- vim.cmd.colorscheme "catppuccin-frappe"
-                    -- vim.cmd.colorscheme "catppuccin-macchiato"
-                    -- vim.cmd.colorscheme "catppuccin-mocha"
-                }
-            )
+            require("catppuccin").setup({})
         end
     },
     -- base16nvim
@@ -93,7 +83,7 @@ return {
                     -- indentblankline = true,
                     -- notify = true,
                     -- ts_rainbow = true,
-                    cmp = true,
+                    cmp = true
                     -- illuminate = true,
                     -- dapui = true,
 
@@ -287,6 +277,33 @@ return {
                 {
                     style = {
                         type = {bold = true}
+                    }
+                }
+            )
+        end
+    },
+    -- nano
+    {
+        "ronisbr/nano-theme.nvim"
+        -- init = function ()
+        --   vim.o.background = "light" -- or "dark".
+        -- end
+    },
+    -- citrus-mist
+    {
+        "antonio-hickey/citrus-mist"
+    },
+    -- aki
+    {
+        "comfysage/aki",
+        config = function()
+            require("aki").setup(
+                {
+                    transparent_background = false,
+                    contrast_dark = "hard", -- 'hard'|'medium'|'soft'
+                    override_terminal = true,
+                    style = {
+                        search = {reverse = true}
                     }
                 }
             )
