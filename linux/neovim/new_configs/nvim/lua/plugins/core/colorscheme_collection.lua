@@ -189,6 +189,45 @@ return {
             require("nord").set({})
         end
     },
+    -- onedark
+    {
+        "navarasu/onedark.nvim",
+        lazy = true,
+        config = function()
+            require("onedark").setup(
+                {
+                    -- 可以设置不同的style
+                    -- 可选的风格有：dark darker cool deep warm warmer light
+                    style = "darker",
+                    -- 代码风格
+                    code_style = {
+                        keywords = "bold",
+                        functions = "bold"
+                    }
+                }
+            )
+        end
+    },
+    -- citruszest
+    {
+        "zootedb0t/citruszest.nvim",
+        lazy = true,
+        config = function()
+            require("citruszest").setup(
+                {
+                    option = {
+                        transparent = false, -- Enable/Disable transparency
+                        bold = true,
+                        italic = true
+                    },
+                    style = {
+                        -- This will change Constant foreground color and make it bold.
+                        Constant = {fg = "#FFFFFF", bold = true}
+                    }
+                }
+            )
+        end
+    },
     -- bamboo
     {
         "ribru17/bamboo.nvim",
@@ -329,6 +368,14 @@ return {
         "comfysage/twilight-moon",
         lazy = true,
         config = function()
+        end
+    },
+    -- grail
+    {
+        "chama-chomo/grail",
+        lazy = true,
+        config = function()
+            require("grail").setup({})
         end
     },
     -- komeiji

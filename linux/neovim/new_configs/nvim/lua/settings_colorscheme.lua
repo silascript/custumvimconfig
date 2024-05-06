@@ -80,4 +80,13 @@
 -- vim.cmd.colorscheme "aomi-grayscale"
 
 -- komeiji
-vim.cmd.colorscheme "komeiji"
+-- vim.cmd.colorscheme "komeiji"
+
+-- onedark
+-- vim.cmd.colorscheme "onedark"
+
+-- citruszest
+-- vim.cmd.colorscheme "citruszest"
+
+-- grail
+vim.cmd.colorscheme "grail"
