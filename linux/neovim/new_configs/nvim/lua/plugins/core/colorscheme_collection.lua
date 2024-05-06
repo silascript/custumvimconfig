@@ -147,6 +147,13 @@ return {
             )
         end
     },
+    -- forest.nvim
+    {
+        "Skullamortis/forest.nvim",
+        lazy = true,
+        priority = 1000,
+        opts = {}
+    },
     -- tokyonight
     {
         "folke/tokyonight.nvim",
@@ -268,6 +275,11 @@ return {
         config = function()
         end
     },
+    -- eihigh/vim-aomi-grayscale
+    {
+        "eihigh/vim-aomi-grayscale",
+        lazy = true
+    },
     -- no-clown-fiesta
     {
         "aktersnurra/no-clown-fiesta.nvim",
@@ -284,18 +296,21 @@ return {
     },
     -- nano
     {
-        "ronisbr/nano-theme.nvim"
+        "ronisbr/nano-theme.nvim",
+        lazy = true
         -- init = function ()
         --   vim.o.background = "light" -- or "dark".
         -- end
     },
     -- citrus-mist
     {
-        "antonio-hickey/citrus-mist"
+        "antonio-hickey/citrus-mist",
+        lazy = true
     },
     -- aki
     {
         "comfysage/aki",
+        lazy = true,
         config = function()
             require("aki").setup(
                 {
@@ -308,5 +323,17 @@ return {
                 }
             )
         end
+    },
+    -- twilight-moon
+    {
+        "comfysage/twilight-moon",
+        lazy = true,
+        config = function()
+        end
+    },
+    -- komeiji
+    {
+        "isopropyletherperoxide/komeiji-vim",
+        lazy = true
     }
 }

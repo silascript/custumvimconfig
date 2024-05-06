@@ -64,4 +64,20 @@
 -- vim.cmd.colorscheme "citrus-mist"
 
 -- aki
-vim.cmd.colorscheme "aki"
+-- vim.cmd.colorscheme "aki"
+
+-- twilight-moon
+-- vim.cmd.colorscheme "twilight-moon"
+
+-- forest.nvim
+-- 有不同的风格配色
+-- vim.cmd.colorscheme "forest"
+-- vim.cmd.colorscheme "forest-night"
+-- vim.cmd.colorscheme "forest-serene"
+-- vim.cmd.colorscheme "forest-day"
+
+-- aomi-grayscale
+-- vim.cmd.colorscheme "aomi-grayscale"
+
+-- komeiji
+vim.cmd.colorscheme "komeiji"
