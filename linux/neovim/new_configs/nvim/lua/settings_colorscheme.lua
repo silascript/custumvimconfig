@@ -48,6 +48,9 @@
 -- sweet-fusion
 -- vim.cmd.colorscheme "sweet-fusion"
 
+-- tairiki
+-- vim.cmd.colorscheme "tairiki"
+
 -- noir
 -- vim.cmd.colorscheme "noir"
 
@@ -85,8 +88,20 @@
 -- onedark
 -- vim.cmd.colorscheme "onedark"
 
+-- onenord
+-- vim.cmd.colorscheme "onenord"
+
 -- citruszest
 -- vim.cmd.colorscheme "citruszest"
 
 -- grail
-vim.cmd.colorscheme "grail"
+-- vim.cmd.colorscheme "grail"
+
+-- gruber-darker
+-- vim.cmd.colorscheme "gruber-darker"
+
+-- palenightfall
+-- vim.cmd.colorscheme "palenightfall"
+
+-- sherbet
+vim.cmd.colorscheme "sherbet"

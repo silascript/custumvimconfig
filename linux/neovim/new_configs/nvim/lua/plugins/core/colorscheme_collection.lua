@@ -15,6 +15,20 @@ return {
             )
         end
     },
+    -- onenord
+    {
+        "rmehri01/onenord.nvim",
+        lazy = true,
+        config = function()
+            require("onenord").setup(
+                {
+                    styles = {
+						keywords = "bold"
+                    }
+                }
+            )
+        end
+    },
     -- material
     {
         "marko-cerovac/material.nvim",
@@ -307,6 +321,21 @@ return {
             }
         }
     },
+    -- tairiki
+    {
+        "deparr/tairiki.nvim",
+        lazy = true,
+        -- priority = 1000, -- only necessary if you use tairiki as default theme
+        config = function()
+            require("tairiki").setup(
+                {
+                    code_style = {
+                        keywords = "bold"
+                    }
+                }
+            )
+        end
+    },
     -- mosel
     {
         "Domeee/mosel.nvim",
@@ -363,6 +392,22 @@ return {
             )
         end
     },
+    -- sherbet.nvim
+    {
+        "lewpoly/sherbet.nvim",
+        lazy = true,
+        config = function()
+            require("sherbet").setup({})
+        end
+    },
+    -- palenightfall
+    {
+        "JoosepAlviste/palenightfall.nvim",
+        lazy = true,
+        config = function()
+            require("palenightfall").setup({})
+        end
+    },
     -- twilight-moon
     {
         "comfysage/twilight-moon",
@@ -376,6 +421,14 @@ return {
         lazy = true,
         config = function()
             require("grail").setup({})
+        end
+    },
+    -- gruber-darker
+    {
+        "behemothbucket/gruber-darker-theme.nvim",
+        lazy = true,
+        config = function()
+            require("gruber-darker").setup({})
         end
     },
     -- komeiji
