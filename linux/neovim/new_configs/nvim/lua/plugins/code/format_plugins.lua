@@ -4,9 +4,9 @@ return {
     -- formatter.nvim
     {
         "mhartington/formatter.nvim",
-		-- event = {"CmdlineEnter"},
-		lazy = true,
-		event = { "BufReadPost" },
+        -- event = {"CmdlineEnter"},
+        lazy = true,
+        event = {"BufReadPost"},
         config = function()
             require("formatter").setup(
                 {
@@ -35,6 +35,15 @@ return {
                         javascript = {require("formatter.filetypes.javascript").prettier},
                         typescript = {require("formatter.filetypes.typescript").prettier},
                         markdown = {require("formatter.filetypes.markdown").prettier},
+                        -- markdown = {
+                        --     -- 使用 mdformat来格式化
+                        --     function()
+                        --         return {
+                        --             exe = "mdformat",
+                        --             args = {vim.fn.shellescape(vim.api.nvim_buf_get_name(0))}
+                        --         }
+                        --     end
+                        -- },
                         json = {require("formatter.filetypes.json").prettier},
                         less = {
                             function()

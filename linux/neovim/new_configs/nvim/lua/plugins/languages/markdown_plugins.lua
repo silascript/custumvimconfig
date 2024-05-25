@@ -6,6 +6,7 @@ return {
         dependencies = {"nvim-treesitter/nvim-treesitter"},
         -- lazy = true,
         ft = {"markdown"},
+		enabled = false,
         config = function()
             require("headlines").setup(
                 {
