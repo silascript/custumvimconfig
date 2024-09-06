@@ -26,7 +26,9 @@ return {
             lspconfig.cssls.setup {
                 capabilities = capabilities
             }
-            lspconfig.tsserver.setup {}
+
+            -- lspconfig.tsserver.setup {}
+            lspconfig.ts_ls.setup {}
 
             -- golang
             lspconfig.gopls.setup {}

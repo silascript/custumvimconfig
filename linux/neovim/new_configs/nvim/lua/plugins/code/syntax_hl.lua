@@ -10,6 +10,7 @@ return {
             require("nvim-treesitter.configs").setup(
                 {
                     ensure_installed = {
+						"awk",
                         "c",
                         "cpp",
                         "bash",
@@ -18,6 +19,7 @@ return {
                         "css",
                         "scss",
                         "json",
+                        "jsonc",
                         "vim",
                         "lua",
                         "go",
