@@ -60,8 +60,8 @@ return {
             -- end
 
             -- 使用 ruff 或 ruff-lsp 来作python分析诊断
-            -- lspconfig.ruff.setup {}
-            lspconfig.ruff_lsp.setup {}
+            lspconfig.ruff.setup {}
+            -- lspconfig.ruff_lsp.setup {}
 
             -- ruby
             lspconfig.solargraph.setup {
