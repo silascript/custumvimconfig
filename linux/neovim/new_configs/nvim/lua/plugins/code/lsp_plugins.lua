@@ -2,14 +2,17 @@
 
 return {
     -- nvim-lspconfig
+	-- 新版本的 nvim 已经不需要 这个插件了
     {
         "neovim/nvim-lspconfig",
         lazy = true,
+		enabled = false,
         event = {"BufReadPre", "BufNewFile"},
         -- event = { "CursorHold", "CursorHoldI" },
         -- enabled = false,
         config = function()
             local lspconfig = require("lspconfig")
+            -- local lspconfig = "vim.lsp.config"
 
             local capabilities = vim.lsp.protocol.make_client_capabilities()
             capabilities.textDocument.completion.completionItem.snippetSupport = true
@@ -24,7 +27,7 @@ return {
                 capabilities = capabilities
             }
             lspconfig.cssls.setup {
-                capabilities = capabilities
+                -- capabilities = capabilities
             }
 
             -- lspconfig.tsserver.setup {}
@@ -93,17 +96,6 @@ return {
                 }
             }
 
-            --
-            -- vim.api.nvim_create_autocmd(
-            --     {"TextChanged", "InsertLeave", "CursorHold", "LspAttach"},
-            --     {
-            --         buffer = bufnr,
-            --         callback = vim.lsp.codelens.refresh
-            --     }
-            -- )
-
-            -- trigger codelens refresh
-            -- vim.api.nvim_exec_autocmds("User", {pattern = "LspAttached"})
         end --config
     }, --nvim-lspconfig
     -- lspsaga

@@ -7,9 +7,9 @@ return {
         lazy = true,
         event = {"InsertEnter"},
         -- event = {"VeryLazy"},
-		-- enabled = false,
+        -- enabled = false,
         dependencies = {
-            "neovim/nvim-lspconfig",
+            -- "neovim/nvim-lspconfig",
             "hrsh7th/cmp-nvim-lsp",
             "hrsh7th/cmp-buffer",
             "hrsh7th/cmp-path",
@@ -20,10 +20,10 @@ return {
             -- 使用 nvim-snippy
             "dcampos/nvim-snippy",
             "dcampos/cmp-snippy",
+            -- 图标
             "onsails/lspkind.nvim"
         },
         config = function()
-
             local cmp = require("cmp")
             -- local luasnip = require("luasnip")
             local lspkind = require("lspkind")
@@ -87,18 +87,15 @@ return {
                             -- {name = "luasnip"},
                             {name = "snippy", priority = 750},
                             {name = "path", priority = 200},
-                            {name = "calc",priority = 100}
+                            {name = "calc", priority = 100}
                         },
                         {
                             {
-								name = "buffer", 
-								keyword_length = 3,
-								priority = 500,
-								option = {
-									-- indexing_interval = 5000,
-									-- max_indexed_line_length = 300
-								}
-							}
+                                name = "buffer",
+                                keyword_length = 3,
+                                priority = 500,
+                                option = {}
+                            }
                         }
                     ),
                     mapping = cmp.mapping.preset.insert(
@@ -188,6 +185,7 @@ return {
     {
         "hrsh7th/cmp-cmdline",
         lazy = true,
+        -- enabled = false,
         keys = {":", "/", "?"},
         dependencies = {"hrsh7th/nvim-cmp"},
         config = function()
@@ -223,5 +221,52 @@ return {
                 }
             ) --cmdline "/" "?"
         end
-    }
+    },
+    --- blink.cmp
+    {
+        "saghen/blink.cmp",
+        lazy = true,
+        event = {"InsertEnter"},
+        version = "*",
+        enabled = false,
+        dependencies = {
+            -- snippet 库
+            "rafamadriz/friendly-snippets",
+            -- 图标
+            "onsails/lspkind.nvim"
+        },
+        opts = {
+            sources = {
+                default = {"lsp", "path", "snippets", "buffer"}
+                -- default = {"lsp", "path", "buffer"}
+            },
+            -- appearance = {
+            --     -- 'mono' (default) for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
+            --     -- Adjusts spacing to ensure icons are aligned
+            --     -- nerd_font_variant = "mono"
+            --     -- nerd_font_variant = "Nerd Font"
+            -- },
+            completion = {
+                keyword = {range = "prefix"},
+                trigger = {show_on_trigger_character = true},
+                documentation = {auto_show = false}
+            },
+            signature = {enabled = true},
+            keymap = {
+                -- Each keymap may be a list of commands and/or functions
+                preset = "enter",
+                -- Select completions
+                ["<Up>"] = {"select_prev", "fallback"},
+                ["<Down>"] = {"select_next", "fallback"},
+                ["<Tab>"] = {"select_next", "fallback"},
+                ["<S-Tab>"] = {"select_prev", "fallback"},
+                -- Scroll documentation
+                ["<C-b>"] = {"scroll_documentation_up", "fallback"},
+                ["<C-f>"] = {"scroll_documentation_down", "fallback"},
+                -- Show/hide signature
+                ["<C-k>"] = {"show_signature", "hide_signature", "fallback"}
+            }
+        }, -- opts
+        opts_extend = {"sources.default"}
+    } --blink.cmp
 }

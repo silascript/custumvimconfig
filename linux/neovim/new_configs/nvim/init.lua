@@ -8,3 +8,6 @@ require("laziness")
 -- 所以配色配置得在lazy.nvim加载后才加载
 require("settings_colorscheme")
 
+-- 加载lsp配置
+require("lsp_enable")
+
