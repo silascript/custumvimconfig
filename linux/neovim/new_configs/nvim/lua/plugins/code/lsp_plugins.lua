@@ -2,11 +2,11 @@
 
 return {
     -- nvim-lspconfig
-	-- 新版本的 nvim 已经不需要 这个插件了
+    -- 新版本的 nvim 已经不需要 这个插件了
     {
         "neovim/nvim-lspconfig",
         lazy = true,
-		enabled = false,
+        enabled = false,
         event = {"BufReadPre", "BufNewFile"},
         -- event = { "CursorHold", "CursorHoldI" },
         -- enabled = false,
@@ -26,9 +26,7 @@ return {
             lspconfig.html.setup {
                 capabilities = capabilities
             }
-            lspconfig.cssls.setup {
-                -- capabilities = capabilities
-            }
+            lspconfig.cssls.setup {}
 
             -- lspconfig.tsserver.setup {}
             lspconfig.ts_ls.setup {}
@@ -95,9 +93,8 @@ return {
                     ["rust-analyzer"] = {}
                 }
             }
-
         end --config
-    }, --nvim-lspconfig
+    } --nvim-lspconfig
     -- lspsaga
     -- {
     -- 	'nvimdev/lspsaga.nvim',
@@ -105,58 +102,4 @@ return {
     -- 		require('lspsaga').setup({})
     -- 	end,
     -- },
-
-    -- trouble
-    {
-        "folke/trouble.nvim",
-        dependencies = {"nvim-tree/nvim-web-devicons"},
-        lazy = true,
-        event = {"BufReadPost"},
-        config = function()
-            -- require("trouble").setup({
-            -- })
-            vim.keymap.set(
-                "n",
-                "<leader>xx",
-                function()
-                    require("trouble").toggle()
-                end
-            )
-            vim.keymap.set(
-                "n",
-                "<leader>xw",
-                function()
-                    require("trouble").toggle("workspace_diagnostics")
-                end
-            )
-            vim.keymap.set(
-                "n",
-                "<leader>xd",
-                function()
-                    require("trouble").toggle("document_diagnostics")
-                end
-            )
-            vim.keymap.set(
-                "n",
-                "<leader>xq",
-                function()
-                    require("trouble").toggle("quickfix")
-                end
-            )
-            vim.keymap.set(
-                "n",
-                "<leader>xl",
-                function()
-                    require("trouble").toggle("loclist")
-                end
-            )
-            vim.keymap.set(
-                "n",
-                "gR",
-                function()
-                    require("trouble").toggle("lsp_references")
-                end
-            )
-        end
-    }
 }

@@ -181,6 +181,8 @@ return {
             ) --require("cmp")
         end
     }, -- cmp
+    ----------------------------------------------------------
+
     -- cmp-cmdline
     {
         "hrsh7th/cmp-cmdline",
@@ -221,7 +223,9 @@ return {
                 }
             ) --cmdline "/" "?"
         end
-    },
+    }, -- cmp-cmdline
+    ----------------------------------------------------------
+
     --- blink.cmp
     {
         "saghen/blink.cmp",
