@@ -63,6 +63,9 @@ return {
 					java = {
 						require("formatter.filetypes.java").google_java_format,
 					},
+					kotlin = {
+						require("formatter.filetypes.kotlin").ktlint,
+					},
 					dart = {
 						require("formatter.filetypes.dart").dartformat,
 					},
