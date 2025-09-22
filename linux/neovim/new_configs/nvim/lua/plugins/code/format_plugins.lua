@@ -36,6 +36,7 @@ return {
 					javascript = { require("formatter.filetypes.javascript").prettier },
 					typescript = { require("formatter.filetypes.typescript").prettier },
 					markdown = { require("formatter.filetypes.markdown").prettier },
+					-- markdown = { require("formatter.filetypes.markdown").mdformat },
 					-- markdown = {
 					--     -- 使用 mdformat来格式化
 					--     function()

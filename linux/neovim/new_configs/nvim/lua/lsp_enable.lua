@@ -17,4 +17,5 @@ vim.lsp.enable({
 	"html",
 	"emmet_language_server",
 	"solargraph",
+	"markdown_oxide",
 })
