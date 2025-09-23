@@ -13,9 +13,11 @@ vim.lsp.enable({
 	"ruff",
 	"bashls",
 	"rust_analyzer",
+	"taplo",
 	"cssls",
 	"html",
 	"emmet_language_server",
+	"docker_language_server",
 	"solargraph",
 	"markdown_oxide",
 })

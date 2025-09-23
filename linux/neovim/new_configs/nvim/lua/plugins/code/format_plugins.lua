@@ -47,6 +47,7 @@ return {
 					--     end
 					-- },
 					json = { require("formatter.filetypes.json").prettier },
+					toml = { require("formatter.filetypes.toml").taplo },
 					less = {
 						function()
 							return {
