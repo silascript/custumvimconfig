@@ -19,5 +19,7 @@ vim.lsp.enable({
 	"emmet_language_server",
 	"docker_language_server",
 	"solargraph",
+	-- "sqlls",
+	"sqls",
 	"markdown_oxide",
 })

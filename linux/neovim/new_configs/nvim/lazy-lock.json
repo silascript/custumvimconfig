@@ -70,6 +70,7 @@
   "sherbet.nvim": { "branch": "master", "commit": "5c4166eff70ec551ae0023edfb89141b25cc18c6" },
   "smartcolumn.nvim": { "branch": "main", "commit": "b9cdbdf42f7ac5a659204cd5926017c7ff724a19" },
   "sqlite.lua": { "branch": "master", "commit": "50092d60feb242602d7578398c6eb53b4a8ffe7b" },
+  "sqls.nvim": { "branch": "main", "commit": "bfb7b4090268f6163c408577070da4cc9d7450fd" },
   "stcursorword": { "branch": "main", "commit": "f6810ed5001eeee6061fdce77b292a5565823ded" },
   "sweet-fusion": { "branch": "dev", "commit": "219a56b3cc635fc80410a35dfa3da56c86c09b45" },
   "tairiki.nvim": { "branch": "master", "commit": "7dd9a81f96280cfd4789582c7165787b456f1577" },
@@ -83,6 +84,6 @@
   "twilight-moon": { "branch": "mega", "commit": "4f6521a043d15f0b402f8a25fbfb166715b058ab" },
   "vim-aomi-grayscale": { "branch": "main", "commit": "eb4a16f36d93a6a1ff2b6520bf8fa3042e40ad4e" },
   "vim-snippets": { "branch": "master", "commit": "f371d635f6f6350d34bbb483e37e383db322d145" },
-  "which-key.nvim": { "branch": "main", "commit": "370ec46f710e058c9c1646273e6b225acf47cbed" },
+  "which-key.nvim": { "branch": "main", "commit": "904308e6885bbb7b60714c80ab3daf0c071c1492" },
   "yanky.nvim": { "branch": "main", "commit": "04775cc6e10ef038c397c407bc17f00a2f52b378" }
 }

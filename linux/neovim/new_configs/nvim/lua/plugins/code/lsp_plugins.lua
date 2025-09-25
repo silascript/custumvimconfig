@@ -114,4 +114,12 @@ return {
 			vim.keymap.set({ "n", "v" }, "<leader>xe", require("nvim-emmet").wrap_with_abbreviation)
 		end,
 	},
+
+	-- sqls.nvim
+	-- 使用sqls为LSP时，增强实用功能
+	{
+		"nanotee/sqls.nvim",
+		lazy = true,
+		event = { "BufReadPre", "BufNewFile" },
+	},
 }
