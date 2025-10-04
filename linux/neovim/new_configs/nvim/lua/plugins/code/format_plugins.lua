@@ -83,7 +83,10 @@ return {
 
 						function()
 							-- sql格式化器可执行程序的名称
-							-- local formatter_execn="sqlfluff",
+							-- sqlfluff 使用的是子命令进行格式化
+							-- 在这时不能使用format子命令，因为其返回值是格式化的统计结果，而非格式化后sql的内容
+							-- local formatter_execn = "sqlfluff render"
+							-- sql-formatter
 							local formatter_execn = "sql-formatter"
 							-- 当前文件的sql方言
 							local sql_dialect = "sql"
@@ -98,15 +101,27 @@ return {
 								end)
 								-- vim.print(sql_dialect)
 								return {
-									-- exe = "sqlfluff",
+									-- sqlfluff,
 									exe = formatter_execn,
 									args = {
-										string.format("format --dialect %s", sql_dialect),
+										string.format("--dialect %s", sql_dialect),
 										util.escape_path(util.get_current_buffer_file_path()),
 									},
 									stdin = true,
 								}
 							else -- use sqlfluff
+								-- local current_bufnr = vim.api.nvim_get_current_buf()
+								-- local buffer_clients = vim.lsp.get_clients({ bufnr = current_bufnr })
+
+								-- if #buffer_clients > 0 then
+								-- 	print("当前缓冲区 " .. current_bufnr .. "有以下LSP客户端：")
+								-- 	for _, lsp_ct in ipairs(buffer_clients) do
+								-- 		print(lsp_ct.name)
+								-- 	end
+								-- else
+								-- 	print("当前缓冲区" .. current_bufnr .. "没有LSP客户端！")
+								-- end
+
 								-- vim.ui.input({
 								-- 	prompt = "请输入sql的方言类型：",
 								-- 	default = sql_dialect,
@@ -114,38 +129,61 @@ return {
 								-- }, function(in_sql)
 								-- 	sql_dialect = in_sql
 								-- end)
-								local commands = "sqlfluff dialects | awk '/:/{print $1}{FS=\":\"}'"
-								-- local commands = "ls -al"
-								local c_result = io.popen(commands)
+								-- 从sqlfluff dialects 子命令中获取sqlfluff支持的方言
+								-- local commands = "sqlfluff dialects | awk '/:/{print $1}{FS=\":\"}'"
+								-- local c_result = io.popen(commands)
 
 								-- 方言数组
-								local dialect_list = {}
+								-- local dialect_list = {}
 								-- { "mysql", "sql", "mariadb", "plsql", "postgresql", "t-sql", "spart" }
 
 								-- 将每一行数据添加进数组中
-								for line in c_result:lines() do
-									table.insert(dialect_list, line)
-								end
+								-- for line in c_result:lines() do
+								-- 	table.insert(dialect_list, line)
+								-- end
 
 								-- print(dialect_list)
 								-- 关闭
-								c_result.close()
+								-- c_result.close()
 
-								vim.ui.select(dialect_list, {
-									prompt = "选择一个SQL方言：",
-									format_item = function(s_item)
-										return s_item
-									end,
-								}, function(s_item)
-									if s_item then
-										-- 赋值
-										sql_dialect = s_item
-									end
+								-- vim.ui.input({
+								-- 	prompt = "请输入sql的方言类型：",
+								-- 	completion = function(arg_lead)
+								-- 		local matches = {}
+								-- 		for _, sql_item in ipairs(c_result) do
+								-- 			if sql_item:lower():find(arg_lead:lower(), 1, true) then
+								-- 				table.insert(matches, sql_item)
+								-- 			end
+								-- 		end
+								-- 		return matches
+								-- 	end,
+								-- }, function(input)
+								-- 	if input then
+								-- 		sql_dialect = input
+								-- 	end
+								-- end)
+
+								-- vim.ui.select(dialect_list, {
+								-- 	prompt = "选择一个SQL方言：",
+								-- 	format_item = function(s_item)
+								-- 		return s_item
+								-- 	end,
+								-- }, function(s_item)
+								-- 	if s_item then
+								-- 		-- 赋值
+								-- 		sql_dialect = s_item
+								-- 	end
+								-- end)
+
+								vim.ui.input({
+									prompt = "请输入sql的方言类型：",
+									default = sql_dialect,
+								}, function(in_sql)
+									sql_dialect = in_sql
 								end)
-
 								-- vim.print(sql_dialect)
 								return {
-									-- exe = "sql-formatter",
+									-- sql-formatter,
 									exe = formatter_execn,
 									args = {
 										string.format("-l %s", sql_dialect),
